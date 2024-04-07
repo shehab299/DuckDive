@@ -5,7 +5,7 @@
 </h1>
 
 <h1 align="center">
-    <img src="./docs/image/Duck.jpeg" />
+    <img src="./Docs/imgs/Duck.jpeg" />
     <br />
 </h1>
 
@@ -24,19 +24,27 @@ A search engine that's quack-tastically different! Say goodbye to feeling like a
 
 1. **Clone the Repository**: 
 
+```
     git clone https://github.com/shehab299/DuckDive.git
+```
 
 2. **Navigate to the Crawler Directory**
 
+```
     cd DuckDive/SpiderDuck
+```
 
 3. **Build The Project**
 
+```
     mvn clean install
+```
 
 4. **Run the Crawler**
 
+```
     java -cp target/spider_duck-1.0-SNAPSHOT.jar com.crawler.App
+```
 
 5. **Build Other Components**
 
