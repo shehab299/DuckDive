@@ -14,8 +14,8 @@ public class App
         DBManager db = new DBManager();
         MongoDatabase database = db.connect(connString,"Tasks");
 
-        
-
+        Page p = new Page("SHEHAB","SHEHAB","SEHAB",true,"SHEHAB");
+        System.out.println(p.getHash());
 
         db.disconnect();
 
