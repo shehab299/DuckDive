@@ -1,10 +1,23 @@
 package com.crawler;
 
 
-public class App 
+import com.crawler.utils.DBManager;
+import com.mongodb.client.*;
+
+
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello Crawler!" );
+        String connString = "mongodb+srv://shehab:shahab1234@tasks.e3rqvm7.mongodb.net/?retryWrites=true&w=majority";
+        DBManager db = new DBManager();
+        MongoDatabase database = db.connect(connString,"Tasks");
+
+        
+
+
+        db.disconnect();
+
     }
 }

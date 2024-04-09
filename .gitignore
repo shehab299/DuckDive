@@ -1,9 +1,4 @@
 */target/
 *.log
-
-# Local environment files
 .env
-
-
-
-tired of search engines that leave you feeling like a sitting duck? We get it. That's why DuckDive dives deep, uncovering the web's hidden gems (and maybe some questionable bread crumbs).
+.idea
