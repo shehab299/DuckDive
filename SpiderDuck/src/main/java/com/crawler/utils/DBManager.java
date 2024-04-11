@@ -19,18 +19,12 @@ import com.mongodb.client.MongoDatabase;
 
 public class DBManager {
 
-    private MongoDatabase db;
-    private MongoClient client;
+    private static MongoDatabase db;
+    private static MongoClient client;
 
-    public DBManager()
+    public static MongoDatabase connect(String conString, String dbname)
     {
-        this.client = null;
-        this.db = null;
-    }
-
-    public MongoDatabase connect(String conString,String dbname)
-    {
-        if(this.client == null)
+        if(client == null)
         {
 
             ServerApi serverApi = ServerApi.builder()
@@ -48,11 +42,11 @@ public class DBManager {
                     .build();
 
 
-            this.client = MongoClients.create(settings);
+            client = MongoClients.create(settings);
 
             try {
-                this.db = this.client.getDatabase(dbname);
-                this.db.runCommand(new Document("ping", 1));
+                db = client.getDatabase(dbname);
+                db.runCommand(new Document("ping", 1));
                 System.out.println("successfully connected to MongoDB!");
             } catch (MongoException e) {
                 e.printStackTrace();
@@ -62,11 +56,11 @@ public class DBManager {
         return db;
     }
 
-    public void disconnect() {
-        if (this.db != null) {
-            this.client.close();
-            this.client = null;
-            this.db = null;
+    public static void disconnect() {
+        if (db != null) {
+            client.close();
+            client = null;
+            db = null;
             System.out.println("Disconnected from MongoDB.");
         }
     }
