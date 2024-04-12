@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Frontier {
+
     private Queue<Url> urlQueue;
     private int count;
 
@@ -26,6 +27,10 @@ public class Frontier {
                     Url url = new Url(line);
                     addurl(url);
                 }
+
+            String url;
+            while ((url = reader.readLine()) != null)
+                addurl(url);
         } 
         catch (IOException e)
         {
@@ -45,17 +50,17 @@ public class Frontier {
             count--;
         return urlQueue.poll();
     }
-//Test Function
-    public static void main(String[] argv)
-    {
-        String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
-        Frontier frontier=new Frontier();
-        frontier.readSeed(seedPath);
-        Url url=frontier.getNexturl();
-        while(url != null)
-        {
-            System.out.println(url.getNormalized());
-            url=frontier.getNexturl();
-        }
-    }
-}
+  
+  
+// //Test Function
+//     public static void main(String[] argv)
+//     {
+//         String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
+//         Frontier frontier=new Frontier();
+//         frontier.readSeed(seedPath);
+//         Url url=frontier.getNexturl();
+//         while(url != null)
+//         {
+//             System.out.println(url.getNormalized());
+//         }
+//      }
