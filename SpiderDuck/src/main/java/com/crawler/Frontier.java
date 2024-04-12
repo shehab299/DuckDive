@@ -7,12 +7,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Frontier {
-    private Queue<String> urlQueue;
+    private Queue<Url> urlQueue;
     private int count;
 
     public Frontier()
     {
-        urlQueue=new LinkedList<String>();
+        urlQueue=new LinkedList<Url>();
         count=0;
     }
 
@@ -20,9 +20,12 @@ public class Frontier {
     {
         try (BufferedReader reader = new BufferedReader(new FileReader(seedPath)))
         {
-            String url;
-            while ((url = reader.readLine()) != null)
-                addurl(url);
+            String line;
+            while ((line = reader.readLine()) != null)
+                {
+                    Url url = new Url(line);
+                    addurl(url);
+                }
         } 
         catch (IOException e)
         {
@@ -30,13 +33,13 @@ public class Frontier {
         }
     }
 
-    public void addurl(String url)
+    public void addurl(Url url)
     {
         urlQueue.offer(url);
         count++;
     }
 
-    public String getNexturl()
+    public Url getNexturl()
     {
         if(count > 0)
             count--;
@@ -48,11 +51,10 @@ public class Frontier {
         String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
         Frontier frontier=new Frontier();
         frontier.readSeed(seedPath);
-        frontier.addurl("Ay7aga.com");
-        String url=frontier.getNexturl();
+        Url url=frontier.getNexturl();
         while(url != null)
         {
-            System.out.println(url);
+            System.out.println(url.getNormalized());
             url=frontier.getNexturl();
         }
     }
