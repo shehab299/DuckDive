@@ -40,8 +40,8 @@ public class HtmlDocument {
         return urls.toArray(new String[0]);
     }
 
-    public static String hash(Document doc) {
-        String htmlContent = doc.html();
+    public String hash() {
+        String htmlContent = document.html();
         byte[] hash = Hash.getSHA(htmlContent);
 
         return Hash.toHexString(hash);

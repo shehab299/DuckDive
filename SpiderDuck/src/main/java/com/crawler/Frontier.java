@@ -39,16 +39,18 @@ public class Frontier {
         return urlQueue.poll();
     }
 
-    // //Test Function
-    //     public static void main(String[] argv)
-    //     {
-    //         String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
-    //         Frontier frontier=new Frontier();
-    //         frontier.readSeed(seedPath);
-    //         Url url=frontier.getNexturl();
-    //         while(url != null)
-    //         {
-    //             System.out.println(url.getNormalized());
-    //         }
-    //      }
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    // // Test Function
+    // public static void main(String[] argv) {
+    //     String seedPath = "SpiderDuck/src/main/java/com/crawler/seed.txt";
+    //     Frontier frontier = new Frontier();
+    //     frontier.readSeed(seedPath);
+    //     Url url = frontier.getNexturl();
+    //     if (url != null) {
+    //         System.out.println(url.getNormalized());
+    //     }
+    // }
 }
