@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 
 public class RobotsHandler {
@@ -14,7 +15,8 @@ public class RobotsHandler {
     {
         try
         {
-            HttpURLConnection connection = (HttpURLConnection) new URL(url.getRobots()).openConnection();
+            URI uri = new URI(url.getRobots());
+            HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
             connection.setRequestProperty("User-Agent", USER_AGENT);
             BufferedReader reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
             String line;
@@ -51,6 +53,8 @@ public class RobotsHandler {
         catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         return true;
