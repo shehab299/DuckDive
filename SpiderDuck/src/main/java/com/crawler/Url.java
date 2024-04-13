@@ -1,8 +1,10 @@
 package com.crawler;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import org.jsoup.Jsoup;
 import org.jsoup.Connection.Response;
 
 public class Url {
@@ -10,17 +12,21 @@ public class Url {
     private String baseUrl;
     private String normalizedUrl;
     private String robotsUrl;
-    private Response response;
 
     private boolean urlExists(String url) {
-        int statusCode = this.response.statusCode();
-        return statusCode != 404;
+        try {
+            Response response = Jsoup.connect(url).execute();
+            int statusCode = response.statusCode();
+            return statusCode != 404;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    public Url(String url, Response response) {
+    public Url(String url) {
         try {
             URI uri = new URI(url);
-            this.response = response;
             this.url = url;
             this.baseUrl = uri.getScheme() + "://" + uri.getHost();
             this.normalizedUrl = uri.normalize().toString();
