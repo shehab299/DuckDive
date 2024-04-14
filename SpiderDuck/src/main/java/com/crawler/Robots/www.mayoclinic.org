@@ -1,7 +1,0 @@
-A: https://www.mayoclinic.org /
-D: https://www.mayoclinic.org /edu/
-D: https://www.mayoclinic.org /content/experience-fragments/*
-D: https://www.mayoclinic.org *.model.json
-D: https://www.mayoclinic.org /static/chunks/*
-D: https://www.mayoclinic.org /content/mayoclinic/*
-D: https://www.mayoclinic.org /api/*

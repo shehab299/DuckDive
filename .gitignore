@@ -1,4 +1,5 @@
 */target/
+*/Robots/
 *.log
 .env
 .idea
