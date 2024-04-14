@@ -46,16 +46,16 @@ public class Frontier {
         return urlQueue.poll();
     }
 //Test Function
-    public static void main(String[] argv)
-    {
-        String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
-        Frontier frontier=new Frontier();
-        frontier.readSeed(seedPath);
-        Url url=frontier.getNexturl();
-        while(url != null)
-        {
-            System.out.println(url.getNormalized());
-            url=frontier.getNexturl();
-        }
-    }
+    // public static void main(String[] argv)
+    // {
+    //     String seedPath="E:\\Education\\CMP_SecYear\\SecondSemester\\APT\\WebCrawler\\Frontier\\src\\seed.txt";
+    //     Frontier frontier=new Frontier();
+    //     frontier.readSeed(seedPath);
+    //     Url url=frontier.getNexturl();
+    //     while(url != null)
+    //     {
+    //         System.out.println(url.getNormalized());
+    //         url=frontier.getNexturl();
+    //     }
+    // }
 }

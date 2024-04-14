@@ -1,0 +1,35 @@
+A: https://arxiv.org/archive
+A: https://arxiv.org/year
+A: https://arxiv.org/list
+A: https://arxiv.org/abs
+A: https://arxiv.org/pdf
+A: https://arxiv.org/html
+A: https://arxiv.org/catchup
+D: https://arxiv.org /user
+D: https://arxiv.org /e-print
+D: https://arxiv.org /src
+D: https://arxiv.org /ps
+D: https://arxiv.org /dvi
+D: https://arxiv.org /cookies
+D: https://arxiv.org /form
+D: https://arxiv.org /find
+D: https://arxiv.org /view
+D: https://arxiv.org /ftp
+D: https://arxiv.org /refs
+D: https://arxiv.org /cits
+D: https://arxiv.org /format
+D: https://arxiv.org /PS_cache
+D: https://arxiv.org /Stats
+D: https://arxiv.org /seek-and-destroy
+D: https://arxiv.org /IgnoreMe
+D: https://arxiv.org /oai2
+D: https://arxiv.org /auth
+D: https://arxiv.org /tb
+D: https://arxiv.org /tb-recent
+D: https://arxiv.org /trackback
+D: https://arxiv.org /prevnext
+D: https://arxiv.org /ct
+D: https://arxiv.org /api
+D: https://arxiv.org /search
+D: https://arxiv.org /set_author_id
+D: https://arxiv.org /show-email
