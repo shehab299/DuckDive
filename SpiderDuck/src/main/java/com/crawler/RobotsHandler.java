@@ -1,4 +1,5 @@
 package com.crawler;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -92,7 +93,7 @@ public class RobotsHandler {
             writer = new BufferedWriter(new FileWriter(file));
             String line;
             boolean foundAgent=false;
-            //
+            
             while((line = reader.readLine()) != null)
             {
                 if(line.toLowerCase().startsWith("user-agent")) 
@@ -101,7 +102,7 @@ public class RobotsHandler {
 
                 if(foundAgent)
                 {
-                    while ((line=reader.readLine()) != null && foundAgent == true)
+                  while ((line=reader.readLine()) != null && foundAgent == true)
                     {
                         if(line.toLowerCase().startsWith("user-agent"))
                             foundAgent=false; //a break would do bc it doesn't matter in our case but i think this is the right thing to do
@@ -185,3 +186,5 @@ public class RobotsHandler {
     }
 
 }
+
+    

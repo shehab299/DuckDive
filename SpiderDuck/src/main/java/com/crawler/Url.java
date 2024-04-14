@@ -17,7 +17,7 @@ public class Url {
         try {
             Response response = Jsoup.connect(url).execute();
             int statusCode = response.statusCode();
-            return statusCode == 404 ? false : true;
+            return statusCode != 404;
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -34,6 +34,10 @@ public class Url {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public String getBase() {
