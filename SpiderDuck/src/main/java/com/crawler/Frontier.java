@@ -39,18 +39,9 @@ public class Frontier {
         return urlQueue.poll();
     }
 
+
     public boolean isEmpty() {
         return count == 0;
     }
 
-    // // Test Function
-    // public static void main(String[] argv) {
-    //     String seedPath = "SpiderDuck/src/main/java/com/crawler/seed.txt";
-    //     Frontier frontier = new Frontier();
-    //     frontier.readSeed(seedPath);
-    //     Url url = frontier.getNexturl();
-    //     if (url != null) {
-    //         System.out.println(url.getNormalized());
-    //     }
-    // }
 }
