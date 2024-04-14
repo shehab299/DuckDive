@@ -16,7 +16,7 @@ public class HttpRequest {
         }
     }
 
-    public boolean isHtml(Response response) {
+    public static boolean isHtml(Response response) {
         String contentType = response.contentType();
         return contentType.startsWith("text/html") ? true : false;
     }

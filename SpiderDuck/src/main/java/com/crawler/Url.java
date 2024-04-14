@@ -36,6 +36,10 @@ public class Url {
         }
     }
 
+    public String getUrl() {
+        return url;
+    }
+
     public String getBase() {
         return baseUrl;
     }
