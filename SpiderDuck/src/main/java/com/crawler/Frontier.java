@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Frontier {
-
     private Queue<Url> urlQueue;
     private int count;
 
@@ -28,6 +27,7 @@ public class Frontier {
         }
     }
 
+
     public void addurl(Url url) {
         urlQueue.offer(url);
         count++;
@@ -45,3 +45,4 @@ public class Frontier {
     }
 
 }
+
