@@ -1,0 +1,14 @@
+D: https://www.allrecipes.com*quizResult=
+D: https://www.allrecipes.com*.pdf
+D: https://www.allrecipes.com*globeTest_
+D: https://www.allrecipes.com*globeNoTest
+D: https://www.allrecipes.com*globeResource
+D: https://www.allrecipes.com*?kw
+D: https://www.allrecipes.com/embed?
+D: https://www.allrecipes.com/shop/
+D: https://www.allrecipes.com/authentication/
+D: https://www.allrecipes.com/newsletters/preferences/manage
+D: https://www.allrecipes.com/newsletters/preferences/unsubscribe
+D: https://www.allrecipes.com/cook/*/all-saved-items
+D: https://www.allrecipes.com/cook/*/recipe/*
+D: https://www.allrecipes.com/cook/*/collection/
