@@ -4,11 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.io.BufferedWriter; //for better performance; it reduces the number of system calls
 import java.io.FileWriter;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileReader
 
 public class RobotsHandler {
     private static final String USER_AGENT = "DuckDive";
@@ -146,6 +149,8 @@ public class RobotsHandler {
                 writer.close();
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         return found; //if this url is disallowed

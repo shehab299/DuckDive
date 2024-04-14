@@ -27,7 +27,6 @@ public class Frontier {
         }
     }
 
-
     public void addurl(Url url) {
         urlQueue.offer(url);
         count++;
@@ -38,8 +37,7 @@ public class Frontier {
             count--;
         return urlQueue.poll();
     }
-
-
+  
     public boolean isEmpty() {
         return count == 0;
     }
