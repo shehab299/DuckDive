@@ -30,14 +30,26 @@ public class HtmlDocument {
         }
     }
 
-    public String[] extractUrls() {
-        List<String> urls = new ArrayList<>();
+    // public String[] extractUrls() {
+    // List<String> urls = new ArrayList<>();
+
+    // for (Element link : this.document.select("a[href]")) {
+    // urls.add(link.absUrl("href"));
+    // }
+
+    // return urls.toArray(new String[0]);
+    // }
+
+    public Url[] extractUrls() {
+        List<Url> urls = new ArrayList<>();
 
         for (Element link : this.document.select("a[href]")) {
-            urls.add(link.absUrl("href"));
+            String absUrl = link.absUrl("href");
+            Url url = new Url(absUrl);
+            urls.add(url);
         }
 
-        return urls.toArray(new String[0]);
+        return urls.toArray(new Url[0]);
     }
 
     public String hash() {

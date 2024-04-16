@@ -3,21 +3,20 @@ package com.crawler;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.io.BufferedWriter; //for better performance; it reduces the number of system calls
+
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.File;
-import java.io.FileReader
+import java.io.FileReader;
 
 public class RobotsHandler {
     private static final String USER_AGENT = "DuckDive";
-    static String robotsDirectory="SpiderDuck\\src\\main\\java\\com\\crawler\\Robots"; //contains robots.txt for each base url
-    //utility functions
-    private static boolean readRobotsFile(String path, Url url) //
+    static String robotsDirectory= "SpiderDuck/src/main/java/com/crawler/Robots/";
+    private static boolean readRobotsFile(String path, Url url)
     {
         boolean found=false;
         BufferedReader reader=null;
@@ -26,7 +25,7 @@ public class RobotsHandler {
             String line;
             while ((line = reader.readLine()) != null)
             {
-                String AD= line.substring(0, 3); //allowed or disallowed
+                String AD= line.substring(0, 3);
                 String base=url.getBase();
                 if(line.substring(3).equals(url.getNormalized()) || line.substring(3).equals(base) ||line.substring(3).equals(base.concat("/"))) // skipping "D: " or "A: "
                 {
@@ -78,19 +77,20 @@ public class RobotsHandler {
 
     private static boolean writeRobotsFile(Url url)
     {
-        String thisUrl=url.getNormalized();
-        String thisBase=url.getBase(); 
+        String thisUrl = url.getNormalized();
+        String thisBase = url.getBase(); 
         
         BufferedWriter writer = null;
         BufferedReader reader = null;
 
-        boolean found= false;
-        String properName= thisBase.replace("http://", "");
-        properName=properName.replace("https://", "");
-        String fileName=robotsDirectory+"\\"+properName;
+        boolean found = false;
+        String properName = thisBase.replace("http://", "");
+        properName = properName.replace("https://", "");
+        String fileName = robotsDirectory+"\\"+properName;
         File file = new File(fileName);
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(url.getRobots()).openConnection();
+            URI uri = new URI(url.getRobots());
+            HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
             connection.setRequestProperty("User-Agent", USER_AGENT);
             reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
             writer = new BufferedWriter(new FileWriter(file));
@@ -142,6 +142,8 @@ public class RobotsHandler {
             writer.flush();
         } catch (IOException e) {
             System.err.println("Unable to access this url(403)");
+        } catch (URISyntaxException e1) {
+            e1.printStackTrace();
         }
 
         try {
@@ -150,10 +152,8 @@ public class RobotsHandler {
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
         }
-        return found; //if this url is disallowed
+        return found;
     }
 
     public static boolean canBeCrawled(Url url)

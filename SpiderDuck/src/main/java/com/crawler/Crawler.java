@@ -2,36 +2,84 @@ package com.crawler;
 
 import org.jsoup.Connection.Response;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Crawler {
+
+    private static void writeToLogFile(String filePath, String message) {
+        if (message == null) {
+            return;
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            writer.write(message);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
+
+        String logFilePath = "SpiderDuck/src/main/java/com/crawler/CrawlerLog.txt";
+
         String seedPath = "SpiderDuck/src/main/java/com/crawler/seed.txt";
         String docPath = "SpiderDuck/src/main/java/com/crawler/Docs/";
+
         Frontier frontier = new Frontier();
         frontier.readSeed(seedPath);
         int i = 0;
-        while (!frontier.isEmpty()) {
+        while (i < 500) {
+            writeToLogFile(logFilePath, "-----------------------");
             Url url = frontier.getNexturl();
+
+            writeToLogFile(logFilePath, Integer.toString(i));
+
             Response response = HttpRequest.sendRequest(url.getUrl());
+
+            writeToLogFile(logFilePath, "Response? " + response);
+
             if (response == null) {
                 i++;
                 continue;
             }
+
+            writeToLogFile(logFilePath, "Is Html? " + HttpRequest.isHtml(response));
             if (!HttpRequest.isHtml(response)) {
                 i++;
                 continue;
             }
+
+            writeToLogFile(logFilePath, "Url exists?" + url.exists());
             if (!url.exists()) {
                 i++;
                 continue;
             }
+
             // url = url.getNormalized();
-            // if (url.robotsExists()) {
-            //     RobotsHandler.canBeCrawled(url);
-            // }
+            writeToLogFile(logFilePath, "Robots exists? " + url.robotsExists());
+            writeToLogFile(logFilePath, "Can be crawled? " + RobotsHandler.canBeCrawled(url));
+            if (url.robotsExists()) {
+                if (!RobotsHandler.canBeCrawled(url)) {
+                    i++;
+                    continue;
+                }
+            }
+
             HtmlDocument doc = new HtmlDocument(url.getUrl());
-            // String hashCode = doc.hash();
-            //check if the hashcode exists
+            String hashCode = doc.hash();
+
+            writeToLogFile(logFilePath, "hashCode: " + hashCode);
+
             doc.download(docPath + i + ".html");
+            System.out.println("\n\n\n\n\n");
+            Url[] exctractedUrls = doc.extractUrls();
+            for (Url exctractedUrl : exctractedUrls) {
+                System.out.println(exctractedUrl.getUrl());
+                writeToLogFile(logFilePath, exctractedUrl.getUrl());
+                frontier.addurl(exctractedUrl);
+            }
             i++;
         }
     }
@@ -50,4 +98,4 @@ public class Crawler {
 // // 7. hash the doc
 // // 8. check if doc is repeated --> return if repeated
 // // 9. download the doc
-// // 10. add th url to the frontier
+// // 10. add the url to the frontier
