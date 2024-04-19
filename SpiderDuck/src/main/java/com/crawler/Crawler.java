@@ -1,6 +1,8 @@
 package com.crawler;
 
+import org.jsoup.Connection;
 import org.jsoup.Connection.Response;
+import org.jsoup.Jsoup;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -16,19 +18,21 @@ public class Crawler {
             writer.write(message);
             writer.newLine();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Can't Open The Log File For Writing");
         }
     }
 
+
     public static void main(String[] args) {
 
-        String logFilePath = "SpiderDuck/src/main/java/com/crawler/CrawlerLog.txt";
+        String logFilePath = "/home/shehab/Desktop/DuckDive/SpiderDuck/CrawlerLog.txt";
 
-        String seedPath = "SpiderDuck/src/main/java/com/crawler/seed.txt";
-        String docPath = "SpiderDuck/src/main/java/com/crawler/Docs/";
+        String seedPath = "/home/shehab/Desktop/DuckDive/SpiderDuck/Resources/seed.txt";
+        String docPath = "/home/shehab/Desktop/DuckDive/SpiderDuck/Pages/";
 
         Frontier frontier = new Frontier();
         frontier.readSeed(seedPath);
+
         int i = 0;
         while (i < 500) {
             writeToLogFile(logFilePath, "-----------------------");
@@ -60,6 +64,7 @@ public class Crawler {
             // url = url.getNormalized();
             writeToLogFile(logFilePath, "Robots exists? " + url.robotsExists());
             writeToLogFile(logFilePath, "Can be crawled? " + RobotsHandler.canBeCrawled(url));
+
             if (url.robotsExists()) {
                 if (!RobotsHandler.canBeCrawled(url)) {
                     i++;
@@ -83,8 +88,9 @@ public class Crawler {
             i++;
         }
     }
-
 }
+
+
 // read seeds
 // get nextUrl
 // process it

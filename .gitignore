@@ -1,6 +1,7 @@
 */target/
 */Robots/
 */docs/
+*/Pages/
 *.log
 .env
 .idea
