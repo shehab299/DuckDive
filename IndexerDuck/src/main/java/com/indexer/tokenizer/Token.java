@@ -1,23 +1,25 @@
 package com.indexer.tokenizer;
+import java.util.ArrayList;
 
 public class Token {
-    public String token_text;
+    public String term;
     public String html_pos;
-    public int position;
+    public int TF;
+    public ArrayList<Integer> position; // Changed to ArrayList of integers
 
     @Override
     public String toString() {
         return "{" +
-                "token_text=" + token_text +
+                "term=" + term +
                 ", html_pos=" + html_pos +
                 ", position=" + position +
                 '}';
     }
 
-    public Token(String token_text, String html_pos, int position) {
-        this.token_text = token_text;
+    public Token(String term, String html_pos) { // Changed parameter type
+        this.term = term;
         this.html_pos = html_pos;
-        this.position = position;
+        this.position = new ArrayList<>();
+        this.TF = 0;
     }
-
 }
