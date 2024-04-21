@@ -1,19 +1,27 @@
 package com.crawler.Models;
 
+import org.bson.Document;
+
 public class Page {
 
     private String url;
     private String hash;
     private String path;
     private Boolean isIndexed;
-    private String lastModified;
 
-    public Page(String url, String hash, String path, Boolean isIndexed, String lastModified) {
+
+    public Page(String url, String hash, String path, Boolean isIndexed) {
         this.url = url;
         this.hash = hash;
         this.path = path;
         this.isIndexed = isIndexed;
-        this.lastModified = lastModified;
+    }
+
+    public  Page(Document pageDoc){
+        this.url = pageDoc.getString("url");
+        this.hash = pageDoc.getString("hash");
+        this.path = pageDoc.getString("path");
+        this.isIndexed = pageDoc.getBoolean("isIndexed");
     }
 
     public String getUrl() {
@@ -46,13 +54,5 @@ public class Page {
 
     public void setIndexed(Boolean indexed) {
         isIndexed = indexed;
-    }
-
-    public String getLastModified() {
-        return lastModified;
-    }
-
-    public void setLastModified(String lastModified) {
-        this.lastModified = lastModified;
     }
 }

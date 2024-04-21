@@ -1,5 +1,6 @@
 package com.indexer.tokenizer;
 
+import com.indexer.Language;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -30,8 +31,9 @@ public class Tokenizer {
     HashMap<String,Token> tokenDic;
     Integer counter;
     BufferedWriter w;
+    FileWriter w_dummy;
 
-    public Tokenizer(String path,String docId)
+    public Tokenizer(String path,int docId)
     {
 
         String output_path = "/home/shehab/Desktop/DuckDive/IndexerDuck/docs/";
@@ -54,8 +56,11 @@ public class Tokenizer {
             if(token.isEmpty())
                 continue;
 
+            if(Language.isStop(token) || token.length() == 1)
+                continue;
+
             try {
-                w.write(token + " ");
+                w_dummy.write(token + " ");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -101,11 +106,12 @@ public class Tokenizer {
             File file = new File(this.path);
             doc = Jsoup.parse(file);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            return;
         }
 
         try {
-            this.w = new BufferedWriter(new FileWriter(output_path)); // Initialize BufferedWriter with FileWriter
+            this.w_dummy = new FileWriter(new File(output_path)); // Initialize BufferedWriter with FileWriter
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -115,9 +121,9 @@ public class Tokenizer {
 
         Element body = doc.body();
         traverse(body);
-
+        ;
         try {
-            this.w.close();
+            this.w_dummy.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

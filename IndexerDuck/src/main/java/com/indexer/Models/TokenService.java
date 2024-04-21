@@ -13,7 +13,7 @@ import java.util.Set;
 public class TokenService {
     private final MongoCollection<Document> tokenTable;
 
-    private void getToken(Token t, String docId) {
+    private void getToken(Token t, int docId) {
 
         Document query = new Document("term", t.term);
 
@@ -40,7 +40,7 @@ public class TokenService {
         this.tokenTable = dbConnection.getCollection("InvertedIndex");
     }
 
-    public void insertToken(HashMap<String, Token> dict, String docId){
+    public void insertToken(HashMap<String, Token> dict, int docId){
 
         Set<String> keySet = dict.keySet();
 

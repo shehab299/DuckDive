@@ -1,5 +1,9 @@
 package com.crawler;
 
+import com.crawler.Models.Page;
+import com.crawler.Models.PageService;
+import com.crawler.utils.DBManager;
+import com.mongodb.client.MongoDatabase;
 import org.jsoup.Connection;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
@@ -24,6 +28,12 @@ public class Crawler {
 
 
     public static void main(String[] args) {
+
+        //start database
+
+        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017" , "SearchEngine");
+        PageService service = new PageService(connection);
+
 
         String logFilePath = "/home/shehab/Desktop/DuckDive/SpiderDuck/CrawlerLog.txt";
 
@@ -77,10 +87,17 @@ public class Crawler {
 
             writeToLogFile(logFilePath, "hashCode: " + hashCode);
 
-            doc.download(docPath + i + ".html");
+
+            String path = docPath + i + ".html";
+
+            Page x = new Page(url.getNormalized(),hashCode,path,false);
+            service.insertPage(x);
+
+            doc.download(path);
+
             System.out.println("\n\n\n\n\n");
-            Url[] exctractedUrls = doc.extractUrls();
-            for (Url exctractedUrl : exctractedUrls) {
+            Url[] extractedUrls = doc.extractUrls();
+            for (Url exctractedUrl : extractedUrls) {
                 System.out.println(exctractedUrl.getUrl());
                 writeToLogFile(logFilePath, exctractedUrl.getUrl());
                 frontier.addurl(exctractedUrl);

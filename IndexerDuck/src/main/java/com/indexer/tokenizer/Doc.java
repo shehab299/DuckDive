@@ -16,8 +16,4 @@ public class Doc {
         this.positions = new LinkedList<Integer>();
     }
 
-
-
-
-
 }
