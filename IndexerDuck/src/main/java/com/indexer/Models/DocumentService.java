@@ -1,6 +1,6 @@
 package com.indexer.Models;
 
-import com.indexer.tokenizer.Doc;
+// import com.indexer.tokenizer.Doc;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;

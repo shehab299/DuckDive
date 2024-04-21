@@ -18,7 +18,7 @@ public class HtmlDocument {
         try {
             this.document = Jsoup.connect(url).get();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error getting the document: " + e.getMessage());
         }
     }
 
@@ -29,16 +29,6 @@ public class HtmlDocument {
             System.err.println("Error occurred while saving the document: " + e.getMessage());
         }
     }
-
-    // public String[] extractUrls() {
-    // List<String> urls = new ArrayList<>();
-
-    // for (Element link : this.document.select("a[href]")) {
-    // urls.add(link.absUrl("href"));
-    // }
-
-    // return urls.toArray(new String[0]);
-    // }
 
     public Url[] extractUrls() {
         List<Url> urls = new ArrayList<>();
@@ -53,6 +43,9 @@ public class HtmlDocument {
     }
 
     public String hash() {
+        if (document == null) {
+            return null;
+        }
         String htmlContent = document.html();
         byte[] hash = Hash.getSHA(htmlContent);
 

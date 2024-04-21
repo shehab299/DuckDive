@@ -14,7 +14,6 @@ public class Hash {
             md = MessageDigest.getInstance("SHA-256");
             return md.digest(input.getBytes(StandardCharsets.UTF_8));
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
             return null;
         }
     }

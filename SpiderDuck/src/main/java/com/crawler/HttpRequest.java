@@ -3,8 +3,6 @@ package com.crawler;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection.Response;
 
-import java.io.IOException;
-
 public class HttpRequest {
     public static Response sendRequest(String url) {
         try {

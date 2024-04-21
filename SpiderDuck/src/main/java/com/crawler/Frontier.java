@@ -23,7 +23,7 @@ public class Frontier {
                 addurl(url);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            return;
         }
     }
 

@@ -4,121 +4,65 @@ import com.crawler.Models.Page;
 import com.crawler.Models.PageService;
 import com.crawler.utils.DBManager;
 import com.mongodb.client.MongoDatabase;
-import org.jsoup.Connection;
-import org.jsoup.Connection.Response;
-import org.jsoup.Jsoup;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import org.jsoup.Connection.Response;
 
 public class Crawler {
+    private static final int CRAWLING_LIMIT = 5000;
+    private static final String seedPath = "SpiderDuck/Resources/seed.txt";
+    private static final String docPath = "SpiderDuck/src/main/java/com/crawler/Pages/";
+    private static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
+    private static PageService service = new PageService(connection);
 
-    private static void writeToLogFile(String filePath, String message) {
-        if (message == null) {
-            return;
+    private static boolean shouldBeCrawled(Response response, Url url) {
+        if (service.urlExists(url)) {
+            System.out.println(url.getUrl() + " Repeated\n");
         }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
-            writer.write(message);
-            writer.newLine();
-        } catch (IOException e) {
-            System.out.println("Can't Open The Log File For Writing");
+        return response != null
+                && response.statusCode() == 200
+                && HttpRequest.isHtml(response)
+                && (!url.robotsExists() || RobotsHandler.canBeCrawled(url))
+                && !service.urlExists(url);
+    }
+
+    private static void addUrlsToFrontier(HtmlDocument doc, Frontier frontier) {
+        Url[] extractedUrls = doc.extractUrls();
+        for (Url exctractedUrl : extractedUrls) {
+            frontier.addurl(exctractedUrl);
         }
     }
 
-
     public static void main(String[] args) {
-
-        //start database
-
-        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017" , "SearchEngine");
-        PageService service = new PageService(connection);
-
-
-        String logFilePath = "/home/shehab/Desktop/DuckDive/SpiderDuck/CrawlerLog.txt";
-
-        String seedPath = "/home/shehab/Desktop/DuckDive/SpiderDuck/Resources/seed.txt";
-        String docPath = "/home/shehab/Desktop/DuckDive/SpiderDuck/Pages/";
 
         Frontier frontier = new Frontier();
         frontier.readSeed(seedPath);
 
-        int i = 0;
-        while (i < 500) {
-            writeToLogFile(logFilePath, "-----------------------");
+        int numCrawled = 0;
+        while (numCrawled < CRAWLING_LIMIT) {
             Url url = frontier.getNexturl();
-
-            writeToLogFile(logFilePath, Integer.toString(i));
 
             Response response = HttpRequest.sendRequest(url.getUrl());
 
-            writeToLogFile(logFilePath, "Response? " + response);
-
-            if (response == null) {
-                i++;
+            if (!shouldBeCrawled(response, url)) {
                 continue;
-            }
-
-            writeToLogFile(logFilePath, "Is Html? " + HttpRequest.isHtml(response));
-            if (!HttpRequest.isHtml(response)) {
-                i++;
-                continue;
-            }
-
-            writeToLogFile(logFilePath, "Url exists?" + url.exists());
-            if (!url.exists()) {
-                i++;
-                continue;
-            }
-
-            // url = url.getNormalized();
-            writeToLogFile(logFilePath, "Robots exists? " + url.robotsExists());
-            writeToLogFile(logFilePath, "Can be crawled? " + RobotsHandler.canBeCrawled(url));
-
-            if (url.robotsExists()) {
-                if (!RobotsHandler.canBeCrawled(url)) {
-                    i++;
-                    continue;
-                }
             }
 
             HtmlDocument doc = new HtmlDocument(url.getUrl());
+
             String hashCode = doc.hash();
 
-            writeToLogFile(logFilePath, "hashCode: " + hashCode);
+            if (hashCode == null || service.hashExists(hashCode)) {
+                continue;
+            }
 
+            String path = docPath + numCrawled + ".html";
+            doc.download(path);
+            addUrlsToFrontier(doc, frontier);
 
-            String path = docPath + i + ".html";
-
-            Page x = new Page(url.getNormalized(),hashCode,path,false);
+            Page x = new Page(url.getNormalized(), hashCode, path, false);
             service.insertPage(x);
 
-            doc.download(path);
-
-            System.out.println("\n\n\n\n\n");
-            Url[] extractedUrls = doc.extractUrls();
-            for (Url exctractedUrl : extractedUrls) {
-                System.out.println(exctractedUrl.getUrl());
-                writeToLogFile(logFilePath, exctractedUrl.getUrl());
-                frontier.addurl(exctractedUrl);
-            }
-            i++;
+            numCrawled++;
         }
     }
 }
-
-
-// read seeds
-// get nextUrl
-// process it
-// // 1. sendRequest
-// // 2. check if url exists --> return if not
-// // 3. check if isHtml --> return if not
-// // 4. normalize url
-// // 5. check if repeated --> return if repeated
-// // 6. check if robots.txt exists
-// // // // 1. check if the doc can be crawled --> return if not
-// // 7. hash the doc
-// // 8. check if doc is repeated --> return if repeated
-// // 9. download the doc
-// // 10. add the url to the frontier
