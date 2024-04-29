@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-height: 7rem;
+  width: 45%;
+
+  overflow-y: scroll;
+
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+
+  box-shadow: #f1ee8e 0px 3px 8px;
+  clip-path: inset(0px -10px -10px -10px);
+}
