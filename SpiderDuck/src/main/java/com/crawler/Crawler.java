@@ -1,18 +1,24 @@
 package com.crawler;
 
-import com.crawler.Models.Page;
-import com.crawler.Models.PageService;
-import com.crawler.utils.DBManager;
-import com.mongodb.client.MongoDatabase;
-
 import org.jsoup.Connection.Response;
 
-public class Crawler {
+import com.crawler.Models.Page;
+import com.crawler.Models.PageService;
+
+public class Crawler implements Runnable {
     private static final int CRAWLING_LIMIT = 5000;
     private static final String seedPath = "SpiderDuck/Resources/seed.txt";
-    private static final String docPath = "SpiderDuck/src/main/java/com/crawler/Pages/";
-    private static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
-    private static PageService service = new PageService(connection);
+    private static final String docPath = "SpiderDuck/src/main/java/com/crawler/HtmlPages/";
+    private static PageService service;
+    private Frontier frontier;
+    private Counter numCrawled;
+
+    public Crawler(Frontier frontier, PageService service, Counter numCrawled) {
+        this.frontier = frontier;
+        Crawler.service = service;
+        this.numCrawled = numCrawled;
+
+    }
 
     private static boolean shouldBeCrawled(Response response, Url url) {
         if (service.urlExists(url)) {
@@ -32,14 +38,16 @@ public class Crawler {
         }
     }
 
-    public static void main(String[] args) {
+    public void run() {
+        synchronized (frontier) {
+            frontier.readSeed(seedPath);
+        }
 
-        Frontier frontier = new Frontier();
-        frontier.readSeed(seedPath);
-
-        int numCrawled = 0;
-        while (numCrawled < CRAWLING_LIMIT) {
-            Url url = frontier.getNexturl();
+        while (true) {
+            Url url;
+            synchronized (frontier) {
+                url = frontier.getNexturl();
+            }
 
             Response response = HttpRequest.sendRequest(url.getUrl());
 
@@ -55,14 +63,26 @@ public class Crawler {
                 continue;
             }
 
-            String path = docPath + numCrawled + ".html";
+            String path;
+            synchronized (numCrawled) {
+                path = docPath + numCrawled.get() + ".html";
+                numCrawled.increment();
+            }
+
             doc.download(path);
-            addUrlsToFrontier(doc, frontier);
+
+            synchronized (frontier) {
+                addUrlsToFrontier(doc, frontier);
+            }
 
             Page x = new Page(url.getNormalized(), hashCode, path, false);
             service.insertPage(x);
 
-            numCrawled++;
+            synchronized (numCrawled) {
+                if (numCrawled.get() == CRAWLING_LIMIT) {
+                    break;
+                }
+            }
         }
     }
 }

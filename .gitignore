@@ -1,7 +1,7 @@
 */target/
 */Robots/
 */docs/
-*/Pages/
+*/HtmlPages/
 *.log
 .env
 .idea
