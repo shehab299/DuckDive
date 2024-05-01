@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+ <head>
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-889d0f3d691da91ea39",applicationID:"812192627"};;/*! For license information please see nr-loader-rum-1.258.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},R={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]={...(0,i.D)(t,R),...D};const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.258.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,iS:()=>a,il:()=>n,sK:()=>l,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.258.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.258.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-dbRQ0U/DzQ6bR/LVo1bSCjmtT4Mn+TUoByqFctqWrjwdLoHvi/Uhr3w190Zk5FuNMJFjPV0z6jQVNhQGb0DrLQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.258.0.PROD"]=self["webpackChunk:NRBA-1.258.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class T extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var I=i(3081);class O extends m{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,T,O],loaderType:"lite"})})()})();</script>
+  <script src="/sites/default/files/hotjar/hotjar.script.js?scprmy"></script>
+  <meta name="description" content="Supporting the study of China, Japan, Russia, and Eurasia with world-class collections, expert librarians, and digital resources.">
+  <link rel="canonical" href="https://library.harvard.edu/libraries/fung">
+  <meta property="og:site_name" content="Harvard Library">
+  <meta property="og:type" content="library">
+  <meta property="og:url" content="https://library.harvard.edu/libraries/fung">
+  <meta property="og:title" content="Fung Library">
+  <meta property="og:description" content="Supporting the study of China, Japan, Russia, and Eurasia with world-class collections, expert librarians, and digital resources.">
+  <meta property="og:image" content="https://library.harvard.edu/sites/default/files/2018-05/Fung-Interior-ReadingRoom-02%20%281%29.jpg">
+  <meta property="og:image:alt" content="The interior of the Fung Library">
+  <meta itemprop="name" content="Fung Library">
+  <meta itemprop="description" content="Supporting the study of China, Japan, Russia, and Eurasia with world-class collections, expert librarians, and digital resources.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@harvardlibrary">
+  <meta name="twitter:title" content="Harvard Library - Fung Library">
+  <meta name="twitter:url" content="https://library.harvard.edu/libraries/fung">
+  <meta name="twitter:image" content="https://library.harvard.edu/sites/default/files/2018-05/Fung-Interior-ReadingRoom-02%20%281%29.jpg">
+  <meta name="twitter:image:alt" content="The interior of the Fung Library">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/themes/custom/harvard/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="/sites/default/files/google_tag/ga4/google_tag.script.js?scprmy" defer></script>
+  <title>Fung Library | Harvard Library</title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_R3-jz4M_WMiDo66AlxxoYk3Z7FSbOudK6LyCu2STLbc.css">
+  <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1oXiADemalWzIEeb4lEtEEgKDSTfnVTMq27KGrpRbCw.css">
+ </head>
+ <body class="path-node page-node-type-library">
+  <a href="#hl__main-id" class="visually-hidden focusable skip-link"> Skip to main content </a>
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSHSDQ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+   <section class="region">
+   </section>
+   <section class="hl__header region js-header">
+    <nav class="hl__header__container" aria-label="main">
+     <div class="hl__header__logo">
+      <section class="hl__linked-image">
+       <a href="/" title="Harvard Library Homepage"> <img class="hl__image " alt="Harvard Library Homepage" height="82" width="110" src="/themes/custom/harvard/assets/images/logo-final.svg"> </a>
+      </section>
+     </div>
+     <div class="hl__header__menu">
+      <section class="hl__main-nav js-main-nav">
+       <button class="hl__hamburger-button js-hamburger-button" type="button" aria-label="open or close the Main Navigation"> <span class="hl__hamburger-button__icon"></span> </button>
+       <div class="hl__main-nav__wrapper">
+        <div class="hl__main-nav__container">
+         <div class="hl__main-nav__menu">
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-1"> Help with... </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-1">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/services-tools" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1326"><span>All Services, Tools &amp; Catalogs</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/use-harvard-library-alum" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1416"><span>Alumni Access</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/borrow-renew-and-return-library-materials" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1306"><span>Borrowing</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/get-remote-support-research-publishing" class="hl__link-tag" title="Get Remote Support for Research &amp; Publishing" data-ga-link="Header Nav" data-drupal-link-system-path="node/9426"><span>Research &amp; Publishing</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="https://library.harvard.edu/services-tools/scan-deliver" class="hl__link-tag" data-ga-link="Header Nav"><span>Scan &amp; Deliver</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-2"> Collections </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-2">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/collections-exhibits/explore-collections" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/341"><span>Explore All Collections</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/digital-collections" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/6236"><span>Search Digital Collections</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/use-harvard-librarys-special-collections-and-archives" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1311"><span>How to Use Special Collections &amp; Archives</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/collections/exhibits" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1441"><span>What's on Exhibit</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-3"> Events &amp; News </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-3">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="https://libcal.library.harvard.edu/calendar/main" title="Upcoming Events" class="hl__link-tag" data-ga-link="Header Nav"><span>Events</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/about/news" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/116"><span>News</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-4"> Visit &amp; About </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-4">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/libraries" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/171"><span>Locations &amp; Hours</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visitor-access" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/3186"><span>Visitor Access</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/spaces" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="spaces"><span>Find a Space</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/confronting-anti-black-racism" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/10946"><span>Confronting Anti-Black Racism</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visit-about/grants-fellowships" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1586"><span>Grants &amp; Fellowships</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/staff" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1466"><span>Staff Profiles</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visit-about/about-harvard-library" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/10241"><span>About Harvard Library</span></a></li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <div class="hl__main-nav__utility-nav">
+          <section class="hl__utility-nav js-utility-nav">
+           <div class="js-utility-nav-item hl__utility-nav__link js-utility-nav-item--hollis">
+            <a href="https://hollis.harvard.edu/primo-explore/account?vid=HVD2&amp;section=overview&amp;lang=en_US" data-icon="user" data-show-title="yes" data-item-type="link" data-item-label="hollis" class="hl__utility-nav__item" title="Sign in to HOLLIS"> <span class="hl__utility-nav__icon hl__utility-nav__item--hollis" aria-hidden="true">
+              <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="user-icon" style="pointer-events:none">
+               <title id="user-icon">
+                Sign in to HOLLIS
+               </title> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-1156.000000, -35.000000)">
+                 <g transform="translate(1065.000000, 1.000000)">
+                  <g transform="translate(91.000000, 34.000000)" fill="#1E1E1E" fill-rule="nonzero">
+                   <path d="M17.5774327,20 C18.8046827,20 19.8251827,18.9925 19.5558077,17.795125 C18.5516827,13.333125 14.5650577,11.875 9.79980771,11.875 C5.03454521,11.875 1.04763271,13.333125 0.0435327056,17.795125 C-0.225904794,18.9925 0.794582706,20 2.02188271,20 L17.5774327,20 Z"></path>
+                   <path d="M14.7996827,5 C14.7996827,7.761375 12.5610577,10 9.79968271,10 C7.03823271,10 4.79965771,7.761375 4.79965771,5 C4.79965771,2.238575 7.03823271,0 9.79968271,0 C12.5610577,0 14.7996827,2.238575 14.7996827,5 Z"></path>
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--hollis ">MyHOLLIS</span> </a>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--ask">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--ask" id="hl__utility-nav__button-2" title="Ask a Librarian, contact us with your question" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--ask" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" role="img" aria-labelledby="ask-icon" style="pointer-events:none">
+               <title id="ask-icon">
+                Ask a Librarian, contact us with your question
+               </title> <g>
+                <g transform="translate(-34 -74)">
+                 <path d="M41 81h-2v2h2zm4 0h-2v2h2zm4 0h-2v2h2zm3-7a2 2 0 0 1 2 2v18l-4-4H36a2 2 0 0 1-2-2V76c0-1.1.9-2 2-2z"></path>
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--ask ">Ask</span> </button>
+            <div class="hl__utility-nav__dropdown  js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small   js-utility-nav-back-button " aria-label="close dropdown menu"> back </button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__dropdown-tray">
+               <div class="hl__dropdown-tray__container">
+                <div class="hl__dropdown-tray__columns hl__dropdown-tray__columns--searchbox">
+                 <h2 class="hl__comp-heading">Ask <span class="hl__dropdown-tray__heading--lora">a Librarian</span></h2>
+                 <section class="hl__single-input-form  ">
+                  <form class="hl__single-input-form__form" action="https://ask.library.harvard.edu/search" method="GET" autocomplete="off">
+                   <label class="hl__label hl__label--inline" for="text-input">Ask a librarian</label>
+                   <div class="hl__single-input-form__input-group">
+                    <input class="hl__input hl__input--inline js-is-required" name="q" id="text-input" type="text" placeholder="Try &quot;printer help&quot; or &quot;Zotero&quot;" data-type="text" required autocomplete="off"> <button type="submit" class="hl__button hl__button--small hl__button--inline" aria-label=""> Go </button>
+                   </div>
+                  </form>
+                 </section>
+                </div>
+                <div class="hl__dropdown-tray__columns hl__dropdown-tray__columns--links">
+                 <div class="hl__linked-list hl__linked-list--no-bullets ">
+                  <h2 class="hl__comp-heading  ">More help options</h2>
+                  <ul class="hl__linked-list__items">
+                   <li class="hl__linked-list__item"><a href="/services-tools/library-liaisons" class="hl__link-tag">Find my subject liaison</a></li>
+                   <li class="hl__linked-list__item"><a href="https://harvard.az1.qualtrics.com/jfe/form/SV_09DXHPBmaMSnqdL" class="hl__link-tag">Request a research appointment</a></li>
+                  </ul>
+                 </div><!-- "Library.Harvard Chat Widget" embedded from ask.library.harvard.edu --> <!-- update styles in sprinshare interface -->
+                 <div id="hl__chat-button">
+                  <div id="libchat_90b85bdd1489a074045c2519ad2fc1a5" class="hl__chat-button">
+                   <p class="hl__chat-button__placeholder">Let's chat!</p>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </section>
+             </div>
+            </div>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--hours">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--hours" id="hl__utility-nav__button-3" title="Library locations and hours" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--hours" aria-hidden="true">
+              <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="clock-icon" style="pointer-events:none">
+               <title id="clock-icon">
+                Library locations and hours
+               </title> <g>
+                <g transform="translate(-188 -510)">
+                 <g>
+                  <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                 </g>
+                 <g>
+                  <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                 </g>
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--hours ">Hours</span> </button>
+            <div class="hl__utility-nav__dropdown  js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small   js-utility-nav-back-button " aria-label="close dropdown menu"> back </button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__featured-libraries">
+               <div class="hl__featured-libraries__container">
+                <div class="hl__featured-libraries__today">
+                 <h2><span class="hl__highlighted-text">Wednesday, May 1, 2024</span></h2>
+                </div>
+                <ul class="hl__featured-libraries__items">
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/widener" class="hl__link-tag"><span>Widener Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">9am - 10pm</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/lamont" class="hl__link-tag"><span>Lamont Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">24 Hours Reading Period/Exams</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/cabot" class="hl__link-tag"><span>Cabot Science Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">24 Hours</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item hl__featured-libraries__item--more">
+                  <h3 class="hl__featured-libraries__all"><span>see all locations</span></h3>
+                  <div class="hl__featured-libraries__see-more">
+                   <span class="hl__featured-libraries__more-icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__more-link"> <a href="/libraries?active_filter=1" class="hl__link-tag hl__link-tag--with-arrow" #title="See more library hours"><span>Hours for all 25+ locations</span></a> </span>
+                  </div></li>
+                </ul>
+               </div>
+              </section>
+             </div>
+            </div>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--search">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--search" id="hl__utility-nav__button-4" title="Search" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--search" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17" role="img" aria-labelledby="search-icon" style="pointer-events:none">
+               <title id="search-icon">
+                Search
+               </title> <g>
+                <g transform="translate(-158 -656)">
+                 <path d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z"></path>
+                </g>
+               </g>
+              </svg></span> </button>
+            <div class="hl__utility-nav__dropdown js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small js-utility-nav-back-button" aria-label="close dropdown menu" tabindex="-1"><span class="hl__button__text">back</span></button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__single-input-form hl__single-input-form--clear js-search-dropdown">
+               <form class="hl__single-input-form__form" action="/search" method="GET" autocomplete="off">
+                <label class="hl__label hl__label--hidden" for="utility-nav-search-input">Search website or HOLLIS catalog</label>
+                <div class="hl__single-input-form__input-group">
+                 <input class="hl__input hl__input--inline js-is-required" name="keywords" id="utility-nav-search-input" type="text" placeholder="" data-type="text" required autocomplete="off"> <button type="submit" class="hl__button hl__button--small hl__button--inline" aria-label=""><span class="hl__button__text">Search</span></button>
+                </div>
+                <div class="hl__single-input-form__dropdown">
+                 <div class="hl__single-input-form__dropdown-item">
+                  <a href="#" alt="search in website" id="search-website-link" tabindex="0">
+                   <div class="hl__single-input-form__search-term"></div> in <span>website (library.harvard)</span> </a>
+                 </div>
+                 <div class="hl__single-input-form__dropdown-item">
+                  <a href="#" alt="search in library catalog" id="search-hollis-link" tabindex="0">
+                   <div class="hl__single-input-form__search-term"></div> in <span>library catalog &amp; articles (HOLLIS)</span> </a>
+                 </div>
+                </div>
+               </form>
+              </section>
+              <div class="hl__utility-nav__helper-text">
+               <section class="hl__rich-text">
+                <p>Search website or HOLLIS catalog</p>
+               </section>
+              </div>
+             </div>
+            </div>
+           </div>
+          </section>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+    </nav>
+   </section>
+   <div class="hl__header__sticky-gap"></div>
+   <main id="hl__main-id" class="hl__full-template hl__library-details" tabindex="-1">
+    <section class="hl__full-template__pre-content hl__library-details__pre-content region">
+     <div id="block-breadcrumbs" data-block-plugin-id="system_breadcrumb_block">
+      <nav role="navigation" aria-labelledby="system-breadcrumb" class="hl__breadcrumb hl__breadcrumb--light">
+       <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+       <ul class="hl__breadcrumb__items">
+        <li class="hl__breadcrumb__item"><a href="/" class="hl__link-tag" data-ga-link="Breadcrumb" title="Home">Home</a></li>
+        <li class="hl__breadcrumb__item"><a href="/libraries" class="hl__link-tag" data-ga-link="Breadcrumb" title="Locations &amp; Hours">Locations &amp; Hours</a></li>
+       </ul>
+      </nav>
+     </div>
+     <section role="article" class="hl__page-header hl__page-header--light">
+      <div class="hl__page-header__container">
+       <div class="hl__page-header__page-title">
+        <h1 class="hl__page-title"><span>Fung Library</span></h1>
+       </div>
+       <div class="hl__page-header__sub-text">
+        <div class="hl__sub-text"></div>
+       </div>
+      </div>
+     </section>
+     <div class="hl__library-details__bg-overlay hl__library-details__bg-overlay--dark"></div>
+     <style>
+  .hl__library-details__pre-content {
+    background-image: url('https://library.harvard.edu/sites/default/files/styles/library_header_narrow/public/2018-05/Fung-Interior-ReadingRoom-02%20%281%29.jpg?h=d3010f18&itok=vrOL4MhP');
+  }
+
+  @media (min-width: 800px) {
+    .hl__library-details__pre-content {
+      background-image: url('https://library.harvard.edu/sites/default/files/styles/library_header_wide/public/2018-05/Fung-Interior-ReadingRoom-02%20%281%29.jpg?h=d3010f18&itok=W-QET67J');
+    }
+  }
+</style>
+     <div class="hl__library-details__jump-links">
+      <div class="hl__jump-links js-jump-links hl__jump-links--primary">
+       <div class="hl__jump-links__navigation">
+        <nav class="hl__jump-links__items" aria-label="in-page">
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#using-library" class="hl__link-tag"><span>Using the Library</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#collections" class="hl__link-tag"><span>Collections</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#history" class="hl__link-tag"><span>History</span></a>
+         </div>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="hl__full-template__main-content region">
+     <div data-drupal-messages-fallback class="hidden"></div>
+     <div id="block-harvard-content" data-block-plugin-id="system_main_block">
+      <article role="article">
+       <div class="hl__library-details__info">
+        <a name="library-info" id="library-info"></a>
+        <section class="hl__library-info">
+         <div class="hl__library-info__container hl__library-info__container--no-cta">
+          <div class="hl__library-info__hours">
+           <section class="hl__library-hours">
+            <div class="hl__library-hours__icon">
+             <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+              <g>
+               <g transform="translate(-188 -510)">
+                <g>
+                 <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                </g>
+                <g>
+                 <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z"></path>
+                </g>
+               </g>
+              </g>
+             </svg>
+            </div>
+            <div class="hl__library-hours__today">
+             Today: 9am - 8pm
+            </div>
+            <div class="hl__library-hours__see-all">
+             <a href="/libraries?active_filter=1&amp;library=fung" class="hl__link-tag hl__link-tag--with-arrow" title="See all hours for Fung Library" data-ga-link="Text Link: In-Line Arrow"><span>See All Hours</span></a>
+            </div>
+           </section>
+          </div>
+          <div class="hl__library-info__summary">
+           <h2 class="hl__comp-heading  ">Highlights</h2>
+           <div class="hl__library-info__highlights">
+            <section class="hl__rich-text  ">
+             <p>Supporting the study of China, Japan, Russia, and Eurasia with world-class collections, expert librarians, and digital resources.</p>
+             <ul>
+              <li>China’s Cultural Revolution</li>
+              <li>2011 Japan Disasters archive</li>
+              <li>Post-WWII Soviet photographs</li>
+              <li>Spaces to study</li>
+             </ul>
+            </section>
+           </div>
+           <div class="hl__library-info__access">
+            <section class="hl__rich-text  ">
+             Open to Harvard ID holders. We offer stacks access to external students and researchers who present an official form of ID. 
+             <div class="hl__rich-text__see-all-link">
+              <a href="/visitor-access" class="hl__link-tag hl__link-tag--with-arrow" data-ga-link="Text Link: In-Line Arrow"><span>Full access policy</span></a>
+             </div>
+            </section>
+           </div>
+          </div>
+          <div class="hl__library-info__sidebar js-accordion">
+           <div class="hl__library-info__contact">
+            <section class="hl__contact-info">
+             <h2 class="hl__comp-heading  ">Contact</h2>
+             <div class="hl__contact-info__list">
+              <div class="hl__contact-info__section">
+               <div class="hl__contact-info__address">
+                Knafel Building, Concourse Level 
+                <br><span class="address-line1">1737 Cambridge Street</span>
+                <br>
+                 Cambridge, <span class="administrative-area">MA</span> <span class="postal-code">02138</span>
+               </div>
+               <div class="hl__contact-info__directions">
+                <span class="hl__contact-info__icon" aria-hidden="true">
+                 <svg height="17" viewbox="0 0 12 17" width="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                   <path d="M994 1676c3.32 0 6 2.66 6 5.95 0 4.46-6 11.05-6 11.05s-6-6.59-6-11.05a5.97 5.97 0 0 1 6-5.95zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" id="jpn3a">
+                   </path>
+                  </defs> <g>
+                   <g transform="translate(-988 -1676)">
+                    <use fill="silver" xlink:href="#jpn3a">
+                    </use>
+                   </g>
+                  </g>
+                 </svg></span> <a class="hl__link-tag" href="https://www.google.com/maps/place/Cgis+Knafel,+1737+Cambridge+St,+Cambridge,+MA+02138/@42.375638,-71.1154243,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37744241b934f:0x70603c849cad1301!8m2!3d42.375638!4d-71.1132356" title="Get directions to Fung Library"> <span>Directions</span> </a>
+               </div>
+              </div>
+             </div>
+            </section>
+            <section class="hl__contact-info">
+             <div class="hl__contact-info__list">
+              <div class="hl__contact-info__section">
+               <ul class="hl__contact-info__items hl__contact-info__items--email">
+                <li class="hl__contact-info__item"><span class="hl__contact-info__icon" aria-hidden="true">
+                  <svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs></defs> <g id="Press-Release" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="press-release---final" transform="translate(-845.000000, -677.000000)">
+                     <g id="for-the-media" transform="translate(801.000000, 512.000000)">
+                      <path d="M57.5,165 L45.5,165 C44.675,165 44.0075,165.675 44.0075,166.5 L44,175.5 C44,176.325 44.675,177 45.5,177 L57.5,177 C58.325,177 59,176.325 59,175.5 L59,166.5 C59,165.675 58.325,165 57.5,165 L57.5,165 Z M58,168.428571 L52,172 L46,168.428571 L46,167 L52,170.571429 L58,167 L58,168.428571 L58,168.428571 Z" id="Icon"></path>
+                     </g>
+                    </g>
+                   </g>
+                  </svg></span> <span class="hl__contact-info__email"><a href="mailto:fung_library@fas.harvard.edu" class="hl__link-tag"> <span class="hl__visually-hidden">email:</span> <span>fung_library@fas.harvard.edu</span> </a></span></li>
+               </ul>
+               <ul class="hl__contact-info__items hl__contact-info__items--phone">
+                <li class="hl__contact-info__item"><span class="hl__contact-info__icon" aria-hidden="true">
+                  <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs></defs> <g id="Press-Release" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="press-release---final" transform="translate(-846.000000, -702.000000)">
+                     <g id="for-the-media" transform="translate(801.000000, 512.000000)">
+                      <path d="M48.0166667,196.491667 C49.2166667,198.85 51.15,200.775 53.5083333,201.983333 L55.3416667,200.15 C55.5666667,199.925 55.9,199.85 56.1916667,199.95 C57.125,200.258333 58.1333333,200.425 59.1666667,200.425 C59.625,200.425 60,200.8 60,201.258333 L60,204.166667 C60,204.625 59.625,205 59.1666667,205 C51.3416667,205 45,198.658333 45,190.833333 C45,190.375 45.375,190 45.8333333,190 L48.75,190 C49.2083333,190 49.5833333,190.375 49.5833333,190.833333 C49.5833333,191.875 49.75,192.875 50.0583333,193.808333 C50.15,194.1 50.0833333,194.425 49.85,194.658333 L48.0166667,196.491667 L48.0166667,196.491667 Z" id="Icon"></path>
+                     </g>
+                    </g>
+                   </g>
+                  </svg></span> <a href="tel:617-496-0485" class="hl__contact-info__phone"> <span class="hl__contact-info__label hl__visually-hidden">Phone number</span> 617-496-0485 </a></li>
+               </ul>
+              </div>
+             </div>
+            </section>
+           </div>
+           <div class="js-accordion-content">
+            <div class="hl__library-info__links">
+             <section class="hl__contact-info">
+              <div class="hl__contact-info__list">
+               <div class="hl__contact-info__section">
+               </div>
+              </div>
+             </section>
+             <div class="hl__library-info__links-buttons">
+              <a href="/staff?active_filter=1&amp;library=241" class="hl__library-info__contact-buttons hl__button hl__button--small" title="View Staff Directory">View Staff Directory</a>
+             </div>
+            </div>
+           </div>
+           <div class="hl__library-info__more-info">
+            <a class="hl__link-tag hl__link-tag--with-arrow js-accordion-link" href="#" title="Show or hide more contact information"> <span class="hl__link-tag__toggle-text">Less contact information</span> <span>More contact information</span> </a>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="using-library" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Using the Library</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-17612" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText17612">
+          <section class="hl__rich-text">
+           <h3>Accessibility of Fung Library&nbsp;</h3>
+           <ul>
+            <li>The Fung Library is accessible through the main entrance of the CGIS Knafel Building on Cambridge Street. Take the elevator one floor down to the concourse level for the library.&nbsp;</li>
+            <li>Elevators and accessible restrooms are located just outside the library entrance.</li>
+            <li>Circulation Desk staff will assist patrons with out-of-reach items.</li>
+           </ul>
+           <p>For more information or to arrange for assistance in advance, contact the Circulation Desk at 617-496-0485 or email Hugh Truslow <a href="mailto:truslow@fas.harvard.edu">truslow@fas.harvard.edu</a>.</p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="collections" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Collections</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="featured_collections-101" tabindex="-1">
+        <section class="hl__overlay-promo-grid hl__overlay-promo-grid--accordion js-accordion">
+         <div class="hl__overlay-promo-grid__container">
+          <h3 class="hl__comp-heading">Main Collections</h3>
+          <section class="hl__masonry-promo">
+           <div class="hl__overlay-promo-grid__grid">
+            <a href="/collections/davis-center-collection" title="Read more about Davis Center Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/davis-center.jpg?h=6f943cee&amp;itok=0fFHZpmn')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Davis Center Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Davis Center Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Resources related to the field of Russian and Eurasian studies at the Fung Library.
+              </div>
+             </div></a> <a href="/collections/fairbank-center-chinese-studies-collection" title="Read more about Fairbank Center for Chinese Studies Collection" class="hl__overlay-promo hl__overlay-promo--description hl__overlay-promo--no-image">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Fairbank Center for Chinese Studies Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Fairbank Center for Chinese Studies Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A variety of Chinese-language publications not widely available in the West.
+              </div>
+             </div></a> <a href="/collections/japan-digital-research-center" title="Read more about Japan Digital Research Center" class="hl__overlay-promo hl__overlay-promo--description hl__overlay-promo--no-image">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Japan Digital Research Center</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Japan Digital Research Center</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               The Japan Digital Research Center at the Fung Library develops and manages digital research collections in support of Japan-related academic and teaching programs.&nbsp;
+              </div>
+             </div></a>
+           </div>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="featured_collections-111" tabindex="-1">
+        <section class="hl__overlay-promo-grid hl__overlay-promo-grid--accordion js-accordion">
+         <div class="hl__overlay-promo-grid__container">
+          <h3 class="hl__comp-heading">Special Collections</h3>
+          <section class="hl__masonry-promo">
+           <div class="hl__overlay-promo-grid__grid">
+            <a href="/collections/womens-movement-russia" title="Read more about Women's Movement in Russia" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/490199306_1.jpg?h=ee27b93d&amp;itok=CCSBnPLC')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Women's Movement in Russia</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Women's Movement in Russia</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Primary source materials documenting women's activism and daily life
+              </div>
+             </div></a> <a href="/collections/soviet-anti-bureaucracy-posters" title="Read more about Soviet Anti-Bureaucracy Posters" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/455370340_0.jpg?h=19ad3fdd&amp;itok=rA9GdIFR')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Anti-Bureaucracy Posters</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Anti-Bureaucracy Posters</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Cartoons commissioned by the Soviet state to fight corruption and inefficiency
+              </div>
+             </div></a> <a href="/collections/helen-tisdel-de-wollant-papers" title="Read more about Helen Tisdel De Wollant Papers" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/CL20r2.jpg?h=f3239f7d&amp;itok=KvBDHLB1')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Helen Tisdel De Wollant Papers</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Helen Tisdel De Wollant Papers</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Tisdel De Wollant recorded her harrowing experiences in Crimea during the Civil War.
+               <br>
+               <br>
+              </div>
+             </div></a>
+           </div>
+           <div class="hl__overlay-promo-grid__grid hl__overlay-promo-grid__grid--accordion-content js-accordion-content" style="display: none;" id="paragraph-accordion-111">
+            <a href="/collections/womens-movement-russia" title="Read more about Women's Movement in Russia" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/490199306_1.jpg?h=ee27b93d&amp;itok=CCSBnPLC')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Women's Movement in Russia</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Women's Movement in Russia</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Primary source materials documenting women's activism and daily life
+              </div>
+             </div></a> <a href="/collections/soviet-anti-bureaucracy-posters" title="Read more about Soviet Anti-Bureaucracy Posters" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/455370340_0.jpg?h=19ad3fdd&amp;itok=rA9GdIFR')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Anti-Bureaucracy Posters</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Anti-Bureaucracy Posters</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Cartoons commissioned by the Soviet state to fight corruption and inefficiency
+              </div>
+             </div></a> <a href="/collections/helen-tisdel-de-wollant-papers" title="Read more about Helen Tisdel De Wollant Papers" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/CL20r2.jpg?h=f3239f7d&amp;itok=KvBDHLB1')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Helen Tisdel De Wollant Papers</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Helen Tisdel De Wollant Papers</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Tisdel De Wollant recorded her harrowing experiences in Crimea during the Civil War.
+               <br>
+               <br>
+              </div>
+             </div></a> <a href="/collections/soviet-information-bureau-photograph-collection" title="Read more about Soviet Information Bureau Photograph Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/SIB3559_Kolo.jpg?h=6f943cee&amp;itok=7YrvgczY')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Information Bureau Photograph Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Soviet Information Bureau Photograph Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               These 6,000 black and white photos were intended to document the reconstruction of the Soviet Union following World War II.
+              </div>
+             </div></a> <a href="/collections/poliksena-shishkina-iavein-digital-photo-collection" title="Read more about Poliksena Shishkina-Iavein Digital Photo Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/sidc2020_001_edited.jpg?h=8cc6fbf3&amp;itok=7JIqLljb')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Poliksena Shishkina-Iavein Digital Photo Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Poliksena Shishkina-Iavein Digital Photo Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Digital images documenting the life and work of Poliksena Shishkina-Iavein.
+              </div>
+             </div></a> <a href="/collections/25-years-soviet-latvia" title="Read more about 25 Years of Soviet Latvia" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/422063292.jpg?h=6031d5b7&amp;itok=E4AaLyQI')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>25 Years of Soviet Latvia</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>25 Years of Soviet Latvia</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Images published by the government to celebrate the 25th anniversary of the restoration of Soviet power in Latvia.
+              </div>
+             </div></a> <a href="/collections/alexander-v-chukayeff-papers" title="Read more about Alexander V. Chukayeff Papers" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/chukayeff2.jpg?h=3e0e2372&amp;itok=OPQ0TQTH')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Alexander V. Chukayeff Papers</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Alexander V. Chukayeff Papers</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Russian-born U.S. Information Agency analyst on Soviet affairs.
+              </div>
+             </div></a> <a href="/collections/davis-center-library-poster-collection" title="Read more about Davis Center Library Poster Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/fundclpc_056_sovietpeoplecanrestassured_0.jpg?h=8324a493&amp;itok=u8sPsP3v')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Davis Center Library Poster Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Davis Center Library Poster Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Soviet posters dating from 1919 to the 1990s
+              </div>
+             </div></a> <a href="/collections/zavod-diafoto-glass-slides" title="Read more about Zavod Diafoto Glass Slides" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/diafoto_egipetskii_khlopok_mugan_crop_0.jpg?h=3c4c8925&amp;itok=9ehcU7yl')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Zavod Diafoto Glass Slides</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Zavod Diafoto Glass Slides</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Two 1940s slide collections showing images of Soviet agriculture and bodies of water.
+              </div>
+             </div></a> <a href="/collections/obolensky-family-papers" title="Read more about Obolensky Family Papers" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/14c1d6f178e662af82a1716d85fe32c7.jpg?h=27f480d3&amp;itok=iXWFEN6v')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Obolensky Family Papers</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Obolensky Family Papers</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Documents 150 years of a prominent family of the Russian imperial aristocracy.
+              </div>
+             </div></a> <a href="/collections/harvard-project-soviet-social-system" title="Read more about Harvard Project on the Soviet Social System" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/443543271_0.jpg?h=d23d4191&amp;itok=ZycbIprO')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Harvard Project on the Soviet Social System</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Harvard Project on the Soviet Social System</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Transcripts and notes from 705 interviews with Soviet refugees in the early Cold War era.
+              </div>
+             </div></a> <a href="/collections/graham-sloan-archive" title="Read more about Graham-Sloan Archive" class="hl__overlay-promo hl__overlay-promo--description hl__overlay-promo--no-image">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Graham-Sloan Archive</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Graham-Sloan Archive</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Documentation on the transformation of the USSR Academy of Sciences into the Russian Academy of Sciences.
+              </div>
+             </div></a> <a href="/collections/smirnoff-vodka-archive" title="Read more about Smirnoff Vodka Archive" class="hl__overlay-promo hl__overlay-promo--description hl__overlay-promo--no-image">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Smirnoff Vodka Archive</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Smirnoff Vodka Archive</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Documents related to a 1996 court case between descendants of Smirnoff's founder and its parent company.
+              </div>
+             </div></a>
+           </div>
+           <div class="hl__overlay-promo-grid__see-all">
+            <a class="hl__link-tag hl__link-tag--with-arrow js-accordion-link" href="#" title="Show or hide more items" aria-expanded="false" aria-controls="paragraph-accordion-111"> <span class="hl__link-tag__toggle-text">Show Less</span><span>Show More</span> </a>
+           </div>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-126" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="history" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">History</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-116" tabindex="-1">
+        <section class="hl__show-more-text js-show-more-text">
+         <div class="hl__show-more-text__content js-show-more-text-content" id="showMoreText116">
+          <section class="hl__rich-text">
+           <p>The H.C. Fung Library was founded in 2005, bringing together the libraries of the former Coolidge Hall, including:</p>
+           <ul>
+            <li>the Davis Center for Russian and Eurasian Studies Library,</li>
+            <li>the Japan Digital Resource Center (formerly the Documentation Center on Contemporary Japan),</li>
+            <li>and the Fairbank Center for Chinese Studies Library.</li>
+           </ul>
+           <p>The library collects resources related to international politics, foreign relations, foreign policy, economics, sociology, and political science of China, Japan, Russia and Eurasia.</p>
+           <p>Librarians with expertise in a designated area of the world and affiliated with a particular research institute select the library's holdings.</p>
+          </section>
+         </div>
+         <div class="hl__show-more-text__controls" aria-hidden="true">
+          <a class="hl__link-tag hl__link-tag--with-arrow js-show-more-text-link" href="#" title="" aria-expanded="false" aria-controls="showMoreText116"><span class="hl__link-tag__toggle-text">Show Less</span><span>Show More</span></a>
+         </div>
+        </section>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="hl__full-template__post-content region">
+     <div id="block-newslettersignupblock" data-block-plugin-id="newsletter_signup_block">
+      <section class="hl__single-input-form">
+       <form class="newsletter-signup hl__single-input-form__form" data-drupal-selector="newsletter-signup" action="/libraries/fung" method="post" id="newsletter-signup" accept-charset="UTF-8">
+        <label class="hl__label hl__label--inline" data-drupal-selector="edit-title" for="edit-email-address" id="edit-title">Stay in the know</label>
+        <div class="hl__single-input-form__input-group">
+         <input placeholder="Email Address" class="hl__input hl__input--inline js-is-required form-email required" data-twig-suggestion="newsletter_signup_email" data-drupal-selector="edit-email-address" type="email" id="edit-email-address" name="email_address" value="" maxlength="254" required aria-required="true"> <button class="hl__button hl__button--small hl__button--inline button js-form-submit form-submit" data-twig-suggestion="newsletter_signup_submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Sign up" data-ga-link="Form: Email Full-Width"> Sign up </button>
+        </div><input autocomplete="off" data-drupal-selector="form-yrlofm1jio5g3j7tkds3mhhceubmtm-aeehdbkkcxk" type="hidden" name="form_build_id" value="form-_YRlofM1Jio5G3J7tkDs3mhHcEUbmTm-AEehdbKKcXk"> <input data-drupal-selector="edit-newsletter-signup" type="hidden" name="form_id" value="newsletter_signup">
+       </form>
+      </section>
+     </div>
+    </section>
+   </main>
+   <footer role="contentinfo">
+    <section>
+     <section class="region hl__footer">
+      <div class="hl__footer__container">
+       <div class="hl__footer__logo">
+        <section class="hl__linked-image">
+         <a href="/" title="Harvard Library"> <img class="hl__image" alt="Harvard Library Logo" height="24" width="270" src="/themes/custom/harvard/assets/images/logo-large.svg"> </a>
+        </section>
+       </div>
+       <div class="hl__footer__links">
+        <div class="hl__footer__column">
+         <nav class="hl__footer-nav" aria-label="footer 1 of 2">
+          <ul class="hl__footer-nav__items">
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/support-library" class="hl__link-tag" data-drupal-link-system-path="node/5341"><span>Giving to the Library</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://provost.harvard.edu/" class="hl__link-tag"><span>Office of the Provost</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://hollis.harvard.edu/" class="hl__link-tag"><span>HOLLIS</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/digital-collections" class="hl__link-tag" data-drupal-link-system-path="node/6236"><span>Harvard Digital Collections</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://hollisarchives.lib.harvard.edu/" class="hl__link-tag"><span>HOLLIS for Archival Discovery</span></a></li>
+          </ul>
+         </nav>
+        </div>
+        <div class="hl__footer__column">
+         <nav class="hl__footer-nav" aria-label="footer 2 of 2">
+          <ul class="hl__footer-nav__items">
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="http://nrs.harvard.edu/urn-3:hul.ois:databases" class="hl__link-tag"><span>Databases</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/library-newsletters-social-media" class="hl__link-tag" data-drupal-link-system-path="node/10856"><span>Newsletters/Social</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://staff.library.harvard.edu" class="hl__link-tag"><span>Staff Portal</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://library.harvard.edu/accessibility" class="hl__link-tag"><span>Library Accessibility</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://nrs.harvard.edu/urn-3:hul.ois:reportaproblem" class="hl__link-tag"><span>Report a Problem</span></a></li>
+          </ul>
+         </nav>
+        </div>
+       </div>
+       <div class="hl__footer__content">
+        <div class="hl__footer__top-links">
+         <div class="hl__footer__quick-links">
+          <div class="hl__linked-list hl__linked-list--no-bullets ">
+           <ul class="hl__linked-list__items">
+            <li class="hl__linked-list__item"><a class="hl__link-tag" href="https://accessibility.harvard.edu/" title="Read our accessibility"><span>Accessibility</span></a></li>
+            <li class="hl__linked-list__item"><a class="hl__link-tag" href="/privacy-terms-use-copyright-information/" title="Read our Privacy Policy"><span>Privacy</span></a></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div class="hl__footer__license">
+         <div class="hl__footer__cc-icon">
+          <img class="hl__image " alt="Creative Commons license" height="31" width="88" src="/themes/custom/harvard/assets/images/cc-88x31.png">
+         </div>
+         <div class="hl__footer__cc-text">
+          Creative Commons Attribution 4.0 International License
+         </div>
+        </div>
+        <div class="hl__footer__message">
+         <section class="hl__rich-text hl__rich-text--small ">
+          <p>Except where otherwise noted, this work is subject to a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, which allows anyone to share and adapt our material as long as proper attribution is given. For details and exceptions, see the <a href="https://osc.hul.harvard.edu/programs/copyright/ccby">Harvard Library Copyright Policy</a> ©2024 Presidents and Fellows of Harvard College.</p>
+         </section>
+        </div>
+       </div>
+      </div>
+     </section>
+    </section>
+   </footer>
+  </div>
+  <script src="/sites/default/files/js/js_UidHnrtdlpI_bMpjuWcyjWBS2sgPohZ-uwzhL401g5s.js"></script>
+  <script src="https://v2.libanswers.com/load_chat.php?hash=90b85bdd1489a074045c2519ad2fc1a5"></script>
+  <script src="https://v2.libanswers.com/load_chat.php?hash=055503cc8dd52ad22b42fb2afdf10da9"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-889d0f3d691da91ea39","applicationID":"812192627","transactionName":"b1RUbEVTWxEDBhILXFYed1tDW1oMTSEUF0NZXWpWWFZQPiEKCBZBV11aXUVuew0GADALVk9yWVZDQFoODgAUTw1OWFNP","queueTime":0,"applicationTime":376,"atts":"QxNXGg1JSB8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+ </body>
+</html>

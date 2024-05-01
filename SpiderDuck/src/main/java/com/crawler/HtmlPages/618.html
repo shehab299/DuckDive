@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en-US" class="no-js no-svg">
+ <head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-26d49e9cd1d82010791",applicationID:"529647296"};;/*! For license information please see nr-loader-rum-1.258.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},R={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]={...(0,i.D)(t,R),...D};const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.258.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,iS:()=>a,il:()=>n,sK:()=>l,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.258.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.258.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-dbRQ0U/DzQ6bR/LVo1bSCjmtT4Mn+TUoByqFctqWrjwdLoHvi/Uhr3w190Zk5FuNMJFjPV0z6jQVNhQGb0DrLQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.258.0.PROD"]=self["webpackChunk:NRBA-1.258.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class T extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var I=i(3081);class O extends m{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,T,O],loaderType:"lite"})})()})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+  <title>Youth Summit on Climate, Equity, and Health – C-CHANGE | Harvard T.H. Chan School of Public Health</title>
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="dns-prefetch" href="//www.hsph.harvard.edu">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+  <link rel="alternate" type="application/rss+xml" title="C-CHANGE | Harvard T.H. Chan School of Public Health » Feed" href="https://www.hsph.harvard.edu/c-change/feed/">
+  <script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.hsph.harvard.edu\/c-change\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+  <style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+  <link rel="stylesheet" id="wp-block-library-css" href="https://www.hsph.harvard.edu/c-change/wp-includes/css/dist/block-library/style.min.css?ver=6.5.2" type="text/css" media="all">
+  <style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+  <style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+  <link rel="stylesheet" id="hsph-plugin-multisite-tweaks-styles-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-multisite-tweaks/assets/css/hsph-plugin-multisite-tweaks.css?ver%5BVersion%5D=1.2.2" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph_page_elements_styles-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-page-elements/assets/css/plugin-page-elements.css?ver=1.2.6" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph-plugin-tagging-topics-pages-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-tagging/assets/css/topics.css?ver=1.1.5" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph-table-sortable-css-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-tinymce-tweaks/assets/css/hsph-table-sortable.css?ver=1.1.1" type="text/css" media="all">
+  <link rel="stylesheet" id="dashicons-css" href="https://www.hsph.harvard.edu/c-change/wp-includes/css/dashicons.min.css?ver=6.5.2" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph-bootstrap-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-design-system/assets/css/hsph-bootstrap-no-conflict.css?ver=1.4.12" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph-ui-shortcodes-style-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-ui-shortcodes/assets/css/hsph-ui-shortcodes.css?ver=1.6.11" type="text/css" media="all">
+  <link rel="stylesheet" id="search-filter-plugin-styles-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/search-filter-pro/public/assets/css/search-filter.min.css?ver=2.5.13" type="text/css" media="all">
+  <link rel="stylesheet" id="parent-style-css" href="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/style.css?ver=1.5.4" type="text/css" media="all">
+  <link rel="stylesheet" id="bootstrap-grid-css" href="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/css/bootstrap-grid.min.css?ver=4.1.3" type="text/css" media="all">
+  <link rel="stylesheet" id="affiliate2017-fonts-css" href="https://fonts.googleapis.com/css?family=Merriweather%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&amp;subset=latin%2Clatin-ext&amp;ver=1.2.15" type="text/css" media="all">
+  <link rel="stylesheet" id="affiliate2017-style-css" href="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/style.css?ver=1.2.15" type="text/css" media="all"><!--[if lt IE 9]>
+<link rel='stylesheet' id='affiliate2017-ie8-css' href='https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/css/ie8.css?ver=1.2.15' type='text/css' media='all' />
+<![endif]-->
+  <link rel="stylesheet" id="hsph-fontawesome-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-design-system/assets/css/hsph-fontawesome.css?ver=1.4.12" type="text/css" media="all">
+  <link rel="stylesheet" id="hsph-sharing-buttons-styles-css" href="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-social//assets/css/hsph-sharing-buttons.css?ver%5BVersion%5D=1.0.1" type="text/css" media="all">
+  <script type="text/javascript" id="wp-sentry-browser-js-extra">
+/* <![CDATA[ */
+var wp_sentry = {"environment":"prod","release":"v6.5.2.3","context":{"tags":{"wordpress":"6.5.2","language":"en-US"}},"blacklistUrls":["https:\/\/theforum.sph.harvard.edu\/","https:\/\/theforum.sph.harvard.edu\/","https:\/\/p3.3playmedia.com\/","https:\/\/static.3playmedia.com\/","http:\/\/p3.3playmedia.com\/","http:\/\/static.3playmedia.com\/","https:\/\/www.hsph.harvard.edu\/voices\/","regex:3playmedia","regex:theforum\\.sph\\.harvard","regex:theforum\\.sph\\.harvard","harvard\\\\.edu\\\/voices\\\/","harvard\\.edu\\\/voices\\\/"],"denyUrls":["https:\/\/theforum.sph.harvard.edu\/","https:\/\/theforum.sph.harvard.edu\/","https:\/\/p3.3playmedia.com\/","https:\/\/static.3playmedia.com\/","http:\/\/p3.3playmedia.com\/","http:\/\/static.3playmedia.com\/","https:\/\/www.hsph.harvard.edu\/voices\/","regex:theforum\\.sph\\.harvard","regex:theforum\\.sph\\.harvard","harvard\\\\.edu\\\/voices\\\/","harvard\\.edu\\\/voices\\\/"],"dsn":"https:\/\/1cf5486bca3949988f6ee887a807ff7c@o259296.ingest.sentry.io\/1856593"};
+/* ]]> */
+</script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/wp-sentry-integration/public/wp-sentry-browser.min.js?ver=7.12.0" id="wp-sentry-browser-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/jquery-updater/js/jquery-3.7.1.min.js?ver=3.7.1" id="jquery-core-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/jquery-updater/js/jquery-migrate-3.4.1.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-includes/js/jquery/ui/tabs.min.js?ver=1.13.2" id="jquery-ui-tabs-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-includes/js/jquery/ui/accordion.min.js?ver=1.13.2" id="jquery-ui-accordion-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-ui-shortcodes/assets/js/hsph-ui-shortcodes.js?ver=1.6.11" id="hsph-ui-shortcodes-scripts-js"></script>
+  <script type="text/javascript" id="search-filter-plugin-build-js-extra">
+/* <![CDATA[ */
+var SF_LDATA = {"ajax_url":"https:\/\/www.hsph.harvard.edu\/c-change\/wp-admin\/admin-ajax.php","home_url":"https:\/\/www.hsph.harvard.edu\/c-change\/","extensions":[]};
+/* ]]> */
+</script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/search-filter-pro/public/assets/js/search-filter-build.min.js?ver=2.5.13" id="search-filter-plugin-build-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/search-filter-pro/public/assets/js/chosen.jquery.min.js?ver=2.5.13" id="search-filter-plugin-chosen-js"></script><!--[if lt IE 9]>
+<script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/js/html5.js?ver=3.7.3" id="html5-js"></script>
+<![endif]-->
+  <link rel="https://api.w.org/" href="https://www.hsph.harvard.edu/c-change/wp-json/">
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hsph.harvard.edu/c-change/xmlrpc.php?rsd">
+  <meta name="generator" content="WordPress 6.5.2">
+  <link rel="canonical" href="https://www.hsph.harvard.edu/c-change/news/harvard-chan-c-change-youth-summits/">
+  <link rel="shortlink" href="https://www.hsph.harvard.edu/c-change/?p=5611">
+  <link rel="alternate" type="application/json+oembed" href="https://www.hsph.harvard.edu/c-change/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hsph.harvard.edu%2Fc-change%2Fnews%2Fharvard-chan-c-change-youth-summits%2F">
+  <link rel="alternate" type="text/xml+oembed" href="https://www.hsph.harvard.edu/c-change/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hsph.harvard.edu%2Fc-change%2Fnews%2Fharvard-chan-c-change-youth-summits%2F&amp;format=xml"><!-- Google Analytics -->
+  <script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			
+	ga( 'create', 'UA-16396394-1', 'hsph.harvard.edu', 'trackern1');
+	ga( 'trackern1.require', 'displayfeatures');
+	ga( 'trackern1.require', 'linkid');
+	ga( 'trackern1.set', 'dimension1', 'signed_out' );
+	ga( 'trackern1.set', 'dimension2', 'none' );
+	ga( 'trackern1.send', 'pageview');
+
+
+	ga( 'create', ' UA-44468534-1', 'hsph.harvard.edu', 'trackern2');
+	ga( 'trackern2.require', 'displayfeatures');
+	ga( 'trackern2.require', 'linkid');
+	ga( 'trackern2.set', 'dimension1', 'signed_out' );
+	ga( 'trackern2.set', 'dimension2', 'none' );
+	ga( 'trackern2.send', 'pageview');
+
+</script><!-- End Google Analytics --> <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XL6K');</script><!-- End Google Tag Manager -->
+  <script type="text/javascript">
+		(function() {
+			var config = {
+			kitId: 'gwe3pmm',
+			scriptTimeout: 3000
+			};
+			var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+		})();
+		</script>
+  <style type="text/css">
+				.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+				</style><!-- Jetpack Open Graph Tags -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Youth Summit on Climate, Equity, and Health">
+  <meta property="og:url" content="https://www.hsph.harvard.edu/c-change/news/harvard-chan-c-change-youth-summits/">
+  <meta property="og:description" content="Join our annual student summit to learn how to be a climate and health leader in your community.">
+  <meta property="article:published_time" content="2022-08-18T14:43:58+00:00">
+  <meta property="article:modified_time" content="2023-10-13T23:20:50+00:00">
+  <meta property="og:site_name" content="C-CHANGE | Harvard T.H. Chan School of Public Health">
+  <meta property="og:image" content="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/LAN3638-1-scaled.jpg">
+  <meta property="og:image:width" content="2560">
+  <meta property="og:image:height" content="1707">
+  <meta property="og:image:alt" content="Students watch a presentation at Harvard">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:site" content="@harvardchansph">
+  <meta name="twitter:text:title" content="Youth Summit on Climate, Equity, and Health">
+  <meta name="twitter:image" content="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/LAN3638-1-scaled.jpg?w=640">
+  <meta name="twitter:image:alt" content="Students watch a presentation at Harvard">
+  <meta name="twitter:card" content="summary_large_image"><!-- End Jetpack Open Graph Tags -->
+  <link rel="icon" href="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/04/cropped-hsph-shield-favicon-512-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/04/cropped-hsph-shield-favicon-512-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/04/cropped-hsph-shield-favicon-512-180x180.png">
+  <meta name="msapplication-TileImage" content="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/04/cropped-hsph-shield-favicon-512-270x270.png">
+  <style type="text/css" id="wp-custom-css">
+			@media screen and (min-width: 1024px) {
+
+.branding-bar {
+    gap: 20px;
+
+}
+
+}
+
+.search-utility-wrap {
+    position: relative;
+}
+
+
+.footer-branding-wrap .cchange-subscribe a{
+	border-bottom: 1px dashed #5ba6c3
+}		</style>
+  <style id="kirki-inline-styles"></style>
+ </head>
+ <body class="cchange_article-template-default single single-cchange_article postid-5611 wp-custom-logo affiliate2017-no-shrink-header affiliate-2017 has-post-thumbnail affiliate-bar affiliate-bar- title-tagline-hidden colors-light">
+  <div class="wrapper" id="wrapper">
+   <div id="navbar" class="navbar">
+    <div id="nav-search" class="nav-search"></div>
+    <div id="nav-utility-menu" class="nav-utility-menu"></div>
+    <div id="nav-primary-menu" class="nav-primary-menu"></div>
+   </div><button id="main-menu-toggle" class="main-menu-toggle" aria-controls="top-menu" aria-expanded="false">Menu</button> <button id="main-menu-caption" class="main-menu-caption"><span id="main-menu-caption-text" class="main-menu-caption-text">Close Menu</span></button>
+   <div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <header id="masthead" class="site-header" role="banner">
+     <div class="site-afbar" id="afbar">
+      <div class="afbar-wrap">
+       <div class="affiliate-logo-container">
+        <a href="https://www.hsph.harvard.edu/" class="affiliate-logo">
+         <svg class="logo logo-hsph-normal" aria-labelledby="title-6632bac7cc545 desc-6632bac7cc545" role="img" id="logo-hsph-normal-6632bac7cc545" viewBox="0 0 308.4 54.9">
+          <title id="title-6632bac7cc545">
+           Harvard T.H. Chan School of Public Health
+          </title><desc id="desc-6632bac7cc545">
+           Harvard T.H. Chan School of Public Health main site homepage
+          </desc> <path id="school-of-public-health-6632bac7cc545" class="logo-school" d="M56.1,46l1-1.6c0.7,0.7,1.6,1.1,2.5,1.1c0.7,0.1,1.3-0.3,1.4-1
+		c0-0.1,0-0.1,0-0.2c0-1.9-4.7-1.2-4.7-4.8c0-1.7,1.5-3.1,3.2-3.1c0.1,0,0.2,0,0.2,0c1.2,0,2.3,0.4,3.2,1.2l-1,1.6
+		c-0.6-0.6-1.4-0.9-2.2-0.9c-0.6-0.1-1.2,0.3-1.3,0.9v0.1c0,1.7,4.7,1.2,4.7,4.7c0,1.8-1.2,3.2-3.6,3.2C58.4,47.4,57.1,46.9,56.1,46
+		z M64.5,41.9c0-3.2,1.7-5.4,4.5-5.4c1.6,0,3,1,3.5,2.5l-1.8,0.8c-0.2-0.8-0.9-1.4-1.8-1.4c-1.4,0-2.3,1.5-2.3,3.6s0.9,3.6,2.3,3.6
+		c0.9-0.1,1.6-0.7,1.8-1.5l1.8,0.8c-0.5,1.6-1.9,2.6-3.5,2.7C66.2,47.4,64.5,45.1,64.5,41.9z M79.9,47.2v-4.5h-3.5v4.5h-2.1V36.7
+		h2.1v4.2h3.5v-4.2H82v10.5H79.9L79.9,47.2z M84,41.9c0-3.1,1.6-5.4,4.4-5.4s4.4,2.3,4.4,5.4s-1.7,5.4-4.4,5.4
+		C85.7,47.3,84,45,84,41.9z M90.7,41.9c0-2-0.8-3.6-2.2-3.6s-2.2,1.5-2.2,3.6s0.8,3.6,2.2,3.6S90.7,43.9,90.7,41.9z M94.7,41.9
+		c0-3.1,1.6-5.4,4.4-5.4s4.4,2.3,4.4,5.4s-1.7,5.4-4.4,5.4C96.4,47.3,94.7,45,94.7,41.9z M101.4,41.9c0-2-0.8-3.6-2.2-3.6
+		S97,39.8,97,41.9s0.8,3.6,2.2,3.6S101.4,43.9,101.4,41.9L101.4,41.9z M105.8,47.2V36.7h2.1v8.7h3.5v1.9L105.8,47.2L105.8,47.2z
+		 M117.4,41.9c0-3.1,1.6-5.4,4.4-5.4s4.4,2.3,4.4,5.4s-1.6,5.4-4.4,5.4S117.4,45,117.4,41.9z M124.1,41.9c0-2-0.8-3.6-2.2-3.6
+		s-2.2,1.5-2.2,3.6s0.8,3.6,2.2,3.6S124.1,43.9,124.1,41.9z M128.5,47.2V36.7h6v1.9h-3.9V41h3.8v1.8h-3.8v4.4L128.5,47.2L128.5,47.2
+		z M141,47.2V36.7h3.9c1.8,0.1,3.3,1.7,3.2,3.5c-0.1,1.7-1.5,3.1-3.2,3.2h-1.8v3.8H141L141,47.2z M146,40c0.1-0.7-0.5-1.4-1.2-1.5
+		c-0.1,0-0.1,0-0.2,0h-1.5v3h1.5c0.8,0,1.4-0.6,1.4-1.3C146,40.1,146,40.1,146,40z M150.3,43.5v-6.8h2.1v6.9c-0.1,1,0.6,1.9,1.5,2
+		c1,0.1,1.9-0.6,2-1.5c0-0.2,0-0.3,0-0.5v-6.9h2.1v6.9c0,2.1-1.8,3.9-3.9,3.9S150.3,45.7,150.3,43.5L150.3,43.5z M160.5,47.2V36.7
+		h4.4c1.4-0.1,2.7,0.9,2.8,2.3c0,0.1,0,0.2,0,0.4c0.1,1.1-0.6,2.1-1.7,2.4c1.2,0.3,1.9,1.4,1.9,2.6c0.1,1.4-0.9,2.7-2.3,2.8
+		c-0.2,0-0.3,0-0.5,0L160.5,47.2L160.5,47.2z M165.5,39.7c0.1-0.6-0.3-1.1-0.9-1.2c-0.1,0-0.1,0-0.2,0h-1.8v2.4h1.8
+		c0.6,0,1.1-0.4,1.1-1C165.5,39.8,165.5,39.8,165.5,39.7z M165.6,44c0.1-0.6-0.4-1.2-1.1-1.3c-0.1,0-0.1,0-0.2,0h-1.8v2.6h1.8
+		c0.6,0.1,1.2-0.4,1.2-1C165.7,44.2,165.7,44.1,165.6,44L165.6,44z M170.1,47.2V36.7h2.1v8.7h3.5v1.9L170.1,47.2L170.1,47.2z
+		 M177.9,47.2V36.7h2.1v10.5H177.9L177.9,47.2z M182.4,41.9c0-3.2,1.7-5.4,4.5-5.4c1.6,0,3,1,3.5,2.5l-1.8,0.8
+		c-0.2-0.8-0.9-1.4-1.8-1.4c-1.4,0-2.3,1.5-2.3,3.6s0.9,3.6,2.3,3.6c0.9-0.1,1.6-0.7,1.8-1.5l1.8,0.8c-0.5,1.6-1.9,2.6-3.5,2.7
+		C184.1,47.4,182.4,45.1,182.4,41.9z M202.3,47.2v-4.5h-3.5v4.5h-2.1V36.7h2.1v4.2h3.5v-4.2h2.1v10.5H202.3L202.3,47.2z M206.9,47.2
+		V36.7h6v1.9H209V41h3.8v1.8H209v2.6h3.9v1.9L206.9,47.2L206.9,47.2z M221.4,47.2l-0.5-1.9h-3.3l-0.5,1.9h-2.3l3.1-10.5h2.5
+		l3.1,10.5H221.4L221.4,47.2z M219.2,38.9l-1.2,4.6h2.4L219.2,38.9z M225.5,47.2V36.7h2.1v8.7h3.5v1.9L225.5,47.2L225.5,47.2z
+		 M234,47.2v-8.7h-2.3v-1.8h6.8v1.9h-2.4v8.7L234,47.2L234,47.2z M246.3,47.2v-4.5h-3.5v4.5h-2.1V36.7h2.1v4.2h3.5v-4.2h2.1v10.5
+		H246.3L246.3,47.2z" /> <path id="harvard-6632bac7cc545" class="logo-harvard" d="M67.5,26.6v-7.7h-5.6v7.7h-4.6V7.7h4.6v7.1h5.6V7.7h4.6v18.9H67.5z M87,26.6l-0.7-2.9h-5.4
+		l-0.7,2.9h-5l5.7-18.9h5.5L92,26.5L87,26.6L87,26.6z M83.6,12.5l-1.8,7.2h3.6L83.6,12.5z M103.4,26.6l-2.5-6.5h-1.7v6.5h-4.6V7.7
+		h7.7c3.2-0.1,6,2.3,6.1,5.6c0,0.2,0,0.4,0,0.5c0,3.2-1.7,4.8-3.1,5.4l3.2,7.3L103.4,26.6L103.4,26.6z M103.7,13.9
+		c0.1-1.1-0.7-2.1-1.8-2.2c-0.1,0-0.2,0-0.3,0h-2.4v4.4h2.4c1.1,0.1,2.1-0.8,2.1-1.9C103.7,14.1,103.7,14,103.7,13.9z M115.7,26.6
+		l-5.6-18.9h4.9l3.4,13.5l3.4-13.5h4.9l-5.6,18.9H115.7z M137.8,26.6l-0.7-2.9h-5.4l-0.7,2.9h-4.9l5.6-18.9h5.5l5.6,18.8L137.8,26.6
+		L137.8,26.6z M134.4,12.5l-1.8,7.2h3.6L134.4,12.5z M154.2,26.6l-2.5-6.5H150v6.5h-4.6V7.7h7.7c3.2-0.1,6,2.3,6.1,5.6
+		c0,0.2,0,0.4,0,0.5c0,3.2-1.7,4.8-3.1,5.4l3.2,7.3L154.2,26.6L154.2,26.6z M154.5,13.9c0.1-1.1-0.7-2.1-1.8-2.2c-0.1,0-0.2,0-0.3,0
+		H150v4.4h2.4c1.1,0.1,2.1-0.8,2.1-1.9C154.5,14.1,154.5,14,154.5,13.9z M162.8,26.6V7.7h6.6c5.4,0,8.6,3.9,8.6,9.4
+		s-3.1,9.4-8.6,9.4L162.8,26.6L162.8,26.6z M173.4,17.2c0-3.5-1.4-5.4-3.9-5.4h-2.1v10.9h2.1C171.9,22.6,173.4,20.5,173.4,17.2z" /> <path id="th-chan-6632bac7cc545" class="logo-th-chan" d="M192.6,26.5V11.7h-4.1v-4h12.7v4h-4.1v14.8H192.6L192.6,26.5z M216.9,26.5v-7.7h-5.6v7.7h-4.6
+		V7.7h4.6v7.1h5.6V7.7h4.5v18.8H216.9z M234.8,17.1c0-5.8,3.2-9.7,8.4-9.7c3.9,0,5.7,2.6,6.7,4.9l-3.8,1.6c-0.3-1.4-1.5-2.4-2.9-2.5
+		c-2.3,0-3.7,2.3-3.7,5.7s1.4,5.7,3.7,5.7c1.5-0.1,2.7-1.2,2.9-2.7l3.7,1.6c-0.9,2.3-2.7,5.1-6.7,5.1
+		C238.1,26.9,234.8,22.9,234.8,17.1z M264.6,26.5v-7.7H259v7.7h-4.6V7.7h4.6v7.1h5.6V7.7h4.5v18.8H264.6z M285.5,26.5l-0.7-2.8h-5.4
+		l-0.7,2.9h-5l5.6-18.9h5.5l5.6,18.8H285.5L285.5,26.5z M282.1,12.5l-1.8,7.2h3.6L282.1,12.5z M304,26.5l-5.8-10v10h-4.5V7.7h4.6
+		l5.5,9.6V7.7h4.6v18.8H304z M201.9,23.2c0.8,0,1.5,0.8,1.5,1.7s-0.7,1.7-1.5,1.7s-1.5-0.8-1.5-1.7S201.1,23.2,201.9,23.2z
+		 M226,23.2c0.8,0,1.5,0.8,1.5,1.7s-0.7,1.7-1.5,1.7s-1.5-0.8-1.5-1.7S225.2,23.2,226,23.2z" /> <polygon id="separator-6632bac7cc545" class="logo-separator" points="46.5,54.9 45.9,54.9 45.9,33.6 45.9,0 46.5,0 46.5,26.3 	" /> <rect id="shield-white-top-6632bac7cc545" x="2.5" y="8.5" class="logo-shield-white-top" width="31.9" height="9.8" /> <path id="shield-white-inside-6632bac7cc545" class="logo-shield-white-inside" d="M34.4,19.1H2.6C2.8,30.3,8.5,40,18.5,46.5C28.6,40,34.2,30.3,34.4,19.1z" /> <path id="shield-white-6632bac7cc545" class="logo-shield-white" d="M0.7,6.6v11.8v1.5c0.5,11.6,6.5,21.5,17,28.2l0.8,0.5l0.8-0.5c10.8-6.9,16.8-17.3,17-29.3
+		V6.6H0.7z M35.2,18.9c-0.2,11.6-6,21.7-16.5,28.4l-0.2,0.1l-0.2-0.1C7.8,40.6,2,30.6,1.8,18.9V7.8h33.4V18.9L35.2,18.9z" /> <path id="shield-red-6632bac7cc545" class="logo-shield-red" d="M34.5,8.5H2.6v9.8h31.9V8.5z M12.2,15.4c-0.1,0-0.2,0-0.3,0s-0.1,0.1-0.1,0.2
+		c0,0.3,0,0.6,0,0.9c-0.2,0.1-0.5,0.1-0.7,0.1H9c-0.2,0-0.4,0-0.6,0.1c0,0.1-0.1,0.1-0.1,0.1c-0.2,0.1-0.4,0.1-0.6,0
+		c-0.1-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2,0-0.4,0H5.2c-0.3,0.1-0.7,0-1-0.1c0-0.3,0-0.6,0-0.9c0-0.1-0.1-0.2-0.2-0.2
+		c-0.4,0-0.6,0-0.7-0.3c-0.1-0.5,0.2-0.6,0.7-0.6c0,0,0,0,0.1,0c0.2-0.4,0.2-0.9,0.1-1.4c0-0.4,0-0.8,0-1.1c-0.5,0-1,0-0.9-0.6
+		C3.4,11.1,3.6,11,4,11c0.4-0.2-0.1-0.9,0.3-1.1c0.2,0,0.3,0,0.5,0H5c0.1,0,0.3,0,0.4,0s0.1-0.1,0.2-0.1c0.2,0,0.4,0.1,0.6,0.1
+		c0.4,0,0.9,0,1.3,0c0.2,0.1,0.4,0.2,0.6,0.3c0-0.1,0.1-0.1,0.2-0.1C8.5,10,8.8,9.9,9.1,9.9c0.4,0,0.7,0,1.1,0
+		c0.2-0.1,0.4-0.2,0.6,0c0.4-0.1,0.8,0,1.1,0.1c0.1,0.3,0.1,0.6,0.1,0.8v0.1c0,0.1,0,0.1,0.1,0.1s0.2,0,0.3,0c0.3,0,0.5,0.3,0.5,0.5
+		v0.1c-0.1,0.3-0.4,0.3-0.8,0.3c0,0.2,0,0.4,0,0.5v1.7c0.1,0.3,0.4,0.1,0.7,0.3S12.9,15.4,12.2,15.4z M22,15.4c-0.1,0-0.2,0-0.3,0
+		c-0.1,0-0.1,0.1-0.1,0.2c0,0.3,0,0.6,0,0.9c-0.2,0.1-0.5,0.1-0.7,0.1H19c-0.2,0-0.4,0-0.5,0.1c0,0.1-0.1,0.1-0.1,0.1
+		c-0.2,0.1-0.4,0.1-0.6,0c-0.1-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2,0-0.4,0h-2c-0.3,0.1-0.7,0-1-0.1c0-0.3,0-0.6,0-0.9
+		c0-0.1-0.1-0.2-0.2-0.2c-0.4,0-0.6,0-0.7-0.3c-0.1-0.5,0.2-0.6,0.7-0.6l0,0c0.2-0.4,0.2-0.9,0.1-1.3c0-0.4,0-0.8,0-1.1
+		c-0.5,0-1,0-0.9-0.6c0.1-0.3,0.3-0.4,0.7-0.4c0.3-0.2-0.1-0.9,0.3-1.1c0.2,0,0.3,0,0.5,0h0.2c0.1,0,0.3,0,0.4,0s0.1-0.1,0.2-0.1
+		c0.2,0,0.4,0.1,0.5,0.1c0.5,0,0.9,0,1.4,0c0.2,0.1,0.4,0.2,0.5,0.3c0.1-0.1,0.1-0.1,0.2-0.2c0.2-0.1,0.5-0.2,0.8-0.2s0.6,0,0.9,0
+		c0.2-0.1,0.4-0.2,0.5,0c0.4-0.1,0.8,0,1.1,0.1c0.1,0.3,0.1,0.6,0.1,0.8v0.1c0,0.1,0,0.1,0.1,0.1s0.2,0,0.3,0c0.3,0,0.5,0.3,0.5,0.5
+		v0.1c-0.1,0.3-0.4,0.3-0.8,0.3c0,0.2,0,0.4,0,0.5v1.7c0.1,0.3,0.4,0.1,0.7,0.3S22.6,15.4,22,15.4L22,15.4z M32.9,15.4
+		c-0.1,0-0.2,0-0.3,0s-0.1,0.1-0.1,0.2c0,0.3,0,0.6,0,0.9c-0.2,0.1-0.5,0.1-0.7,0.1H29c-0.2,0-0.4,0-0.5,0.1c0,0.1-0.1,0.1-0.1,0.1
+		c-0.2,0.1-0.4,0.1-0.6,0c-0.1-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2,0-0.4,0h-2.4c-0.3,0.1-0.7,0-1-0.1c0-0.3,0-0.6,0-0.9
+		c0-0.1-0.1-0.2-0.2-0.2c-0.4,0-0.6,0-0.7-0.3c-0.1-0.5,0.2-0.6,0.7-0.6l0,0c0.2-0.4,0.2-0.9,0.1-1.3c0-0.4,0-0.8,0-1.1
+		c-0.5,0-1,0-0.9-0.6c0.1-0.3,0.3-0.4,0.7-0.4c0.4-0.2-0.1-0.9,0.3-1.1c0.2,0,0.3,0,0.5,0h0.2c0.1,0,0.3,0,0.4,0s0.1-0.1,0.2-0.1
+		c0.2,0,0.4,0.1,0.5,0.1c0.5,0,1.4-0.1,1.8,0c0.2,0.1,0.4,0.2,0.5,0.3c0-0.1,0.1-0.2,0.2-0.2c0.2-0.1,0.5-0.2,0.8-0.2
+		c0.4,0,1.4,0.1,1.8,0s0.4-0.2,0.5,0c0.4-0.1,0.8,0,1.1,0.1c0.1,0.3,0.1,0.6,0.1,0.8v0.1c0,0.1,0,0.1,0.1,0.1s0.2,0,0.3,0
+		c0.3,0,0.5,0.3,0.5,0.5v0.1c-0.1,0.3-0.4,0.3-0.8,0.3c0,0.2,0,0.4,0,0.5v1.7c0.1,0.3,0.3,0.1,0.7,0.3S33.6,15.4,32.9,15.4
+		L32.9,15.4z" /> <path id="shield-grey-6632bac7cc545" class="logo-shield-grey" d="M1.8,7.8v11.1c0.2,11.6,6,21.7,16.5,28.4l0.2,0.1l0.2-0.1C29.2,40.6,35,30.6,35.2,18.9V7.8
+		H1.8z M18.5,46.5C8.4,40,2.8,30.3,2.6,19.1h31.9C34.2,30.3,28.6,40,18.5,46.5z M34.5,18.4H2.6V8.6h31.9V18.4L34.5,18.4z M4,14.5
+		c-0.5-0.1-0.8,0.1-0.7,0.6c0.1,0.3,0.3,0.4,0.7,0.3c0.1,0,0.2,0.1,0.2,0.2c0,0.3,0,0.6,0,0.9c0.3,0.2,0.7,0.2,1,0.1h1.9
+		c0.1,0,0.2,0,0.4,0c0.1,0,0.1,0.1,0.2,0.1c0.2,0.1,0.4,0.1,0.6,0h0.1c0.2-0.1,0.4-0.1,0.6-0.1h2.1c0.2,0,0.5,0,0.7-0.1
+		c0-0.3,0-0.6,0-0.9c0-0.1,0-0.2,0.1-0.2s0.2,0,0.3,0c0.6,0,0.6-0.6,0.2-0.8s-0.6,0.1-0.7-0.3v-1.8c0-0.2,0-0.4,0-0.5
+		c0.4,0,0.7,0,0.8-0.3s-0.1-0.5-0.3-0.6l0,0c-0.1,0-0.1,0-0.3,0s-0.1,0-0.1-0.1v-0.1c0-0.3,0-0.6-0.1-0.8C11.3,10,11,10,10.6,10
+		c-0.1-0.2-0.3-0.1-0.6,0c-0.4,0-0.7,0-1.1,0c-0.3,0-0.5,0.1-0.8,0.2c-0.1,0-0.2,0.1-0.2,0.2c-0.2-0.1-0.4-0.2-0.6-0.3
+		c-0.4,0-0.9,0-1.3,0c-0.2,0-0.4-0.1-0.6-0.1c-0.1,0-0.1,0.1-0.2,0.1s-0.3,0-0.4,0h0c-0.2,0-0.3,0-0.5,0C3.9,10.2,4.4,11,4,11.2
+		c-0.4,0-0.7,0-0.7,0.4c-0.1,0.5,0.4,0.5,0.9,0.5c0,0.3,0,0.7,0,1.1C4.3,13.6,4.3,14,4,14.5C4.1,14.5,4.1,14.5,4,14.5z M7.5,15.8
+		L7.5,15.8c-0.9-0.1-1.4,0.1-2.3,0c-0.2-0.2,0.2-0.5,0.4-0.5c0.5,0.1,1.1,0.1,1.6,0.1c0.1,0,0.3,0.1,0.4,0.2
+		C7.8,15.7,7.6,15.7,7.5,15.8z M11,10.3c0.1-0.2,0.4-0.2,0.6-0.1c0,0,0,0,0.1,0.1c0.1,0.2-0.1,0.8,0.2,0.9c0.1,0,0.2,0,0.2,0h0.2
+		c0.1,0,0.2,0,0.2,0.1c0.1,0.1,0.1,0.3,0,0.4c0,0.1-0.1,0.1-0.2,0.1c-0.2,0-0.2,0-0.4,0s-0.2,0.4-0.2,0.7s-0.1,1.3,0,1.9
+		c0,0.3,0.4,0.1,0.7,0.2c0.1,0,0.2,0.1,0.2,0.2c0.1,0.6-0.8,0.2-0.9,0.5s0.1,0.6,0,0.8c0,0.1-0.2,0.2-0.3,0.2h-1.1H9.8
+		c-0.3,0-0.6,0-1,0c-0.2-0.1-0.1-0.2-0.1-0.3c0-0.1,0.1-0.1,0.1-0.2c0.3,0,0.7,0,1,0s0.4,0,0.7,0s0.6,0,0.8-0.1c0-0.9,0-1.4,0-2.3
+		v-2c0-0.2,0-0.5,0-0.7C11.2,10.6,11.1,10.5,11,10.3L11,10.3z M10.6,10.5C10.6,10.5,10.6,10.4,10.6,10.5c0.1-0.1,0.2,0,0.3,0
+		c0.1,0.1,0.1,0.2,0.2,0.3c0.1,0.3,0,0.9,0,1.2c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0.1,0.9,0,2.7,0,2.9s0,0.2-0.1,0.1
+		c-0.1-0.2-0.2-0.4-0.3-0.6C10.6,13,10.6,12.3,10.6,10.5z M10.7,15.5c0.1,0,0.1,0.1,0.1,0.2c0,0.2-0.4,0.1-0.6,0.1c-0.7,0-1,0-1.7,0
+		c-0.1-0.1-0.1-0.3,0-0.4c0.2-0.2,1.3,0,1.9-0.2C10.6,15.3,10.7,15.4,10.7,15.5L10.7,15.5z M8.1,13c0-0.6,0-1,0-1.6
+		c0-0.2,0-0.4,0-0.7c0-0.1,0.1-0.2,0.1-0.3c0.1-0.1,0.3-0.2,0.5-0.2c0.4-0.1,0.9,0,1.3,0c0.1,0,0.2,0,0.3,0s0.2,0.1,0.2,0.2
+		c0,1.4,0,3.1,0,4.2c0,0.2,0,0.3,0,0.5c-0.2,0.1-0.4,0.2-0.7,0.2c-0.2,0-0.4,0-0.6,0c-0.2,0-0.3,0-0.5,0c-0.1,0-0.2,0.1-0.2,0.1
+		c-0.1,0.1-0.2,0.1-0.2,0.1c0-0.2,0-0.4,0-0.6C8.1,14.2,8.1,13.4,8.1,13L8.1,13z M8.4,16c0,0.1,0.1,0.2,0.1,0.2
+		c0,0.1-0.1,0.2-0.1,0.3c0,0.1-0.1,0.1-0.2,0.1c-0.1,0-0.2,0-0.2,0c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.1-0.1-0.2-0.2
+		c0-0.1,0-0.1,0-0.2c0-0.2,0.1-0.3,0.2-0.4l0,0C8,15.7,8.2,15.7,8.4,16C8.3,15.9,8.4,16,8.4,16L8.4,16z M5.6,14.5c0-1.2,0-2.4,0-3.8
+		c0-0.2,0-0.3,0-0.5l0,0c0.1-0.1,0.2-0.1,0.3-0.2c0.1,0,0.2,0,0.3,0h0.3c0.1,0,0.3,0,0.4,0.1c0.1,0,0.2,0,0.2-0.1
+		c0.3,0,0.6,0.1,0.8,0.4c0,1.2,0,2.4,0,3.4c0,0.5,0,0.9-0.1,1.4c-0.2,0-0.4-0.1-0.5-0.2c-0.5-0.1-0.9,0.1-1.4,0
+		c-0.1,0-0.3-0.1-0.4-0.1C5.5,14.9,5.5,14.7,5.6,14.5z M5.2,10.4c0.1,0,0.1,0,0.2,0.1l0,0v3.3c0.1,0.5,0,1-0.1,1.4
+		c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1-1.1,0-2.1,0-2.9c0-0.2,0-0.3,0-0.4V12c0-0.1,0-0.1,0-0.2c0-0.2,0-0.4,0-0.5
+		C4.9,10.9,5,10.6,5.2,10.4z M4.4,14.4c0-0.2,0-0.4,0-0.6v-0.6c0-0.5,0-0.9-0.1-1.3c-0.2-0.2-0.6,0.1-0.8-0.2
+		c-0.1-0.2,0-0.4,0.2-0.4h0.1c0.3-0.1,0.4,0.1,0.5-0.2c0-0.2,0-0.5,0-0.7c0-0.1,0.1-0.2,0.2-0.2l0,0c0.2-0.1,0.4,0,0.5,0.1
+		c0,0.1-0.1,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.2c-0.1,0.4-0.1,0.7,0,1.1c0,0.8,0,1.3,0,1.9v0.2c0,0.1,0,0.2,0,0.3c0,0.1,0,0.1,0,0.2
+		s0,0.2,0,0.3s0,0.1,0,0.2c0,0.3-0.1,1,0.1,1.1c0.2,0,0.5,0,0.7,0h1.5c0.1,0,0.2,0.1,0.2,0.2s0,0.2-0.1,0.3l0,0c-1,0-1.7,0-2.8,0
+		c-0.1-0.1-0.2-0.3-0.2-0.4c0-0.3,0.1-0.6-0.1-0.7c-0.2,0-0.3,0-0.5,0c-0.1,0-0.3-0.1-0.3-0.3c0-0.1,0.1-0.2,0.1-0.3
+		c0.1,0,0.2,0,0.2-0.1C4.1,14.6,4.3,14.7,4.4,14.4L4.4,14.4z M5.8,11.8L5.8,11.8L5.8,11.8l0.9-0.1v0.2l0,0c-0.1,0-0.2,0-0.2,0.1
+		s0,0.1,0,0.2l0.4,1.2L7.3,12v-0.1c0-0.1-0.1-0.1-0.2-0.1l0,0v-0.1h0.6v0.2l0,0c-0.1,0-0.2,0.1-0.2,0.1c0,0.1-0.1,0.2-0.1,0.3
+		l-0.5,1.9H6.7l-0.6-2C6,11.9,6,11.9,5.8,11.8L5.8,11.8z M25.6,12.4h-0.1v-0.8h0.1l0.1,0.1H27c0,0,0.1,0,0.1-0.1h0.1v0.8l0,0
+		c-0.1-0.4-0.1-0.5-0.3-0.5h-0.2v1.7c0,0.3,0,0.3,0.2,0.3H27v0.2h-1v-0.2h0.1c0.2,0,0.2,0,0.2-0.3v-1.7H26
+		C25.7,11.9,25.7,11.9,25.6,12.4L25.6,12.4L25.6,12.4z M10,14.1H8.4v-0.2h0.1c0.2,0,0.2,0,0.2-0.3v-1.5c0-0.3,0-0.3-0.2-0.3l0,0
+		v-0.1h1.4v0.6H9.8l0,0C9.8,12,9.7,12,9.6,12H9.1v0.9h0.4c0.2,0,0.2,0,0.2-0.3h0.1v0.8H9.7v-0.1c0-0.2,0-0.2-0.2-0.2H9.1v0.5
+		c0,0.1,0,0.2,0,0.3h0.4c0.2,0,0.3-0.1,0.3-0.4l0,0h0.1L10,14.1z M30.4,13.6c0-0.2-0.1-0.4-0.3-0.5L29.9,13
+		c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.1-0.3-0.1-0.5c0-0.3,0.2-0.6,0.5-0.7l0,0c0.1,0,0.3,0,0.4,0.1l0,0l0,0h0.1l0.1,0.7h-0.1
+		c0-0.2-0.2-0.5-0.4-0.5c-0.1,0-0.2,0.1-0.2,0.2c0,0.2,0.1,0.3,0.2,0.4h0.1l0.1,0.1l0.2,0.2c0.2,0.2,0.3,0.4,0.3,0.7
+		c0,0.4-0.2,0.7-0.6,0.8c-0.1,0-0.2,0-0.3-0.1h-0.1c0,0,0,0,0,0.1h-0.1l-0.1-0.7h0.1c0,0.3,0.2,0.5,0.5,0.6
+		C30.4,13.9,30.5,13.8,30.4,13.6L30.4,13.6z M23.6,14.4c-0.5-0.1-0.8,0.1-0.7,0.6c0.1,0.3,0.3,0.4,0.7,0.3c0.1,0,0.2,0.1,0.2,0.2
+		c0,0.3,0,0.6,0,0.9c0.3,0.2,0.7,0.2,1,0.1h2.4c0.1,0,0.2,0,0.3,0c0.1,0.1,0.1,0.1,0.2,0.2c0.2,0.1,0.4,0.1,0.6,0c0,0,0.1,0,0.2,0
+		c0.2-0.1,0.4-0.1,0.5-0.1h2.8c0.2,0,0.5,0,0.7-0.1c0-0.3,0-0.6,0-0.9c0-0.1,0-0.2,0.1-0.2s0.2,0,0.3,0c0.6,0,0.6-0.6,0.2-0.8
+		s-0.6,0.1-0.7-0.3v-1.8c0-0.2,0-0.4,0-0.5c0.4,0,0.7,0,0.8-0.3s-0.1-0.5-0.4-0.6h-0.1c-0.1,0-0.1,0-0.3,0s-0.1,0-0.1-0.1v-0.1
+		c0-0.3,0-0.6-0.1-0.8C31.8,10,31.5,10,31.1,10c-0.1-0.2-0.3-0.1-0.5,0s-1.4,0-1.8,0c-0.3,0-0.5,0.1-0.8,0.2c-0.1,0-0.2,0.1-0.2,0.2
+		c-0.2-0.1-0.4-0.2-0.5-0.3c-0.4-0.1-1.3,0-1.8,0c-0.2,0-0.4-0.1-0.5-0.1s-0.1,0.1-0.2,0.1s-0.3,0-0.4,0h-0.2c-0.2,0-0.3,0-0.5,0
+		c-0.4,0.1,0.1,0.9-0.3,1.1c-0.5,0-0.7,0-0.7,0.4c-0.1,0.6,0.4,0.6,0.9,0.6c0,0.3,0,0.7,0,1.1C23.8,13.6,23.7,14.1,23.6,14.4
+		C23.6,14.5,23.6,14.5,23.6,14.4L23.6,14.4z M27.6,15.8C27.6,15.8,27.5,15.8,27.6,15.8c-0.9-0.1-1.9,0.1-2.7,0
+		c-0.2-0.2,0.2-0.5,0.4-0.5c0.7,0.1,1.4,0.1,2.1,0.1c0.1,0,0.3,0.1,0.4,0.2C27.8,15.7,27.6,15.7,27.6,15.8L27.6,15.8z M28.4,16.5
+		c0,0.1-0.1,0.1-0.2,0.1s-0.2,0-0.2,0c-0.1,0-0.1-0.1-0.2-0.1s-0.1-0.1-0.2-0.2c0-0.1,0-0.1,0-0.2c0-0.2,0.1-0.3,0.2-0.4l0,0
+		c0.2-0.1,0.4-0.1,0.5,0.1v0.1c0,0.1,0.1,0.2,0.1,0.2C28.5,16.3,28.4,16.4,28.4,16.5L28.4,16.5z M31.8,10.3c0.1-0.2,0.4-0.2,0.6-0.1
+		c0,0,0,0,0.1,0.1c0.1,0.2-0.1,0.8,0.2,0.9c0.1,0,0.2,0,0.2,0h0.2c0.1,0,0.1,0,0.2,0.1c0.1,0.1,0.1,0.3,0,0.4c0,0.1-0.1,0.1-0.2,0.1
+		c-0.2,0-0.2,0-0.4,0s-0.2,0.4-0.2,0.7s-0.1,1.3,0,1.9c0,0.3,0.4,0.1,0.7,0.2c0.1,0,0.2,0.1,0.2,0.2c0.1,0.6-0.8,0.2-0.9,0.5
+		s0.1,0.6,0,0.8c0,0.1-0.2,0.2-0.3,0.2h-1.1h-0.6h-1.6c-0.2-0.1-0.1-0.2-0.1-0.3c0-0.1,0.1-0.1,0.1-0.2c0.3,0,1,0,1.3,0h1.1
+		c0.3,0,0.6,0,0.8-0.1c0-0.9,0-1.4,0-2.3v-2c0-0.2,0-0.5,0-0.7C31.9,10.6,31.8,10.5,31.8,10.3C31.7,10.3,31.7,10.3,31.8,10.3
+		L31.8,10.3z M31.4,10.5C31.4,10.5,31.4,10.4,31.4,10.5L31.4,10.5c0.2-0.1,0.3,0,0.3,0c0.1,0.1,0.1,0.2,0.2,0.3c0,0.3,0,0.9,0,1.2
+		c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.9,0,2.7,0,2.9s0,0.2-0.1,0.1c-0.1-0.2-0.3-0.4-0.3-0.6C31.3,13,31.4,12.3,31.4,10.5
+		L31.4,10.5z M31.5,15.5c0.1,0,0.1,0.1,0.1,0.2c0,0.2-0.4,0.1-0.6,0.1h-2.5c-0.1-0.1-0.1-0.3,0-0.4c0.2-0.2,2,0,2.6-0.2
+		C31.3,15.3,31.4,15.4,31.5,15.5L31.5,15.5z M25.2,14.5c0-1.2,0-2.4,0-3.8c0-0.2,0-0.3,0-0.5l0,0c0.1-0.1,0.2-0.1,0.3-0.2
+		c0.1,0,0.2,0,0.3,0h0.3c0.2,0,0.7,0.1,0.9,0.1s0.2,0,0.2-0.1c0.3,0,0.6,0.1,0.8,0.4c0,0.2,0,0.3,0,0.5h0.2c0-0.1,0-0.2,0-0.3
+		c0-0.1,0.1-0.2,0.1-0.3c0.1-0.1,0.3-0.2,0.5-0.2c0.4-0.1,1.6,0,2,0c0.1,0,0.2,0,0.3,0s0.2,0.1,0.2,0.2c0,1.4,0,3.1,0,4.2
+		c0,0.2,0,0.3,0,0.5c-0.2,0.1-0.4,0.2-0.7,0.2s-1.1,0-1.4,0c-0.2,0-0.3,0-0.5,0c-0.1,0-0.2,0.1-0.2,0.1c-0.1,0.1-0.2,0.1-0.2,0.1
+		c0-0.2,0-0.4,0-0.6h-0.2c0,0.2,0,0.4-0.1,0.6c-0.2,0-0.4-0.1-0.5-0.2c-0.5-0.1-1.4,0.1-1.8,0c-0.1,0-0.3-0.1-0.4-0.1
+		C25.1,15,25.1,14.7,25.2,14.5L25.2,14.5z M24.8,10.4c0.1,0,0.1,0,0.2,0.1l0,0v3.3c0.1,0.5,0,1-0.1,1.4c-0.1,0.1-0.2,0.2-0.3,0.3
+		c-0.1-1.1,0-2.1,0-2.9c0-0.2,0-0.3,0-0.4V12v-0.2c0-0.2,0-0.4,0-0.5C24.5,10.9,24.6,10.6,24.8,10.4z M24,14.4c0-0.2,0-0.4,0-0.6
+		s0-0.4,0-0.6c0-0.5,0-0.9-0.1-1.3c-0.2-0.2-0.6,0.1-0.8-0.2c-0.1-0.2,0-0.4,0.2-0.4h0.1c0.3-0.1,0.4,0.1,0.5-0.2c0-0.2,0-0.5,0-0.7
+		c0-0.1,0.1-0.2,0.2-0.2c0.2-0.1,0.4,0,0.5,0.1c0,0.1-0.1,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.2c-0.1,0.4-0.1,0.7,0,1.1
+		c0,0.8,0,1.3,0,1.9c0,0.1,0,0.2,0,0.2s0,0.2,0,0.3c0,0.1,0,0.1,0,0.2s0,0.2,0,0.3s0,0.1,0,0.2c0,0.3-0.1,1,0.1,1.1
+		c0.2,0,0.5,0,0.7,0h1.9c0.1,0,0.2,0.1,0.2,0.2s0,0.2-0.1,0.3l0,0c-1,0-2.2,0-3.2,0c-0.1-0.1-0.2-0.3-0.2-0.4c0-0.3,0.2-0.6-0.1-0.7
+		c-0.2,0-0.3,0-0.5,0c-0.1,0-0.3-0.1-0.3-0.3c0-0.1,0.1-0.2,0.1-0.2c0.1,0,0.2,0,0.2-0.1C23.7,14.6,23.9,14.7,24,14.4L24,14.4z
+		 M28.1,14L28.1,14c-0.2,0-0.3-0.1-0.3-0.1s0-0.1,0-0.2l0.1-0.4h0.6l0.2,0.5c0,0.1,0,0.1,0,0.2s0,0.1-0.1,0.1c0,0,0,0-0.1,0h-0.1
+		v0.2h0.9v-0.2l0,0c-0.2,0-0.3-0.2-0.3-0.3l-0.5-2h-0.4v0.1l-0.5,1.9c-0.1,0.3-0.1,0.4-0.2,0.4l0,0v0.2h0.8V14H28.1z M28.2,12.1
+		l0.2,0.8h-0.5L28.2,12.1z M29.6,30.1c-0.3-0.3-0.8-0.4-0.9-0.6s-0.2-0.5-0.3-0.8c-0.1-0.2-0.2-0.4-0.4-0.6
+		c-0.3-0.4-0.9-0.8-1.1-0.4s-0.5,0.8-0.8,1.1c-0.4,0.3-0.7,0.5-1.2,0.6c-1.6,0.1-3.1,0.1-4.7,0.1c-0.2,0-0.3-0.2-0.2-0.4
+		c0-1.3,0-2.7,0.1-4c0.2-0.4,0.5-0.7,0.9-1c0.5-0.4,1.2-0.6,1.2-0.9c-0.2-0.5-0.5-0.8-1-1c-0.5-0.3-1.1-0.3-1.3-0.4
+		c-0.3-0.3-0.5-0.7-0.7-1c-0.3-0.3-0.5-0.6-0.8-0.8c-0.3,0.3-0.6,0.5-0.8,0.8c-0.2,0.3-0.4,0.7-0.7,1c-0.2,0.1-0.8,0.1-1.3,0.4
+		c-0.5,0.2-0.8,0.5-1,1c0,0.3,0.7,0.4,1.2,0.8c0.4,0.3,0.7,0.6,0.9,1c0.1,1.3,0.1,2.7,0.1,4c0,0.2-0.1,0.3-0.2,0.4
+		c-1.6,0.1-3.1,0-4.7-0.1c-0.4-0.1-0.8-0.4-1.2-0.6c-0.3-0.3-0.6-0.7-0.8-1.1c-0.2-0.3-0.8,0.1-1.1,0.4c-0.2,0.2-0.3,0.4-0.4,0.7
+		c0,0.3-0.1,0.5-0.3,0.8c-0.1,0.2-0.6,0.3-0.9,0.6c-0.4,0.3-0.7,0.7-0.9,1.1c0.2,0.3,0.5,0.6,0.8,0.8c0.3,0.2,1,0.5,1,0.6
+		s0.2,0.8,0.4,1.1c0.2,0.4,0.6,0.8,1,1c0.3,0.1,0.5,0.2,0.6,0s0.4-0.7,0.5-1c0.3-0.4,0.6-0.8,1.1-1s0.9-0.3,1.4-0.2
+		c0.8,0,2.9,0,3.1,0c0.2,0,0.5,0.2,0.5,0.4c0,0.3,0,5,0,5.3c0,0.6-0.2,1.1-0.6,1.6s-1,0.8-1.6,1c-0.3,0.1,0,0.3,0.1,0.5
+		c0.2,0.3,0.5,0.5,0.8,0.7c0.4,0.2,0.8,0.3,1.2,0.4c0.3,0.2,0.5,0.5,0.6,0.8c0.3,0.5,0.6,1,1.1,1.3c0.5-0.4,0.8-0.8,1.1-1.3
+		c0.1-0.3,0.3-0.6,0.6-0.8c0.4-0.1,0.8-0.2,1.2-0.4c0.3-0.2,0.6-0.4,0.8-0.7c0.1-0.2,0.4-0.4,0.1-0.5c-0.6-0.2-1.2-0.5-1.6-1
+		c-0.4-0.4-0.6-1-0.6-1.6c0-0.3,0-5,0-5.3c0-0.2,0.2-0.4,0.5-0.4c0.2,0,2.3,0,3.1,0c0.5,0,1,0.1,1.4,0.2c0.4,0.2,0.8,0.6,1.1,1
+		c0.2,0.3,0.5,0.9,0.5,1s0.3,0.1,0.6,0c0.4-0.2,0.8-0.6,1-1c0.2-0.3,0.3-1,0.4-1.1s0.7-0.3,1-0.6c0.3-0.2,0.6-0.5,0.8-0.8
+		C30.1,30.7,29.8,30.4,29.6,30.1L29.6,30.1z M9.6,29c0.1-0.1,0.2-0.3,0.3-0.4H10h0.1c0.1,0.1,0.2,0.2,0.3,0.4
+		c0.1,0.2,0.1,0.4,0.1,0.6c0,0.3-0.1,0.5-0.1,0.8c-0.1,0.2-0.1,0.4-0.2,0.5c0,0.2-0.1,0.3-0.1,0.5c0,0.1,0,0.2,0,0.2s0,0.1-0.1,0.1
+		c0,0-0.1,0-0.1-0.1s0-0.2,0-0.2c0-0.2-0.1-0.3-0.1-0.5s-0.1-0.3-0.2-0.5c-0.1-0.3-0.1-0.5-0.1-0.8C9.5,29.4,9.5,29.2,9.6,29L9.6,29
+		z M10.5,31.9c0.1,0,0.2,0.1,0.2,0.2s-0.1,0.2-0.2,0.2h-1c-0.1,0-0.2-0.1-0.2-0.2s0.1-0.2,0.2-0.2H10.5z M8.7,30.9
+		c-0.1,0-0.2,0-0.3,0S8.2,31,8.2,31.1s-0.1,0.2-0.1,0.2c-0.1-0.1-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.2-0.1-0.3c0-0.2,0.1-0.3,0.2-0.4
+		c0.2-0.2,0.4-0.3,0.6-0.3c0.2,0,0.3,0,0.4,0.1c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0,0.3,0,0.4
+		c0,0-0.1,0.1-0.1,0l0,0v-0.1c0-0.1-0.1-0.1-0.1-0.2c-0.1-0.1-0.2-0.2-0.3-0.3C9,30.9,8.9,30.9,8.7,30.9L8.7,30.9z M10.6,32.9
+		c-0.1,0-0.3,0-0.4-0.1c0,0.1,0,0.2,0,0.2c0,0.1-0.1,0.2-0.1,0.2H10H9.9c-0.1-0.1-0.1-0.1-0.1-0.2s0-0.2,0-0.2
+		c-0.1,0.1-0.2,0.1-0.4,0.1s-0.3-0.1-0.2-0.1s0.3-0.1,0.4-0.2c0.1-0.1,0.1-0.1,0.1-0.2h0.7c0,0.1,0.1,0.1,0.1,0.2
+		c0.1,0.1,0.2,0.2,0.4,0.2C10.9,32.8,10.7,32.9,10.6,32.9L10.6,32.9z M12.1,30.8c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.1,0.1-0.2,0.2
+		c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2,0-0.3,0s-0.3,0.1-0.4,0.2c-0.1,0.1-0.2,0.2-0.3,0.3c0,0.1-0.1,0.1-0.1,0.2
+		v0.1c0,0-0.1,0.1-0.1,0l0,0c0-0.1,0-0.3,0-0.4c0-0.2,0.1-0.3,0.2-0.4c0.1-0.2,0.3-0.4,0.4-0.5c0.1-0.1,0.3-0.1,0.4-0.1
+		c0.2,0,0.4,0.1,0.6,0.3C12,30.6,12.1,30.7,12.1,30.8L12.1,30.8z M19.4,22.7c0.1-0.1,0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.6,0.3
+		c0.1,0.1,0.2,0.3,0.1,0.4c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.1,0.2-0.2,0.2c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2
+		c-0.1,0-0.2,0-0.3,0c-0.1,0-0.3,0.1-0.4,0.2s-0.2,0.2-0.3,0.3c0,0.1-0.1,0.1-0.1,0.2v0.1c0,0-0.1,0.1-0.1,0l0,0c0-0.1,0-0.3,0-0.4
+		c0-0.2,0.1-0.3,0.2-0.4C19,23,19.2,22.8,19.4,22.7z M18.6,41.3c0,0.1,0,0.2,0,0.2s0,0.1-0.1,0.1c0,0-0.1,0-0.1-0.1s0-0.2,0-0.2
+		c0-0.2,0-0.3-0.1-0.5c0-0.2-0.1-0.3-0.2-0.5C18,40,18,39.8,18,39.5c0-0.2,0-0.4,0.1-0.6c0.1-0.1,0.2-0.3,0.3-0.4h0.1h0.1
+		c0.1,0.1,0.2,0.2,0.3,0.4c0.1,0.2,0.1,0.4,0.1,0.6c0,0.3-0.1,0.5-0.1,0.8c-0.1,0.2-0.1,0.4-0.2,0.5C18.7,41,18.6,41.1,18.6,41.3
+		L18.6,41.3z M19,41.8c0.1,0,0.2,0,0.2,0.1s0,0.2-0.1,0.2H19h-1c-0.1,0-0.2,0-0.2-0.1s0-0.2,0.1-0.2H18H19z M18.7,32.8
+		c0,0.1,0,0.2,0,0.2c0,0.1-0.1,0.2-0.1,0.2h-0.1h-0.1c-0.1-0.1-0.1-0.1-0.1-0.2s0-0.2,0-0.2c-0.1,0.1-0.2,0.1-0.4,0.1
+		c-0.2,0-0.3-0.1-0.2-0.1c0.1,0,0.3-0.1,0.4-0.2s0.1-0.1,0.1-0.2h0.7c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.2,0.2,0.4,0.2
+		c0.1,0-0.1,0.1-0.2,0.1C19,33,18.9,32.9,18.7,32.8L18.7,32.8z M19,32.2h-1c-0.1,0-0.2-0.1-0.2-0.2s0.1-0.2,0.2-0.2h1
+		c0.1,0,0.2,0,0.2,0.1s0,0.2-0.1,0.2C19.1,32.2,19.1,32.2,19,32.2L19,32.2z M18.6,31.4c0,0.1,0,0.2,0,0.2s0,0.1-0.1,0.1
+		c0,0-0.1,0-0.1-0.1s0-0.2,0-0.2c0-0.2-0.1-0.3-0.1-0.5s-0.1-0.3-0.2-0.5C18,30.1,18,29.9,18,29.6c0-0.2,0-0.4,0.1-0.6
+		c0.1-0.1,0.2-0.3,0.3-0.4h0.1h0.1c0.1,0.1,0.2,0.2,0.3,0.4c0.1,0.2,0.1,0.4,0.1,0.6c0,0.3-0.1,0.5-0.1,0.8
+		c-0.1,0.2-0.1,0.4-0.2,0.5C18.7,31.1,18.7,31.2,18.6,31.4L18.6,31.4z M18.7,25.3c0,0.1,0,0.2,0,0.3c0,0.1-0.1,0.2-0.1,0.2h-0.1
+		h-0.1c-0.1-0.1-0.2-0.2-0.2-0.3c0-0.1,0-0.2,0-0.3c-0.1,0.1-0.2,0.1-0.4,0.1c-0.2,0-0.3-0.1-0.2-0.1c0.1,0,0.2-0.1,0.4-0.2
+		c0.1-0.1,0.1-0.1,0.1-0.2h0.7c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.2,0.2,0.4,0.2c0.1,0-0.1,0.1-0.2,0.1C18.9,25.4,18.8,25.3,18.7,25.3
+		L18.7,25.3z M17.8,24.5c0-0.1,0.1-0.1,0.2-0.1h1c0.1,0,0.2,0.1,0.2,0.1c0,0.1-0.1,0.2-0.2,0.2h-1C17.9,24.7,17.8,24.6,17.8,24.5
+		L17.8,24.5L17.8,24.5z M18.1,21.5c0.1-0.1,0.2-0.3,0.3-0.4h0.1h0.1c0.1,0.1,0.2,0.2,0.3,0.4c0.1,0.2,0.1,0.4,0.1,0.6
+		c0,0.3-0.1,0.5-0.1,0.8c-0.1,0.2-0.1,0.4-0.2,0.5c0,0.2-0.1,0.3-0.1,0.5c0,0.1,0,0.2,0,0.2s0,0.1-0.1,0.1c0,0-0.1,0-0.1-0.1
+		s0-0.2,0-0.2c0-0.1,0-0.2-0.1-0.5s-0.1-0.3-0.2-0.5C18,22.6,18,22.4,18,22.1C18,21.9,18,21.7,18.1,21.5L18.1,21.5z M16.8,23.6
+		c0,0.1-0.1,0.2-0.1,0.2c-0.1-0.1-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.2-0.1-0.3c0-0.2,0-0.3,0.1-0.4c0.2-0.2,0.4-0.3,0.6-0.3
+		s0.3,0,0.4,0.1c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0,0.3,0,0.4c0,0-0.1,0.1-0.1,0l0,0c0,0,0,0,0-0.1
+		s-0.1-0.1-0.1-0.2c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.2-0.2-0.4-0.2c-0.1,0-0.2,0-0.3,0C16.9,23.4,16.8,23.4,16.8,23.6L16.8,23.6
+		z M16.8,31.1c0,0.1-0.1,0.2-0.1,0.2c-0.1-0.1-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.2-0.1-0.3c0-0.2,0-0.3,0.1-0.4
+		c0.2-0.2,0.4-0.3,0.6-0.3s0.3,0,0.4,0.1c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0,0.3,0,0.4c0,0-0.1,0.1-0.1,0l0,0
+		v-0.1c0-0.1-0.1-0.1-0.1-0.2c-0.1-0.1-0.2-0.2-0.3-0.3c-0.2-0.1-0.4-0.2-0.6-0.1C16.9,31,16.9,31,16.8,31.1L16.8,31.1z M17.2,40.8
+		c-0.1,0-0.2,0-0.3,0c-0.1,0-0.2,0.1-0.2,0.2s-0.1,0.2-0.1,0.2c-0.1-0.1-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.2-0.1-0.3
+		c0-0.2,0.1-0.3,0.2-0.4c0.2-0.2,0.4-0.3,0.6-0.3s0.3,0,0.4,0.1c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0,0.3,0,0.4
+		c0,0-0.1,0.1-0.1,0l0,0v-0.1c0-0.1-0.1-0.1-0.1-0.2c-0.1-0.1-0.2-0.2-0.3-0.3C17.5,40.9,17.4,40.8,17.2,40.8z M19.1,42.8
+		c-0.1,0-0.3,0-0.4-0.1c0,0.1,0,0.2,0,0.2c0,0.1-0.1,0.2-0.1,0.2h-0.1h-0.1c-0.1-0.1-0.1-0.1-0.1-0.2s0-0.2,0-0.3
+		c-0.1,0.1-0.2,0.1-0.4,0.1c-0.2,0-0.3-0.1-0.2-0.1c0.1,0,0.2-0.1,0.4-0.2c0.1-0.1,0.1-0.1,0.1-0.2h0.7c0,0.1,0.1,0.1,0.1,0.2
+		c0.1,0.1,0.2,0.2,0.4,0.2C19.4,42.7,19.2,42.8,19.1,42.8L19.1,42.8z M20.4,40.3c0.1,0.1,0.2,0.3,0.1,0.4c0,0.1,0,0.2-0.1,0.3
+		c-0.1,0.1-0.1,0.1-0.2,0.2c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.1,0-0.2,0-0.3,0c-0.1,0-0.3,0.1-0.4,0.2s-0.2,0.2-0.3,0.3
+		c0,0.1-0.1,0.1-0.1,0.2c0,0,0,0,0,0.1c0,0-0.1,0.1-0.1,0l0,0c0-0.1,0-0.3,0-0.4c0-0.2,0.1-0.3,0.2-0.4c0.1-0.2,0.3-0.4,0.4-0.5
+		s0.3-0.1,0.4-0.1C20,40.1,20.3,40.2,20.4,40.3L20.4,40.3z M20.6,30.8c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.1,0.1-0.2,0.2
+		c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2c-0.2-0.1-0.5,0-0.6,0.1s-0.2,0.2-0.3,0.3c0,0.1-0.1,0.1-0.1,0.2v0.1c0,0-0.1,0.1-0.1,0
+		l0,0c0-0.1,0-0.3,0-0.4c0-0.2,0.1-0.3,0.2-0.4c0.1-0.2,0.3-0.4,0.4-0.5s0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.6,0.3
+		C20.6,30.5,20.6,30.7,20.6,30.8L20.6,30.8z M26.6,29c0.1-0.1,0.2-0.3,0.3-0.4H27h0.1c0.1,0.1,0.2,0.2,0.3,0.4
+		c0.1,0.2,0.1,0.4,0.2,0.6c0,0.3-0.1,0.5-0.2,0.8c-0.1,0.2-0.1,0.4-0.2,0.5c0,0.2-0.1,0.3-0.1,0.5c0,0.1,0,0.2,0,0.2s0,0.1-0.1,0.1
+		c0,0-0.1,0-0.1-0.1s0-0.2,0-0.2c0-0.2-0.1-0.3-0.1-0.5s-0.1-0.3-0.2-0.5c-0.1-0.3-0.1-0.5-0.1-0.8C26.5,29.4,26.5,29.2,26.6,29z
+		 M27.5,31.9c0.1,0,0.2,0.1,0.2,0.1c0,0.1-0.1,0.2-0.2,0.2h-1c-0.1,0-0.2-0.1-0.2-0.2s0.1-0.1,0.2-0.1H27.5z M25.7,30.9
+		c-0.1,0-0.2,0-0.3,0c-0.1,0-0.2,0.1-0.2,0.2s-0.1,0.2-0.1,0.2c-0.1-0.1-0.2-0.1-0.2-0.2c-0.1-0.1-0.1-0.2-0.1-0.3
+		c0-0.2,0-0.3,0.1-0.4c0.2-0.2,0.4-0.3,0.6-0.3s0.3,0,0.4,0.1c0.2,0.1,0.3,0.3,0.4,0.5c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0,0.3,0,0.4
+		c0,0-0.1,0.1-0.1,0l0,0v-0.1c-0.1-0.2-0.2-0.4-0.4-0.5C26,30.9,25.9,30.9,25.7,30.9L25.7,30.9z M27.6,32.9c-0.1,0-0.3,0-0.4-0.1
+		c0,0.1,0,0.2,0,0.2c0,0.1-0.1,0.2-0.1,0.2H27h-0.1c-0.1-0.1-0.1-0.1-0.1-0.2s0-0.2,0-0.2c-0.1,0.1-0.2,0.1-0.4,0.1
+		c-0.2,0-0.3-0.1-0.2-0.1c0.1,0,0.2-0.1,0.4-0.2c0.1-0.1,0.1-0.1,0.1-0.2h0.7c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.2,0.2,0.3,0.2
+		C27.9,32.8,27.7,32.9,27.6,32.9L27.6,32.9z M29,31.1c-0.1,0.1-0.1,0.1-0.2,0.2c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.2-0.2
+		c-0.2-0.1-0.5,0-0.6,0.1s-0.2,0.2-0.3,0.3c0,0.1-0.1,0.1-0.1,0.2v0.1c0,0-0.1,0.1-0.1,0l0,0c0-0.1,0-0.3,0-0.4
+		c0-0.2,0.1-0.3,0.2-0.4c0.1-0.2,0.3-0.4,0.4-0.5s0.3-0.1,0.4-0.1c0.2,0,0.5,0.1,0.6,0.3c0.1,0.1,0.2,0.3,0.2,0.4
+		C29.1,30.9,29,31,29,31.1L29,31.1z M13.9,14.5c-0.5-0.1-0.8,0.1-0.7,0.6c0.1,0.3,0.3,0.4,0.7,0.3c0.1,0,0.2,0.1,0.2,0.2
+		c0,0.3,0,0.6,0,0.9c0.3,0.2,0.7,0.2,1,0.1h2c0.1,0,0.2,0,0.4,0c0.1,0.1,0.1,0.1,0.2,0.2c0.2,0.1,0.4,0.1,0.6,0h0.1
+		c0.2-0.1,0.4-0.1,0.5-0.1h1.9c0.2,0,0.5,0,0.7-0.1c0-0.3,0-0.6,0-0.9c0-0.1,0-0.2,0.1-0.2s0.2,0,0.3,0c0.6,0,0.6-0.6,0.2-0.8
+		s-0.6,0.1-0.7-0.3v-1.8c0-0.2,0-0.4,0-0.5c0.4,0,0.7,0,0.8-0.3c0.1-0.3-0.1-0.5-0.4-0.6h-0.1c-0.1,0-0.1,0-0.3,0s-0.1,0-0.1-0.1V11
+		c0-0.3,0-0.6-0.1-0.8c-0.4-0.1-0.7-0.1-1.1-0.1c-0.1-0.2-0.3-0.1-0.5,0c-0.3,0-0.6,0-0.9,0s-0.5,0.1-0.8,0.2
+		c-0.1,0-0.2,0.1-0.2,0.2c-0.2-0.1-0.4-0.2-0.5-0.3c-0.5,0-0.9,0-1.4,0c-0.2,0-0.4-0.1-0.5-0.1s-0.1,0.1-0.2,0.1s-0.3,0-0.4,0h-0.2
+		c-0.2,0-0.3,0-0.5,0c-0.4,0.1,0.1,0.9-0.3,1.1c-0.5,0-0.7,0-0.7,0.4c-0.1,0.6,0.4,0.6,0.9,0.6c0,0.3,0,0.7,0,1.1
+		C14.1,13.6,14,14.1,13.9,14.5L13.9,14.5z M17.4,15.8L17.4,15.8c-0.9-0.1-1.5,0.1-2.3,0c-0.2-0.2,0.2-0.5,0.4-0.5
+		c0.5,0.1,1.1,0.1,1.7,0.1c0.1,0,0.3,0.1,0.4,0.2C17.7,15.7,17.5,15.7,17.4,15.8z M20.7,10.3c0.1-0.2,0.4-0.2,0.6-0.1
+		c0,0,0,0,0.1,0.1c0.1,0.2-0.1,0.8,0.2,0.9c0.1,0,0.2,0,0.3,0h0.2c0.1,0,0.2,0,0.2,0.1c0.1,0.1,0.1,0.3,0,0.4c0,0.1-0.1,0.1-0.2,0.1
+		c-0.2,0-0.2,0-0.4,0s-0.2,0.4-0.2,0.7s-0.1,1.3,0,1.9c0,0.3,0.4,0.1,0.7,0.2c0.1,0,0.2,0.1,0.2,0.2c0.1,0.6-0.8,0.2-0.9,0.5
+		s0.1,0.6,0,0.8c0,0.1-0.2,0.2-0.3,0.2h-1.1h-0.5c-0.3,0-0.4,0-0.9,0c-0.1,0-0.2-0.2-0.1-0.3c0-0.1,0.1-0.1,0.1-0.2
+		c0.3,0,0.5,0,0.8,0s0.4,0,0.7,0c0.3,0,0.6,0,0.8-0.1c0-0.9,0-1.4,0-2.3v-2c0-0.2,0-0.5,0-0.7C20.9,10.6,20.8,10.5,20.7,10.3
+		L20.7,10.3z M20.4,10.5C20.4,10.5,20.4,10.4,20.4,10.5c0.1-0.1,0.2,0,0.3,0c0.1,0.1,0.1,0.2,0.2,0.3c0,0.3,0,0.9,0,1.2
+		c0,0.1,0,0.2,0,0.3c0,0.1,0,0.2,0,0.3c0,0.9,0,2.7,0,2.9s0,0.2-0.1,0.1c-0.1-0.2-0.3-0.4-0.3-0.6C20.3,13,20.4,12.3,20.4,10.5z
+		 M20.4,15.5c0.1,0,0.1,0.1,0.1,0.2c0,0.2-0.4,0.1-0.6,0.1c-0.7,0-0.8,0-1.5,0c-0.1-0.1-0.1-0.3,0-0.4c0.2-0.2,1.2,0,1.8-0.2
+		C20.3,15.3,20.4,15.4,20.4,15.5L20.4,15.5z M18,13c0-0.6,0-1,0-1.6c0-0.2,0-0.4,0-0.7c0-0.1,0-0.2,0.1-0.3c0.1-0.1,0.3-0.2,0.5-0.2
+		c0.4-0.1,0.7,0,1.1,0c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0.1,0.2,0.2c0,1.4,0,3.1,0,4.2c0,0.2,0,0.3,0,0.5c-0.2,0.1-0.4,0.2-0.7,0.2
+		c-0.2,0-0.3,0-0.5,0s-0.3,0-0.5,0c-0.1,0-0.2,0.1-0.2,0.1c-0.1,0.1-0.2,0.1-0.2,0.1c0-0.2,0-0.4,0-0.6C18,14.2,18,13.4,18,13L18,13
+		z M18.3,16c0,0.1,0.1,0.2,0.1,0.2c0,0.1-0.1,0.2-0.1,0.3c0,0.1-0.1,0.1-0.2,0.1s-0.2,0-0.2,0c-0.1,0-0.1-0.1-0.2-0.1
+		s-0.1-0.1-0.2-0.2c0-0.1,0-0.1,0-0.2c0-0.2,0.1-0.3,0.2-0.4l0,0C17.9,15.7,18.1,15.7,18.3,16C18.2,15.9,18.2,16,18.3,16L18.3,16z
+		 M15.4,14.5c0-1.2,0-2.4,0-3.8c0-0.2,0-0.3,0-0.5l0,0c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.2,0,0.3,0h0.1c0.2,0,0.4,0,0.6,0.1
+		c0.1,0,0.2,0,0.2-0.1c0.3,0,0.6,0.1,0.8,0.4c0,1.2,0,2.4,0,3.4l0,0l0,0l-0.1-0.1c-0.1-0.1-0.2-0.2-0.2-0.4l-0.1-0.2
+		c-0.1-0.1-0.1-0.2-0.2-0.4c0.2-0.1,0.4-0.4,0.4-0.7c0-0.3-0.1-0.5-0.3-0.6c-0.2-0.1-0.4-0.1-0.5-0.1c-0.2,0-0.5,0-0.7,0.1h-0.1v0.2
+		l0,0c0.2,0,0.2,0,0.2,0.3v1.5c0,0.3,0,0.3-0.2,0.3h-0.1V14h0.9v-0.2h0c-0.2,0-0.2,0-0.2-0.3V13h0.2c0.1,0.1,0.2,0.2,0.2,0.4
+		l0.1,0.2c0.1,0.2,0.2,0.3,0.3,0.4c0.1,0.1,0.3,0.1,0.4,0.1h0.1c0,0.4,0,0.8-0.1,1.2c-0.2,0-0.4-0.1-0.5-0.2c-0.5-0.1-1,0.1-1.4,0
+		c-0.1,0-0.3-0.1-0.4-0.1C15.4,14.9,15.4,14.7,15.4,14.5L15.4,14.5z M17.1,12.4c0.1,0.2-0.1,0.5-0.3,0.6c-0.1,0-0.1,0-0.2,0l0,0
+		v-1.1h0.1C16.9,11.8,17.1,12,17.1,12.4C17.1,12.3,17.1,12.3,17.1,12.4L17.1,12.4z M15.1,10.4c0.1,0,0.1,0,0.2,0.1l0,0v3.3
+		c0.1,0.5,0,1-0.1,1.4c-0.1,0.1-0.2,0.2-0.3,0.3c-0.1-1.1,0-2.1,0-2.9c0-0.2,0-0.3,0-0.4V12v-0.2c0-0.2,0-0.4,0-0.5
+		C14.7,10.9,14.9,10.6,15.1,10.4L15.1,10.4z M14.2,14.4c0-0.2,0-0.4,0-0.6s0-0.4,0-0.6c0-0.5,0-0.9-0.1-1.3
+		c-0.2-0.2-0.6,0.1-0.8-0.2c-0.1-0.2,0-0.4,0.2-0.4h0.1c0.3-0.1,0.4,0.1,0.5-0.2c0-0.2,0-0.5,0-0.7c0-0.1,0.1-0.2,0.2-0.2l0,0
+		c0.2-0.1,0.4,0,0.5,0.1c0,0,0,0.1-0.1,0.2c0,0-0.1,0.1-0.1,0.2c-0.1,0.4-0.1,0.7,0,1.1c0,0.8,0,1.3,0,1.9v0.2c0,0.1,0,0.2,0,0.3
+		c0,0.1,0,0.1,0,0.2s0,0.2,0,0.3s0,0.1,0,0.2c0,0.3-0.1,1,0.1,1.1c0.2,0,0.5,0,0.7,0h1.5c0.1,0,0.2,0.1,0.2,0.2s0,0.2-0.1,0.3l0,0
+		c-1,0-1.8,0-2.8,0c-0.1-0.1-0.2-0.2-0.1-0.4c0-0.3,0.1-0.6-0.1-0.7c-0.2,0-0.3,0-0.5,0c-0.1,0-0.3-0.1-0.3-0.3
+		c0-0.1,0.1-0.2,0.1-0.3c0.1,0,0.2,0,0.2-0.1C14,14.6,14.2,14.7,14.2,14.4L14.2,14.4z M19.5,14.1h-0.8V14l0,0c0.1,0,0.2,0,0.2-0.3
+		v-1.5c0-0.3,0-0.3-0.2-0.3l0,0v-0.2h0.9v0.2l0,0c-0.2,0-0.2,0-0.2,0.3v1.5c0,0.3,0,0.3,0.2,0.3l0,0L19.5,14.1L19.5,14.1z" />
+         </svg></a>
+       </div>
+       <div id="afmenu">
+        <nav id="hsph-quicklinks" class="hsph-quicklinks" role="navigation" aria-label="HSPH Quicklinks">
+         <ul>
+          <li><a href="#"><span id="afbarquicktitle">Quicklinks</span> <i class="fa fa-angle-down" aria-hidden="true"></i> </a>
+           <ul>
+            <li><a href="https://www.hsph.harvard.edu/about">About the School</a></li>
+            <li><a href="https://www.hsph.harvard.edu/academics">Academics</a></li>
+            <li><a href="https://www.hsph.harvard.edu/admissions">Admissions</a></li>
+            <li><a href="https://www.hsph.harvard.edu/research">Research</a></li>
+            <li><a href="https://www.hsph.harvard.edu/faculty">Faculty</a></li>
+            <li><a href="https://www.hsph.harvard.edu/student-life">Student Life</a></li>
+            <li><a href="https://www.hsph.harvard.edu/news">News</a></li>
+            <li><a href="https://www.hsph.harvard.edu/alumni">Alumni</a></li>
+            <li><a href="https://www.hsph.harvard.edu/frontiers">Frontiers</a></li>
+            <li><a href="https://www.hsph.harvard.edu/giving">Make A Gift</a></li>
+           </ul></li>
+         </ul>
+        </nav>
+       </div>
+      </div><!-- .wrap -->
+     </div><!-- .site-afbar -->
+     <div class="branding-bar">
+      <div class="search-utility-wrap" id="search-utility-wrap">
+       <div class="navigation-utility">
+        <div class="navigation-utility-wrap">
+         <nav id="utility-navigation" class="utility-navigation" role="navigation" aria-label="Related Links">
+          <div class="menu-utility-links-container">
+           <ul id="utility-menu" class="menu">
+            <li id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1295"><a href="https://www.hsph.harvard.edu/c-change/how-to-donate-to-harvard-chan-c-change/">Give</a></li>
+            <li id="menu-item-1393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1393"><a href="https://www.hsph.harvard.edu/c-change/resources?_sfm_article_type=Research%20Study">Publications</a></li>
+            <li id="menu-item-1310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1310"><a href="https://www.hsph.harvard.edu/c-change/contact-us/">Contact Us</a></li>
+           </ul>
+          </div>
+         </nav><!-- #site-navigation -->
+        </div><!-- .wrap -->
+       </div><!-- .navigation-top -->
+       <form role="search" method="get" class="search-form" action="https://www.hsph.harvard.edu/c-change/">
+        <label for="search-form-6632bac7cda5d"> <span class="screen-reader-text">Search for:</span> </label> <input type="search" id="search-form-6632bac7cda5d" class="search-field" placeholder="Search …" value="" name="s"> <button type="submit" class="search-submit">
+         <svg class="icon icon-search" aria-hidden="true" role="img">
+          <use href="#icon-search" xlink:href="#icon-search"></use>
+         </svg><span class="screen-reader-text">Search</span></button>
+       </form>
+      </div>
+      <div class="site-branding">
+       <div class="site-branding-text">
+        <div class="site-title">
+         <a href="https://www.hsph.harvard.edu/c-change/" rel="home">C-CHANGE | Harvard T.H. Chan School of Public Health</a>
+        </div>
+       </div><!-- .site-branding-text -->
+       <div class="site-branding-image">
+        <a href="https://www.hsph.harvard.edu/c-change/" rel="home"></a><a href="https://www.hsph.harvard.edu/c-change/" class="custom-logo-link" rel="home"><img width="1875" height="250" src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo.png" class="custom-logo" alt="C-CHANGE | Harvard T.H. Chan School of Public Health" decoding="async" fetchpriority="high" srcset="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo.png 1875w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-300x40.png 300w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-1024x137.png 1024w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-150x20.png 150w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-768x102.png 768w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-1536x205.png 1536w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2020/05/cropped-ChanCCHANGELogo-500x67.png 500w" sizes="100vw"></a>
+       </div><!-- .site-branding-text -->
+      </div><!-- .site-branding -->
+      <div class="navigation-top">
+       <div class="navigation-wrap">
+        <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Top Menu">
+         <div class="menu-main-menu-container">
+          <ul id="top-menu" class="menu">
+           <li id="menu-item-1312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1312"><a href="https://www.hsph.harvard.edu/c-change/about-c-change/">About Us
+             <svg class="icon icon-angle-down" aria-hidden="true" role="img">
+              <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use>
+             </svg></a>
+            <ul class="sub-menu">
+             <li id="menu-item-1327" class="menu-item menu-item-type-post_type_archive menu-item-object-cchange_bio menu-item-1327"><a href="https://www.hsph.harvard.edu/c-change/team/">Meet the Team</a></li>
+             <li id="menu-item-5095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5095"><a href="https://www.hsph.harvard.edu/c-change/about-c-change/jobs/">Jobs</a></li>
+             <li id="menu-item-5912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5912"><a href="https://www.hsph.harvard.edu/c-change/2022-putting-science-into-climate-action/">2022 Annual Report</a></li>
+            </ul></li>
+           <li id="menu-item-5978" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5978"><a href="#">Our Work
+             <svg class="icon icon-angle-down" aria-hidden="true" role="img">
+              <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use>
+             </svg></a>
+            <ul class="sub-menu">
+             <li id="menu-item-1314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1314"><a href="https://www.hsph.harvard.edu/c-change/research/">Research</a></li>
+             <li id="menu-item-3040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3040"><a href="https://www.hsph.harvard.edu/c-change/outreach/">Outreach</a></li>
+             <li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1305"><a href="https://www.hsph.harvard.edu/c-change/education/">Education</a></li>
+            </ul></li>
+           <li id="menu-item-1367" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1367"><a href="#">News and Events
+             <svg class="icon icon-angle-down" aria-hidden="true" role="img">
+              <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use>
+             </svg></a>
+            <ul class="sub-menu">
+             <li id="menu-item-1325" class="menu-item menu-item-type-post_type_archive menu-item-object-cchange_article menu-item-1325"><a href="https://www.hsph.harvard.edu/c-change/news/">Featured News</a></li>
+             <li id="menu-item-1326" class="menu-item menu-item-type-post_type_archive menu-item-object-cchange_event menu-item-1326"><a href="https://www.hsph.harvard.edu/c-change/events/">Events</a></li>
+             <li id="menu-item-1624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="https://www.hsph.harvard.edu/c-change/climateoptimist/">The Climate Optimist Newsletter</a></li>
+            </ul></li>
+          </ul>
+         </div>
+        </nav><!-- #site-navigation -->
+       </div><!-- .wrap -->
+      </div><!-- .navigation-top -->
+     </div><!-- .branding-bar -->
+    </header><!-- #masthead -->
+    <div class="site-content-contain">
+     <div id="content" class="site-content">
+      <header class="cchange-hero-header has-image" style="background-image: url('https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/LAN3638-1-scaled.jpg');">
+      </header>
+      <div class="cchange-header-accent"></div>
+      <div>
+       <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+         <div class="container">
+          <div class="row justify-content-center">
+           <div class="cchange-article-attributes col-md-8 col-sm-12">
+            <p class="cchange-photo-credit"><em>Photo by: Bridget Lanigan</em></p>
+            <h1>Youth Summit on Climate, Equity, and Health</h1>
+            <h4>07/17/2021 | <span class="cchange-article-source">Harvard Chan C-CHANGE</span></h4>
+           </div>
+          </div>
+          <div class="entry-content row justify-content-center">
+           <div class="cchange-article-content col-md-8 col-sm-12">
+            <p>Each summer, the <a href="https://www.hsph.harvard.edu/c-change/news/harvard-chan-c-change-announces-youth-summits-on-climate-and-public-health-to-empower-the-next-generation-of-leaders/">Center for Climate, Health, and the Global Environment at Harvard T.H. Chan School of Public Health (Harvard Chan C-CHANGE) joins forces with Putney Pre-College</a> to bring together passionate high school students from around the world for our Youth Summit on Climate, Equity, and Health.</p>
+            <p>Located at the Harvard Chan School, we train students to be climate and health leaders in their communities through workshops, field-based activities, and meetings with scientists, health and policy experts, academics, energy innovators and more.</p>
+            <p>The Youth Summits combine Putney’s extensive history of designing educational and innovative student programs with Harvard Chan C-CHANGE’s leadership putting health and equity at the center of climate actions.</p>
+            <h2 style="text-align: left"><strong><a href="https://www.hsph.harvard.edu/c-change/events/youth-summit-on-climate-equity-and-health/">Learn about our 2024 summer program</a></strong></h2>
+            <p>&nbsp;</p>
+            <div class="hsph-bootstrap">
+             <div class="embed-responsive embed-responsive-16by9">
+              <iframe title="Harvard Chan C-CHANGE Youth Summit on Climate, Equity, &amp; Health" width="700" height="394" src="https://www.youtube.com/embed/GwXc0_sMk7s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+            </div>
+            <p>&nbsp;</p>
+            <p><strong>Check out past summits from <a href="https://www.hsph.harvard.edu/c-change/events/harvard-chan-c-change-youth-summit-on-climate-equity-and-health/">2023</a>, <a href="https://www.hsph.harvard.edu/c-change/events/harvard-c-change-youth-climate-summit/" target="_blank" rel="noopener">2022 </a>and&nbsp;<a href="https://www.hsph.harvard.edu/c-change/events/harvard-chan-c-change-youth-summits-on-climate-change-and-public-health/" target="_blank" rel="noopener">2021</a>.</strong></p>
+            <section class="cchange-quote-block article-quote">
+             <div class="container no-margin">
+              <div class="row justify-content-center">
+               <div class="col-md-9 col-sm-12">
+                <blockquote>
+                 <p>Forming connections with people was amazing. I now have a network with people all over the country and feel less isolated in this movement. I have had a total shift in mindset since this program started!</p>
+                 <footer>
+                  <cite>-&nbsp;2021 participant</cite>
+                 </footer>
+                </blockquote>
+               </div>
+              </div>
+             </div>
+            </section>
+            <div class="hsph-bootstrap">
+             <div class="embed-responsive embed-responsive-16by9">
+              <iframe title="Youth climate activists share their motivation at Climate Week 2022" width="700" height="394" src="https://www.youtube.com/embed/Yp2XsonnRIg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+            </div>
+            <hr>
+            <p>Financial support is available for students through our partner, <a href="https://precollege.goputney.com/harvard-chan-youth-summits-scholarship-opportunities/#page-content" target="_blank" rel="noopener">Putney Student Travel.&nbsp;</a></p>
+            <p><span style="font-weight: 400">This program was developed thanks to the support of Gina McCarthy, the former National Climate Adviser in the Biden-Harris Administration and former Director of Harvard Chan C-CHANGE.</span></p>
+            <p>If you’d like to learn more about the summits or are interested in supporting the program, contact Skye Flanigan at <a href="mailto:Flanigan@hsph.harvard.edu" target="_blank" rel="noopener">Flanigan@hsph.harvard.edu</a>.</p>
+           </div>
+          </div>
+         </div><span id="articles" style="display: block; visibility: hidden; margin-top:-160px; padding-bottom: 160px;">&nbsp;</span>
+         <section class="container">
+          <div class="row cchange-tab-row">
+           <a data-id="1" class="cchange-resource-tab col-lg-2 col-md-3 col-sm-4 col-xs-12 active-tab" href="#">News</a> <a data-id="2" class="cchange-resource-tab col-lg-2 col-md-3 col-sm-4 col-xs-12 " href="#">Staff</a>
+          </div>
+          <div class="cchange-resource-tab-content">
+           <div data-id="1" class="row cchange-tab-content active-row">
+            <div id="post-" aria-label="Excerpt of the article: Youth Climate Summit Brings Together High School Students from Across the Globe" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2023/08/CCHANGETrashCaulin.jpg" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>Youth Climate Summit Brings Together High School Students from Across the Globe</h3>
+              <p>It was a summer of learning and action.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=6164" rel="bookmark" title="Permalink to Youth Climate Summit Brings Together High School Students from Across the Globe">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: Meg Haywood-Sullivan Recaps The Harvard University Youth C-CHANGE Summit" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/10/Screen-Shot-2022-10-28-at-9.59.57-AM.png" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>Meg Haywood-Sullivan Recaps The Harvard University Youth C-CHANGE Summit</h3>
+              <p>A sustainability strategist and third-generation creative reflects on her experience speaking at our summer education program for high school students.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5781" rel="bookmark" title="Permalink to Meg Haywood-Sullivan Recaps The Harvard University Youth C-CHANGE Summit">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: Harvard Chan C-CHANGE Youth Summit on Climate, Health, and Equity empowers the next generation of climate and health leaders this July" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/Ella-Niederhelman_Putney2022-scaled.jpg" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>Harvard Chan C-CHANGE Youth Summit on Climate, Health, and Equity empowers the next generation of climate and health leaders this July</h3>
+              <p>A former participant explores how our Youth Summit impacted students and increased knowledge on climate, health, and equity issues.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5636" rel="bookmark" title="Permalink to Harvard Chan C-CHANGE Youth Summit on Climate, Health, and Equity empowers the next generation of climate and health leaders this July">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: A call to action: My experience at the inaugural Harvard Chan C-Change Youth Climate Summit" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/Screen-Shot-2022-08-17-at-2.00.33-PM.png" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>A call to action: My experience at the inaugural Harvard Chan C-Change Youth Climate Summit</h3>
+              <p>A Youth Summit participant brings what she learned back to her home community in Ipswich, MA.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5618" rel="bookmark" title="Permalink to A call to action: My experience at the inaugural Harvard Chan C-Change Youth Climate Summit">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: Islesboro 11th grader proposes sustainable development goals for town" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/2021_PCHARV_BridgetLanigan-0030-scaled.jpg" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>Islesboro 11th grader proposes sustainable development goals for town</h3>
+              <p>Julian Kelly, fresh from our youth climate summit, approached his town about creating goals to reduce the effects of climate change by 2030.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5616" rel="bookmark" title="Permalink to Islesboro 11th grader proposes sustainable development goals for town">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: My Experience Hosting a Small Town Climate Strike: Breaking the Intergenerational Divide" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/Ella-Niederhelman.png" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>My Experience Hosting a Small Town Climate Strike: Breaking the Intergenerational Divide</h3>
+              <p>A youth summit participant reflects on the power of intergenerational unity in tackling the climate crisis.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5614" rel="bookmark" title="Permalink to My Experience Hosting a Small Town Climate Strike: Breaking the Intergenerational Divide">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: At youth summit, activists give crash course in fighting climate change" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2022/08/Bernstein-Putney.jpg" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>At youth summit, activists give crash course in fighting climate change</h3>
+              <p>Our summit offered tangible strategies for taking climate action, skills in leadership, and advice on inspiring others to join in the fight for a healthier, more sustainable, and equitable future.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=5612" rel="bookmark" title="Permalink to At youth summit, activists give crash course in fighting climate change">Read Now</a></p>
+             </div>
+            </div>
+            <div id="post-" aria-label="Excerpt of the article: Baltimore Teen Activist Uses Art To Call Attention To Climate Change" class="post- cchange-post-row row">
+             <div class="col-md-5 col-sm-12">
+              <img src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2021/03/Nadia-and-Skye.png" class="attachment-post-thumbnail wp-post-image" scale="0">
+             </div>
+             <div class="col-md-7 col-sm-12 cchange-post-text">
+              <h3>Baltimore Teen Activist Uses Art To Call Attention To Climate Change</h3>
+              <p>CBS Baltimore interviews youth activist Nadia Nazar and our Program Manager Skye Flanigan about the importance of the youth climate movement and the Harvard Chan C-CHANGE Youth Summits on Climate Change and Public Health.</p>
+              <p><a target="_blank" href="http://www.hsph.harvard.edu/c-change/?p=4492" rel="bookmark" title="Permalink to Baltimore Teen Activist Uses Art To Call Attention To Climate Change">Read Now</a></p>
+             </div>
+            </div>
+            <nav id="tab-pagination-articles" class="navigation pagination" role="navigation">
+             <h3 class="assistive-text screen-reader-text">Post navigation</h3>
+             <div class="nav-links">
+             </div>
+            </nav>
+           </div>
+           <div data-id="2" class="row cchange-tab-content ">
+            <div class="cchange-post-row row">
+             <div class="col-xl-4 offset-xl-1 col-md-5 col-sm-12">
+              <img width="360" height="360" src="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2019/01/Image-from-iOS-5-360x360.jpg" class="attachment-cchange-bio-thumb-small size-cchange-bio-thumb-small wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2019/01/Image-from-iOS-5-360x360.jpg 360w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2019/01/Image-from-iOS-5-450x450.jpg 450w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2019/01/Image-from-iOS-5-300x300.jpg 300w, https://www.hsph.harvard.edu/c-change/wp-content/uploads/sites/2343/2019/01/Image-from-iOS-5-100x100.jpg 100w" sizes="100vw">
+             </div>
+             <div class="col-xl-6 col-md-7 col-sm-12 cchange-post-text">
+              <h3>Skye Flanigan</h3>
+              <p>Skye develops and&nbsp;implements various programs as well as manages internal engagement, partnerships, and strategic collaborations.</p>
+              <p><a target="_self" href="https://www.hsph.harvard.edu/c-change/team/skye-flanigan/">View Profile</a></p>
+             </div>
+            </div>
+           </div>
+          </div>
+         </section>
+        </main><!-- #main -->
+       </div><!-- #primary -->
+      </div><!-- .wrap -->
+     </div><!-- #content -->
+     <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="footer-branding-wrap">
+       <div class="container">
+        <div class="row">
+         <div class="col-md-3 col-xs-12 cchange-footer-social">
+          <a href="https://www.facebook.com/HarvardCCHANGE/" class="cchange-social-link big"><img style="max-height: 100%;" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/facebook-logo.svg"></a> <a href="https://twitter.com/harvardcchange" class="cchange-social-link big"><img style="max-width: 100%;" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/twitter-logo.svg"></a> <a href="https://www.linkedin.com/company/harvardcchange/" class="cchange-social-link big"><img style="max-width: 100%;" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/linkedin-logo.svg"></a>
+         </div>
+         <address class="cchange-vcard col-md-3 col-xs-12">
+          <div class="adr">
+           <span class="street-address">665 Huntington Avenue <br>
+            Building 1, Room 1312</span> <span class="locality">Boston</span>, <abbr class="region" title="Massachusetts">MA</abbr> <span class="postal-code">02115</span>
+          </div>
+          <div class="tel">
+           +1 (617) 495?1000
+          </div><a href="https://www.google.com/maps/place/665+Huntington+Ave,+Boston,+MA+02115/@42.335682,-71.101782,17z">Directions</a></address>
+         <form class="cchange-subscribe col-md-6 col-xs-12">
+          <label>Subscribe to <em><a href="https://www.hsph.harvard.edu/c-change/climateoptimist/">The Climate Optimist</a></em> for stories of climate hope and action.</label> <a class="cchange-button " href="https://signup.e2ma.net/signup/1969398/1952910/">Subscribe now!</a>
+         </form>
+        </div>
+        <div class="footer-menu-wrap">
+         <nav id="footer-links" class="footer-links" role="navigation" aria-label="Footer Links">
+          <div class="footer-links-menu-container">
+           <ul id="footer-menu" class="footer-menu">
+            <li class="menu-item"><a href="https://www.hsph.harvard.edu/">Harvard Chan Home</a></li>
+            <li class="menu-item"><a href="https://www.hsph.harvard.edu/contact-us/">Contact Us</a></li>
+            <li class="menu-item"><a href="http://www.harvard.edu/">Harvard University Home</a></li>
+            <li class="menu-item"><a href="https://www.hsph.harvard.edu/giving/">Make a Gift</a></li>
+            <li class="menu-item"><a href="https://www.hsph.harvard.edu/privacy-policy/">Privacy Policy</a></li>
+            <li class="menu-item"><a href="http://www.harvard.edu/copyright-issue/">Report Copyright Violation</a></li>
+            <li class="menu-item"><a href="https://accessibility.huit.harvard.edu">Accessibility</a></li>
+           </ul>
+          </div>
+         </nav>
+        </div>
+       </div>
+      </div><!-- .footer-branding-wrap -->
+      <div class="site-copyright">
+       Copyright © The President and Fellows of Harvard College
+      </div>
+     </footer><!-- #colophon -->
+    </div><!-- .site-content-contain -->
+   </div><!-- #page -->
+  </div><!-- .wrapper -->
+  <div class="cchange-modal-bg" style="display: none;">
+   <div class="cchange-modal container">
+    <div class="close-wrapper">
+     <a class="cchange-modal-close" href="#"><img src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/close-sign.svg"></a>
+    </div> [ctct form="863"]
+   </div>
+  </div>
+  <div class="menu-mask"></div><!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XL6K" height="0" width="0" title="Google tag manager" aria-hidden="true" style="display:none;visibility:hidden"></iframe>
+  </noscript><!-- End Google Tag Manager (noscript) -->
+  <script>
+			// Slide controls for the sub brand carousel template
+			jQuery(document).ready(function($) {
+				if ( $('#sidebar-carousel-widget .flexslider').length && $().flexslider ) {
+					$('#sidebar-carousel-widget .flexslider').flexslider({
+						animation: 'fade',
+						prevText: ' ',
+						nextText: ' ',
+						controlsContainer: '#hsph-carousel-widget-controls',
+					});
+				}
+			});
+		</script>
+  <script>
+			// Slide controls for the sub brand carousel template
+			jQuery(document).ready(function($) {
+				if ( $('#news-sidebar-carousel-widget .flexslider').length && $().flexslider ) {
+					$('#news-sidebar-carousel-widget .flexslider').flexslider({
+						animation: 'fade',
+						prevText: ' ',
+						nextText: ' ',
+						controlsContainer: '#hsph-news-carousel-widget-controls',
+					});
+				}
+			});
+		</script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-tagging/assets/js/hsph-plugin-tagging.js?ver=1.1.5" id="hsph-plugin-tagging-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-tinymce-tweaks/assets/js/jquery.tablesorter.min.js?ver=2.31.1" id="jquery-tablesorter-js-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-tinymce-tweaks/assets/js/hsph-table-sortable.js?ver=1.1.1" id="hsph-table-sortable-js-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2" id="jquery-ui-datepicker-js"></script>
+  <script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+/* ]]> */
+</script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/js/cchange-resource-tabs.js?ver=1.5.4" id="cchange-resource-tabs-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/js/cchange-filter-display.js?ver=1.5.4" id="cchange-filter-display-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/js/cchange-dom-loaded.js?ver=1.5.4" id="cchange-dom-loaded-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/js/cchange-searchfilter-more.js?ver=1.5.4" id="cchange-searchfilter-more-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016-child-c-change/assets/js/cchange-email-subscription.js?ver=1.5.4" id="cchange-email-subscription-js"></script>
+  <script type="text/javascript" id="affiliate2017-skip-link-focus-fix-js-extra">
+/* <![CDATA[ */
+var affiliate2017ScreenReaderText = {"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>","expand":"Expand child menu","collapse":"Collapse child menu","icon":"<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>"};
+/* ]]> */
+</script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/js/skip-link-focus-fix.js?ver=1.2.15" id="affiliate2017-skip-link-focus-fix-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/js/navigation.js?ver=1.2.15" id="affiliate2017-navigation-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/js/global.js?ver=1.2.15" id="affiliate2017-global-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/themes/theme-affiliate-template-2016/assets/js/jquery.scrollTo.js?ver=2.1.2" id="jquery-scrollto-js"></script>
+  <script type="text/javascript" src="https://www.hsph.harvard.edu/c-change/wp-content/plugins/plugin-design-system/assets/js/hsph-bootstrap.bundle.min.js?ver=1.4.12" id="hsph-bootstrap-js"></script>
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+    <symbol id="icon-behance" viewBox="0 0 37 32">
+     <path class="path1" d="M33 6.054h-9.125v2.214h9.125v-2.214zM28.5 13.661q-1.607 0-2.607 0.938t-1.107 2.545h7.286q-0.321-3.482-3.571-3.482zM28.786 24.107q1.125 0 2.179-0.571t1.357-1.554h3.946q-1.786 5.482-7.625 5.482-3.821 0-6.080-2.357t-2.259-6.196q0-3.714 2.33-6.17t6.009-2.455q2.464 0 4.295 1.214t2.732 3.196 0.902 4.429q0 0.304-0.036 0.839h-11.75q0 1.982 1.027 3.063t2.973 1.080zM4.946 23.214h5.286q3.661 0 3.661-2.982 0-3.214-3.554-3.214h-5.393v6.196zM4.946 13.625h5.018q1.393 0 2.205-0.652t0.813-2.027q0-2.571-3.393-2.571h-4.643v5.25zM0 4.536h10.607q1.554 0 2.768 0.25t2.259 0.848 1.607 1.723 0.563 2.75q0 3.232-3.071 4.696 2.036 0.571 3.071 2.054t1.036 3.643q0 1.339-0.438 2.438t-1.179 1.848-1.759 1.268-2.161 0.75-2.393 0.232h-10.911v-22.5z" />
+    </symbol>
+    <symbol id="icon-deviantart" viewBox="0 0 18 32">
+     <path class="path1" d="M18.286 5.411l-5.411 10.393 0.429 0.554h4.982v7.411h-9.054l-0.786 0.536-2.536 4.875-0.536 0.536h-5.375v-5.411l5.411-10.411-0.429-0.536h-4.982v-7.411h9.054l0.786-0.536 2.536-4.875 0.536-0.536h5.375v5.411z" />
+    </symbol>
+    <symbol id="icon-medium" viewBox="0 0 32 32">
+     <path class="path1" d="M10.661 7.518v20.946q0 0.446-0.223 0.759t-0.652 0.313q-0.304 0-0.589-0.143l-8.304-4.161q-0.375-0.179-0.634-0.598t-0.259-0.83v-20.357q0-0.357 0.179-0.607t0.518-0.25q0.25 0 0.786 0.268l9.125 4.571q0.054 0.054 0.054 0.089zM11.804 9.321l9.536 15.464-9.536-4.75v-10.714zM32 9.643v18.821q0 0.446-0.25 0.723t-0.679 0.277-0.839-0.232l-7.875-3.929zM31.946 7.5q0 0.054-4.58 7.491t-5.366 8.705l-6.964-11.321 5.786-9.411q0.304-0.5 0.929-0.5 0.25 0 0.464 0.107l9.661 4.821q0.071 0.036 0.071 0.107z" />
+    </symbol>
+    <symbol id="icon-slideshare" viewBox="0 0 32 32">
+     <path class="path1" d="M15.589 13.214q0 1.482-1.134 2.545t-2.723 1.063-2.723-1.063-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054 2.723 1.054 1.134 2.554zM24.554 13.214q0 1.482-1.125 2.545t-2.732 1.063q-1.589 0-2.723-1.063t-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054q1.607 0 2.732 1.054t1.125 2.554zM28.571 16.429v-11.911q0-1.554-0.571-2.205t-1.982-0.652h-19.857q-1.482 0-2.009 0.607t-0.527 2.25v12.018q0.768 0.411 1.58 0.714t1.446 0.5 1.446 0.33 1.268 0.196 1.25 0.071 1.045 0.009 1.009-0.036 0.795-0.036q1.214-0.018 1.696 0.482 0.107 0.107 0.179 0.161 0.464 0.446 1.089 0.911 0.125-1.625 2.107-1.554 0.089 0 0.652 0.027t0.768 0.036 0.813 0.018 0.946-0.018 0.973-0.080 1.089-0.152 1.107-0.241 1.196-0.348 1.205-0.482 1.286-0.616zM31.482 16.339q-2.161 2.661-6.643 4.5 1.5 5.089-0.411 8.304-1.179 2.018-3.268 2.643-1.857 0.571-3.25-0.268-1.536-0.911-1.464-2.929l-0.018-5.821v-0.018q-0.143-0.036-0.438-0.107t-0.42-0.089l-0.018 6.036q0.071 2.036-1.482 2.929-1.411 0.839-3.268 0.268-2.089-0.643-3.25-2.679-1.875-3.214-0.393-8.268-4.482-1.839-6.643-4.5-0.446-0.661-0.071-1.125t1.071 0.018q0.054 0.036 0.196 0.125t0.196 0.143v-12.393q0-1.286 0.839-2.196t2.036-0.911h22.446q1.196 0 2.036 0.911t0.839 2.196v12.393l0.375-0.268q0.696-0.482 1.071-0.018t-0.071 1.125z" />
+    </symbol>
+    <symbol id="icon-snapchat-ghost" viewBox="0 0 30 32">
+     <path class="path1" d="M15.143 2.286q2.393-0.018 4.295 1.223t2.92 3.438q0.482 1.036 0.482 3.196 0 0.839-0.161 3.411 0.25 0.125 0.5 0.125 0.321 0 0.911-0.241t0.911-0.241q0.518 0 1 0.321t0.482 0.821q0 0.571-0.563 0.964t-1.232 0.563-1.232 0.518-0.563 0.848q0 0.268 0.214 0.768 0.661 1.464 1.83 2.679t2.58 1.804q0.5 0.214 1.429 0.411 0.5 0.107 0.5 0.625 0 1.25-3.911 1.839-0.125 0.196-0.196 0.696t-0.25 0.83-0.589 0.33q-0.357 0-1.107-0.116t-1.143-0.116q-0.661 0-1.107 0.089-0.571 0.089-1.125 0.402t-1.036 0.679-1.036 0.723-1.357 0.598-1.768 0.241q-0.929 0-1.723-0.241t-1.339-0.598-1.027-0.723-1.036-0.679-1.107-0.402q-0.464-0.089-1.125-0.089-0.429 0-1.17 0.134t-1.045 0.134q-0.446 0-0.625-0.33t-0.25-0.848-0.196-0.714q-3.911-0.589-3.911-1.839 0-0.518 0.5-0.625 0.929-0.196 1.429-0.411 1.393-0.571 2.58-1.804t1.83-2.679q0.214-0.5 0.214-0.768 0-0.5-0.563-0.848t-1.241-0.527-1.241-0.563-0.563-0.938q0-0.482 0.464-0.813t0.982-0.33q0.268 0 0.857 0.232t0.946 0.232q0.321 0 0.571-0.125-0.161-2.536-0.161-3.393 0-2.179 0.482-3.214 1.143-2.446 3.071-3.536t4.714-1.125z" />
+    </symbol>
+    <symbol id="icon-yelp" viewBox="0 0 27 32">
+     <path class="path1" d="M13.804 23.554v2.268q-0.018 5.214-0.107 5.446-0.214 0.571-0.911 0.714-0.964 0.161-3.241-0.679t-2.902-1.589q-0.232-0.268-0.304-0.643-0.018-0.214 0.071-0.464 0.071-0.179 0.607-0.839t3.232-3.857q0.018 0 1.071-1.25 0.268-0.339 0.705-0.438t0.884 0.063q0.429 0.179 0.67 0.518t0.223 0.75zM11.143 19.071q-0.054 0.982-0.929 1.25l-2.143 0.696q-4.911 1.571-5.214 1.571-0.625-0.036-0.964-0.643-0.214-0.446-0.304-1.339-0.143-1.357 0.018-2.973t0.536-2.223 1-0.571q0.232 0 3.607 1.375 1.25 0.518 2.054 0.839l1.5 0.607q0.411 0.161 0.634 0.545t0.205 0.866zM25.893 24.375q-0.125 0.964-1.634 2.875t-2.42 2.268q-0.661 0.25-1.125-0.125-0.25-0.179-3.286-5.125l-0.839-1.375q-0.25-0.375-0.205-0.821t0.348-0.821q0.625-0.768 1.482-0.464 0.018 0.018 2.125 0.714 3.625 1.179 4.321 1.42t0.839 0.366q0.5 0.393 0.393 1.089zM13.893 13.089q0.089 1.821-0.964 2.179-1.036 0.304-2.036-1.268l-6.75-10.679q-0.143-0.625 0.339-1.107 0.732-0.768 3.705-1.598t4.009-0.563q0.714 0.179 0.875 0.804 0.054 0.321 0.393 5.455t0.429 6.777zM25.714 15.018q0.054 0.696-0.464 1.054-0.268 0.179-5.875 1.536-1.196 0.268-1.625 0.411l0.018-0.036q-0.411 0.107-0.821-0.071t-0.661-0.571q-0.536-0.839 0-1.554 0.018-0.018 1.339-1.821 2.232-3.054 2.679-3.643t0.607-0.696q0.5-0.339 1.161-0.036 0.857 0.411 2.196 2.384t1.446 2.991v0.054z" />
+    </symbol>
+    <symbol id="icon-vine" viewBox="0 0 27 32">
+     <path class="path1" d="M26.732 14.768v3.536q-1.804 0.411-3.536 0.411-1.161 2.429-2.955 4.839t-3.241 3.848-2.286 1.902q-1.429 0.804-2.893-0.054-0.5-0.304-1.080-0.777t-1.518-1.491-1.83-2.295-1.92-3.286-1.884-4.357-1.634-5.616-1.259-6.964h5.054q0.464 3.893 1.25 7.116t1.866 5.661 2.17 4.205 2.5 3.482q3.018-3.018 5.125-7.25-2.536-1.286-3.982-3.929t-1.446-5.946q0-3.429 1.857-5.616t5.071-2.188q3.179 0 4.875 1.884t1.696 5.313q0 2.839-1.036 5.107-0.125 0.018-0.348 0.054t-0.821 0.036-1.125-0.107-1.107-0.455-0.902-0.92q0.554-1.839 0.554-3.286 0-1.554-0.518-2.357t-1.411-0.804q-0.946 0-1.518 0.884t-0.571 2.509q0 3.321 1.875 5.241t4.768 1.92q1.107 0 2.161-0.25z" />
+    </symbol>
+    <symbol id="icon-vk" viewBox="0 0 35 32">
+     <path class="path1" d="M34.232 9.286q0.411 1.143-2.679 5.25-0.429 0.571-1.161 1.518-1.393 1.786-1.607 2.339-0.304 0.732 0.25 1.446 0.304 0.375 1.446 1.464h0.018l0.071 0.071q2.518 2.339 3.411 3.946 0.054 0.089 0.116 0.223t0.125 0.473-0.009 0.607-0.446 0.491-1.054 0.223l-4.571 0.071q-0.429 0.089-1-0.089t-0.929-0.393l-0.357-0.214q-0.536-0.375-1.25-1.143t-1.223-1.384-1.089-1.036-1.009-0.277q-0.054 0.018-0.143 0.063t-0.304 0.259-0.384 0.527-0.304 0.929-0.116 1.384q0 0.268-0.063 0.491t-0.134 0.33l-0.071 0.089q-0.321 0.339-0.946 0.393h-2.054q-1.268 0.071-2.607-0.295t-2.348-0.946-1.839-1.179-1.259-1.027l-0.446-0.429q-0.179-0.179-0.491-0.536t-1.277-1.625-1.893-2.696-2.188-3.768-2.33-4.857q-0.107-0.286-0.107-0.482t0.054-0.286l0.071-0.107q0.268-0.339 1.018-0.339l4.893-0.036q0.214 0.036 0.411 0.116t0.286 0.152l0.089 0.054q0.286 0.196 0.429 0.571 0.357 0.893 0.821 1.848t0.732 1.455l0.286 0.518q0.518 1.071 1 1.857t0.866 1.223 0.741 0.688 0.607 0.25 0.482-0.089q0.036-0.018 0.089-0.089t0.214-0.393 0.241-0.839 0.17-1.446 0-2.232q-0.036-0.714-0.161-1.304t-0.25-0.821l-0.107-0.214q-0.446-0.607-1.518-0.768-0.232-0.036 0.089-0.429 0.304-0.339 0.679-0.536 0.946-0.464 4.268-0.429 1.464 0.018 2.411 0.232 0.357 0.089 0.598 0.241t0.366 0.429 0.188 0.571 0.063 0.813-0.018 0.982-0.045 1.259-0.027 1.473q0 0.196-0.018 0.75t-0.009 0.857 0.063 0.723 0.205 0.696 0.402 0.438q0.143 0.036 0.304 0.071t0.464-0.196 0.679-0.616 0.929-1.196 1.214-1.92q1.071-1.857 1.911-4.018 0.071-0.179 0.179-0.313t0.196-0.188l0.071-0.054 0.089-0.045t0.232-0.054 0.357-0.009l5.143-0.036q0.696-0.089 1.143 0.045t0.554 0.295z" />
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 30 32">
+     <path class="path1" d="M20.571 14.857q0-3.304-2.348-5.652t-5.652-2.348-5.652 2.348-2.348 5.652 2.348 5.652 5.652 2.348 5.652-2.348 2.348-5.652zM29.714 29.714q0 0.929-0.679 1.607t-1.607 0.679q-0.964 0-1.607-0.679l-6.125-6.107q-3.196 2.214-7.125 2.214-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884 0.991-4.884 2.679-4.018 4.018-2.679 4.884-0.991 4.884 0.991 4.018 2.679 2.679 4.018 0.991 4.884q0 3.929-2.214 7.125l6.125 6.125q0.661 0.661 0.661 1.607z" />
+    </symbol>
+    <symbol id="icon-envelope-o" viewBox="0 0 32 32">
+     <path class="path1" d="M29.714 26.857v-13.714q-0.571 0.643-1.232 1.179-4.786 3.679-7.607 6.036-0.911 0.768-1.482 1.196t-1.545 0.866-1.83 0.438h-0.036q-0.857 0-1.83-0.438t-1.545-0.866-1.482-1.196q-2.821-2.357-7.607-6.036-0.661-0.536-1.232-1.179v13.714q0 0.232 0.17 0.402t0.402 0.17h26.286q0.232 0 0.402-0.17t0.17-0.402zM29.714 8.089v-0.438t-0.009-0.232-0.054-0.223-0.098-0.161-0.161-0.134-0.25-0.045h-26.286q-0.232 0-0.402 0.17t-0.17 0.402q0 3 2.625 5.071 3.446 2.714 7.161 5.661 0.107 0.089 0.625 0.527t0.821 0.67 0.795 0.563 0.902 0.491 0.768 0.161h0.036q0.357 0 0.768-0.161t0.902-0.491 0.795-0.563 0.821-0.67 0.625-0.527q3.714-2.946 7.161-5.661 0.964-0.768 1.795-2.063t0.83-2.348zM32 7.429v19.429q0 1.179-0.839 2.018t-2.018 0.839h-26.286q-1.179 0-2.018-0.839t-0.839-2.018v-19.429q0-1.179 0.839-2.018t2.018-0.839h26.286q1.179 0 2.018 0.839t0.839 2.018z" />
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 25 32">
+     <path class="path1" d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z" />
+    </symbol>
+    <symbol id="icon-angle-down" viewBox="0 0 21 32">
+     <path class="path1" d="M19.196 13.143q0 0.232-0.179 0.411l-8.321 8.321q-0.179 0.179-0.411 0.179t-0.411-0.179l-8.321-8.321q-0.179-0.179-0.179-0.411t0.179-0.411l0.893-0.893q0.179-0.179 0.411-0.179t0.411 0.179l7.018 7.018 7.018-7.018q0.179-0.179 0.411-0.179t0.411 0.179l0.893 0.893q0.179 0.179 0.179 0.411z" />
+    </symbol>
+    <symbol id="icon-folder-open" viewBox="0 0 34 32">
+     <path class="path1" d="M33.554 17q0 0.554-0.554 1.179l-6 7.071q-0.768 0.911-2.152 1.545t-2.563 0.634h-19.429q-0.607 0-1.080-0.232t-0.473-0.768q0-0.554 0.554-1.179l6-7.071q0.768-0.911 2.152-1.545t2.563-0.634h19.429q0.607 0 1.080 0.232t0.473 0.768zM27.429 10.857v2.857h-14.857q-1.679 0-3.518 0.848t-2.929 2.134l-6.107 7.179q0-0.071-0.009-0.223t-0.009-0.223v-17.143q0-1.643 1.179-2.821t2.821-1.179h5.714q1.643 0 2.821 1.179t1.179 2.821v0.571h9.714q1.643 0 2.821 1.179t1.179 2.821z" />
+    </symbol>
+    <symbol id="icon-twitter" viewBox="0 0 30 32">
+     <path class="path1" d="M28.929 7.286q-1.196 1.75-2.893 2.982 0.018 0.25 0.018 0.75 0 2.321-0.679 4.634t-2.063 4.437-3.295 3.759-4.607 2.607-5.768 0.973q-4.839 0-8.857-2.589 0.625 0.071 1.393 0.071 4.018 0 7.161-2.464-1.875-0.036-3.357-1.152t-2.036-2.848q0.589 0.089 1.089 0.089 0.768 0 1.518-0.196-2-0.411-3.313-1.991t-1.313-3.67v-0.071q1.214 0.679 2.607 0.732-1.179-0.786-1.875-2.054t-0.696-2.75q0-1.571 0.786-2.911 2.161 2.661 5.259 4.259t6.634 1.777q-0.143-0.679-0.143-1.321 0-2.393 1.688-4.080t4.080-1.688q2.5 0 4.214 1.821 1.946-0.375 3.661-1.393-0.661 2.054-2.536 3.179 1.661-0.179 3.321-0.893z" />
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 19 32">
+     <path class="path1" d="M17.125 0.214v4.714h-2.804q-1.536 0-2.071 0.643t-0.536 1.929v3.375h5.232l-0.696 5.286h-4.536v13.554h-5.464v-13.554h-4.554v-5.286h4.554v-3.893q0-3.321 1.857-5.152t4.946-1.83q2.625 0 4.071 0.214z" />
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 27 32">
+     <path class="path1" d="M13.714 2.286q3.732 0 6.884 1.839t4.991 4.991 1.839 6.884q0 4.482-2.616 8.063t-6.759 4.955q-0.482 0.089-0.714-0.125t-0.232-0.536q0-0.054 0.009-1.366t0.009-2.402q0-1.732-0.929-2.536 1.018-0.107 1.83-0.321t1.679-0.696 1.446-1.188 0.946-1.875 0.366-2.688q0-2.125-1.411-3.679 0.661-1.625-0.143-3.643-0.5-0.161-1.446 0.196t-1.643 0.786l-0.679 0.429q-1.661-0.464-3.429-0.464t-3.429 0.464q-0.286-0.196-0.759-0.482t-1.491-0.688-1.518-0.241q-0.804 2.018-0.143 3.643-1.411 1.554-1.411 3.679 0 1.518 0.366 2.679t0.938 1.875 1.438 1.196 1.679 0.696 1.83 0.321q-0.696 0.643-0.875 1.839-0.375 0.179-0.804 0.268t-1.018 0.089-1.17-0.384-0.991-1.116q-0.339-0.571-0.866-0.929t-0.884-0.429l-0.357-0.054q-0.375 0-0.518 0.080t-0.089 0.205 0.161 0.25 0.232 0.214l0.125 0.089q0.393 0.179 0.777 0.679t0.563 0.911l0.179 0.411q0.232 0.679 0.786 1.098t1.196 0.536 1.241 0.125 0.991-0.063l0.411-0.071q0 0.679 0.009 1.58t0.009 0.973q0 0.321-0.232 0.536t-0.714 0.125q-4.143-1.375-6.759-4.955t-2.616-8.063q0-3.732 1.839-6.884t4.991-4.991 6.884-1.839zM5.196 21.982q0.054-0.125-0.125-0.214-0.179-0.054-0.232 0.036-0.054 0.125 0.125 0.214 0.161 0.107 0.232-0.036zM5.75 22.589q0.125-0.089-0.036-0.286-0.179-0.161-0.286-0.054-0.125 0.089 0.036 0.286 0.179 0.179 0.286 0.054zM6.286 23.393q0.161-0.125 0-0.339-0.143-0.232-0.304-0.107-0.161 0.089 0 0.321t0.304 0.125zM7.036 24.143q0.143-0.143-0.071-0.339-0.214-0.214-0.357-0.054-0.161 0.143 0.071 0.339 0.214 0.214 0.357 0.054zM8.054 24.589q0.054-0.196-0.232-0.286-0.268-0.071-0.339 0.125t0.232 0.268q0.268 0.107 0.339-0.107zM9.179 24.679q0-0.232-0.304-0.196-0.286 0-0.286 0.196 0 0.232 0.304 0.196 0.286 0 0.286-0.196zM10.214 24.5q-0.036-0.196-0.321-0.161-0.286 0.054-0.25 0.268t0.321 0.143 0.25-0.25z" />
+    </symbol>
+    <symbol id="icon-bars" viewBox="0 0 27 32">
+     <path class="path1" d="M27.429 24v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 14.857v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 5.714v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804z" />
+    </symbol>
+    <symbol id="icon-google-plus" viewBox="0 0 41 32">
+     <path class="path1" d="M25.661 16.304q0 3.714-1.554 6.616t-4.429 4.536-6.589 1.634q-2.661 0-5.089-1.036t-4.179-2.786-2.786-4.179-1.036-5.089 1.036-5.089 2.786-4.179 4.179-2.786 5.089-1.036q5.107 0 8.768 3.429l-3.554 3.411q-2.089-2.018-5.214-2.018-2.196 0-4.063 1.107t-2.955 3.009-1.089 4.152 1.089 4.152 2.955 3.009 4.063 1.107q1.482 0 2.723-0.411t2.045-1.027 1.402-1.402 0.875-1.482 0.384-1.321h-7.429v-4.5h12.357q0.214 1.125 0.214 2.179zM41.143 14.125v3.75h-3.732v3.732h-3.75v-3.732h-3.732v-3.75h3.732v-3.732h3.75v3.732h3.732z" />
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 27 32">
+     <path class="path1" d="M6.232 11.161v17.696h-5.893v-17.696h5.893zM6.607 5.696q0.018 1.304-0.902 2.179t-2.42 0.875h-0.036q-1.464 0-2.357-0.875t-0.893-2.179q0-1.321 0.92-2.188t2.402-0.866 2.375 0.866 0.911 2.188zM27.429 18.714v10.143h-5.875v-9.464q0-1.875-0.723-2.938t-2.259-1.063q-1.125 0-1.884 0.616t-1.134 1.527q-0.196 0.536-0.196 1.446v9.875h-5.875q0.036-7.125 0.036-11.554t-0.018-5.286l-0.018-0.857h5.875v2.571h-0.036q0.357-0.571 0.732-1t1.009-0.929 1.554-0.777 2.045-0.277q3.054 0 4.911 2.027t1.857 5.938z" />
+    </symbol>
+    <symbol id="icon-quote-right" viewBox="0 0 30 32">
+     <path class="path1" d="M13.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429zM29.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429z" />
+    </symbol>
+    <symbol id="icon-mail-reply" viewBox="0 0 32 32">
+     <path class="path1" d="M32 20q0 2.964-2.268 8.054-0.054 0.125-0.188 0.429t-0.241 0.536-0.232 0.393q-0.214 0.304-0.5 0.304-0.268 0-0.42-0.179t-0.152-0.446q0-0.161 0.045-0.473t0.045-0.42q0.089-1.214 0.089-2.196 0-1.804-0.313-3.232t-0.866-2.473-1.429-1.804-1.884-1.241-2.375-0.759-2.75-0.384-3.134-0.107h-4v4.571q0 0.464-0.339 0.804t-0.804 0.339-0.804-0.339l-9.143-9.143q-0.339-0.339-0.339-0.804t0.339-0.804l9.143-9.143q0.339-0.339 0.804-0.339t0.804 0.339 0.339 0.804v4.571h4q12.732 0 15.625 7.196 0.946 2.393 0.946 5.946z" />
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 27 32">
+     <path class="path1" d="M17.339 22.214v3.768q0 1.196-0.696 1.196-0.411 0-0.804-0.393v-5.375q0.393-0.393 0.804-0.393 0.696 0 0.696 1.196zM23.375 22.232v0.821h-1.607v-0.821q0-1.214 0.804-1.214t0.804 1.214zM6.125 18.339h1.911v-1.679h-5.571v1.679h1.875v10.161h1.786v-10.161zM11.268 28.5h1.589v-8.821h-1.589v6.75q-0.536 0.75-1.018 0.75-0.321 0-0.375-0.375-0.018-0.054-0.018-0.625v-6.5h-1.589v6.982q0 0.875 0.143 1.304 0.214 0.661 1.036 0.661 0.857 0 1.821-1.089v0.964zM18.929 25.857v-3.518q0-1.304-0.161-1.768-0.304-1-1.268-1-0.893 0-1.661 0.964v-3.875h-1.589v11.839h1.589v-0.857q0.804 0.982 1.661 0.982 0.964 0 1.268-0.982 0.161-0.482 0.161-1.786zM24.964 25.679v-0.232h-1.625q0 0.911-0.036 1.089-0.125 0.643-0.714 0.643-0.821 0-0.821-1.232v-1.554h3.196v-1.839q0-1.411-0.482-2.071-0.696-0.911-1.893-0.911-1.214 0-1.911 0.911-0.5 0.661-0.5 2.071v3.089q0 1.411 0.518 2.071 0.696 0.911 1.929 0.911 1.286 0 1.929-0.946 0.321-0.482 0.375-0.964 0.036-0.161 0.036-1.036zM14.107 9.375v-3.75q0-1.232-0.768-1.232t-0.768 1.232v3.75q0 1.25 0.768 1.25t0.768-1.25zM26.946 22.786q0 4.179-0.464 6.25-0.25 1.054-1.036 1.768t-1.821 0.821q-3.286 0.375-9.911 0.375t-9.911-0.375q-1.036-0.107-1.83-0.821t-1.027-1.768q-0.464-2-0.464-6.25 0-4.179 0.464-6.25 0.25-1.054 1.036-1.768t1.839-0.839q3.268-0.357 9.893-0.357t9.911 0.357q1.036 0.125 1.83 0.839t1.027 1.768q0.464 2 0.464 6.25zM9.125 0h1.821l-2.161 7.125v4.839h-1.786v-4.839q-0.25-1.321-1.089-3.786-0.661-1.839-1.161-3.339h1.893l1.268 4.696zM15.732 5.946v3.125q0 1.446-0.5 2.107-0.661 0.911-1.893 0.911-1.196 0-1.875-0.911-0.5-0.679-0.5-2.107v-3.125q0-1.429 0.5-2.089 0.679-0.911 1.875-0.911 1.232 0 1.893 0.911 0.5 0.661 0.5 2.089zM21.714 3.054v8.911h-1.625v-0.982q-0.946 1.107-1.839 1.107-0.821 0-1.054-0.661-0.143-0.429-0.143-1.339v-7.036h1.625v6.554q0 0.589 0.018 0.625 0.054 0.393 0.375 0.393 0.482 0 1.018-0.768v-6.804h1.625z" />
+    </symbol>
+    <symbol id="icon-dropbox" viewBox="0 0 32 32">
+     <path class="path1" d="M7.179 12.625l8.821 5.446-6.107 5.089-8.75-5.696zM24.786 22.536v1.929l-8.75 5.232v0.018l-0.018-0.018-0.018 0.018v-0.018l-8.732-5.232v-1.929l2.625 1.714 6.107-5.071v-0.036l0.018 0.018 0.018-0.018v0.036l6.125 5.071zM9.893 2.107l6.107 5.089-8.821 5.429-6.036-4.821zM24.821 12.625l6.036 4.839-8.732 5.696-6.125-5.089zM22.125 2.107l8.732 5.696-6.036 4.821-8.821-5.429z" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 27 32">
+     <path class="path1" d="M18.286 16q0-1.893-1.339-3.232t-3.232-1.339-3.232 1.339-1.339 3.232 1.339 3.232 3.232 1.339 3.232-1.339 1.339-3.232zM20.75 16q0 2.929-2.054 4.982t-4.982 2.054-4.982-2.054-2.054-4.982 2.054-4.982 4.982-2.054 4.982 2.054 2.054 4.982zM22.679 8.679q0 0.679-0.482 1.161t-1.161 0.482-1.161-0.482-0.482-1.161 0.482-1.161 1.161-0.482 1.161 0.482 0.482 1.161zM13.714 4.75q-0.125 0-1.366-0.009t-1.884 0-1.723 0.054-1.839 0.179-1.277 0.33q-0.893 0.357-1.571 1.036t-1.036 1.571q-0.196 0.518-0.33 1.277t-0.179 1.839-0.054 1.723 0 1.884 0.009 1.366-0.009 1.366 0 1.884 0.054 1.723 0.179 1.839 0.33 1.277q0.357 0.893 1.036 1.571t1.571 1.036q0.518 0.196 1.277 0.33t1.839 0.179 1.723 0.054 1.884 0 1.366-0.009 1.366 0.009 1.884 0 1.723-0.054 1.839-0.179 1.277-0.33q0.893-0.357 1.571-1.036t1.036-1.571q0.196-0.518 0.33-1.277t0.179-1.839 0.054-1.723 0-1.884-0.009-1.366 0.009-1.366 0-1.884-0.054-1.723-0.179-1.839-0.33-1.277q-0.357-0.893-1.036-1.571t-1.571-1.036q-0.518-0.196-1.277-0.33t-1.839-0.179-1.723-0.054-1.884 0-1.366 0.009zM27.429 16q0 4.089-0.089 5.661-0.179 3.714-2.214 5.75t-5.75 2.214q-1.571 0.089-5.661 0.089t-5.661-0.089q-3.714-0.179-5.75-2.214t-2.214-5.75q-0.089-1.571-0.089-5.661t0.089-5.661q0.179-3.714 2.214-5.75t5.75-2.214q1.571-0.089 5.661-0.089t5.661 0.089q3.714 0.179 5.75 2.214t2.214 5.75q0.089 1.571 0.089 5.661z" />
+    </symbol>
+    <symbol id="icon-flickr" viewBox="0 0 27 32">
+     <path class="path1" d="M22.286 2.286q2.125 0 3.634 1.509t1.509 3.634v17.143q0 2.125-1.509 3.634t-3.634 1.509h-17.143q-2.125 0-3.634-1.509t-1.509-3.634v-17.143q0-2.125 1.509-3.634t3.634-1.509h17.143zM12.464 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679zM22.536 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679z" />
+    </symbol>
+    <symbol id="icon-tumblr" viewBox="0 0 19 32">
+     <path class="path1" d="M16.857 23.732l1.429 4.232q-0.411 0.625-1.982 1.179t-3.161 0.571q-1.857 0.036-3.402-0.464t-2.545-1.321-1.696-1.893-0.991-2.143-0.295-2.107v-9.714h-3v-3.839q1.286-0.464 2.304-1.241t1.625-1.607 1.036-1.821 0.607-1.768 0.268-1.58q0.018-0.089 0.080-0.152t0.134-0.063h4.357v7.571h5.946v4.5h-5.964v9.25q0 0.536 0.116 1t0.402 0.938 0.884 0.741 1.455 0.25q1.393-0.036 2.393-0.518z" />
+    </symbol>
+    <symbol id="icon-dribbble" viewBox="0 0 27 32">
+     <path class="path1" d="M18.286 26.786q-0.75-4.304-2.5-8.893h-0.036l-0.036 0.018q-0.286 0.107-0.768 0.295t-1.804 0.875-2.446 1.464-2.339 2.045-1.839 2.643l-0.268-0.196q3.286 2.679 7.464 2.679 2.357 0 4.571-0.929zM14.982 15.946q-0.375-0.875-0.946-1.982-5.554 1.661-12.018 1.661-0.018 0.125-0.018 0.375 0 2.214 0.786 4.223t2.214 3.598q0.893-1.589 2.205-2.973t2.545-2.223 2.33-1.446 1.777-0.857l0.661-0.232q0.071-0.018 0.232-0.063t0.232-0.080zM13.071 12.161q-2.143-3.804-4.357-6.75-2.464 1.161-4.179 3.321t-2.286 4.857q5.393 0 10.821-1.429zM25.286 17.857q-3.75-1.071-7.304-0.518 1.554 4.268 2.286 8.375 1.982-1.339 3.304-3.384t1.714-4.473zM10.911 4.625q-0.018 0-0.036 0.018 0.018-0.018 0.036-0.018zM21.446 7.214q-3.304-2.929-7.732-2.929-1.357 0-2.768 0.339 2.339 3.036 4.393 6.821 1.232-0.464 2.321-1.080t1.723-1.098 1.17-1.018 0.67-0.723zM25.429 15.875q-0.054-4.143-2.661-7.321l-0.018 0.018q-0.161 0.214-0.339 0.438t-0.777 0.795-1.268 1.080-1.786 1.161-2.348 1.152q0.446 0.946 0.786 1.696 0.036 0.107 0.116 0.313t0.134 0.295q0.643-0.089 1.33-0.125t1.313-0.036 1.232 0.027 1.143 0.071 1.009 0.098 0.857 0.116 0.652 0.107 0.446 0.080zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z" />
+    </symbol>
+    <symbol id="icon-skype" viewBox="0 0 27 32">
+     <path class="path1" d="M20.946 18.982q0-0.893-0.348-1.634t-0.866-1.223-1.304-0.875-1.473-0.607-1.563-0.411l-1.857-0.429q-0.536-0.125-0.786-0.188t-0.625-0.205-0.536-0.286-0.295-0.375-0.134-0.536q0-1.375 2.571-1.375 0.768 0 1.375 0.214t0.964 0.509 0.679 0.598 0.714 0.518 0.857 0.214q0.839 0 1.348-0.571t0.509-1.375q0-0.982-1-1.777t-2.536-1.205-3.25-0.411q-1.214 0-2.357 0.277t-2.134 0.839-1.589 1.554-0.598 2.295q0 1.089 0.339 1.902t1 1.348 1.429 0.866 1.839 0.58l2.607 0.643q1.607 0.393 2 0.643 0.571 0.357 0.571 1.071 0 0.696-0.714 1.152t-1.875 0.455q-0.911 0-1.634-0.286t-1.161-0.688-0.813-0.804-0.821-0.688-0.964-0.286q-0.893 0-1.348 0.536t-0.455 1.339q0 1.643 2.179 2.813t5.196 1.17q1.304 0 2.5-0.33t2.188-0.955 1.58-1.67 0.589-2.348zM27.429 22.857q0 2.839-2.009 4.848t-4.848 2.009q-2.321 0-4.179-1.429-1.375 0.286-2.679 0.286-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884q0-1.304 0.286-2.679-1.429-1.857-1.429-4.179 0-2.839 2.009-4.848t4.848-2.009q2.321 0 4.179 1.429 1.375-0.286 2.679-0.286 2.554 0 4.884 0.991t4.018 2.679 2.679 4.018 0.991 4.884q0 1.304-0.286 2.679 1.429 1.857 1.429 4.179z" />
+    </symbol>
+    <symbol id="icon-foursquare" viewBox="0 0 23 32">
+     <path class="path1" d="M17.857 7.75l0.661-3.464q0.089-0.411-0.161-0.714t-0.625-0.304h-12.714q-0.411 0-0.688 0.304t-0.277 0.661v19.661q0 0.125 0.107 0.018l5.196-6.286q0.411-0.464 0.679-0.598t0.857-0.134h4.268q0.393 0 0.661-0.259t0.321-0.527q0.429-2.321 0.661-3.411 0.071-0.375-0.205-0.714t-0.652-0.339h-5.25q-0.518 0-0.857-0.339t-0.339-0.857v-0.75q0-0.518 0.339-0.848t0.857-0.33h6.179q0.321 0 0.625-0.241t0.357-0.527zM21.911 3.786q-0.268 1.304-0.955 4.759t-1.241 6.25-0.625 3.098q-0.107 0.393-0.161 0.58t-0.25 0.58-0.438 0.589-0.688 0.375-1.036 0.179h-4.839q-0.232 0-0.393 0.179-0.143 0.161-7.607 8.821-0.393 0.446-1.045 0.509t-0.866-0.098q-0.982-0.393-0.982-1.75v-25.179q0-0.982 0.679-1.83t2.143-0.848h15.857q1.696 0 2.268 0.946t0.179 2.839zM21.911 3.786l-2.821 14.107q0.071-0.304 0.625-3.098t1.241-6.25 0.955-4.759z" />
+    </symbol>
+    <symbol id="icon-wordpress" viewBox="0 0 32 32">
+     <path class="path1" d="M2.268 16q0-2.911 1.196-5.589l6.554 17.946q-3.5-1.696-5.625-5.018t-2.125-7.339zM25.268 15.304q0 0.339-0.045 0.688t-0.179 0.884-0.205 0.786-0.313 1.054-0.313 1.036l-1.357 4.571-4.964-14.75q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-1.339-0.018-3.607-0.179-0.214-0.018-0.366 0.089t-0.205 0.268-0.027 0.33 0.161 0.295 0.348 0.143l1.429 0.143 2.143 5.857-3 9-5-14.857q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-0.125 0-0.411-0.009t-0.464-0.009q1.875-2.857 4.902-4.527t6.563-1.67q2.625 0 5.009 0.946t4.259 2.661h-0.179q-0.982 0-1.643 0.723t-0.661 1.705q0 0.214 0.036 0.429t0.071 0.384 0.143 0.411 0.161 0.375 0.214 0.402 0.223 0.375 0.259 0.429 0.25 0.411q1.125 1.911 1.125 3.786zM16.232 17.196l4.232 11.554q0.018 0.107 0.089 0.196-2.25 0.786-4.554 0.786-2 0-3.875-0.571zM28.036 9.411q1.696 3.107 1.696 6.589 0 3.732-1.857 6.884t-4.982 4.973l4.196-12.107q1.054-3.018 1.054-4.929 0-0.75-0.107-1.411zM16 0q3.25 0 6.214 1.268t5.107 3.411 3.411 5.107 1.268 6.214-1.268 6.214-3.411 5.107-5.107 3.411-6.214 1.268-6.214-1.268-5.107-3.411-3.411-5.107-1.268-6.214 1.268-6.214 3.411-5.107 5.107-3.411 6.214-1.268zM16 31.268q3.089 0 5.92-1.214t4.875-3.259 3.259-4.875 1.214-5.92-1.214-5.92-3.259-4.875-4.875-3.259-5.92-1.214-5.92 1.214-4.875 3.259-3.259 4.875-1.214 5.92 1.214 5.92 3.259 4.875 4.875 3.259 5.92 1.214z" />
+    </symbol>
+    <symbol id="icon-stumbleupon" viewBox="0 0 34 32">
+     <path class="path1" d="M18.964 12.714v-2.107q0-0.75-0.536-1.286t-1.286-0.536-1.286 0.536-0.536 1.286v10.929q0 3.125-2.25 5.339t-5.411 2.214q-3.179 0-5.42-2.241t-2.241-5.42v-4.75h5.857v4.679q0 0.768 0.536 1.295t1.286 0.527 1.286-0.527 0.536-1.295v-11.071q0-3.054 2.259-5.214t5.384-2.161q3.143 0 5.393 2.179t2.25 5.25v2.429l-3.482 1.036zM28.429 16.679h5.857v4.75q0 3.179-2.241 5.42t-5.42 2.241q-3.161 0-5.411-2.223t-2.25-5.366v-4.786l2.339 1.089 3.482-1.036v4.821q0 0.75 0.536 1.277t1.286 0.527 1.286-0.527 0.536-1.277v-4.911z" />
+    </symbol>
+    <symbol id="icon-digg" viewBox="0 0 37 32">
+     <path class="path1" d="M5.857 5.036h3.643v17.554h-9.5v-12.446h5.857v-5.107zM5.857 19.661v-6.589h-2.196v6.589h2.196zM10.964 10.143v12.446h3.661v-12.446h-3.661zM10.964 5.036v3.643h3.661v-3.643h-3.661zM16.089 10.143h9.518v16.821h-9.518v-2.911h5.857v-1.464h-5.857v-12.446zM21.946 19.661v-6.589h-2.196v6.589h2.196zM27.071 10.143h9.5v16.821h-9.5v-2.911h5.839v-1.464h-5.839v-12.446zM32.911 19.661v-6.589h-2.196v6.589h2.196z" />
+    </symbol>
+    <symbol id="icon-spotify" viewBox="0 0 27 32">
+     <path class="path1" d="M20.125 21.607q0-0.571-0.536-0.911-3.446-2.054-7.982-2.054-2.375 0-5.125 0.607-0.75 0.161-0.75 0.929 0 0.357 0.241 0.616t0.634 0.259q0.089 0 0.661-0.143 2.357-0.482 4.339-0.482 4.036 0 7.089 1.839 0.339 0.196 0.589 0.196 0.339 0 0.589-0.241t0.25-0.616zM21.839 17.768q0-0.714-0.625-1.089-4.232-2.518-9.786-2.518-2.732 0-5.411 0.75-0.857 0.232-0.857 1.143 0 0.446 0.313 0.759t0.759 0.313q0.125 0 0.661-0.143 2.179-0.589 4.482-0.589 4.982 0 8.714 2.214 0.429 0.232 0.679 0.232 0.446 0 0.759-0.313t0.313-0.759zM23.768 13.339q0-0.839-0.714-1.25-2.25-1.304-5.232-1.973t-6.125-0.67q-3.643 0-6.5 0.839-0.411 0.125-0.688 0.455t-0.277 0.866q0 0.554 0.366 0.929t0.92 0.375q0.196 0 0.714-0.143 2.375-0.661 5.482-0.661 2.839 0 5.527 0.607t4.527 1.696q0.375 0.214 0.714 0.214 0.518 0 0.902-0.366t0.384-0.92zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z" />
+    </symbol>
+    <symbol id="icon-soundcloud" viewBox="0 0 41 32">
+     <path class="path1" d="M14 24.5l0.286-4.304-0.286-9.339q-0.018-0.179-0.134-0.304t-0.295-0.125q-0.161 0-0.286 0.125t-0.125 0.304l-0.25 9.339 0.25 4.304q0.018 0.179 0.134 0.295t0.277 0.116q0.393 0 0.429-0.411zM19.286 23.982l0.196-3.768-0.214-10.464q0-0.286-0.232-0.429-0.143-0.089-0.286-0.089t-0.286 0.089q-0.232 0.143-0.232 0.429l-0.018 0.107-0.179 10.339q0 0.018 0.196 4.214v0.018q0 0.179 0.107 0.304 0.161 0.196 0.411 0.196 0.196 0 0.357-0.161 0.161-0.125 0.161-0.357zM0.625 17.911l0.357 2.286-0.357 2.25q-0.036 0.161-0.161 0.161t-0.161-0.161l-0.304-2.25 0.304-2.286q0.036-0.161 0.161-0.161t0.161 0.161zM2.161 16.5l0.464 3.696-0.464 3.625q-0.036 0.161-0.179 0.161-0.161 0-0.161-0.179l-0.411-3.607 0.411-3.696q0-0.161 0.161-0.161 0.143 0 0.179 0.161zM3.804 15.821l0.446 4.375-0.446 4.232q0 0.196-0.196 0.196-0.179 0-0.214-0.196l-0.375-4.232 0.375-4.375q0.036-0.214 0.214-0.214 0.196 0 0.196 0.214zM5.482 15.696l0.411 4.5-0.411 4.357q-0.036 0.232-0.25 0.232-0.232 0-0.232-0.232l-0.375-4.357 0.375-4.5q0-0.232 0.232-0.232 0.214 0 0.25 0.232zM7.161 16.018l0.375 4.179-0.375 4.393q-0.036 0.286-0.286 0.286-0.107 0-0.188-0.080t-0.080-0.205l-0.357-4.393 0.357-4.179q0-0.107 0.080-0.188t0.188-0.080q0.25 0 0.286 0.268zM8.839 13.411l0.375 6.786-0.375 4.393q0 0.125-0.089 0.223t-0.214 0.098q-0.286 0-0.321-0.321l-0.321-4.393 0.321-6.786q0.036-0.321 0.321-0.321 0.125 0 0.214 0.098t0.089 0.223zM10.518 11.875l0.339 8.357-0.339 4.357q0 0.143-0.098 0.241t-0.241 0.098q-0.321 0-0.357-0.339l-0.286-4.357 0.286-8.357q0.036-0.339 0.357-0.339 0.143 0 0.241 0.098t0.098 0.241zM12.268 11.161l0.321 9.036-0.321 4.321q-0.036 0.375-0.393 0.375-0.339 0-0.375-0.375l-0.286-4.321 0.286-9.036q0-0.161 0.116-0.277t0.259-0.116q0.161 0 0.268 0.116t0.125 0.277zM19.268 24.411v0 0zM15.732 11.089l0.268 9.107-0.268 4.268q0 0.179-0.134 0.313t-0.313 0.134-0.304-0.125-0.143-0.321l-0.25-4.268 0.25-9.107q0-0.196 0.134-0.321t0.313-0.125 0.313 0.125 0.134 0.321zM17.5 11.429l0.25 8.786-0.25 4.214q0 0.196-0.143 0.339t-0.339 0.143-0.339-0.143-0.161-0.339l-0.214-4.214 0.214-8.786q0.018-0.214 0.161-0.357t0.339-0.143 0.33 0.143 0.152 0.357zM21.286 20.214l-0.25 4.125q0 0.232-0.161 0.393t-0.393 0.161-0.393-0.161-0.179-0.393l-0.107-2.036-0.107-2.089 0.214-11.357v-0.054q0.036-0.268 0.214-0.429 0.161-0.125 0.357-0.125 0.143 0 0.268 0.089 0.25 0.143 0.286 0.464zM41.143 19.875q0 2.089-1.482 3.563t-3.571 1.473h-14.036q-0.232-0.036-0.393-0.196t-0.161-0.393v-16.054q0-0.411 0.5-0.589 1.518-0.607 3.232-0.607 3.482 0 6.036 2.348t2.857 5.777q0.946-0.393 1.964-0.393 2.089 0 3.571 1.482t1.482 3.589z" />
+    </symbol>
+    <symbol id="icon-codepen" viewBox="0 0 32 32">
+     <path class="path1" d="M3.857 20.875l10.768 7.179v-6.411l-5.964-3.982zM2.75 18.304l3.446-2.304-3.446-2.304v4.607zM17.375 28.054l10.768-7.179-4.804-3.214-5.964 3.982v6.411zM16 19.25l4.857-3.25-4.857-3.25-4.857 3.25zM8.661 14.339l5.964-3.982v-6.411l-10.768 7.179zM25.804 16l3.446 2.304v-4.607zM23.339 14.339l4.804-3.214-10.768-7.179v6.411zM32 11.125v9.75q0 0.732-0.607 1.143l-14.625 9.75q-0.375 0.232-0.768 0.232t-0.768-0.232l-14.625-9.75q-0.607-0.411-0.607-1.143v-9.75q0-0.732 0.607-1.143l14.625-9.75q0.375-0.232 0.768-0.232t0.768 0.232l14.625 9.75q0.607 0.411 0.607 1.143z" />
+    </symbol>
+    <symbol id="icon-twitch" viewBox="0 0 32 32">
+     <path class="path1" d="M16 7.75v7.75h-2.589v-7.75h2.589zM23.107 7.75v7.75h-2.589v-7.75h2.589zM23.107 21.321l4.518-4.536v-14.196h-21.321v18.732h5.821v3.875l3.875-3.875h7.107zM30.214 0v18.089l-7.75 7.75h-5.821l-3.875 3.875h-3.875v-3.875h-7.107v-20.679l1.946-5.161h26.482z" />
+    </symbol>
+    <symbol id="icon-meanpath" viewBox="0 0 27 32">
+     <path class="path1" d="M23.411 15.036v2.036q0 0.429-0.241 0.679t-0.67 0.25h-3.607q-0.429 0-0.679-0.25t-0.25-0.679v-2.036q0-0.429 0.25-0.679t0.679-0.25h3.607q0.429 0 0.67 0.25t0.241 0.679zM14.661 19.143v-4.464q0-0.946-0.58-1.527t-1.527-0.58h-2.375q-1.214 0-1.714 0.929-0.5-0.929-1.714-0.929h-2.321q-0.946 0-1.527 0.58t-0.58 1.527v4.464q0 0.393 0.375 0.393h0.982q0.393 0 0.393-0.393v-4.107q0-0.429 0.241-0.679t0.688-0.25h1.679q0.429 0 0.679 0.25t0.25 0.679v4.107q0 0.393 0.375 0.393h0.964q0.393 0 0.393-0.393v-4.107q0-0.429 0.25-0.679t0.679-0.25h1.732q0.429 0 0.67 0.25t0.241 0.679v4.107q0 0.393 0.393 0.393h0.982q0.375 0 0.375-0.393zM25.179 17.429v-2.75q0-0.946-0.589-1.527t-1.536-0.58h-4.714q-0.946 0-1.536 0.58t-0.589 1.527v7.321q0 0.375 0.393 0.375h0.982q0.375 0 0.375-0.375v-3.214q0.554 0.75 1.679 0.75h3.411q0.946 0 1.536-0.58t0.589-1.527zM27.429 6.429v19.143q0 1.714-1.214 2.929t-2.929 1.214h-19.143q-1.714 0-2.929-1.214t-1.214-2.929v-19.143q0-1.714 1.214-2.929t2.929-1.214h19.143q1.714 0 2.929 1.214t1.214 2.929z" />
+    </symbol>
+    <symbol id="icon-pinterest-p" viewBox="0 0 23 32">
+     <path class="path1" d="M0 10.661q0-1.929 0.67-3.634t1.848-2.973 2.714-2.196 3.304-1.393 3.607-0.464q2.821 0 5.25 1.188t3.946 3.455 1.518 5.125q0 1.714-0.339 3.357t-1.071 3.161-1.786 2.67-2.589 1.839-3.375 0.688q-1.214 0-2.411-0.571t-1.714-1.571q-0.179 0.696-0.5 2.009t-0.42 1.696-0.366 1.268-0.464 1.268-0.571 1.116-0.821 1.384-1.107 1.545l-0.25 0.089-0.161-0.179q-0.268-2.804-0.268-3.357 0-1.643 0.384-3.688t1.188-5.134 0.929-3.625q-0.571-1.161-0.571-3.018 0-1.482 0.929-2.786t2.357-1.304q1.089 0 1.696 0.723t0.607 1.83q0 1.179-0.786 3.411t-0.786 3.339q0 1.125 0.804 1.866t1.946 0.741q0.982 0 1.821-0.446t1.402-1.214 1-1.696 0.679-1.973 0.357-1.982 0.116-1.777q0-3.089-1.955-4.813t-5.098-1.723q-3.571 0-5.964 2.313t-2.393 5.866q0 0.786 0.223 1.518t0.482 1.161 0.482 0.813 0.223 0.545q0 0.5-0.268 1.304t-0.661 0.804q-0.036 0-0.304-0.054-0.911-0.268-1.616-1t-1.089-1.688-0.58-1.929-0.196-1.902z" />
+    </symbol>
+    <symbol id="icon-get-pocket" viewBox="0 0 31 32">
+     <path class="path1" d="M27.946 2.286q1.161 0 1.964 0.813t0.804 1.973v9.268q0 3.143-1.214 6t-3.259 4.911-4.893 3.259-5.973 1.205q-3.143 0-5.991-1.205t-4.902-3.259-3.268-4.911-1.214-6v-9.268q0-1.143 0.821-1.964t1.964-0.821h25.161zM15.375 21.286q0.839 0 1.464-0.589l7.214-6.929q0.661-0.625 0.661-1.518 0-0.875-0.616-1.491t-1.491-0.616q-0.839 0-1.464 0.589l-5.768 5.536-5.768-5.536q-0.625-0.589-1.446-0.589-0.875 0-1.491 0.616t-0.616 1.491q0 0.911 0.643 1.518l7.232 6.929q0.589 0.589 1.446 0.589z" />
+    </symbol>
+    <symbol id="icon-vimeo" viewBox="0 0 32 32">
+     <path class="path1" d="M30.518 9.25q-0.179 4.214-5.929 11.625-5.946 7.696-10.036 7.696-2.536 0-4.286-4.696-0.786-2.857-2.357-8.607-1.286-4.679-2.804-4.679-0.321 0-2.268 1.357l-1.375-1.75q0.429-0.375 1.929-1.723t2.321-2.063q2.786-2.464 4.304-2.607 1.696-0.161 2.732 0.991t1.446 3.634q0.786 5.125 1.179 6.661 0.982 4.446 2.143 4.446 0.911 0 2.75-2.875 1.804-2.875 1.946-4.393 0.232-2.482-1.946-2.482-1.018 0-2.161 0.464 2.143-7.018 8.196-6.821 4.482 0.143 4.214 5.821z" />
+    </symbol>
+    <symbol id="icon-reddit-alien" viewBox="0 0 32 32">
+     <path class="path1" d="M32 15.107q0 1.036-0.527 1.884t-1.42 1.295q0.214 0.821 0.214 1.714 0 2.768-1.902 5.125t-5.188 3.723-7.143 1.366-7.134-1.366-5.179-3.723-1.902-5.125q0-0.839 0.196-1.679-0.911-0.446-1.464-1.313t-0.554-1.902q0-1.464 1.036-2.509t2.518-1.045q1.518 0 2.589 1.125 3.893-2.714 9.196-2.893l2.071-9.304q0.054-0.232 0.268-0.375t0.464-0.089l6.589 1.446q0.321-0.661 0.964-1.063t1.411-0.402q1.107 0 1.893 0.777t0.786 1.884-0.786 1.893-1.893 0.786-1.884-0.777-0.777-1.884l-5.964-1.321-1.857 8.429q5.357 0.161 9.268 2.857 1.036-1.089 2.554-1.089 1.482 0 2.518 1.045t1.036 2.509zM7.464 18.661q0 1.107 0.777 1.893t1.884 0.786 1.893-0.786 0.786-1.893-0.786-1.884-1.893-0.777q-1.089 0-1.875 0.786t-0.786 1.875zM21.929 25q0.196-0.196 0.196-0.464t-0.196-0.464q-0.179-0.179-0.446-0.179t-0.464 0.179q-0.732 0.75-2.161 1.107t-2.857 0.357-2.857-0.357-2.161-1.107q-0.196-0.179-0.464-0.179t-0.446 0.179q-0.196 0.179-0.196 0.455t0.196 0.473q0.768 0.768 2.116 1.214t2.188 0.527 1.625 0.080 1.625-0.080 2.188-0.527 2.116-1.214zM21.875 21.339q1.107 0 1.884-0.786t0.777-1.893q0-1.089-0.786-1.875t-1.875-0.786q-1.107 0-1.893 0.777t-0.786 1.884 0.786 1.893 1.893 0.786z" />
+    </symbol>
+    <symbol id="icon-hashtag" viewBox="0 0 32 32">
+     <path class="path1" d="M17.696 18.286l1.143-4.571h-4.536l-1.143 4.571h4.536zM31.411 9.286l-1 4q-0.125 0.429-0.554 0.429h-5.839l-1.143 4.571h5.554q0.268 0 0.446 0.214 0.179 0.25 0.107 0.5l-1 4q-0.089 0.429-0.554 0.429h-5.839l-1.446 5.857q-0.125 0.429-0.554 0.429h-4q-0.286 0-0.464-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-4.536l-1.446 5.857q-0.125 0.429-0.554 0.429h-4.018q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-5.554q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1-4q0.125-0.429 0.554-0.429h5.839l1.143-4.571h-5.554q-0.268 0-0.446-0.214-0.179-0.25-0.107-0.5l1-4q0.089-0.429 0.554-0.429h5.839l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h4.536l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h5.554q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5z" />
+    </symbol>
+    <symbol id="icon-chain" viewBox="0 0 30 32">
+     <path class="path1" d="M26 21.714q0-0.714-0.5-1.214l-3.714-3.714q-0.5-0.5-1.214-0.5-0.75 0-1.286 0.571 0.054 0.054 0.339 0.33t0.384 0.384 0.268 0.339 0.232 0.455 0.063 0.491q0 0.714-0.5 1.214t-1.214 0.5q-0.268 0-0.491-0.063t-0.455-0.232-0.339-0.268-0.384-0.384-0.33-0.339q-0.589 0.554-0.589 1.304 0 0.714 0.5 1.214l3.679 3.696q0.482 0.482 1.214 0.482 0.714 0 1.214-0.464l2.625-2.607q0.5-0.5 0.5-1.196zM13.446 9.125q0-0.714-0.5-1.214l-3.679-3.696q-0.5-0.5-1.214-0.5-0.696 0-1.214 0.482l-2.625 2.607q-0.5 0.5-0.5 1.196 0 0.714 0.5 1.214l3.714 3.714q0.482 0.482 1.214 0.482 0.75 0 1.286-0.554-0.054-0.054-0.339-0.33t-0.384-0.384-0.268-0.339-0.232-0.455-0.063-0.491q0-0.714 0.5-1.214t1.214-0.5q0.268 0 0.491 0.063t0.455 0.232 0.339 0.268 0.384 0.384 0.33 0.339q0.589-0.554 0.589-1.304zM29.429 21.714q0 2.143-1.518 3.625l-2.625 2.607q-1.482 1.482-3.625 1.482-2.161 0-3.643-1.518l-3.679-3.696q-1.482-1.482-1.482-3.625 0-2.196 1.571-3.732l-1.571-1.571q-1.536 1.571-3.714 1.571-2.143 0-3.643-1.5l-3.714-3.714q-1.5-1.5-1.5-3.643t1.518-3.625l2.625-2.607q1.482-1.482 3.625-1.482 2.161 0 3.643 1.518l3.679 3.696q1.482 1.482 1.482 3.625 0 2.196-1.571 3.732l1.571 1.571q1.536-1.571 3.714-1.571 2.143 0 3.643 1.5l3.714 3.714q1.5 1.5 1.5 3.643z" />
+    </symbol>
+    <symbol id="icon-thumb-tack" viewBox="0 0 21 32">
+     <path class="path1" d="M8.571 15.429v-8q0-0.25-0.161-0.411t-0.411-0.161-0.411 0.161-0.161 0.411v8q0 0.25 0.161 0.411t0.411 0.161 0.411-0.161 0.161-0.411zM20.571 21.714q0 0.464-0.339 0.804t-0.804 0.339h-7.661l-0.911 8.625q-0.036 0.214-0.188 0.366t-0.366 0.152h-0.018q-0.482 0-0.571-0.482l-1.357-8.661h-7.214q-0.464 0-0.804-0.339t-0.339-0.804q0-2.196 1.402-3.955t3.17-1.759v-9.143q-0.929 0-1.607-0.679t-0.679-1.607 0.679-1.607 1.607-0.679h11.429q0.929 0 1.607 0.679t0.679 1.607-0.679 1.607-1.607 0.679v9.143q1.768 0 3.17 1.759t1.402 3.955z" />
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 43 32">
+     <path class="path1" d="M42.311 14.044c-0.178-0.178-0.533-0.356-0.711-0.356h-33.778l10.311-10.489c0.178-0.178 0.356-0.533 0.356-0.711 0-0.356-0.178-0.533-0.356-0.711l-1.6-1.422c-0.356-0.178-0.533-0.356-0.889-0.356s-0.533 0.178-0.711 0.356l-14.578 14.933c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l14.756 14.933c0 0.178 0.356 0.356 0.533 0.356s0.533-0.178 0.711-0.356l1.6-1.6c0.178-0.178 0.356-0.533 0.356-0.711s-0.178-0.533-0.356-0.711l-10.311-10.489h33.778c0.178 0 0.533-0.178 0.711-0.356 0.356-0.178 0.533-0.356 0.533-0.711v-2.133c0-0.356-0.178-0.711-0.356-0.889z" />
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 43 32">
+     <path class="path1" d="M0.356 17.956c0.178 0.178 0.533 0.356 0.711 0.356h33.778l-10.311 10.489c-0.178 0.178-0.356 0.533-0.356 0.711 0 0.356 0.178 0.533 0.356 0.711l1.6 1.6c0.178 0.178 0.533 0.356 0.711 0.356s0.533-0.178 0.711-0.356l14.756-14.933c0.178-0.356 0.356-0.711 0.356-0.889s-0.178-0.533-0.356-0.711l-14.756-14.933c0-0.178-0.356-0.356-0.533-0.356s-0.533 0.178-0.711 0.356l-1.6 1.6c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l10.311 10.489h-33.778c-0.178 0-0.533 0.178-0.711 0.356-0.356 0.178-0.533 0.356-0.533 0.711v2.311c0 0.178 0.178 0.533 0.356 0.711z" />
+    </symbol>
+    <symbol id="icon-play" viewBox="0 0 22 28">
+     <path d="M21.625 14.484l-20.75 11.531c-0.484 0.266-0.875 0.031-0.875-0.516v-23c0-0.547 0.391-0.781 0.875-0.516l20.75 11.531c0.484 0.266 0.484 0.703 0 0.969z" />
+    </symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 28">
+     <path d="M24 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1zM10 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1z" />
+    </symbol>
+   </defs>
+  </svg>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-26d49e9cd1d82010791","applicationID":"529647296","transactionName":"YlBRN0pRWBUDBU1dWFsacgBMWVkITRVQWlBZUB4AW1hXCAUDZlVFQVxQD10=","queueTime":0,"applicationTime":261,"atts":"ThdSQQJLSxs=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+ </body>
+</html>

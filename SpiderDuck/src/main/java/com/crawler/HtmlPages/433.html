@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+ <head>
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"383a8e13e9",applicationID:"1421411587"};;/*! For license information please see nr-loader-rum-1.258.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},R={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]={...(0,i.D)(t,R),...D};const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.258.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,iS:()=>a,il:()=>n,sK:()=>l,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.258.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.258.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-dbRQ0U/DzQ6bR/LVo1bSCjmtT4Mn+TUoByqFctqWrjwdLoHvi/Uhr3w190Zk5FuNMJFjPV0z6jQVNhQGb0DrLQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.258.0.PROD"]=self["webpackChunk:NRBA-1.258.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class T extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var I=i(3081);class O extends m{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,T,O],loaderType:"lite"})})()})();</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K4P1NYW88"></script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-5K4P1NYW88", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+  <meta name="description" content="Accelerating the development of large-scale solutions and educating tomorrow’s change makers in response to urgent planetary challenges.">
+  <link rel="canonical" href="https://sustainability.stanford.edu/">
+  <link rel="shortlink" href="https://sustainability.stanford.edu/">
+  <meta property="og:site_name" content="Stanford Doerr School of Sustainability">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sustainability.stanford.edu/">
+  <meta property="og:title" content="Stanford Doerr School of Sustainability">
+  <meta property="og:image" content="https://sustainability.stanford.edu/sites/sustainability/files/styles/large/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=tq5pzCy4">
+  <meta property="og:image:url" content="https://sustainability.stanford.edu/sites/sustainability/files/styles/large/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=tq5pzCy4">
+  <meta property="og:image:alt" content="2024 photo contest">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Accelerating the development of large-scale solutions and educating tomorrow’s change makers in response to urgent planetary challenges.">
+  <meta name="twitter:title" content="Stanford Doerr School of Sustainability">
+  <meta name="twitter:image" content="https://sustainability.stanford.edu/sites/sustainability/files/styles/large/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=tq5pzCy4">
+  <meta name="twitter:image:alt" content="2024 photo contest">
+  <meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/profiles/sdss/sdss_profile/themes/sdss_subtheme/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www-media.stanford.edu/assets/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-128.png" sizes="128x128">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www-media.stanford.edu/assets/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="https://www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="application-name" content="Stanford University">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="https://www-media.stanford.edu/assets/favicon/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="https://www-media.stanford.edu/assets/favicon/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="https://www-media.stanford.edu/assets/favicon/mstile-150x150.png">
+  <meta name="msapplication-square310x310logo" content="https://www-media.stanford.edu/assets/favicon/mstile-310x310.png">
+  <title>Stanford Doerr School of Sustainability</title>
+  <link rel="stylesheet" media="all" href="/sites/sustainability/files/css/css_vw-4G0qcb_RPsTXseq97QL-Vq-Lw308HycYkPjDi1TE.css?delta=0&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht">
+  <link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+  <link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
+  <link rel="stylesheet" media="all" href="/sites/sustainability/files/css/css_RZI9aQABuY_uqsc00GA3Luq3yM6mVVaebOBtWCFaCMo.css?delta=3&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht">
+  <link rel="stylesheet" media="all" href="/sites/sustainability/files/css/css_vhcz6lWC1DxSfcZPGt12euAuDrTlIN5VAvurjjwFVbg.css?delta=4&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht">
+  <link rel="stylesheet" media="print" href="/sites/sustainability/files/css/css_t24fQmXslix_fwPd4atwM5-lCrbIFwRO_7TaMMhebvk.css?delta=5&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht">
+  <link rel="stylesheet" media="all" href="/sites/sustainability/files/css/css_U2bKMon_jTXn27A019_n37texXRC-x_9DCSsX-MFbmw.css?delta=6&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht">
+  <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+  <script>
+          gtag('config', 'G-BECJQXLNCY');
+        </script>
+ </head>
+ <body class="sdss-header-variant--option_a front role--anonymous">
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+   <header class="su-masthead su-masthead--right">
+    <a href="#main-content" class="visually-hidden focusable su-skipnav su-skipnav--content"> Skip to main content </a> <a href="#secondary-navigation" class="visually-hidden focusable su-skipnav su-skipnav--secondary"> Skip to secondary navigation </a>
+    <div class="su-brand-bar su-brand-bar--dark">
+     <div class="su-brand-bar__container">
+      <a class="su-brand-bar__logo" href="https://stanford.edu">Stanford University<span class="su-brand-bar__link--a11y"> (link is external)</span> </a>
+     </div>
+    </div>
+    <section class="su-masthead--inner">
+     <div id="block-sdss-subtheme-branding" class="su-lockup su-lockup--option-none">
+      <a href="https://sustainability.stanford.edu/">
+       <div class="su-lockup__cell1">
+        <div class="su-lockup__logo-wrapper">
+         <img src="/sites/sustainability/files/2022-08/sdss-lock-up-color-small_0.png" alt="Stanford Doerr School of Sustainability" class="su-lockup__custom-logo">
+        </div>
+       </div></a>
+     </div>
+     <div data-drupal-selector="views-exposed-form-search-results" id="block-sdss-subtheme-search" class="su-site-search views-exposed-form views-exposed-filter-block search-results su-site-search" role="search">
+      <form action="/search" method="get" accept-charset="UTF-8">
+       <label class="su-site-search__sr-label" for="key">Search this site</label> <input type="text" id="key" name="key" class="su-site-search__input" placeholder="Search this site" maxlength="128"> <button type="submit" name="search" class="su-site-search__submit su-sr-only-text">Submit Search</button>
+      </form>
+     </div>
+     <div id="block-sdss-subtheme-main-navigation" class="system-menu-block main">
+      <nav class="su-multi-menu--dropdowns su-multi-menu su-multi-menu--buttons no-js" aria-label="main menu">
+       <button class="su-multi-menu__nav-toggle su-multi-menu__nav-toggle--right " aria-expanded="false">Menu</button>
+       <ul class="su-multi-menu__menu su-multi-menu__menu-lv1">
+        <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-impact"><span class="su-multi-menu__link-text-wrapper">Impact</span></a>
+         <ul class="su-multi-menu__menu su-multi-menu__menu-lv2">
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-impact/get-involved"><span class="su-multi-menu__link-text-wrapper">Get Involved</span></a></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-impact/living-lab"><span class="su-multi-menu__link-text-wrapper">A Living Lab</span></a></li>
+         </ul></li>
+        <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community"><span class="su-multi-menu__link-text-wrapper">Community</span></a>
+         <ul class="su-multi-menu__menu su-multi-menu__menu-lv2">
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/faculty-0"><span class="su-multi-menu__link-text-wrapper">Faculty</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/faculty-0/faculty-forum-talks"><span class="su-multi-menu__link-text-wrapper">Faculty talks</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/community-awards"><span class="su-multi-menu__link-text-wrapper">Community Awards</span></a></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/environmental-justice"><span class="su-multi-menu__link-text-wrapper">Environmental Justice</span></a></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/dei"><span class="su-multi-menu__link-text-wrapper">Diversity, Equity &amp; Inclusion</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/about-our-dei-vision"><span class="su-multi-menu__link-text-wrapper">About our DEI Vision</span></a></li>
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/dei/community-dei-resources"><span class="su-multi-menu__link-text-wrapper">Community DEI Resources</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/dei-library"><span class="su-multi-menu__link-text-wrapper">DEI Library</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/community-dei-resources/prospective-students"><span class="su-multi-menu__link-text-wrapper">Prospective Students</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/community-dei-resources/current-students"><span class="su-multi-menu__link-text-wrapper">Current Students</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/faculty-staff-resources"><span class="su-multi-menu__link-text-wrapper">Faculty &amp; Staff</span></a></li>
+             </ul></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/excellence-dei-awards"><span class="su-multi-menu__link-text-wrapper">Excellence in DEI Awards</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/meet-dei-team"><span class="su-multi-menu__link-text-wrapper">Meet the DEI Team</span></a></li>
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/dei/surge"><span class="su-multi-menu__link-text-wrapper">SURGE</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/surge/program-details"><span class="su-multi-menu__link-text-wrapper">SURGE program details</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/surge/surge-faqs"><span class="su-multi-menu__link-text-wrapper">FAQs</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/surge/potential-projects-2024"><span class="su-multi-menu__link-text-wrapper">Potential Projects for 2024</span></a></li>
+             </ul></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/land-acknowledgment"><span class="su-multi-menu__link-text-wrapper">Land Acknowledgment</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/dei-events"><span class="su-multi-menu__link-text-wrapper">Events</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/alumni"><span class="su-multi-menu__link-text-wrapper">Alumni</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/alumni/events"><span class="su-multi-menu__link-text-wrapper">Events</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/alumni/events/all-alumni-events"><span class="su-multi-menu__link-text-wrapper">All Events</span></a></li>
+             </ul></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/alumni/get-involved"><span class="su-multi-menu__link-text-wrapper">Get Involved</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/alumni/career-education"><span class="su-multi-menu__link-text-wrapper">Advance your Career</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/alumni/awards"><span class="su-multi-menu__link-text-wrapper">Awards</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/leadership"><span class="su-multi-menu__link-text-wrapper">Leadership</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/leadership/dean-arun-majumdar"><span class="su-multi-menu__link-text-wrapper">Dean Arun Majumdar</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/advisory-council"><span class="su-multi-menu__link-text-wrapper">Advisory Council</span></a></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/our-community/our-values-and-practices"><span class="su-multi-menu__link-text-wrapper">Our Values and Practices</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/our-values-and-practices/how-we-put-our-values-practice"><span class="su-multi-menu__link-text-wrapper">How we put our values into practice</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/our-values-and-practices/field-expectations"><span class="su-multi-menu__link-text-wrapper">Field expectations</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/our-values-and-practices/reporting-structures-and-resources"><span class="su-multi-menu__link-text-wrapper">Reporting structures and resources</span></a></li>
+           </ul></li>
+         </ul></li>
+        <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-and-education"><span class="su-multi-menu__link-text-wrapper">Admissions &amp; education</span></a>
+         <ul class="su-multi-menu__menu su-multi-menu__menu-lv2">
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-and-education/student-experience"><span class="su-multi-menu__link-text-wrapper">Student Experience</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/careers"><span class="su-multi-menu__link-text-wrapper">Careers</span></a></li>
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-and-education/student-experience/undergraduate-research-opportunities"><span class="su-multi-menu__link-text-wrapper">Undergraduate Research Opportunities</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://hopkinsmarinestation.stanford.edu/undergraduate-studies/research-opportunities"><span class="su-multi-menu__link-text-wrapper">Hopkins Internships - Summer Undergraduate Research Funds (HI-SURF)</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://woods.stanford.edu/educating-leaders/education-leadership-programs/mentoring-undergraduates-interdisciplinary-research"><span class="su-multi-menu__link-text-wrapper">Mentoring Undergraduates in Interdisciplinary Research (MUIR)</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://explore-energy.stanford.edu/research/super"><span class="su-multi-menu__link-text-wrapper">Summer Undergraduate Program on Energy Research (SUPER)</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/surge"><span class="su-multi-menu__link-text-wrapper">Sustainability Undergraduate Research in Geoscience and Engineering (SURGE)</span></a></li>
+             </ul></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions"><span class="su-multi-menu__link-text-wrapper">Admissions</span></a></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-and-education/executive-education"><span class="su-multi-menu__link-text-wrapper">Executive Education</span></a></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/field-learning"><span class="su-multi-menu__link-text-wrapper">Field Learning</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://hawaii.stanford.edu/"><span class="su-multi-menu__link-text-wrapper">Wrigley Field Program in Hawaii</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://insidesdss.stanford.edu/resources/field-and-travel"><span class="su-multi-menu__link-text-wrapper">Field Resources</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/professional-development"><span class="su-multi-menu__link-text-wrapper">Professional Development</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/professional-development/academic-professional-program"><span class="su-multi-menu__link-text-wrapper">Academic Professional Program</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/professional-development/academic-professional-program/pillars"><span class="su-multi-menu__link-text-wrapper">The Pillars</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/professional-development/academic-professional-program/faqs"><span class="su-multi-menu__link-text-wrapper">FAQs</span></a></li>
+             </ul></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/professional-development/professional-development-events"><span class="su-multi-menu__link-text-wrapper">Events</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-and-education/graduate-certificate-programs"><span class="su-multi-menu__link-text-wrapper">Sustainability Graduate Certificates</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-and-education/graduate-certificate-programs/climate-change"><span class="su-multi-menu__link-text-wrapper">Climate Change</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-and-education/graduate-certificate-programs/sustainable-energy"><span class="su-multi-menu__link-text-wrapper">Sustainable Energy</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-and-education/graduate-certificate-programs/sustainability-decision-making"><span class="su-multi-menu__link-text-wrapper">Sustainability Decision Making</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-and-education/graduate-certificate-programs/graduate-certificate-programs-faqs"><span class="su-multi-menu__link-text-wrapper">FAQs</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach"><span class="su-multi-menu__link-text-wrapper">K-12 Outreach</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach/geokids"><span class="su-multi-menu__link-text-wrapper">Geokids Program</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach/geokids/geokids-faqs"><span class="su-multi-menu__link-text-wrapper">Geokids FAQs</span></a></li>
+             </ul></li>
+            <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach/young-investigators"><span class="su-multi-menu__link-text-wrapper">Young Investigators</span></a>
+             <ul class="su-multi-menu__menu su-multi-menu__menu-lv4">
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach/young-investigators/internship-options"><span class="su-multi-menu__link-text-wrapper">Internship Options</span></a></li>
+              <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/admissions-education/k-12-outreach/young-investigators/faqs"><span class="su-multi-menu__link-text-wrapper">FAQs</span></a></li>
+             </ul></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/our-community/dei/postdoctoral-resources"><span class="su-multi-menu__link-text-wrapper">Postdoctoral Resources</span></a></li>
+         </ul></li>
+        <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/about-school"><span class="su-multi-menu__link-text-wrapper">The school</span></a>
+         <ul class="su-multi-menu__menu su-multi-menu__menu-lv2">
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/school/departments"><span class="su-multi-menu__link-text-wrapper">Departments &amp; Programs</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/school/departments/environmental-behavioral-sciences"><span class="su-multi-menu__link-text-wrapper">Environmental Behavior Sciences</span></a></li>
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/school/departments/global-environmental-policy"><span class="su-multi-menu__link-text-wrapper">Global Environmental Policy</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="https://sustainability-accelerator.stanford.edu/"><span class="su-multi-menu__link-text-wrapper">Sustainability Accelerator</span></a></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/about-school/institutes-and-centers"><span class="su-multi-menu__link-text-wrapper">Institutes &amp; Centers</span></a></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/school/shared-analytical-facilities-and-research-resources"><span class="su-multi-menu__link-text-wrapper">Shared Analytical Facilities &amp; Research Resources</span></a></li>
+          <li class="su-multi-menu__item su-multi-menu__item--parent"><a class="su-multi-menu__link" href="/school/industrial-affiliate-programs"><span class="su-multi-menu__link-text-wrapper">Industrial Affiliates Programs</span></a>
+           <ul class="su-multi-menu__menu su-multi-menu__menu-lv3">
+            <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/school/industrial-affiliate-programs/research-supported-industrial-affiliates-programs"><span class="su-multi-menu__link-text-wrapper">Research news</span></a></li>
+           </ul></li>
+          <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/history"><span class="su-multi-menu__link-text-wrapper">History</span></a></li>
+         </ul></li>
+        <li class="su-multi-menu__item"><a class="su-multi-menu__link" href="/news"><span class="su-multi-menu__link-text-wrapper">News &amp; events</span></a></li>
+       </ul>
+      </nav>
+     </div>
+    </section>
+   </header>
+   <main class="page-content" id="page-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+    <div id="block-sdss-subtheme-content" class="system-main-block block-system block-sdss-subtheme-content">
+     <section class="node basic-page node--layout-full">
+      <div class="content">
+       <div class="jumpstart-ui--one-column">
+        <div class="main-region">
+         <div class="field-block node-stanford-page-su-page-banner block-layout-builder">
+          <div class="node stanford-page su-page-banner entity-reference-revisions label-hidden">
+           <div class="ptype-stanford-banner">
+            <div class="overlay-left ds-entity--paragraph ds-entity--stanford-banner sdss-banner-wrapper--no-headline sdss-banner-wrapper--headline-default sdss-banner-wrapper--height-default">
+             <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=16506:changed=1713808789&amp;ds_bundle=stanford_banner&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="5Po0jAFnnaw5M0B2CJZCvZj2OD1TEKcx7VelcPC71yI" data-drupal-ajax-container=""></div>
+             <div class="su-hero overlay-left">
+              <div class="su-hero__media">
+               <div class="media-entity-wrapper image">
+                <div class="media image field-media-image label-hidden">
+                 <picture>
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_2xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=cXGkkHb4 1x, /sites/sustainability/files/styles/breakpoint_2xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=Ph01_k0w 2x" media="screen and (min-width: 1500px)" type="image/webp" width="1500" height="500">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_2xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=cXGkkHb4 1x, /sites/sustainability/files/styles/breakpoint_2xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=Ph01_k0w 2x" media="screen and (min-width: 1200px)" type="image/webp" width="1500" height="500">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=cPHgECci 1x, /sites/sustainability/files/styles/breakpoint_xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=mj5fl1aX 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="400">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_lg_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=qLbEGKdX 1x, /sites/sustainability/files/styles/breakpoint_lg_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=epvMzIme 2x" media="screen and (min-width: 768px)" type="image/webp" width="992" height="331">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_md_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=jsdNfcmW 1x, /sites/sustainability/files/styles/breakpoint_md_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=MuA-QCa4 2x" media="screen and (min-width: 576px)" type="image/webp" width="768" height="256">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_sm_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=4kbkoGkj 1x, /sites/sustainability/files/styles/breakpoint_sm_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg.webp?itok=25A3NbqT 2x" media="(min-width: 0em)" type="image/webp" width="576" height="192">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_2xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=cXGkkHb4 1x, /sites/sustainability/files/styles/breakpoint_2xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=Ph01_k0w 2x" media="screen and (min-width: 1500px)" type="image/jpeg" width="1500" height="500">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_2xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=cXGkkHb4 1x, /sites/sustainability/files/styles/breakpoint_2xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=Ph01_k0w 2x" media="screen and (min-width: 1200px)" type="image/jpeg" width="1500" height="500">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_xl_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=cPHgECci 1x, /sites/sustainability/files/styles/breakpoint_xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=mj5fl1aX 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="400">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_lg_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=qLbEGKdX 1x, /sites/sustainability/files/styles/breakpoint_lg_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=epvMzIme 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="992" height="331">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_md_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=jsdNfcmW 1x, /sites/sustainability/files/styles/breakpoint_md_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=MuA-QCa4 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="768" height="256">
+                  <source srcset="/sites/sustainability/files/styles/breakpoint_sm_1x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=4kbkoGkj 1x, /sites/sustainability/files/styles/breakpoint_sm_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=25A3NbqT 2x" media="(min-width: 0em)" type="image/jpeg" width="576" height="192">
+                  <img loading="lazy" src="/sites/sustainability/files/styles/breakpoint_2xl_2x/public/media/image/2024photocontest_websitebanner_3000x1000_0.jpg?itok=Ph01_k0w" width="3000" height="1000" alt="2024 photo contest">
+                 </picture>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="jumpstart-ui--one-column centered-content">
+        <div class="main-region flex-10-of-12">
+         <div class="field-block node-stanford-page-title block-layout-builder">
+         </div>
+        </div>
+       </div>
+       <div class="jumpstart-ui--one-column">
+        <div class="main-region">
+         <div class="jumpstart-ui-skipnav-main-anchor block-jumpstart-ui">
+          <div id="main-content" tabindex="-1" class="visually-hidden focusable">
+           Main content start
+          </div>
+         </div>
+         <div class="field-block node-stanford-page-su-page-components block-layout-builder">
+          <div class="node stanford-page su-page-components entity-reference-revisions label-hidden">
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--green layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2>Images capture science in action and nature's beauty</h2>
+                 <p>This year’s Stanford Doerr School of Sustainability photo contest highlights Earth’s beauty, challenges facing people and the planet, and action to advance global sustainability.</p>
+                 <p><a class="su-button" href="https://sustainability.stanford.edu/news/images-capture-science-action-and-natures-beauty">View the winning images</a>&nbsp;</p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--white layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2 class="text-align-center"><br>
+                  Our research</h2>
+                 <p>Transformative research by our scholars reveals insights into our world and drives ideas to impact.&nbsp;</p>
+                 <p class="text-align-center"><a class="su-button--secondary" href="https://sustainability.stanford.edu/news">Read about our research and impact</a> <a class="su-button--secondary" href="/news/about-our-planet" data-entity-type="node" data-entity-uuid="e157a9cb-1309-4414-a13a-b356f24f578f" data-entity-substitution="canonical" title="About On Our Planet">Sign up for our monthly newsletter</a></p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--white layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-entity paragraph paragraph--type--stanford-entity paragraph--view-mode--default">
+                <div class="su-margin-bottom-5 paragraph stanford-entity su-entity-item entity-reference label-hidden">
+                 <div>
+                  <div class="ds-entity--node ds-entity--stanford-news">
+                   <div data-contextual-id="node:node=26501:changed=1713808658&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="FGGjDccCYyFMGrkddDGXfXko0YO4TMOOYwJaNUDKDf0" data-drupal-ajax-container=""></div>
+                   <article class="su-card su-news-vertical-teaser su-news-external">
+                    <div class="su-figure__wrapper">
+                     <a class="su-news-vertical-teaser__link" href="https://news.stanford.edu/2024/04/22/planning-healthy-corals-communities/" tabindex="-1" aria-hidden="true">
+                      <figure class="su-media su-media--image su-card__media">
+                       <div class="su-media__wrapper">
+                        <div class="media-entity-wrapper image">
+                         <div class="media image field-media-image label-hidden">
+                          <picture>
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=BKoq8S3b 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=piZy6ue4 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=4q4GkhZn 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=piZy6ue4 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=4q4GkhZn 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=BKoq8S3b 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=13xngCgQ 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg.webp?itok=4q4GkhZn 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=BKoq8S3b 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=piZy6ue4 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=4q4GkhZn 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=piZy6ue4 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=4q4GkhZn 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=BKoq8S3b 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=13xngCgQ 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=4q4GkhZn 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                           <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/belize-coral-ww43602-antonio-busiello-2015_0.jpeg?itok=piZy6ue4" width="1920" height="1280" alt="">
+                          </picture>
+                         </div>
+                        </div>
+                       </div>
+                      </figure></a>
+                    </div>
+                    <div class="su-content__wrapper">
+                     <div class="su-news-header">
+                      <a class="su-news-vertical-teaser__link" href="https://news.stanford.edu/2024/04/22/planning-healthy-corals-communities/">
+                       <h2>Planning for healthy corals and communities</h2></a>
+                      <div class="news-vertical-teaser__pub-date">
+                       <time datetime="2024-04-22T12:00:00Z">April 22, 2024</time>
+                      </div>
+                     </div>
+                     <div class="su-card__contents">
+                      <div>
+                       <p>To understand trade-offs for coastal communities along the Mesoamerican Reef, new research looks at watershed interventions regionally versus nationally.</p>
+                      </div>
+                     </div>
+                     <div class="news-vertical-teaser__source">
+                      <span>Stanford News</span>
+                     </div>
+                     <div class="news-vertical-teaser__topics">
+                      <ul class="su-list-unstyled">
+                       <li><a href="/news/research/oceans/coastal-ecosystems" hreflang="en">Coastal ecosystems</a></li>
+                      </ul>
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                 </div>
+                 <div>
+                  <div class="ds-entity--node ds-entity--stanford-news">
+                   <div data-contextual-id="node:node=26496:changed=1713809341&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="QyHz5uW_bJ6BXlcNO6L6DTLi_1a7CZqAlgS6MatXGw4" data-drupal-ajax-container=""></div>
+                   <article class="su-card su-news-vertical-teaser su-news-external">
+                    <div class="su-figure__wrapper">
+                     <a class="su-news-vertical-teaser__link" href="https://woods.stanford.edu/planet-versus-plastic-earth-day-2024" tabindex="-1" aria-hidden="true">
+                      <figure class="su-media su-media--image su-card__media">
+                       <div class="su-media__wrapper">
+                        <div class="media-entity-wrapper image">
+                         <div class="media image field-media-image label-hidden">
+                          <picture>
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=ECntxseL 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=9KnyYUZM 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=WYZbbYsX 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=9KnyYUZM 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=WYZbbYsX 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=ECntxseL 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=0mjRYnAI 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg.webp?itok=WYZbbYsX 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=ECntxseL 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=9KnyYUZM 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=WYZbbYsX 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=9KnyYUZM 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=WYZbbYsX 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=ECntxseL 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=0mjRYnAI 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=WYZbbYsX 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                           <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/istock-1813388243_2.jpg_0.jpeg?itok=9KnyYUZM" width="1920" height="1280" alt="">
+                          </picture>
+                         </div>
+                        </div>
+                       </div>
+                      </figure></a>
+                    </div>
+                    <div class="su-content__wrapper">
+                     <div class="su-news-header">
+                      <a class="su-news-vertical-teaser__link" href="https://woods.stanford.edu/planet-versus-plastic-earth-day-2024">
+                       <h2>Planet versus plastics: Research tackling the plastics problem</h2></a>
+                      <div class="news-vertical-teaser__pub-date">
+                       <time datetime="2024-04-22T12:00:00Z">April 22, 2024</time>
+                      </div>
+                     </div>
+                     <div class="su-card__contents">
+                      <div>
+                       <p>Stanford scholars are exploring the connection between plastic and disease, rethinking how plastic could be reused, and uncovering new ways to break down waste.</p>
+                      </div>
+                     </div>
+                     <div class="news-vertical-teaser__source">
+                      <span>Stanford Woods Institute for the Environment</span>
+                     </div>
+                     <div class="news-vertical-teaser__topics">
+                      <ul class="su-list-unstyled">
+                       <li><a href="/news/research/cities-society/materials" hreflang="en">Materials</a></li>
+                      </ul>
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                 </div>
+                 <div>
+                  <div class="ds-entity--node ds-entity--stanford-news">
+                   <div data-contextual-id="node:node=26431:changed=1713462071&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="-vLSe0B3ythxM14860iK21keqnCYsPC51oJwu7bpXS8" data-drupal-ajax-container=""></div>
+                   <article class="su-card su-news-vertical-teaser su-news-external">
+                    <div class="su-figure__wrapper">
+                     <a class="su-news-vertical-teaser__link" href="https://news.stanford.edu/report/2024/04/17/achieve-speed-scale-clean-energy-transition/" tabindex="-1" aria-hidden="true">
+                      <figure class="su-media su-media--image su-card__media">
+                       <div class="su-media__wrapper">
+                        <div class="media-entity-wrapper image">
+                         <div class="media image field-media-image label-hidden">
+                          <picture>
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=czQ7TY6X 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=sM3pwmQ6 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=eavyNbBX 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=sM3pwmQ6 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=eavyNbBX 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=czQ7TY6X 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=E4CMjZw7 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg.webp?itok=eavyNbBX 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=czQ7TY6X 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=sM3pwmQ6 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=eavyNbBX 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=sM3pwmQ6 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=eavyNbBX 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=czQ7TY6X 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                           <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=E4CMjZw7 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=eavyNbBX 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                           <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/forumenergytransition_creditsaulbromberger_o5a0656_1.jpeg?itok=sM3pwmQ6" width="1920" height="1280" alt="">
+                          </picture>
+                         </div>
+                        </div>
+                       </div>
+                      </figure></a>
+                    </div>
+                    <div class="su-content__wrapper">
+                     <div class="su-news-header">
+                      <a class="su-news-vertical-teaser__link" href="https://news.stanford.edu/report/2024/04/17/achieve-speed-scale-clean-energy-transition/">
+                       <h2>How to achieve speed and scale in the clean energy transition</h2></a>
+                      <div class="news-vertical-teaser__pub-date">
+                       <time datetime="2024-04-17T12:00:00Z">April 17, 2024</time>
+                      </div>
+                     </div>
+                     <div class="su-card__contents">
+                      <div>
+                       <p>The Stanford Forum on the Science of Energy Transition brought together scientific experts, technology innovators, and industry leaders to explore practical pathways to a decarbonized future.</p>
+                      </div>
+                     </div>
+                     <div class="news-vertical-teaser__source">
+                      <span>Stanford Report </span>
+                     </div>
+                     <div class="news-vertical-teaser__topics">
+                      <ul class="su-list-unstyled">
+                       <li><a href="/news/research/energy" hreflang="en">Energy</a></li>
+                      </ul>
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--blue layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2 class="text-align-center">Apply now</h2>
+                 <p class="text-align-center"><a class="su-button" href="/admissions" data-entity-type="node" data-entity-uuid="054e86f3-d4ec-4ff0-a8c6-eaafca16f376" data-entity-substitution="canonical" title="Admissions">Admissions</a>&nbsp; &nbsp;<a class="su-button" href="/admissions-and-education/graduate-certificate-programs" data-entity-type="node" data-entity-uuid="b1022d80-91fc-4428-9c2e-34fa4f60f7ff" data-entity-substitution="canonical" title="Sustainability Graduate Certificates">Graduate certificates</a><a class="su-button" href="/node/746">Postdoctoral fellowships</a></p>
+                </div>
+               </div>
+               <div class="ptype-stanford-spacer sdss_spacer_minimal paragraph paragraph--type--stanford-spacer paragraph--view-mode--default sdss-spacer sdss-spacer-minimal">
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--white layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <p>&nbsp;</p>
+                 <div class="align-left media-entity-wrapper image">
+                  <div class="media image field-media-image label-hidden">
+                   <img loading="lazy" src="/sites/sustainability/files/styles/stanford_circle/public/media/image/2022_stanford_schoolofsustainability_9450_1_0.jpg.png?itok=Z0_6ZJmv" width="140" height="140" alt="Arun Majumdar">
+                  </div>
+                 </div>
+                 <p><strong>Arun Majumdar</strong><br>
+                  Inaugural Dean, Stanford Doerr School of Sustainability</p>
+                 <p class="sdss-block-quote--sm">“Mother Earth is begging us to restore the atmosphere, the oceans, and our biodiversity. For our own sake. For the sake of our children and grandchildren.”</p>
+                 <p class="plain-text"><a class="su-button" href="/news/opening-remarks-dean-arun-majumdar" data-entity-type="node" data-entity-uuid="543c2f28-338a-405f-b799-b92e3e4ffe73" data-entity-substitution="canonical" title="Opening remarks from Dean Arun Majumdar">Read the full text of Majumdar's opening remarks</a></p>
+                 <p class="plain-text"><a class="su-button--secondary" href="/our-community/leadership/dean-arun-majumdar" data-entity-type="node" data-entity-uuid="73291c39-7e3b-4eb7-a636-4043fcd43f70" data-entity-substitution="canonical" title="Dean Arun Majumdar">Meet the Dean</a></p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--green layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2 class="text-align-center">Learn about the school</h2>
+                 <p>Our distinctive three-part structure<strong>&nbsp;</strong>is designed to&nbsp;amplify global impact.</p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-three-column layout-paragraphs-sdss-three-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--green layout--layout-paragraphs-three-column layout--layout-paragraphs-sdss-three-column">
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <p><a class="su-button--secondary" href="https://sustainability.stanford.edu/school/departments">Departments and programs generate knowledge</a></p>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <p><a class="su-button--secondary" href="https://sustainability.stanford.edu/about-school/institutes-and-centers">Institutes innovate across disciplines</a></p>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <p><a class="su-button--secondary" href="https://sustainability-accelerator.stanford.edu">The Accelerator drives policy and technology solutions</a></p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-two-column layout-paragraphs-sdss-two-column--50-50 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--blue layout--layout-paragraphs-two-column layout--layout-paragraphs-sdss-two-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-spacer sdss_spacer_default paragraph paragraph--type--stanford-spacer paragraph--view-mode--default sdss-spacer sdss-spacer-default">
+               </div>
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <div class="align-center media-entity-wrapper image">
+                  <div class="media image field-media-image label-hidden">
+                   <picture>
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=CyGIDtj6 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=cifvLFYd 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=Wtrz9-ir 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=cifvLFYd 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=Wtrz9-ir 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=CyGIDtj6 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=d9kcUW5M 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg.webp?itok=Wtrz9-ir 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20220531-172159-8657_0.jpg?itok=CyGIDtj6 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20220531-172159-8657_0.jpg?itok=cifvLFYd 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg?itok=Wtrz9-ir 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20220531-172159-8657_0.jpg?itok=cifvLFYd 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg?itok=Wtrz9-ir 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20220531-172159-8657_0.jpg?itok=CyGIDtj6 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                    <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/20220531-172159-8657_0.jpg?itok=d9kcUW5M 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20220531-172159-8657_0.jpg?itok=Wtrz9-ir 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                    <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20220531-172159-8657_0.jpg?itok=cifvLFYd" width="1920" height="1280" alt="Group photo of students">
+                   </picture>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2 class="text-align-center"><span>Our community</span></h2>
+                 <p><span>Sustainability challenges affect everyone, and we need to include all voices in creating global solutions. We support a diverse community of faculty, students, and staff through our DEI programming, including our </span><a href="/about-school/dei/courses" data-entity-type="node" data-entity-uuid="6e53d90b-1a02-402a-9526-94e507642d88" data-entity-substitution="canonical" title="Courses"><span>courses</span></a><span>, financial aid,&nbsp;and&nbsp;</span><a href="/about-school/dei/community-centers-and-affinity-groups" data-entity-type="node" data-entity-uuid="e1cef434-dc46-41a0-b8ec-ce038e16d5c6" data-entity-substitution="canonical" title="Community centers and affinity groups"><span>affinity groups</span></a><span>. We also hold ourselves accountable by </span><a href="/about-school/dei/about/our-milestones" data-entity-type="node" data-entity-uuid="ae8b9373-965a-4b4d-a222-874258318c0b" data-entity-substitution="canonical" title="Our milestones"><span>tracking our progress</span></a><span>.</span></p>
+                 <p><a class="su-button--secondary" href="/our-community/dei/meet-dei-team" data-entity-type="node" data-entity-uuid="f2da1ba2-4e35-44a9-823e-e813527f9517" data-entity-substitution="canonical" title="Meet the DEI team"><span>Meet our people</span></a><a class="su-button--secondary" href="/our-community/dei" data-entity-type="node" data-entity-uuid="61d114e5-5072-441a-9da3-24defc2087b9" data-entity-substitution="canonical" title="Diversity, Equity, and Inclusion"><span>Learn more about our DEI programs</span></a></p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-spacer sdss_spacer_reduced paragraph paragraph--type--stanford-spacer paragraph--view-mode--default sdss-spacer sdss-spacer-reduced">
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--white layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-lists paragraph paragraph--type--stanford-lists paragraph--view-mode--default">
+                <div class="su-margin-bottom-3 paragraph stanford-lists su-list-headline string label-hidden">
+                 <h2>News about our people and programs</h2>
+                </div>
+                <div class="field field--name-su-list-view field--type-viewfield field--label-hidden">
+                 <div class="field__item field__item-label-hidden">
+                  <div class="views-element-container">
+                   <div class="stanford-news--cards stanford-news--cards-any view stanford-news vertical-cards js-view-dom-id-8b5a1fe9dbaf409c9536562a69cdfdac361fd8de0c69efae3db1c841df137407">
+                    <div>
+                     <ul class="su-list-unstyled grid-container-3">
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-news">
+                        <div data-contextual-id="node:node=26716:changed=1714388400&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="AAR9pA9x4kGsQr6K4ewJE1SAyaEgKRXilEdmYVE-DaM" data-drupal-ajax-container=""></div>
+                        <article class="su-card su-news-vertical-teaser">
+                         <div class="su-figure__wrapper">
+                          <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/ocean-science-meets-art-new-visiting-artist-program" tabindex="-1" aria-hidden="true">
+                           <figure class="su-media su-media--image su-card__media">
+                            <div class="su-media__wrapper">
+                             <div class="media-entity-wrapper image">
+                              <div class="media image field-media-image label-hidden">
+                              <picture>
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=BCtW_7h8 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=5bsaZF4z 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=ob67i6ys 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=5bsaZF4z 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=ob67i6ys 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=BCtW_7h8 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=Gewc62GY 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg.webp?itok=ob67i6ys 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=BCtW_7h8 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=5bsaZF4z 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=ob67i6ys 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=5bsaZF4z 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=ob67i6ys 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=BCtW_7h8 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=Gewc62GY 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=ob67i6ys 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                              <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/mark_baugh-sasaki_portrait_credit_aubrie_pick_0.jpg?itok=5bsaZF4z" width="1920" height="1280" alt="Portrait of Mark Baugh-Sasaki in a workshop studio with supplies and woodworking tools around him">
+                              </picture>
+                              </div>
+                             </div>
+                            </div>
+                           </figure></a>
+                         </div>
+                         <div class="su-content__wrapper">
+                          <div class="su-news-header">
+                           <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/ocean-science-meets-art-new-visiting-artist-program">
+                            <h2>Ocean science meets art in new visiting artist program</h2></a>
+                           <div class="news-vertical-teaser__pub-date">
+                            <time datetime="2024-04-29T12:00:00Z">April 29, 2024</time>
+                           </div>
+                          </div>
+                          <div class="su-card__contents">
+                           <div>
+                            <p>Sculptor and installation artist Mark Baugh-Sasaki will work with ocean scholars as the first visiting artist in a new Stanford program exploring how art and science can join forces to advance sustainability.</p>
+                           </div>
+                          </div>
+                          <div class="news-vertical-teaser__topics">
+                           <ul class="su-list-unstyled">
+                            <li><a href="/news/school-news/programs-partnerships-0" hreflang="en">Programs &amp; partnerships</a></li>
+                           </ul>
+                          </div>
+                         </div>
+                        </article>
+                       </div></li>
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-news">
+                        <div data-contextual-id="node:node=26541:changed=1713902037&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="_LFVnJNTK-x7Y85Oegl62kOaDPY0tRsxgR0WwOpMC5A" data-drupal-ajax-container=""></div>
+                        <article class="su-card su-news-vertical-teaser">
+                         <div class="su-figure__wrapper">
+                          <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/grounded-impact" tabindex="-1" aria-hidden="true">
+                           <figure class="su-media su-media--image su-card__media">
+                            <div class="su-media__wrapper">
+                             <div class="media-entity-wrapper image">
+                              <div class="media image field-media-image label-hidden">
+                              <picture>
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=_QXNxKES 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=VkhpnunU 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=gz2HSZVr 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=VkhpnunU 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=gz2HSZVr 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=_QXNxKES 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=rTyGJrYN 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg.webp?itok=gz2HSZVr 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=_QXNxKES 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=VkhpnunU 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=gz2HSZVr 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=VkhpnunU 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=gz2HSZVr 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=_QXNxKES 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=rTyGJrYN 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=gz2HSZVr 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                              <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/1_20240418-stanford_sustainability-5067_0.jpeg?itok=VkhpnunU" width="1920" height="1280" alt="Mitchell Zimmerman sitting on a low tree branch with Lake Lagunita in the background">
+                              </picture>
+                              </div>
+                             </div>
+                            </div>
+                           </figure></a>
+                         </div>
+                         <div class="su-content__wrapper">
+                          <div class="su-news-header">
+                           <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/grounded-impact">
+                            <h2>Grounded in impact</h2></a>
+                           <div class="news-vertical-teaser__pub-date">
+                            <time datetime="2024-04-22T12:00:00Z">April 22, 2024</time>
+                           </div>
+                          </div>
+                          <div class="su-card__contents">
+                           <div>
+                            <p>With a love of animals and a dedication to climate issues, Mitchell Zimmerman stewards the ecosystems across Stanford’s land for an impact that’s as widespread as it is personal.</p>
+                           </div>
+                          </div>
+                          <div class="news-vertical-teaser__topics">
+                           <ul class="su-list-unstyled">
+                            <li><a href="/news/school-news/profiles/graduate-students-0" hreflang="en">Graduate students</a></li>
+                           </ul>
+                          </div>
+                         </div>
+                        </article>
+                       </div></li>
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-news">
+                        <div data-contextual-id="node:node=26536:changed=1713902213&amp;ds_bundle=stanford_news&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="dc2yiku0KKgxDtwii_87llCt3Nf8G2q0Zp1tA2wOD9w" data-drupal-ajax-container=""></div>
+                        <article class="su-card su-news-vertical-teaser">
+                         <div class="su-figure__wrapper">
+                          <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/envisioning-better-food-systems" tabindex="-1" aria-hidden="true">
+                           <figure class="su-media su-media--image su-card__media">
+                            <div class="su-media__wrapper">
+                             <div class="media-entity-wrapper image">
+                              <div class="media image field-media-image label-hidden">
+                              <picture>
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=YZZJuaGf 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=CPtDEziZ 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=G8-JLcTh 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=CPtDEziZ 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=G8-JLcTh 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=YZZJuaGf 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=iXymoOxZ 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg.webp?itok=G8-JLcTh 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=YZZJuaGf 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=CPtDEziZ 2x" media="screen and (min-width: 992px)" type="image/jpeg" width="1200" height="800">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=G8-JLcTh 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=CPtDEziZ 2x" media="screen and (min-width: 768px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=G8-JLcTh 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=YZZJuaGf 2x" media="screen and (min-width: 576px)" type="image/jpeg" width="960" height="640">
+                              <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=iXymoOxZ 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=G8-JLcTh 2x" media="(min-width: 0em)" type="image/jpeg" width="480" height="320">
+                              <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/20240418-stanford_sustainability-5029_smaller_0.jpg?itok=CPtDEziZ" width="1920" height="1280" alt="">
+                              </picture>
+                              </div>
+                             </div>
+                            </div>
+                           </figure></a>
+                         </div>
+                         <div class="su-content__wrapper">
+                          <div class="su-news-header">
+                           <a class="su-news-vertical-teaser__link" href="https://sustainability.stanford.edu/news/envisioning-better-food-systems">
+                            <h2>Envisioning better food systems</h2></a>
+                           <div class="news-vertical-teaser__pub-date">
+                            <time datetime="2024-04-22T12:00:00Z">April 22, 2024</time>
+                           </div>
+                          </div>
+                          <div class="su-card__contents">
+                           <div>
+                            <p>Acacia Lynch is enthusiastic about farming, food systems, and inviting others into these efforts in the field and the classroom.</p>
+                           </div>
+                          </div>
+                          <div class="news-vertical-teaser__topics">
+                           <ul class="su-list-unstyled">
+                            <li><a href="/news/school-news/profiles/undergraduate-students-0" hreflang="en">Undergraduate students</a></li>
+                           </ul>
+                          </div>
+                         </div>
+                        </article>
+                       </div></li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="paragraph stanford-lists su-list-button link label-hidden">
+                 <a href="/news/school-news/all" class="su-button su-margin-top-5">Read all school news</a>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--blue layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2 class="text-align-center">Join us</h2>
+                 <p>There are many ways to join us in our commitment to cultivating deep knowledge and high-impact solutions to pressing planetary challenges.&nbsp;</p>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-three-column layout-paragraphs-sdss-three-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--blue layout--layout-paragraphs-three-column layout--layout-paragraphs-sdss-three-column">
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-card">
+                <div class="ds-entity--paragraph ds-entity--stanford-card sdss-card-wrapper--border-none sdss-card-wrapper--topic sdss-card-wrapper--default">
+                 <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=84426:changed=1713808789&amp;ds_bundle=stanford_card&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="pHmvfnkh1WZYie64us-aIEBh_tdmBSzzouEJH6nBZBo" data-drupal-ajax-container=""></div>
+                 <article class="su-card ">
+                  <h2 class="su-card__headline">Follow our updates</h2>
+                  <div class="media-entity-wrapper image">
+                   <div class="media image field-media-image label-hidden">
+                    <picture>
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/undergrads-circles_0.png.webp?itok=lHLqV37r 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/undergrads-circles_0.png.webp?itok=JXs3j0ii 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png.webp?itok=j3WQBrsr 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/undergrads-circles_0.png.webp?itok=JXs3j0ii 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png.webp?itok=j3WQBrsr 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/undergrads-circles_0.png.webp?itok=lHLqV37r 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/undergrads-circles_0.png.webp?itok=OKIGIYfX 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png.webp?itok=j3WQBrsr 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/undergrads-circles_0.png?itok=lHLqV37r 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/undergrads-circles_0.png?itok=JXs3j0ii 2x" media="screen and (min-width: 992px)" type="image/png" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png?itok=j3WQBrsr 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/undergrads-circles_0.png?itok=JXs3j0ii 2x" media="screen and (min-width: 768px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png?itok=j3WQBrsr 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/undergrads-circles_0.png?itok=lHLqV37r 2x" media="screen and (min-width: 576px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/undergrads-circles_0.png?itok=OKIGIYfX 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/undergrads-circles_0.png?itok=j3WQBrsr 2x" media="(min-width: 0em)" type="image/png" width="480" height="320">
+                     <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/undergrads-circles_0.png?itok=JXs3j0ii" width="1920" height="1280" alt="Undergrads follow professor">
+                    </picture>
+                   </div>
+                  </div>
+                  <section class="su-card__contents">
+                   <span class="su-card__superheadline"></span>
+                   <p>Learn about our advances and impact through email and social media.</p>
+                   <div class="su-card__button">
+                    <a content="[]" href="/follow-us" class="su-link su-button">Follow us</a>
+                   </div>
+                  </section>
+                 </article>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-card">
+                <div class="ds-entity--paragraph ds-entity--stanford-card sdss-card-wrapper--border-none sdss-card-wrapper--topic sdss-card-wrapper--default">
+                 <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=84431:changed=1713808789&amp;ds_bundle=stanford_card&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="Hz2yrnbdcdKkQjedhbajqW88Kt21NNRZgisJ1dEO6zg" data-drupal-ajax-container=""></div>
+                 <article class="su-card ">
+                  <h2 class="su-card__headline">Get involved</h2>
+                  <div class="media-entity-wrapper image">
+                   <div class="media image field-media-image label-hidden">
+                    <picture>
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/windmill-circles_1.png.webp?itok=AsX_2b_Y 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/windmill-circles_1.png.webp?itok=PK1a7G63 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png.webp?itok=kEK9Az30 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/windmill-circles_1.png.webp?itok=PK1a7G63 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png.webp?itok=kEK9Az30 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/windmill-circles_1.png.webp?itok=AsX_2b_Y 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/windmill-circles_1.png.webp?itok=ZGLXNsLq 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png.webp?itok=kEK9Az30 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/windmill-circles_1.png?itok=AsX_2b_Y 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/windmill-circles_1.png?itok=PK1a7G63 2x" media="screen and (min-width: 992px)" type="image/png" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png?itok=kEK9Az30 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/windmill-circles_1.png?itok=PK1a7G63 2x" media="screen and (min-width: 768px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png?itok=kEK9Az30 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/windmill-circles_1.png?itok=AsX_2b_Y 2x" media="screen and (min-width: 576px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/windmill-circles_1.png?itok=ZGLXNsLq 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/windmill-circles_1.png?itok=kEK9Az30 2x" media="(min-width: 0em)" type="image/png" width="480" height="320">
+                     <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/windmill-circles_1.png?itok=PK1a7G63" width="1920" height="1280" alt="Two people standing on top of a windmill">
+                    </picture>
+                   </div>
+                  </div>
+                  <section class="su-card__contents">
+                   <span class="su-card__superheadline"></span>
+                   <p>We offer many opportunities to join us in making a difference.</p>
+                   <div class="su-card__button">
+                    <a href="/our-impact/get-involved" class="su-link su-button">Get involved</a>
+                   </div>
+                  </section>
+                 </article>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-card">
+                <div class="ds-entity--paragraph ds-entity--stanford-card sdss-card-wrapper--border-none sdss-card-wrapper--topic sdss-card-wrapper--default">
+                 <div data-contextual-id="paragraph:root_parent_type=node&amp;root_parent=46&amp;paragraph=84436:changed=1713808789&amp;ds_bundle=stanford_card&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="WSk251wKJfIUo2LMiyvTNzY0tRL_Y6Rbwh0W9LkJmfs" data-drupal-ajax-container=""></div>
+                 <article class="su-card ">
+                  <h2 class="su-card__headline">Support our work</h2>
+                  <div class="media-entity-wrapper image">
+                   <div class="media image field-media-image label-hidden">
+                    <picture>
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/fendrf_lab-circles_1.png.webp?itok=9sIEgqJW 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/fendrf_lab-circles_1.png.webp?itok=cUf09rQb 2x" media="screen and (min-width: 992px)" type="image/webp" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png.webp?itok=KMfe4k8m 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/fendrf_lab-circles_1.png.webp?itok=cUf09rQb 2x" media="screen and (min-width: 768px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png.webp?itok=KMfe4k8m 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/fendrf_lab-circles_1.png.webp?itok=9sIEgqJW 2x" media="screen and (min-width: 576px)" type="image/webp" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/fendrf_lab-circles_1.png.webp?itok=E93GjtKx 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png.webp?itok=KMfe4k8m 2x" media="(min-width: 0em)" type="image/webp" width="480" height="320">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/fendrf_lab-circles_1.png?itok=9sIEgqJW 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/fendrf_lab-circles_1.png?itok=cUf09rQb 2x" media="screen and (min-width: 992px)" type="image/png" width="1200" height="800">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png?itok=KMfe4k8m 1x, /sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/fendrf_lab-circles_1.png?itok=cUf09rQb 2x" media="screen and (min-width: 768px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png?itok=KMfe4k8m 1x, /sites/sustainability/files/styles/card_3_2_1200x800_/public/media/image/fendrf_lab-circles_1.png?itok=9sIEgqJW 2x" media="screen and (min-width: 576px)" type="image/png" width="960" height="640">
+                     <source srcset="/sites/sustainability/files/styles/card_3_2_480x320_/public/media/image/fendrf_lab-circles_1.png?itok=E93GjtKx 1x, /sites/sustainability/files/styles/card_3_2_960x640_/public/media/image/fendrf_lab-circles_1.png?itok=KMfe4k8m 2x" media="(min-width: 0em)" type="image/png" width="480" height="320">
+                     <img loading="lazy" src="/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/fendrf_lab-circles_1.png?itok=cUf09rQb" width="1920" height="1280" alt="Two students working together">
+                    </picture>
+                   </div>
+                  </div>
+                  <section class="su-card__contents">
+                   <span class="su-card__superheadline"></span>
+                   <p>Your support helps us fund new research, hire faculty, and create solutions.</p>
+                   <div class="su-card__button">
+                    <a content="[]" href="/giving/funding-priorities" class="su-link su-button">Support us</a>
+                   </div>
+                  </section>
+                 </article>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-one-column layout-paragraphs-sdss-one-column--100 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--white layout--layout-paragraphs-one-column layout--layout-paragraphs-sdss-one-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-spacer sdss_spacer_reduced paragraph paragraph--type--stanford-spacer paragraph--view-mode--default sdss-spacer sdss-spacer-reduced">
+               </div>
+               <div class="ptype-stanford-lists paragraph paragraph--type--stanford-lists paragraph--view-mode--default">
+                <div class="su-margin-bottom-3 paragraph stanford-lists su-list-headline string label-hidden">
+                 <h2>Upcoming events</h2>
+                </div>
+                <div class="su-margin-bottom-3 su-wysiwyg-text paragraph stanford-lists su-list-description text-long label-hidden">
+                 <p><a class="su-button--secondary" href="/node/711">See All Events</a></p>
+                </div>
+                <div class="field field--name-su-list-view field--type-viewfield field--label-hidden">
+                 <div class="field__item field__item-label-hidden">
+                  <div class="views-element-container">
+                   <div class="view stanford-events cards js-view-dom-id-bc358663e59b6456d288aa6b0515ff95177640ec80d018e280321b78cc5facdb">
+                    <div>
+                     <ul class="su-list-unstyled grid-container-3">
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-event">
+                        <div data-contextual-id="node:node=25641:changed=1710352808&amp;ds_bundle=stanford_event&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="yJwcCvQ9R2gWvdbCRkrmzaG7Xy5ijlY67gZWJjDu6lA" data-drupal-ajax-container=""></div>
+                        <div class="su-card su-event-card su-event-list-item">
+                         <div class="su-event-list-item__date">
+                          <div class="su-date-stacked su-date-stacked--no-background" aria-hidden="true">
+                           <span class="su-event-start-month">May</span> <span class="su-event-start-date">1</span>
+                          </div>
+                         </div>
+                         <div class="su-event-list-item__details">
+                          <h2><a class="su-link su-link--external" href="https://events.stanford.edu/event/stanford-energy-research-showcase">Stanford Energy Research Showcase</a></h2><span class="event-list-item__type"><a href="/events/lecturepresentationtalk" hreflang="en">Lecture/Presentation/Talk</a></span>
+                          <div class="views-field-su-event-date-time">
+                           <span class="date-icon" aria-hidden="true"></span>
+                           <div>
+                            <time datetime="2024-05-01T08:30:00-07:00">Wednesday, May 1, 2024 | 8:30am</time> - <time datetime="2024-05-01T18:00:00-07:00">6:00pm PDT</time>
+                           </div>
+                          </div>
+                          <div class="views-field-su-event-location">
+                           <span class="map-icon" aria-hidden="true"></span>Alumni Center
+                          </div>
+                          <div class="views-field-su-event-address views-field-su-entered-event-address">
+                          </div>
+                          <div class="views-field-su-event-edit"></div>
+                         </div>
+                        </div>
+                       </div></li>
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-event">
+                        <div data-contextual-id="node:node=26401:changed=1713571209&amp;ds_bundle=stanford_event&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="4nnARzcn4mbFijoeqydSWoy3Aya94GSy7Ip4pEv-cKM" data-drupal-ajax-container=""></div>
+                        <div class="su-card su-event-card su-event-list-item">
+                         <div class="su-event-list-item__date">
+                          <div class="su-date-stacked su-date-stacked--no-background" aria-hidden="true">
+                           <span class="su-event-start-month">May</span> <span class="su-event-start-date">1</span>
+                          </div>
+                         </div>
+                         <div class="su-event-list-item__details">
+                          <h2><a class="su-link su-link--external" href="https://events.stanford.edu/event/rodolfo-dirzo-the-biological-and-cultural-richness-of-our-planet-in-the-era-of-global-anthropogenic-impact-in-conversation-with-ramon-saldivar">Rodolfo Dirzo, "The Biological and Cultural Richness of our Planet in the Era of Global Anthropogenic Impact," in conversation with Ramón Saldívar</a></h2><span class="event-list-item__type"><a href="/events/lecturepresentationtalk" hreflang="en">Lecture/Presentation/Talk</a></span>
+                          <div class="views-field-su-event-date-time">
+                           <span class="date-icon" aria-hidden="true"></span>
+                           <div>
+                            <time datetime="2024-05-01T12:00:00-07:00">Wednesday, May 1, 2024 | 12:00pm</time> - <time datetime="2024-05-01T13:30:00-07:00">1:30pm PDT</time>
+                           </div>
+                          </div>
+                          <div class="views-field-su-event-location">
+                           <span class="map-icon" aria-hidden="true"></span>Building 360
+                          </div>
+                          <div class="views-field-su-event-address views-field-su-entered-event-address">
+                          </div>
+                          <div class="views-field-su-event-edit"></div>
+                         </div>
+                        </div>
+                       </div></li>
+                      <li>
+                       <div class="ds-entity--node ds-entity--stanford-event">
+                        <div data-contextual-id="node:node=26306:changed=1712880008&amp;ds_bundle=stanford_event&amp;ds_view_mode=stanford_card&amp;langcode=en" data-contextual-token="pBXxPBttwcNad85WKd-BRVLxrF_7RwVmKMKKkLyjUl0" data-drupal-ajax-container=""></div>
+                        <div class="su-card su-event-card su-event-list-item">
+                         <div class="su-event-list-item__date">
+                          <div class="su-date-stacked su-date-stacked--no-background" aria-hidden="true">
+                           <span class="su-event-start-month">May</span> <span class="su-event-start-date">1</span>
+                          </div>
+                         </div>
+                         <div class="su-event-list-item__details">
+                          <h2><a class="su-link su-link--external" href="https://events.stanford.edu/event/e-iper-dissertation-defense-leehi-yona">E-IPER Dissertation Defense: Leehi Yona</a></h2><span class="event-list-item__type"><a href="/events/phd-defense" hreflang="en">PhD Defense</a></span>
+                          <div class="views-field-su-event-date-time">
+                           <span class="date-icon" aria-hidden="true"></span>
+                           <div>
+                            <time datetime="2024-05-01T14:00:00-07:00">Wednesday, May 1, 2024 | 2:00pm</time> - <time datetime="2024-05-01T15:00:00-07:00">3:00pm PDT</time>
+                           </div>
+                          </div>
+                          <div class="views-field-su-event-location">
+                           <span class="map-icon" aria-hidden="true"></span>Y2E2 Building
+                          </div>
+                          <div class="views-field-su-event-address views-field-su-entered-event-address">
+                          </div>
+                          <div class="views-field-su-event-edit"></div>
+                         </div>
+                        </div>
+                       </div></li>
+                     </ul>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="paragraph-item ptype-stanford-layout">
+            <div class="ptype-stanford-layout paragraph paragraph--type--stanford-layout paragraph--view-mode--default">
+             <div class="layout layout-paragraphs-sdss-two-column layout-paragraphs-sdss-two-column--50-50 layout-paragraphs-sdss-bgcolor layout-paragraphs-sdss-bgcolor--blue layout--layout-paragraphs-two-column layout--layout-paragraphs-sdss-two-column">
+              <div class="layout__region layout__region--main">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <h2><span>Earth. Climate. Society.</span></h2>
+                 <p><span>The Stanford Doerr School of Sustainability draws on a deep understanding of Earth, climate, and society to create knowledge and scalable solutions, in collaboration with partners worldwide. Together, we strive to create a future where humans and nature thrive in concert and in perpetuity through excellence in research, education, innovation, and service.&nbsp;</span></p>
+                 <p>&nbsp;</p>
+                 <p><a class="su-button" href="/our-impact" data-entity-type="node" data-entity-uuid="12deb47a-c6ea-4a98-9553-cd76138c871c" data-entity-substitution="canonical" title="Our impact">Learn how we’ll have an impact</a></p>
+                </div>
+               </div>
+              </div>
+              <div class="layout__region layout__region--sidebar">
+               <div class="ptype-stanford-wysiwyg paragraph paragraph--type--stanford-wysiwyg paragraph--view-mode--default">
+                <div class="su-wysiwyg-text paragraph stanford-wysiwyg text-long label-hidden">
+                 <div class="align-center media-entity-wrapper image">
+                  <div class="media image field-media-image label-hidden">
+                   <img loading="lazy" src="/sites/sustainability/files/styles/large/public/media/image/globe-landing_page_0.png?itok=kDvVuI4R" width="480" height="480" alt="">
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="node_view"></div>
+      </div><!-- /.content -->
+     </section><!-- /.node as page -->
+    </div>
+   </main>
+   <footer id="footer">
+    <div id="block-sdss-subtheme-config-pages-local-footer" class="config-pages-block block-config-pages block-sdss-subtheme-config-pages-local-footer">
+     <div class="ds-entity--config-pages ds-entity--stanford-local-footer">
+      <div data-contextual-id="config_pages:config_pages=1:changed=1712331772&amp;ds_bundle=stanford_local_footer&amp;ds_view_mode=default&amp;langcode=en" data-contextual-token="BaC5AcIMMsUkxpyprc8uFZxsNFnNUaCt4bjZIlqInxs" data-drupal-ajax-container=""></div>
+      <div class="su-local-footer ">
+       <div class="su-local-footer__header">
+        <div class="su-lockup__logo-wrapper">
+         <a href="https://sustainability.stanford.edu" class="su-lockup__custom-logo-link"> <img src="/profiles/sdss/sdss_profile/themes/sdss_subtheme/src/assets/svg/sdss-footer-lockup.svg" alt="Stanford Doerr School of Sustainability" class="su-lockup__custom-logo"> </a>
+        </div>
+       </div>
+       <div class="su-local-footer__columns">
+        <div class="su-local-footer__cell1">
+         <div class="sdss-footer--stay-connected">
+          <div class="su-wysiwyg-text config-pages stanford-local-footer su-local-foot-pr-co text-long label-hidden">
+           <p><strong>Stay connected</strong></p>
+           <ul>
+            <li><a href="/our-impact/get-involved" data-entity-type="node" data-entity-uuid="7be60078-4ff4-43ac-a170-68f0bf3cebea" data-entity-substitution="canonical" title="Get involved">Get involved</a></li>
+            <li><a href="/follow-us" data-entity-type="node" data-entity-uuid="3b9e170b-ca1b-41d7-94b3-5085a8d0a4dd" data-entity-substitution="canonical" title="Follow us">Follow us</a></li>
+            <li><a href="/node/471">Contact Us</a></li>
+            <li><a href="/node/2411">Visit Us</a><br>
+             &nbsp;</li>
+           </ul>
+          </div>
+         </div>
+         <ul class="su-local-footer__social-links">
+          <li><a href="https://www.facebook.com/stanforddoerr/" class="su-local-footer__social-facebook"> <i aria-hidden="true"></i> <span>Facebook</span> </a></li>
+          <li><a href="https://www.linkedin.com/company/stanford-school-of-sustainability/" class="su-local-footer__social-linkedin"> <i aria-hidden="true"></i> <span>LinkedIn</span> </a></li>
+          <li><a href="https://www.twitter.com/stanforddoerr/" class="su-local-footer__social-twitter"> <i aria-hidden="true"></i> <span>Twitter</span> </a></li>
+          <li><a href="https://www.instagram.com/stanford.doerr/" class="su-local-footer__social-instagram"> <i aria-hidden="true"></i> <span>Instagram</span> </a></li>
+          <li><a href="https://www.threads.net/@stanford.doerr" class="su-local-footer__social-threads"> <i aria-hidden="true"></i> <span>Threads</span> </a></li>
+         </ul>
+        </div>
+        <div class="su-local-footer__cell2">
+         <nav aria-label="footer primary nav">
+          <h2 class="su-local-footer__list-heading">Quick links</h2>
+          <ul class="su-local-footer__primary-links">
+           <li><a href="/academics">Admissions</a></li>
+           <li><a href="/news/events">Upcoming events</a></li>
+           <li><a href="/giving/funding-priorities">Give</a></li>
+           <li><a href="https://careersearch.stanford.edu/jobs/search/13612504">Open staff positions</a></li>
+           <li><a href="https://facultypositions.stanford.edu/en-us/filter/?job-mail-subscribe-privacy=agree&amp;search-keyword=&amp;category=doerr%20school%20of%20sustainability">Open faculty positions</a></li>
+           <li><a href="https://insidesdss.stanford.edu/">Intranet</a></li>
+           <li><a href="/saml_login">Login</a></li>
+           <li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=676f7ee513286b40d3b6b3b12244b0e5">Website feedback</a></li>
+          </ul>
+         </nav>
+         <nav aria-label="footer secondary nav">
+          <h2 class="su-local-footer__list-heading">Learn more</h2>
+          <ul class="su-local-footer__secondary-links">
+           <li><a href="/school/departments">Departments and Programs</a></li>
+           <li><a href="https://woods.stanford.edu">Stanford Woods Institute for the Environment</a></li>
+           <li><a href="https://energy.stanford.edu">Precourt Institute for Energy</a></li>
+           <li><a href="https://sustainability-accelerator.stanford.edu">Sustainability Accelerator</a></li>
+           <li><a href="https://www.stanford.edu/native-peoples-relationship/">Stanford land acknowledgement</a></li>
+          </ul>
+         </nav>
+        </div>
+        <div class="su-local-footer__cell3">
+         <div class="su-wysiwyg-text config-pages stanford-local-footer su-local-foot-tr-co text-long label-hidden">
+          <p><strong>Feedback or questions?</strong></p>
+          <p>Contact us at&nbsp;<br><a href="mailto:sustainability_initiative@stanford.edu">sustainability_initiative@stanford.edu</a></p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="su-global-footer su-global-footer--dark">
+     <div class="su-global-footer__container">
+      <div class="su-global-footer__brand">
+       <a id="su-logo" class="su-logo su-global-footer--dark" aria-hidden="true" tabindex="-1" href="https://www.stanford.edu">Stanford<br>
+        University<span class="su-global-footer__link-a11y"> (link is external)</span> </a>
+      </div>
+      <div class="su-global-footer__content">
+       <nav aria-label="global footer menu">
+        <ul class="su-global-footer__menu su-global-footer__menu--global">
+         <li><a href="https://www.stanford.edu" rel="nofollow">Stanford Home<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://visit.stanford.edu/basics/" rel="nofollow">Maps &amp; Directions<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://www.stanford.edu/search/" rel="nofollow">Search Stanford<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://emergency.stanford.edu" rel="nofollow">Emergency Info<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+        </ul>
+        <ul class="su-global-footer__menu su-global-footer__menu--policy">
+         <li><a href="https://www.stanford.edu/site/terms/" rel="nofollow" title="Terms of use for sites">Terms of Use<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://www.stanford.edu/site/privacy/" rel="nofollow" title="Privacy and cookie policy">Privacy<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://uit.stanford.edu/security/copyright-infringement" rel="nofollow" title="Report alleged copyright infringement">Copyright<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" rel="nofollow" title="Ownership and use of Stanford trademarks and images">Trademarks<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://non-discrimination.stanford.edu/" rel="nofollow" title="Non-discrimination policy">Non-Discrimination<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+         <li><a href="https://www.stanford.edu/site/accessibility" rel="nofollow" title="Report web accessibility issues">Accessibility<span class="su-global-footer__link-a11y"> (link is external)</span> </a></li>
+        </ul>
+       </nav>
+       <div class="su-global-footer__copyright">
+        <span>© Stanford University.</span> <span>&nbsp; Stanford, California 94305.</span>
+       </div>
+      </div>
+     </div>
+    </div><!-- su-global-footer end -->
+   </footer><button id="back-to-top"> <span class="fas fa-chevron-up"></span> Back to Top </button>
+  </div>
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/46","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"G-5K4P1NYW88","consentMode":true,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"extlink\/drupal.extlink,fontawesome\/fontawesome.webfonts,fontawesome\/fontawesome.webfonts.shim,google_analytics\/google_analytics,google_tag\/gtag,google_tag\/gtag.ajax,jumpstart_ui\/base,jumpstart_ui\/jumpstart_ui,jumpstart_ui\/layout,media\/filter.caption,paragraphs\/drupal.paragraphs.unpublished,printable\/entity-links,sdss_layout_paragraphs\/one_column,sdss_layout_paragraphs\/three_column,sdss_layout_paragraphs\/two_column,sdss_subtheme\/sdss,stanford_basic\/basic,stanford_basic\/content.stanford_page,stanford_basic_page_types\/node.stanford-page,stanford_events\/event_views,stanford_media\/display,stanford_news\/news_list,stanford_profile_helper\/siteimprove.analytics,stanford_profile_styles\/layout,stanford_profile_styles\/node.stanford_page,stanford_profile_styles\/node.stanford_page.layout.full-width,stanford_profile_styles\/paragraph.banner,stanford_profile_styles\/paragraph.card,stanford_profile_styles\/paragraph.entity,stanford_profile_styles\/paragraph.layout,stanford_profile_styles\/paragraph.lists,stanford_profile_styles\/paragraph.react_paragraphs,stanford_profile_styles\/paragraph.spacer,stanford_profile_styles\/paragraph.wysiwyg,stanford_profile_styles\/stanford_profile_styles,system\/base,ui_patterns\/card.card,ui_patterns\/events_card.eventslist,ui_patterns\/hero.hero,ui_patterns\/localfooter.localfooter,views\/views.ajax,views\/views.module","theme":"sdss_subtheme","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"account":"G-5K4P1NYW88","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"su-link su-link--external","extLabel":" (link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":".localist-widget, #lclst_widget_footer","extCssExplicit":"#page-content, .su-local-footer","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"mailto","mailtoLabel":" (link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"stanford_basic":{"nav_dropdown_enabled":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:bc358663e59b6456d288aa6b0515ff95177640ec80d018e280321b78cc5facdb":{"view_name":"stanford_events","view_display_id":"cards","view_args":"","view_path":"\/node\/46","view_base_path":null,"view_dom_id":"bc358663e59b6456d288aa6b0515ff95177640ec80d018e280321b78cc5facdb","pager_element":0},"views_dom_id:8b5a1fe9dbaf409c9536562a69cdfdac361fd8de0c69efae3db1c841df137407":{"view_name":"stanford_news","view_display_id":"vertical_cards","view_args":"school-news","view_path":"\/node\/46","view_base_path":null,"view_dom_id":"8b5a1fe9dbaf409c9536562a69cdfdac361fd8de0c69efae3db1c841df137407","pager_element":0}}},"user":{"uid":0,"permissionsHash":"902582738cdc1adb5dfec54ceed8daedcdf9629b187ff66b46325fea4ccec3ae"}}</script>
+  <script src="/sites/sustainability/files/js/js_vA0KMMjUt6jOsGVXtNqTLmOkj03xWQFvkswblsCU334.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht"></script>
+  <script src="/modules/contrib/google_tag/js/gtag.js?scpka1"></script>
+  <script src="/sites/sustainability/files/js/js_3zkHseX9RGeWGoXsjENN0oWbiSxIQ6pdugeNiK1_fF8.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=sdss_subtheme&amp;include=eJyVVO2WoyAMfSEKj8SJEJUZBA4JdXz7Be3U2h533T-RfN_kgn0MDDNSnFD1-1nO2DWVRP-PAEmjm8QQ4-BRQwC_sDOk3g3iq0yJGDLr4lQHhEeLhyUWPtpeFVEPoY_Z6prrjE4woOYlIakQLcpf96059uCUY-8qDuLF19AT-2l8ggxDhjTKjGBYP_XzlMcgZ-4DWP1XsJ-hcisu--L9bXaWR0ELMU7bQo8rUqsUZIk0lY5HrAw2TeAPexe-lc0lgZcP9RPHiD5hVuQY3VSNd5Q7nw-CGQY1VPGuS_iCH1Fcxc2MOdTFRAO-j7Fq8uV8YffzQm5eBpGyq_ev86gwsOPl1mBfIe_Byc7e7-i7RZaQSucdjWi3nW1JL5QrnqM20Zcp7D0ntA6UdZRqvNi0CqINaSCxi-GsWgz4Ue18Akf1Ld4dzqRWKadoi8eDaV35sxbe65ZIrR-9Bhzo2NzaQLZyO7ceF6BQAtNoO9nRmPE_5mrtD7BWPKv1mRzahE3oiwi323EhsIMQ6iiv_UfMUTbx_ppM_dnVwscH-QckmRht"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"383a8e13e9","applicationID":"1421411587","transactionName":"YFBSMkACDEoFBRUKCVkacQVGCg1XSxYABANoVlEFWgY=","queueTime":4,"applicationTime":66,"atts":"TBdRRAgYH0Q=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+ </body>
+</html>

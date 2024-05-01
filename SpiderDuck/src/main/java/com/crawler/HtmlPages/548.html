@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-415bcf4c4af1a9108ef",applicationID:"400299824"};;/*! For license information please see nr-loader-rum-1.258.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},R={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]={...(0,i.D)(t,R),...D};const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.258.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,iS:()=>a,il:()=>n,sK:()=>l,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.258.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.258.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-dbRQ0U/DzQ6bR/LVo1bSCjmtT4Mn+TUoByqFctqWrjwdLoHvi/Uhr3w190Zk5FuNMJFjPV0z6jQVNhQGb0DrLQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.258.0.PROD"]=self["webpackChunk:NRBA-1.258.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class T extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var I=i(3081);class O extends m{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,T,O],loaderType:"lite"})})()})();</script>
+  <meta name="author" content="Harvard University">
+  <link rel="pingback" href="https://www.harvard.edu/xmlrpc.php">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-title" content="Climate Solutions">
+  <meta name="application-name" content="Harvard University">
+  <script>
+			function is_ie() {
+				var ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+				var msie = ua.indexOf('MSIE '); // IE 10 or older
+				var trident = ua.indexOf('Trident/'); //IE 11
+
+				return (msie > 0 || trident > 0);
+			}
+
+			function not_excluded_page() {
+				return (window.location.href.indexOf("/unsupported-browser/") === - 1 && document.title.toLowerCase().indexOf('page not found') === - 1);
+			}
+
+			if (is_ie() && not_excluded_page()) {
+				window.location = location.protocol + '//' + location.host + '/unsupported-browser/';
+			}
+		</script>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script><!-- End Google Tag Manager for WordPress by gtm4wp.com --> <!-- This site is optimized with the Yoast SEO Premium plugin v21.2 (Yoast SEO v21.2) - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>Climate Solutions - Harvard University</title>
+  <meta name="description" content="Faculty and students from across the Harvard community are working on ways to address climate change and its effects.">
+  <link rel="canonical" href="https://www.harvard.edu/in-focus/climate-solutions/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Climate Solutions - Harvard University">
+  <meta property="og:description" content="Faculty and students from across the Harvard community are working on ways to address climate change and its effects.">
+  <meta property="og:url" content="https://www.harvard.edu/in-focus/climate-solutions/">
+  <meta property="og:site_name" content="Harvard University">
+  <meta property="article:publisher" content="https://www.facebook.com/Harvard/">
+  <meta property="article:modified_time" content="2024-04-15T13:11:26+00:00">
+  <meta property="og:image" content="https://www.harvard.edu/wp-content/uploads/2022/04/windmills-5643293_1920-1-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="Faculty and students from across the Harvard community are working on ways to address climate change and its effects.">
+  <meta name="twitter:site" content="@harvard"><!-- / Yoast SEO Premium plugin. -->
+  <link rel="dns-prefetch" href="//www.harvard.edu">
+  <link rel="dns-prefetch" href="//www.google.com">
+  <style id="safe-svg-svg-icon-style-inline-css">
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+  <style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+  <style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+  <link rel="stylesheet" id="tribe-styles-filters-css" href="https://www.harvard.edu/wp-content/themes/core/assets/css/dist/theme/filters.min.css?ver=df9f9e882089abe5be1535a88fa4dea6" media="all">
+  <link rel="stylesheet" id="tribe-styles-master-css" href="https://www.harvard.edu/wp-content/themes/core/assets/css/dist/theme/master.min.css?ver=7068fd682494e98133d94e9470cb1015" media="all">
+  <link rel="stylesheet" id="tribe-styles-print-css" href="https://www.harvard.edu/wp-content/themes/core/assets/css/dist/theme/print.min.css?ver=a9070e358da6513f5e9a3a74b2be88b5" media="print">
+  <link rel="stylesheet" id="searchwp-forms-css" href="https://www.harvard.edu/wp-content/plugins/searchwp/assets/css/frontend/search-forms.css?ver=4.3.5" media="all">
+  <link rel="shortlink" href="https://www.harvard.edu/?p=22995">
+  <link rel="alternate" type="application/json+oembed" href="https://www.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.harvard.edu%2Fin-focus%2Fclimate-solutions%2F">
+  <link rel="alternate" type="text/xml+oembed" href="https://www.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.harvard.edu%2Fin-focus%2Fclimate-solutions%2F&amp;format=xml">
+  <link rel="preload" href="https://www.harvard.edu/wp-content/themes/core/assets/js/dist/theme/scripts.min.js?ver=00c0c90b86df53ffec7a628249ebb472" as="script">
+  <link rel="preload" href="https://www.harvard.edu/wp-content/themes/core/assets/js/dist/theme/vendor.min.js?ver=c2be3fe4ce30ad379854ef238d97400e" as="script">
+  <link rel="preload" href="https://www.harvard.edu/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.18.1" as="script">
+  <link rel="preload" href="https://www.google.com/recaptcha/api.js?render=6Lc_nsgnAAAAAMHbceQB7cPmOz4t4_V5PIRhEbbW?ver=1.3.0" as="script"><!-- Google Custom Search -->
+  <script>
+			var modernTribe = window.modern_tribe || {};
+			modernTribe.events = {
+				trigger: function (event_type, event_data, el) {
+					var event;
+					try {
+						event = new CustomEvent(event_type, {detail: event_data});
+					} catch (e) {
+						event = document.createEvent('CustomEvent');
+						event.initCustomEvent(event_type, true, true, event_data);
+					}
+					el.dispatchEvent(event);
+				}
+			};
+			var coreCallback = function () {
+				if (document.readyState == 'complete') {
+					modernTribe.events.trigger('google_custom_search_loaded', null, document);
+				} else {
+					google.setOnLoadCallback(function () {
+						modernTribe.events.trigger('google_custom_search_loaded', null, document);
+					}, true);
+				}
+			};
+			var resultsRenderedCallback = function () {
+				if (document.readyState == 'complete') {
+					modernTribe.events.trigger('google_custom_search_results_rendered', null, document);
+				} else {
+					google.setOnLoadCallback(function () {
+						modernTribe.events.trigger('google_custom_search_results_rendered', null, document);
+					}, true);
+				}
+			};
+			window.__gcse = {
+				callback: coreCallback,
+				searchCallbacks: {
+					web: {
+						rendered: 'resultsRenderedCallback',
+					},
+				}
+			};
+			(function () {
+				var cx = '006776768860476326824:n4rl30fjc-e';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
+		</script><!-- End Google Custom Search -->
+  <meta name="theme-color" content="#a51c30"><!-- Google Tag Manager for WordPress by gtm4wp.com --> <!-- GTM Container placement set to manual -->
+  <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">
+	var dataLayer_content = {"siteID":"1","siteName":"Harvard University","visitorLoginState":"logged-out","pageTitle":"Climate Solutions - Harvard University","pagePostType":"in_focus","pagePostType2":"single-in_focus","pagePostAuthorID":8,"pagePostDate":"April 15, 2022","pagePostDateYear":"2022","pagePostDateMonth":"04","pagePostDateDay":"15","pagePostDateDayName":"Friday","pagePostDateHour":"09","pagePostDateMinute":"24","pagePostDateIso":"2022-04-15T09:24:19-04:00","pagePostDateUnix":1650014659,"pagePostTerms":{"meta":{"masthead_theme":"light","chapter_links":"","vertical_text":"","screen_reader_h1":"","vertical_text_color":"shade"}},"browserName":"Internet Explorer","browserVersion":"11.0","browserEngineName":"Trident","browserEngineVersion":"7.0","osName":"Windows","osVersion":"10.0","deviceType":"desktop","deviceManufacturer":"","deviceModel":"","postCountOnPage":1,"postCountTotal":1,"postID":22995,"postFormat":"standard"};
+	dataLayer.push( dataLayer_content );
+</script>
+  <script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5SGSF6G');
+</script><!-- End Google Tag Manager --> <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <link rel="icon" href="https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed-150x150.png" sizes="32x32">
+  <link rel="icon" href="https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed-300x300.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed-190x190.png">
+  <meta name="msapplication-TileImage" content="https://www.harvard.edu/wp-content/uploads/2020/10/cropped-logo-branding-compressed-300x300.png">
+  <style id="wp-custom-css">
+			/* on the history page, make the line full height for now */
+.page-harvard-history .the-follower{
+	height: 100% !important;
+}
+/* on the history page, make the line not run through the red dots */
+.page-harvard-history .c-block--width-grid:not(.c-block--layout-center) .b-timeline__container:before,
+.page-harvard-history .c-block--width-grid:not(.c-block--layout-center) .b-timeline__container:after {
+	z-index: 2;
+}
+
+/* temporary fix to give a max-width to the hero underline */
+
+.b-hero .c-content-block__underline {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 624px;
+}
+
+/* colorful hr */
+.wp-block-separator.colorful-hr {
+    margin-bottom:20px;
+}
+
+.wp-block-separator.colorful-hr:after{
+    border-bottom-width: 20px;
+    height: 20px;
+}
+
+.wp-block-separator.colorful-hr.color-ivy:after{
+    border-bottom-color: #52854c;
+}
+
+.wp-block-separator.colorful-hr.color-blue:after{
+    border-bottom-color: #4e84c4;
+}
+
+.wp-block-separator.colorful-hr.color-saffron:after{
+    border-bottom-color: #d16103;
+}
+
+.wp-block-separator.colorful-hr.color-lemon:after{
+    border-bottom-color: #ffdb6d;
+}
+
+/* section header - tall line and color options */
+.b-header.c-block.tall-line .b-header__border:after {
+    border-bottom-width: 20px;
+}
+
+.b-header.c-block.color-saffron .b-header__border:after {
+    border-color: #d16103;
+}
+
+.b-header.c-block.color-blue .b-header__border:after {
+    border-color: #4e84c4;
+}
+
+.b-header.c-block.color-ivy .b-header__border:after {
+    border-color: #52854c;
+}
+
+.b-header.c-block.color-lemon .b-header__border:after {
+    border-color: #ffdb6d;
+}
+
+.b-header.c-block.color-indigo .b-header__border:after {
+    border-color: #0A2240;
+}
+
+.b-header.c-block.color-mortar .b-header__border:after {
+    border-color: #99918F;
+}
+
+.b-header.c-block.color-slate .b-header__border:after {
+    border-color: #8996A0;
+}
+
+.b-header.c-block.color-crimson .b-header__border:after {
+    border-color: #A51C30;
+}
+
+/** 
+Temporary fix for Firefox v 78  
+removed 
+:not(.is-style-XX-Large.has-text-align-center)
+**/
+.t-sink > .wp-block-group__inner-container > :not(.c-block):not(.alignwide):not(.html-alignwide):not(.align-wide):not(.alignfull):not(.wp-block-embed):not(.is-style-pull-quote) {
+    max-width: 624px;
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * Page specific fix
+ * Looking back in 2021 In Focus
+ * remove space above video
+ */
+.postid-23525 .c-block.hide-border .b-header__container .b-header__border{
+	display: none;
+}
+
+.page-id-6392 .c-block.hide-border .b-header__container .b-header__border{
+	display: none;
+}
+
+/**
+ * Try out smooth scroll behavior
+ * */
+html {
+	scroll-behavior: smooth;
+}
+
+/**
+ * 4/20/2023: Fix for event list display issue, handling both events with link and without
+ * */
+.b-events-grid.list_layout .g-3-up>.c-card {
+		display: block;
+}
+
+.b-events-grid.list_layout .g-3-up>.c-card, .b-events-grid.list_layout .g-3-up>.c-card__b-event {
+	border-top: 1px solid #c4c5c6;
+	padding: 48px 0;
+	margin: 0 24px;
+}
+
+.compact-event-list.b-events-grid.list_layout .g-3-up>.c-card, .compact-event-list.b-events-grid.list_layout .g-3-up>.c-card__b-event {
+	padding: 24px 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .b-events-grid.list_layout .g-3-up>.c-card, .b-events-grid.list_layout .g-3-up>.c-card__b-event {
+	padding: 24px 0;
+	margin: 0 12px;
+}
+}
+
+@media screen and (max-width: 767px) {
+  .b-events-grid.list_layout .g-3-up>.c-card, .b-events-grid.list_layout .g-3-up>.c-card__b-event {
+	padding: 24px 0;
+		margin: 0;
+}
+}
+
+.b-events-grid.list_layout .c-card .c-card {
+	border: 0;
+	padding: 0;
+}
+
+/**
+ * 10/17/2023, fix video control issue
+ * **/
+.c-video__block .c-video {
+    position: relative;
+}
+
+/** 
+ * 1/16/2024, Compact margin for side-by-side blocks 
+ * **/
+.c-block.b-side-by-side {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/** 4/5/2024m Gravity form poll results color fix **/
+.gform_confirmation_wrapper:not(.gform-theme--framework) .gpoll_container .red .gpoll_ratio_box {
+    background-color: #A51C30;
+}
+
+.gform_confirmation_wrapper:not(.gform-theme--framework) .gpoll_container  .gpoll_bar_juice:after{
+	background-image: none;
+}
+
+.gform_confirmation_wrapper:not(.gform-theme--framework) .gpoll_container .red .gpoll_bar_juice {
+    background-image: linear-gradient(#A51C30, #A51C30);
+    box-shadow: none;
+}
+
+#gform_confirmation_wrapper_28 {
+	margin: 0 auto;
+	padding: 25px;
+}		</style>
+ </head>
+ <body class="in_focus-template-default single single-in_focus postid-22995 wp-embed-responsive in_focus-climate-solutions">
+  <!-- GTM Container placement set to manual --> <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SGSF6G" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe>
+  </noscript><!-- End Google Tag Manager (noscript) -->
+  <div class="l-wrapper" data-js="site-wrap">
+   <a href="#main-content" class="a11y-skip-link u-visually-hidden"> Skip to main content </a>
+   <header class="site-header site-header--theme-light site-header--position-fixed" data-js="site-header" aria-label="Harvard University">
+    <div class="site-header__wrapper">
+     <div class="site-header__brand">
+      <div class="site-header__brand-inner">
+       <div class="logo" data-js="logo">
+        <a href="https://www.harvard.edu/" class="logo__wrap svgicon" rel="home"><span class="u-visually-hidden">Harvard University</span></a>
+       </div>
+       <div class="site-triggers site-triggers--have-search">
+        <div class="site-triggers__main-item-wrap" role="navigation" aria-label="Search and Navigation">
+         <div class="site-trigger-item site-trigger-item--search">
+          <button id="site-trigger-search-open" class="site-trigger site-trigger--primary site-trigger--search-open" data-js="site-trigger-search-open" aria-label="Open Site Search" aria-expanded="false" aria-controls="site-search"> <span class="site-trigger__icon icon icon-search" aria-hidden="true" title="Open Site Search"> </span> <span class="site-trigger__text"> Search </span> </button>
+          <div id="site-search" class="site-search" aria-labelledby="site-trigger-search-open site-trigger-search-close" data-js="site-search" aria-hidden="true">
+           <div class="site-header__search" data-js="site-search-form" data-placeholder="Search Harvard University">
+            <gcse:searchbox-only resultsurl="https://www.harvard.edu/search/" queryparametername="q_as"></gcse:searchbox-only>
+           </div>
+           <nav class="nav-quick-links-search" aria-labelledby="quick_links_search-label">
+            <div class="nav-quick-links-search__wrapper">
+             <strong class="nav-quick-links-search__label" id="quick_links_search-label"> <span class="u-visually-hidden">Search</span> Quick Links</strong>
+             <ol class="nav-quick-links-search__list">
+              <li class="nav-quick-links-search__item"><a href="https://www.directory.harvard.edu/" class="nav-quick-links-search__action" data-attribute="find-a-person">Find a Person</a></li>
+              <li class="nav-quick-links-search__item"><a href="https://www.harvard.edu/a-to-z/" class="nav-quick-links-search__action" data-attribute="7753">A to Z index</a></li>
+             </ol>
+            </div>
+           </nav><button id="site-trigger-search-close" class="site-trigger site-trigger--search-close" data-js="site-trigger-search-close" aria-label="Close Site Search" aria-expanded="false" aria-controls="site-search"> <span class="site-trigger__icon icon icon-close" aria-hidden="true" title="Close Site Search"> </span> </button>
+          </div>
+         </div>
+         <div class="site-trigger-item">
+          <button id="site-trigger-nav-open" class="site-trigger site-trigger--primary site-trigger--nav site-trigger--nav-open" data-js="site-trigger-nav-open" aria-expanded="false" aria-controls="site-nav"> <span class="site-trigger__icon icon icon-menu" aria-hidden="true" title="Open Site Navigation"></span> <span class="site-trigger__text"> Menu </span> </button>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="site-nav" class="site-nav" data-js="site-nav" aria-label="Site Navigation" aria-hidden="true" role="dialog">
+      <div class="site-nav__outer">
+       <div class="site-nav__inner">
+        <nav class="nav-primary" data-js="site-nav-container" aria-label="Primary">
+         <div class="nav-primary__wrapper">
+          <div class="nav-primary__col-0" data-js="site-nav-col-one">
+           <ol class="nav-primary__list">
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-6683" data-id="6683" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-6683" data-depth="0" data-attribute="academics" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">Academics</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-6683" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-6683" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-6683" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-6683" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Academics </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> <a href="https://www.harvard.edu/academics/" class="nav-primary__subsec-title-link" rel="bookmark" data-attribute="academics"> Academics <span class="icon icon-arrow-right" aria-hidden="true"></span></a> </strong> <span class="nav-primary__subsec-description"> Learning at Harvard can happen for every type of learner, at any phase of life. </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-6682" data-id="6682" data-id-parent="6683" aria-expanded="false" aria-controls="menu-item-child-6682" data-bgd-image-id="6683-6682-1" data-depth="1" data-attribute="degree-programs" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Degree programs<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-6682" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-6682" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-6682" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-6682" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Academics </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <strong class="nav-primary__subsec-title"> Degree programs </strong> <span class="nav-primary__subsec-description"> Browse all of our undergraduate concentrations and graduate degrees. </span>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/programs/?degree_levels=undergraduate" data-depth="2" data-attribute="undergraduate-degrees" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Undergraduate Degrees </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/programs/?degree_levels=graduate" data-depth="2" data-attribute="graduate-degrees" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Graduate Degrees </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/academics/professional-and-lifelong-learning/" data-depth="2" data-attribute="other" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Other </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/academics/professional-and-lifelong-learning/" data-depth="1" data-attribute="professional-and-lifelong-learning" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Professional and Lifelong Learning<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvardonline.harvard.edu/" data-depth="1" data-attribute="harvard-online" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Harvard Online<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-1644" data-id="1644" data-id-parent="6683" aria-expanded="false" aria-controls="menu-item-child-1644" data-bgd-image-id="6683-1644-1" data-depth="1" data-attribute="harvard-schools" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Harvard Schools<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-1644" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-1644" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-1644" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-1644" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Academics </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <span class="nav-primary__subsec-description"> Visit each School for information on admissions and financial aid. </span> <a href="/schools/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="explore-more"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Explore more </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://college.harvard.edu/" data-depth="2" data-attribute="harvard-college" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard College </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.hbs.edu" data-depth="2" data-attribute="harvard-business-school" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Business School </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.dce.harvard.edu/" data-depth="2" data-attribute="harvard-division-of-continuing-education" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Division of Continuing Education </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hds.harvard.edu/" data-depth="2" data-attribute="harvard-divinity-school" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Divinity School </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.fas.harvard.edu/" data-depth="2" data-attribute="harvard-faculty-of-arts-and-sciences" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Faculty of Arts and Sciences </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://gsas.harvard.edu/" data-depth="2" data-attribute="harvard-kenneth-c-griffin-graduate-school-of-arts-and-sciences" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Kenneth C. Griffin Graduate School of Arts and Sciences </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.gsd.harvard.edu/" data-depth="2" data-attribute="harvard-graduate-school-of-design" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Graduate School of Design </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.gse.harvard.edu/" data-depth="2" data-attribute="harvard-graduate-school-of-education" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Graduate School of Education </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.seas.harvard.edu/" data-depth="2" data-attribute="harvard-john-a-paulson-school-of-engineering-and-applied-sciences" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard John A. Paulson School of Engineering and Applied Sciences </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.hks.harvard.edu/" data-depth="2" data-attribute="harvard-kennedy-school" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Kennedy School </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hls.harvard.edu/" data-depth="2" data-attribute="harvard-law-school" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Law School </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hms.harvard.edu/" data-depth="2" data-attribute="harvard-medical-school" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Medical School </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.radcliffe.harvard.edu/" data-depth="2" data-attribute="harvard-radcliffe-institute" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Radcliffe Institute </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hsdm.harvard.edu/" data-depth="2" data-attribute="harvard-school-of-dental-medicine" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard School of Dental Medicine </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.hsph.harvard.edu/" data-depth="2" data-attribute="harvard-t-h-chan-school-of-public-health" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard T.H. Chan School of Public Health </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+              </ol>
+             </div></li>
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-6734" data-id="6734" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-6734" data-bgd-image-id="0-6734-0" data-depth="0" data-attribute="campus" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">Campus</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-6734" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-6734" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-6734" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-6734" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Campus </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> <a href="https://www.harvard.edu/campus/" class="nav-primary__subsec-title-link" rel="bookmark" data-attribute="harvards-campus"> Harvard's Campus <span class="icon icon-arrow-right" aria-hidden="true"></span></a> </strong> <span class="nav-primary__subsec-description"> Get tickets to our next game, hours and locations for our libraries and museums, and information about your next career move. </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-5202" data-id="5202" data-id-parent="6734" aria-expanded="false" aria-controls="menu-item-child-5202" data-bgd-image-id="6734-5202-1" data-depth="1" data-attribute="libraries" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Libraries<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-5202" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-5202" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-5202" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-5202" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Campus </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <a href="https://www.harvard.edu/campus/libraries/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="explore-our-libraries"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Explore our libraries </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://arboretum.harvard.edu/research/library/" data-depth="2" data-attribute="arnold-arboretum-horticultural-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Arnold Arboretum Horticultural Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.library.hbs.edu/" data-depth="2" data-attribute="baker-library-and-special-collections" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Baker Library and Special Collections </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://itatti.harvard.edu/berenson-library" data-depth="2" data-attribute="biblioteca-berenson" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Biblioteca Berenson </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://huh.harvard.edu/libraries" data-depth="2" data-attribute="botany-libraries" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Botany Libraries </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/cabot" data-depth="2" data-attribute="cabot-science-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Cabot Science Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://countway.harvard.edu/" data-depth="2" data-attribute="countway-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Countway Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.doaks.org/research/library-archives" data-depth="2" data-attribute="dumbarton-oaks-research-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Dumbarton Oaks Research Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.mcz.harvard.edu/" data-depth="2" data-attribute="ernst-mayr-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Ernst Mayr Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/fine-arts" data-depth="2" data-attribute="fine-arts-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Fine Arts Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.gsd.harvard.edu/frances-loeb-library/" data-depth="2" data-attribute="frances-loeb-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Frances Loeb Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/fung" data-depth="2" data-attribute="fung-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Fung Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.gse.harvard.edu/library" data-depth="2" data-attribute="gutman-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Gutman Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.hds.harvard.edu/" data-depth="2" data-attribute="harvard-divinity-school-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Divinity School Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://harvardfilmarchive.org/" data-depth="2" data-attribute="harvard-film-archive" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Film Archive </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hls.harvard.edu/library/" data-depth="2" data-attribute="harvard-law-school-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Law School Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/harvard-map-collection" data-depth="2" data-attribute="harvard-map-collection" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Map Collection </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/harvard-university-archives" data-depth="2" data-attribute="harvard-university-archives" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard University Archives </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/yenching" data-depth="2" data-attribute="harvard-yenching-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard-Yenching Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.hks.harvard.edu/research-insights/library-knowledge-services" data-depth="2" data-attribute="hks-library-and-knowledge-services" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> HKS Library and Knowledge Services </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/houghton" data-depth="2" data-attribute="houghton-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Houghton Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/lamont" data-depth="2" data-attribute="lamont-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Lamont Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/loeb-music" data-depth="2" data-attribute="loeb-music-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Loeb Music Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/robbins-philosophy" data-depth="2" data-attribute="robbins-library-of-philosophy" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Robbins Library of Philosophy </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.radcliffe.harvard.edu/schlesinger-library" data-depth="2" data-attribute="schlesinger-library-on-the-history-of-women-in-america" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Schlesinger Library on the History of Women in America </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/tozzer" data-depth="2" data-attribute="tozzer-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Tozzer Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/widener" data-depth="2" data-attribute="widener-library" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Widener Library </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://library.harvard.edu/libraries/poetryroom" data-depth="2" data-attribute="woodberry-poetry-room" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Woodberry Poetry Room </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-5201" data-id="5201" data-id-parent="6734" aria-expanded="false" aria-controls="menu-item-child-5201" data-bgd-image-id="6734-5201-1" data-depth="1" data-attribute="museums" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Museums<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-5201" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-5201" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-5201" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-5201" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Campus </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <a href="https://www.harvard.edu/campus/museums/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="explore-our-museums"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Explore our museums </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.arboretum.harvard.edu/" data-depth="2" data-attribute="the-arnold-arboretum" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> The Arnold Arboretum </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://ccva.fas.harvard.edu/" data-depth="2" data-attribute="carpenter-center-for-the-visual-arts" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Carpenter Center for the Visual Arts </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://chsi.harvard.edu/" data-depth="2" data-attribute="collection-of-historical-scientific-instruments" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Collection of Historical Scientific Instruments </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.gsd.harvard.edu/exhibitions/" data-depth="2" data-attribute="graduate-school-of-design-exhibitions" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Graduate School of Design Exhibitions </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.harvardartmuseums.org/" data-depth="2" data-attribute="harvard-art-museums" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Art Museums </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://harvardforest.fas.harvard.edu/" data-depth="2" data-attribute="harvard-forest" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Forest </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.hmnh.harvard.edu/" data-depth="2" data-attribute="harvard-museum-of-natural-history" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Museum of Natural History </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://hmane.harvard.edu/" data-depth="2" data-attribute="the-harvard-museum-of-the-ancient-near-east" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> The Harvard Museum of the Ancient Near East </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://hmsc.harvard.edu/" data-depth="2" data-attribute="harvard-museums-of-science-and-culture" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Museums of Science and Culture </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.huh.harvard.edu/" data-depth="2" data-attribute="harvard-university-herbaria" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard University Herbaria </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://mgmh.fas.harvard.edu/" data-depth="2" data-attribute="mineralogical-and-geological-museum" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Mineralogical and Geological Museum </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.mcz.harvard.edu/" data-depth="2" data-attribute="museum-of-comparative-zoology" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Museum of Comparative Zoology </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="http://www.peabody.harvard.edu/" data-depth="2" data-attribute="the-peabody-museum-of-archaeology-and-ethnology" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> The Peabody Museum of Archaeology and Ethnology </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://countway.harvard.edu/center-history-medicine/collections-research-access/warren-anatomical-museum-collection" data-depth="2" data-attribute="warren-anatomical-museum" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Warren Anatomical Museum </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/campus/athletics/" data-depth="1" data-attribute="athletics" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Athletics<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/campus/work-at-harvard/" data-depth="1" data-attribute="work-at-harvard" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Work at Harvard<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://news.harvard.edu/gazette/harvard-events/" data-depth="1" data-attribute="events" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Events<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="http://commencement.harvard.edu/" data-depth="1" data-attribute="commencement" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Commencement<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+              </ol>
+             </div></li>
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children nav-primary__item--is-current-parent"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-1664" data-id="1664" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-1664" data-bgd-image-id="0-1664-0" data-depth="0" data-attribute="in-focus" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">In Focus</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-1664" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-1664" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-1664" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-1664" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> In Focus </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> Explore and understand the world with Harvard </strong> <span class="nav-primary__subsec-description"> In Focus is a curated examination of Harvard's research, scholarly work, and community. Recent topics include: </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true nav-primary__item--is-current"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-55673" data-id="55673" data-id-parent="1664" aria-expanded="false" aria-controls="menu-item-child-55673" data-depth="1" data-attribute="climate-solutions" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Climate Solutions<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-55673" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-55673" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-55673" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-55673" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> In Focus </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <strong class="nav-primary__subsec-title"> Climate Solutions </strong> <span class="nav-primary__subsec-description"> Faculty and students from across the Harvard community are working on ways to address climate change and its effects. </span> <a href="https://www.harvard.edu/in-focus/climate-solutions/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="explore-the-solutions"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Explore the solutions </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-content_cards">
+                  <li class="nav-primary__item-content_cards-wrapper"><strong class="nav-primary__item--content-card-title" id="content-card-title-55673">What's inside?</strong>
+                   <ol class="nav-primary__list-content_cards-wrapper" aria-labelledby="content-card-title-55673">
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://seas.harvard.edu/news/2024/03/cutting-edge-methane-monitor" data-depth="2" data-attribute="tracking-methane-from-space" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 56.206896551724%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="A rendering of a satellite" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/MethaneSAT-Model-Credit-MethaneSAT-300x169.png 300w 169h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/MethaneSAT-Model-Credit-MethaneSAT-600x337.png 600w 337h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Tracking methane from space </span> </strong> </a></li>
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://news.harvard.edu/gazette/story/2024/03/climate-alignment-is-no-easy-task/" data-depth="2" data-attribute="the-harvard-thinking-podcast-explores-climate-change" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 66.666666666667%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="Windmills and a rainbow" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2022/04/windmills-5643293_1920-1-300x200.jpg 300w 200h, 
+https://www.harvard.edu/wp-content/uploads/2022/04/windmills-5643293_1920-1-600x400.jpg 600w 400h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> The "Harvard Thinking" podcast explores climate change </span> </strong> </a></li>
+                   </ol></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-55391" data-id="55391" data-id-parent="1664" aria-expanded="false" aria-controls="menu-item-child-55391" data-depth="1" data-attribute="space" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Space<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-55391" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-55391" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-55391" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-55391" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> In Focus </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <strong class="nav-primary__subsec-title"> Space </strong> <span class="nav-primary__subsec-description"> Harvard researchers are asking the big questions about the universe, building tools to answer them, and sharing their discoveries with the world. </span> <a href="https://www.harvard.edu/in-focus/space/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="travel-the-stars"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Travel the stars </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-content_cards">
+                  <li class="nav-primary__item-content_cards-wrapper"><strong class="nav-primary__item--content-card-title" id="content-card-title-55391">What's inside?</strong>
+                   <ol class="nav-primary__list-content_cards-wrapper" aria-labelledby="content-card-title-55391">
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://www.labxchange.org/library/pathway/lx-pathway:caeec466-d07f-415d-9e90-c9bde8f2aca8" data-depth="2" data-attribute="what-is-a-solar-eclipse" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 66.71875%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="A solar eclipse" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/eclipse2-300x200.jpg 300w 200h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/eclipse2-600x400.jpg 600w 400h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> What is a solar eclipse? </span> </strong> </a></li>
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://library.cfa.harvard.edu/plate-stacks/women-at-hco" data-depth="2" data-attribute="who-were-the-women-of-harvards-early-astronomical-research" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 66.611570247934%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="A late 1800s black and white photo of women in a classroom with blackboards" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2022/01/glass-photo29_605_main-300x200.jpeg 300w 200h, 
+https://www.harvard.edu/wp-content/uploads/2022/01/glass-photo29_605_main-600x400.jpeg 600w 400h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Who were the women of Harvard's early astronomical research? </span> </strong> </a></li>
+                   </ol></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-54912" data-id="54912" data-id-parent="1664" aria-expanded="false" aria-controls="menu-item-child-54912" data-depth="1" data-attribute="welcome-to-harvard" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Welcome to Harvard<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-54912" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-54912" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-54912" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-54912" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> In Focus </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <strong class="nav-primary__subsec-title"> Welcome to Harvard </strong> <span class="nav-primary__subsec-description"> Where world-class professors, innovative research, and a dynamic student community come together to advance education and foster change in the world. </span> <a href="https://www.harvard.edu/in-focus/welcome-to-harvard/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="explore-our-campus"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Explore our campus </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-content_cards">
+                  <li class="nav-primary__item-content_cards-wrapper"><strong class="nav-primary__item--content-card-title" id="content-card-title-54912">Meet our community</strong>
+                   <ol class="nav-primary__list-content_cards-wrapper" aria-labelledby="content-card-title-54912">
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://hls.harvard.edu/today/sophia-m-hunt-25-elected-president-of-the-harvard-law-review/" data-depth="2" data-attribute="harvard-law-school-student-sophia-hunt-was-elected-the-138th-president-of-the-harvard-law-review" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 96.153846153846%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="A student wearing a black blazer poses with her arms crossed" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/20240131_HLR-President-Sofia-Hunt_LGranger005-2web-2048x1365-2-300x288.png 300w 288h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Law School student Sophia Hunt was elected the 138th president of the Harvard Law Review </span> </strong> </a></li>
+                    <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-content_cards"><a href="https://www.hsph.harvard.edu/news/features/aya-goto-takemi-program-international-health/" data-depth="2" data-attribute="harvard-school-of-public-health-professor-aya-goto-shares-her-experiences-promoting-health-literacy-and-leading-the-takemi-program-in-international-health" class="nav-primary__action nav-primary__action--depth-2">
+                      <figure class="nav-primary__item-image c-image" style="padding-top: 92.165898617512%;">
+                       <div class="c-image__image lazyload" role="img" aria-label="A woman leans on a railing and poses on a sidewalk of a busy street" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/Aya-Goto-2.28.24.jpg-e1709583868665-300x276.jpg 300w 276h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/Aya-Goto-2.28.24.jpg-e1709583868665-600x553.jpg 600w 553h" style="background-image:url('');"></div>
+                      </figure><strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard School of Public Health Professor Aya Goto shares her experiences promoting health literacy and leading the Takemi Program in International Health. </span> </strong> </a></li>
+                   </ol></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/in-focus/" data-depth="1" data-attribute="explore-the-in-focus-archives" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text"><br><br>
+                  Explore the In Focus archives<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+              </ol>
+             </div></li>
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-5404" data-id="5404" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-5404" data-bgd-image-id="0-5404-0" data-depth="0" data-attribute="visit" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">Visit</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-5404" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-5404" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-5404" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-5404" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> Visit </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> <a href="https://www.harvard.edu/visit/" class="nav-primary__subsec-title-link" rel="bookmark" data-attribute="visit-harvard"> Visit Harvard <span class="icon icon-arrow-right" aria-hidden="true"></span></a> </strong> <span class="nav-primary__subsec-description"> Ideas and assistance for your trip to our campus. </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/visit/tours/" data-depth="1" data-attribute="tours" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Tours<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/visit/maps-directions/" data-depth="1" data-attribute="maps-and-directions" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Maps and Directions<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/visit/tour-providers/" data-depth="1" data-attribute="tour-providers" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Tour Providers<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+              </ol>
+             </div></li>
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-9083" data-id="9083" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-9083" data-bgd-image-id="0-9083-0" data-depth="0" data-attribute="about" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">About</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-9083" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-9083" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-9083" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-9083" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> About </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> <a href="https://www.harvard.edu/about/" class="nav-primary__subsec-title-link" rel="bookmark" data-attribute="about-harvard"> About Harvard <span class="icon icon-arrow-right" aria-hidden="true"></span></a> </strong> <span class="nav-primary__subsec-description"> Learn how Harvard is structured, explore our long history, and discover our extended community. </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-26766" data-id="26766" data-id-parent="9083" aria-expanded="false" aria-controls="menu-item-child-26766" data-depth="1" data-attribute="history-of-harvard" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">History of Harvard<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-26766" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-26766" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-26766" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-26766" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> About </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <strong class="nav-primary__subsec-title"> History of Harvard </strong> <span class="nav-primary__subsec-description"> Harvard is perhaps best-known because of its enduring history of innovation in education. But even die-hard Harvard buffs are not likely to know all of these Harvard firsts and historical snippets. </span> <a href="https://www.harvard.edu/about/history/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="learn-more"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Learn more </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/history/timeline/" data-depth="2" data-attribute="history-timeline" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> History timeline </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/history/nobel-laureates/" data-depth="2" data-attribute="nobel-laureates" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Nobel Laureates </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/history/honorary-degrees/" data-depth="2" data-attribute="honorary-degrees" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Honorary Degrees </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/history/shields/" data-depth="2" data-attribute="harvard-shields" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard shields </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-5206" data-id="5206" data-id-parent="9083" aria-expanded="false" aria-controls="menu-item-child-5206" data-depth="1" data-attribute="leadership-and-governance" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Leadership and governance<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" id="menu-item-child-5206" data-js="child-menu" data-depth="2" aria-labelledby="menu-item-5206" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-5206" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-5206" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> About </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <a href="https://www.harvard.edu/about/leadership-and-governance/" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="learn-about-our-leadership"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Learn about our Leadership </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-standard_list">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/president/" data-depth="2" data-attribute="president" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> President </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/leadership-and-governance/officers-and-deans/" data-depth="2" data-attribute="officers-and-deans" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Officers and Deans </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/leadership-and-governance/harvard-corporation/" data-depth="2" data-attribute="harvard-corporation" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Harvard Corporation </span> </strong> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-standard_list"><a href="https://www.harvard.edu/about/leadership-and-governance/board-of-overseers/" data-depth="2" data-attribute="board-of-overseers" class="nav-primary__action nav-primary__action--depth-2"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Board of Overseers </span> </strong> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/about/university-professorships/" data-depth="1" data-attribute="university-professorships" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">University Professorships<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/about/diversity-and-inclusion/" data-depth="1" data-attribute="diversity-and-inclusion" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Diversity and Inclusion<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/about/endowment/" data-depth="1" data-attribute="endowment" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Endowment<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/about/harvard-in-the-community/" data-depth="1" data-attribute="harvard-in-the-community" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Harvard in the Community<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.harvard.edu/about/harvard-in-the-world/" data-depth="1" data-attribute="harvard-in-the-world" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Harvard in the World<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+              </ol>
+             </div></li>
+            <li class="nav-primary__item nav-primary__item--depth-0 nav-primary__item--has-children"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-1671" data-id="1671" data-id-parent="0" aria-expanded="false" aria-controls="menu-item-child-1671" data-bgd-image-id="0-1671-0" data-depth="0" data-attribute="news" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children"><span class="nav-primary__action-text">News</span></button>
+             <div class="nav-primary__child nav-primary__child--depth-1" id="menu-item-child-1671" data-js="child-menu" data-depth="1" aria-labelledby="menu-item-1671" aria-hidden="true">
+              <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-1">
+               <div class="nav-primary__back nav-primary__back--depth-1">
+                <button id="menu-item-back-1671" class="nav-primary__back-action nav-primary__back-action--depth-1" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-1671" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> News </button>
+               </div>
+               <div class="nav-primary__subsec-header">
+                <strong class="nav-primary__subsec-title"> <a href="https://news.harvard.edu/gazette/" class="nav-primary__subsec-title-link" rel="bookmark" data-attribute="the-harvard-gazette"> The Harvard Gazette <span class="icon icon-arrow-right" aria-hidden="true"></span></a> </strong> <span class="nav-primary__subsec-description"> Official news from Harvard University about science, medicine, art, campus life, University issues, and broader national and global concerns. </span>
+               </div>
+              </div>
+              <ol class="nav-primary__child-list nav-primary__child-list--depth-1 ">
+               <li class="nav-primary__item nav-primary__item--depth-1 nav-primary__item--has-children nav-primary__item--sub-mob-vis-true"><button title="Toggle Sub-Menu" data-js="trigger-child-menu" id="menu-item-5402" data-id="5402" data-id-parent="1671" aria-expanded="false" aria-controls="menu-item-child-5402" data-bgd-image-id="1671-5402-1" data-depth="1" data-attribute="trending-news-stories" class="nav-primary__action nav-primary__action--depth-1 nav-primary__action--has-children"><span class="nav-primary__action-text">Trending News Stories<span class="icon icon-chevron-right" aria-hidden="true"></span></span></button>
+                <div class="nav-primary__child nav-primary__child--depth-2" data-js="child-menu" data-depth="2" id="menu-item-child-5402" aria-labelledby="menu-item-5402" aria-hidden="true">
+                 <div class="nav-primary__subsec nav-primary__subsec--top nav-primary__subsec--has-content nav-primary__subsec--depth-2">
+                  <div class="nav-primary__back nav-primary__back--depth-2">
+                   <button id="menu-item-back-5402" class="nav-primary__back-action nav-primary__back-action--depth-2" title="Return to main menu" data-js="trigger-menu-return" aria-label="Return to main menu" aria-controls="menu-item-child-5402" aria-expanded="true"> <span class="nav-primary__back-action-icon icon icon-chevron-left" aria-hidden="true"></span> News </button>
+                  </div>
+                  <div class="nav-primary__subsec-header">
+                   <a href="http://news.harvard.edu" class="nav-primary__subsec-cta" rel="bookmark" data-attribute="read-more-news"> <span class="icon icon-arrow-right" aria-hidden="true"></span>Read more news </a>
+                  </div>
+                 </div>
+                 <ol class="nav-primary__child-list nav-primary__child-list--depth-2 nav-primary__child-list--layout-gazette">
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-gazette"><a class="nav-primary__action nav-primary__action--depth-2" href="https://news.harvard.edu/gazette/story/2024/04/when-math-is-the-dream-harvard-commencement-2024/" data-depth="2" data-attribute="gazette-when-math-is-the-dream-harvard-commencement-2024"> <span class="nav-primary__item-content"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> When math is the dream </span> </strong> <span class="nav-primary__item-description"> Dora Woodruff was drawn to beauty of numbers as child. Next up: Ph.D. at MIT. </span> </span> <span class="nav-primary__item-image-wrap">
+                     <figure class="nav-primary__item-image c-image" style="padding-top: 64.230769230769%;">
+                      <div class="c-image__image" role="img" aria-label="Dora Woodruff." style="background-image:url('https://news.harvard.edu/wp-content/uploads/2024/04/040424_Dora_Woodruff_05-300x200.jpg');"></div>
+                     </figure></span> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-gazette"><a class="nav-primary__action nav-primary__action--depth-2" href="https://news.harvard.edu/gazette/story/2023/06/how-to-prevent-lyme-disease-this-summer/" data-depth="2" data-attribute="gazette-how-to-prevent-lyme-disease-this-summer"> <span class="nav-primary__item-content"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> Seem like Lyme disease risk is getting worse? It is. </span> </strong> <span class="nav-primary__item-description"> The risk of Lyme disease has increased due to climate change and warmer temperature. A rheumatologist offers advice on how to best avoid ticks while going outdoors. </span> </span> <span class="nav-primary__item-image-wrap">
+                     <figure class="nav-primary__item-image c-image" style="padding-top: 64.230769230769%;">
+                      <div class="c-image__image" role="img" aria-label="Tick warning sign in woods." style="background-image:url('https://news.harvard.edu/wp-content/uploads/2023/06/Tick-warning-300x200.jpg');"></div>
+                     </figure></span> </a></li>
+                  <li class="nav-primary__item nav-primary__item--depth-2 nav-primary__item--layout-gazette"><a class="nav-primary__action nav-primary__action--depth-2" href="https://news.harvard.edu/gazette/story/2024/04/forgiveness-is-good-for-us-why-is-it-so-difficult/" data-depth="2" data-attribute="gazette-forgiveness-is-good-for-us-why-is-it-so-difficult"> <span class="nav-primary__item-content"> <strong class="nav-primary__item-title"> <span class="nav-primary__item-title-text"> ‘Harvard Thinking’: Forgiving what you can’t forget </span> </strong> <span class="nav-primary__item-description"> Wronged and can’t move on? In podcast, a theologian, a psychologist, and a public health expert discuss why and how to heal. </span> </span> <span class="nav-primary__item-image-wrap">
+                     <figure class="nav-primary__item-image c-image" style="padding-top: 64.230769230769%;">
+                      <div class="c-image__image" role="img" aria-label="Illustration of broken heart mended by forgiveness." style="background-image:url('https://news.harvard.edu/wp-content/uploads/2024/04/forgiveness-harvard-thinking-podcast-300x200.jpg');"></div>
+                     </figure></span> </a></li>
+                 </ol>
+                </div></li>
+               <li class="nav-primary__item nav-primary__item--depth-1"><a href="https://www.pages01.net/harvard/gazette?email=" data-depth="1" data-attribute="sign-up-for-the-daily-gazette" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__action-text">Sign up for the Daily Gazette<span class="icon icon-arrow-right" aria-hidden="true"></span></span></a></li>
+              </ol>
+             </div></li>
+           </ol>
+          </div>
+          <div class="nav-primary__col-1" data-js="site-nav-col-two"></div>
+          <div class="nav-primary__col-2" data-js="site-nav-col-three"></div>
+         </div>
+        </nav>
+        <nav class="nav-quick-links-nav" aria-labelledby="quick_links_nav-label">
+         <div class="nav-quick-links-nav__wrapper">
+          <strong class="nav-quick-links-nav__label" id="quick_links_nav-label"> <span class="u-visually-hidden">Navigation</span> Quick Links<span class="icon icon-chevron-right" aria-hidden="true"></span></strong>
+          <ol class="nav-quick-links-nav__list">
+           <li class="nav-quick-links-nav__item"><a href="https://www.harvard.edu/a-to-z/" class="nav-quick-links-nav__action" data-attribute="find-a-department">A to Z index</a></li>
+           <li class="nav-quick-links-nav__item"><a href="https://www.directory.harvard.edu/" class="nav-quick-links-nav__action" data-attribute="find-a-person-2">Find a Person</a></li>
+           <li class="nav-quick-links-nav__item"><a href="https://news.harvard.edu/gazette/harvard-events/" class="nav-quick-links-nav__action" data-attribute="events">Events</a></li>
+           <li class="nav-quick-links-nav__item"><a href="/media-relations" class="nav-quick-links-nav__action" data-attribute="media-relations">Media Relations</a></li>
+           <li class="nav-quick-links-nav__item"><a href="https://alumni.harvard.edu/" class="nav-quick-links-nav__action" data-attribute="alumni-association">Alumni</a></li>
+           <li class="nav-quick-links-nav__item"><a href="https://alumni.harvard.edu/giving/givenow" class="nav-quick-links-nav__action" data-attribute="give-now">Give Now</a></li>
+           <li class="nav-quick-links-nav__item"><a href="https://www.harvard.edu/emergency/" class="nav-quick-links-nav__action" data-attribute="43122">Emergency</a></li>
+          </ol>
+         </div>
+        </nav>
+       </div>
+      </div>
+      <div class="site-nav__brand">
+       <div class="site-nav__brand-inner">
+        <div class="logo" data-js="logo">
+         <a href="https://www.harvard.edu/" class="logo__wrap svgicon" rel="home"><span class="u-visually-hidden">Harvard University</span></a>
+        </div><button id="site-trigger-nav-close" class="site-trigger site-trigger--nav site-trigger--nav-close" data-js="site-trigger-nav-close" aria-label="Close Site Navigation" aria-expanded="false" aria-controls="site-nav"> <span class="site-trigger__text"> Close </span> <span class="site-trigger__icon icon icon-close" aria-hidden="true" title="Close Site Navigation"></span> </button>
+       </div>
+      </div>
+      <div class="site-nav__bgd-images">
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="6683-6682-1">
+        <div class="c-image__image lazyload" role="img" aria-label="Students in graduation gowns at Commencement" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/053019_COM_SM_3758-1152x767.jpeg 1152w 767h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="6683-1644-1">
+        <div class="c-image__image lazyload" role="img" aria-label="demo-img-2" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2020/10/demo-img-2.jpg 1000w 610h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="0-6734-0">
+        <div class="c-image__image lazyload" role="img" aria-label="Paths in the Harvard Yard covered in snow." data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/020117_features_RL_1799-e1557159851767-1-1600x900-1-1152x648.jpg 1152w 648h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="6734-5202-1">
+        <div class="c-image__image lazyload" role="img" aria-label="Widener Library" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/102220_Rittase_Widener_Library-1-1152x851.jpg 1152w 851h, 
+https://www.harvard.edu/wp-content/uploads/2021/01/102220_Rittase_Widener_Library-1-2000x1478.jpg 2000w 1478h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="6734-5201-1">
+        <div class="c-image__image lazyload" role="img" aria-label="A picture of an art gallery with paintings on the wall" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2020/12/image0011-1600x900-1-1152x648.jpg 1152w 648h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="0-1664-0">
+        <div class="c-image__image lazyload" role="img" aria-label="Dogwood branches" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2020/11/041919_flowers_046-1152x768.jpeg 1152w 768h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="0-5404-0">
+        <div class="c-image__image lazyload" role="img" aria-label="Students walking past the John Harvard statue" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/052616_COM_SM_0243-1152x769.jpeg 1152w 769h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="0-9083-0">
+        <div class="c-image__image lazyload" role="img" aria-label="The John Harvard statue" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/092513_JHS_112.jpg 900w 600h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="0-1671-0">
+        <div class="c-image__image lazyload" role="img" aria-label="A professor at a news conference with cameras pointing at him" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/02/100719_Nobel_Medicine_1594-1152x768.jpg 1152w 768h, 
+https://www.harvard.edu/wp-content/uploads/2021/02/100719_Nobel_Medicine_1594-2000x1333.jpg 2000w 1333h" style="background-image:url('');"></div>
+       </div>
+       <div class="site-nav__bgd-image c-image" data-js="site-nav-bgd-image" data-id="1671-5402-1">
+        <div class="c-image__image lazyload" role="img" aria-label="Rowers on the Charles River" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/102012_hocr_se_006_248709_159115.jpg 900w 600h" style="background-image:url('');"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </header>
+   <main id="main-content">
+    <header>
+     <h1 class="screen-reader-text">Climate Solutions</h1>
+    </header>
+    <div class="the-follower" data-js="follower"></div>
+    <div class="s-sink t-sink l-sink">
+     <section class=" c-block b-hero t-theme--light no-caption no-featured-story an-no-animate">
+      <div class="b-hero__container l-container">
+       <div class="b-hero__media b-hero__media-overlay--soft">
+        <div class="b-hero__figure c-image--bg c-image">
+         <div class="b-hero__img c-image__image lazyload" role="img" aria-label="Large windmills in the ocean" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/04/denmark-4618054_1280-1152x768.jpg 1152w 768h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/core-full.png');"></div>
+        </div>
+       </div>
+       <div class="b-hero__content">
+        <header class="c-block__content-block c-block__header b-hero__content-container c-content-block c-content-block--layout-center">
+         <p class="c-block__leadin b-hero__leadin c-content-block__leadin"><a class="b-hero__leadin-in-focus" href="https://www.harvard.edu/in-focus/"><span class="a-btn__text">In Focus</span></a></p>
+         <div class="c-dropdown " data-js="dropdown-container">
+          <button class="c-dropdown__picker" data-js="dropdown-toggle-button" aria-expanded="false" aria-controls="rp0aum">Climate Solutions<span class="icon icon-chevron-down"></span></button>
+          <ul id="rp0aum" class="c-dropdown__options" data-count="4" aria-hidden="true" data-js="dropdown-list">
+           <li><a href="https://www.harvard.edu/in-focus/climate-solutions/"><span>Climate Solutions</span></a></li>
+           <li><a href="https://www.harvard.edu/in-focus/welcome-to-harvard/"><span>Welcome to Harvard</span></a></li>
+           <li><a href="https://www.harvard.edu/in-focus/space/"><span>Space</span></a></li>
+          </ul>
+         </div>
+         <h2 class="c-block__title b-hero__title b-hero__title--large c-content-block__title">Climate Solutions</h2>
+         <p class="c-block__underline b-hero__underline c-content-block__underline">Faculty and students from across the Harvard community are working on ways to address climate change and its effects.</p>
+         <div class="c-content-block__content-wrap">
+          <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-primary a-btn--arrow-right  c-content-block__cta-link" href="https://news.harvard.edu/gazette/story/2024/03/climate-alignment-is-no-easy-task/" aria-label="Explore climate change with the &quot;Harvard Thinking&quot; podcast"> <span class="a-btn__text"> Explore climate change with the “Harvard Thinking” podcast </span> </a></p>
+         </div>
+        </header>
+       </div>
+       <div class="b-hero__bottom-line"></div>
+      </div>
+     </section>
+     <section class=" c-block b-header">
+      <div class="l-container b-header__container">
+       <header class="c-block__content-block c-block__header b-header__header c-content-block c-content-block--layout-left">
+        <h2 class="c-block__title b-header__title h3 c-content-block__title">A diversity of disciplines</h2>
+        <div class="c-content-block__content-wrap">
+         <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://news.harvard.edu/gazette/story/2023/05/what-drives-four-future-climate-leaders/" aria-label="Meet Harvard College alums with big climate visions"> <span class="a-btn__text"> Meet Harvard College alums with big climate visions </span> </a></p>
+        </div>
+       </header>
+       <hr class="b-header__border">
+      </div>
+     </section>
+     <section class="c-block--remove-top-padding c-block b-quote b-quote__layout-left b-quote__icon-crimson">
+      <div class="b-quote__container l-container">
+       <div class="b-quote__content">
+        <blockquote class="c-quote">
+         <div class="c-block__quote-content">
+          <div class="c-quote__text h3">
+           <span>Litigation is one tool that we use … to bring about climate justice and to have a healthier future.”</span>
+          </div>
+          <div class="c-quote__cite-text">
+           <div class="c-quote__cite-name">
+            <p><a href="https://www.hks.harvard.edu/faculty/kathryn-sikkink" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="53b02088-0771-486e-9ab7-ea0159796adc">Kathryn Sikkink</a>, professor of human rights policy at Harvard Kennedy School</p>
+           </div>
+           <div class="c-quote__quote-cta">
+            <a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right " href="https://www.hks.harvard.edu/faculty-research/policy-topics/environment-energy/powering-energy-transition" aria-label="Learn more about the clean energy transition"> <span class="a-btn__text"> Learn more about the clean energy transition </span> </a>
+           </div>
+          </div>
+         </div><cite class="c-quote__cite"> <span class="c-quote__cite-figure c-image"> <img decoding="async" class="c-quote__cite-image c-image__image lazyload" alt="Kathryn Sikkink in a chair" data-expand="200" data-parent-fit="width" data-src="https://www.harvard.edu/wp-content/uploads/2024/03/11.14.23-President-Santos-007-1-624x624.jpg" src="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/square-medium.png"> </span> </cite>
+        </blockquote>
+       </div>
+      </div>
+     </section>
+     <section class="c-block--remove-padding c-block b-card-grid spotlight query_type_manual">
+      <div class="b-card-grid__container l-container">
+       <div class="b-card-grid__loop g-3-up">
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="Aliyah Collins" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/042623_Collins_Aliyah_064-900x600.png 900w 600h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae274783-title"><span>Aliyah Collins</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>Divinity School alum Aliyah Collins launched the Eco-Healing Project to help historically Black colleges and universities (HBCUs) plant on-campus gardens.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Learn more about Aliyah’s passion </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae274783-link" aria-labelledby="p-6632bae274783-title" aria-describedby="p-6632bae274783-link" data-js="target-link" href="https://news.harvard.edu/gazette/story/2023/05/grad-student-found-a-passion-for-environmental-justice-at-divinity-school/"> Learn more about Aliyah’s passion </a>
+         </div>
+        </div>
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="Fernando Reimers" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/1500x1000-fernando-reimers-2021-900x506.png 900w 506h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae2747f9-title"><span>Fernando Reimers</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>Professor Fernando Reimers explores the intersection of education and climate change as director of Harvard’s Global Education Innovation Initiative.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Learn more about Fernando’s work </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae2747f9-link" aria-labelledby="p-6632bae2747f9-title" aria-describedby="p-6632bae2747f9-link" data-js="target-link" href="https://www.gse.harvard.edu/ideas/news/24/03/global-view-education-and-climate-change"> Learn more about Fernando’s work </a>
+         </div>
+        </div>
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="Sam Lim" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/HoW-Samuel-Lim-0405-900x600.jpg 900w 600h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae27480e-title"><span>Sam Lim</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>The Wyss Institute’s Sam Lim is researching how some organisms survive in extreme conditions, like drought, and if that ability can be transferred to crops.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Learn more about Sam’s research </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae27480e-link" aria-labelledby="p-6632bae27480e-title" aria-describedby="p-6632bae27480e-link" data-js="target-link" href="https://wyss.harvard.edu/news/humans-of-the-wyss-sam-lim-on-protecting-plants-with-proteins/"> Learn more about Sam’s research </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <div class="c-block b-spacer mobile-only reduce-spacing"></div>
+     <section class=" c-block b-media-text c-block--layout-right c-block--width-grid content-vertical">
+      <div class="b-media-text__container l-container">
+       <div class="b-media-text__media">
+        <div class="b-media-text__img-wrap">
+         <figure class="c-image">
+          <img decoding="async" class="c-image__image lazyload" alt="A person reading during a sunset" data-expand="200" data-parent-fit="width" data-src="https://www.harvard.edu/wp-content/uploads/2024/03/reading-3606441_1280-768x576.jpg" srcset="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png" data-sizes="(min-width: 1260px) 1260px, 100vw" data-srcset="https://www.harvard.edu/wp-content/uploads/2024/03/reading-3606441_1280-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/reading-3606441_1280-768x576.jpg 768w 576h" src="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png">
+         </figure>
+        </div>
+       </div>
+       <div class="b-media-text__content">
+        <div class="c-block__content-block c-block__header b-media-text__content-container c-content-block c-content-block--layout-left">
+         <h2 class="c-block__title b-media-text__title h3 c-content-block__title">Green reading</h2>
+         <div class="c-content-block__content-wrap">
+          <div class="c-block__description b-media-text__text t-sink s-sink c-content-block__content">
+           <p>Explore book recommendations from Harvard Lecturer on Government Sparsha Saha’s&nbsp;<a href="https://salatainstitute.harvard.edu/dr-sparsha-sahas-reading-list-for-understanding-food-systems-and-sustainability/">Climate Change Literature course</a>, expand your view of the problem with Harvard Professor Sarah Dimick’s recommendations for engaging with <a href="https://salatainstitute.harvard.edu/professor-dimicks-reading-list-for-climate-anxiety/">climate anxiety</a>, or be transported with <a href="https://salatainstitute.harvard.edu/climate-reading-with-a-literary-touch-notes-by-harvard-professor-james-engell/">climate fiction</a> recommended by English Professor James Engell.</p>
+          </div>
+          <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://www.hsph.harvard.edu/c-change/climateoptimist/" aria-label="For shorter reads, sign up for Harvard's Climate Optimist Newsletter"> <span class="a-btn__text"> For shorter reads, sign up for Harvard’s Climate Optimist Newsletter </span> </a></p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-news">
+      <div class="b-news__container l-container">
+       <header class="c-block__content-block c-block__header b-news__header c-content-block c-content-block--layout-left">
+        <h2 class="c-block__title b-news__title h3 c-content-block__title">Improving today</h2>
+        <div class="c-content-block__content-wrap">
+         <div class="c-block__description b-news__description t-sink s-sink c-content-block__content">
+          <p>The Harvard community, from the <a href="https://innovationlabs.harvard.edu/climate/overview">Innovation Labs</a> to the <a href="https://salatainstitute.harvard.edu/salata-institute-funds-eight-new-climate-research-projects/">Salata Institute</a>, is working on climate solutions that can address the issues of today and tomorrow.</p>
+         </div>
+         <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://news.harvard.edu/gazette/story/2024/04/forget-doomers-warming-can-be-stopped-top-climate-scientist-says/" aria-label="Read why it's so important to focus on climate science over doomerism"> <span class="a-btn__text"> Read why it’s so important to focus on climate science over doomerism </span> </a></p>
+        </div>
+       </header>
+       <div class="b-news__wrap">
+        <div class="b-news__left">
+         <div class="b-news__first">
+          <figure class="b-news__first-img main-image c-image">
+           <img decoding="async" class="c-image__image" alt="A rendering of a satellite" src="https://www.harvard.edu/wp-content/uploads/2024/03/MethaneSAT-Model-Credit-MethaneSAT-736x489.png" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/MethaneSAT-Model-Credit-MethaneSAT-736x489.png 736w 489h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/MethaneSAT-Model-Credit-MethaneSAT-736x489.png 736w 489h">
+          </figure>
+          <h3 id="p-6632bae27b284-title" class="h3 b-news__first-title"><span>Tracking methane</span></h3>
+          <p class="p b-news__first-excerpt">MethaneSAT recently took to space to detect and report on methane, a greenhouse gas that accounts for about a third of the current warming of the atmosphere. Methane has a shorter lifetime in the atmosphere than CO2, so a reduction in emissions would have a quicker impact on the environment.</p><a class="b-news__first-cta is-target-link" id="p-6632bae27b284-link" aria-labelledby="p-6632bae27b284-title" aria-describedby="p-6632bae27b284-link" data-js="target-link" href="https://seas.harvard.edu/news/2024/03/cutting-edge-methane-monitor"> Read More </a>
+         </div>
+        </div>
+        <div class="b-news__right">
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27be76-title" class="b-news__side-title"><span>Windows that cool themselves</span></h3>
+           <p class="p b-news__side-excerpt">A “skin” can regulate indoor temperatures using liquid channels.</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="Six windows on a brick building" src="https://www.harvard.edu/wp-content/uploads/2024/03/jakob-braun-ASmyf7fyvqU-unsplash-375x281.jpg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/jakob-braun-ASmyf7fyvqU-unsplash-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/jakob-braun-ASmyf7fyvqU-unsplash-375x281.jpg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27be76-link" aria-labelledby="p-6632bae27be76-title" aria-describedby="p-6632bae27be76-link" data-js="target-link" href="https://salatainstitute.harvard.edu/salata-institute-to-fund-five-new-climate-and-sustainability-projects-across-harvard/"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27c93d-title" class="b-news__side-title"><span>Greener hospitals</span></h3>
+           <p class="p b-news__side-excerpt">Can we make health care environmentally friendly without compromising care?</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="Ambulance at a hospital." src="https://www.harvard.edu/wp-content/uploads/2024/03/emergency-room-3323451_1280-375x281.jpg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/emergency-room-3323451_1280-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/emergency-room-3323451_1280-375x281.jpg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27c93d-link" aria-labelledby="p-6632bae27c93d-title" aria-describedby="p-6632bae27c93d-link" data-js="target-link" href="https://magazine.hms.harvard.edu/articles/confronting-health-cares-carbon-footprint"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27d254-title" class="b-news__side-title"><span>Informed populations</span></h3>
+           <p class="p b-news__side-excerpt">Miami is providing actionable steps for high-risk, high-temp neighborhoods.</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="A street with palm trees and a hot looking sun" src="https://www.harvard.edu/wp-content/uploads/2024/03/8_HKSmag_sp24_Gilbert_2560x1440-375x281.jpeg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/8_HKSmag_sp24_Gilbert_2560x1440-375x281.jpeg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/8_HKSmag_sp24_Gilbert_2560x1440-375x281.jpeg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27d254-link" aria-labelledby="p-6632bae27d254-title" aria-describedby="p-6632bae27d254-link" data-js="target-link" href="https://www.hks.harvard.edu/faculty-research/policy-topics/environment-energy/jane-gilbert-mpa-1994-heat-cool-down-miami-dade"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27de7a-title" class="b-news__side-title"><span>Resilient infrastructure</span></h3>
+           <p class="p b-news__side-excerpt">New construction needs to plan for flooding, wildfires, and extreme heat.</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="A building with a reflection of the sun" src="https://www.harvard.edu/wp-content/uploads/2024/03/skyscraper-3122210_1280-375x281.jpg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/skyscraper-3122210_1280-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/skyscraper-3122210_1280-375x281.jpg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27de7a-link" aria-labelledby="p-6632bae27de7a-title" aria-describedby="p-6632bae27de7a-link" data-js="target-link" href="https://www.hbs.edu/environment/podcast/Pages/podcast-details.aspx?episode=4029408610"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27e936-title" class="b-news__side-title"><span>Plastic-eating bacteria</span></h3>
+           <p class="p b-news__side-excerpt">Microbes that eat plastic could help reduce global waste.</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="A bunch of plastic on the ocean." src="https://www.harvard.edu/wp-content/uploads/2024/03/MicrosoftTeams-image-2-375x281.jpg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/MicrosoftTeams-image-2-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/MicrosoftTeams-image-2-375x281.jpg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27e936-link" aria-labelledby="p-6632bae27e936-title" aria-describedby="p-6632bae27e936-link" data-js="target-link" href="https://wyss.harvard.edu/technology/plastivores-plastic-degrading-super-microbes-and-enzymes/"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <h3 id="p-6632bae27f22e-title" class="b-news__side-title"><span>Eco-friendly air conditioning</span></h3>
+           <p class="p b-news__side-excerpt">A specially coated ceramic can cool air without adding humidity.</p>
+          </div>
+          <figure class="b-news__side-img side-img c-image">
+           <img decoding="async" class="c-image__image" alt="An air conditioning unit installed in a window" src="https://www.harvard.edu/wp-content/uploads/2023/12/20220803-Eco-Friendly-Air-Conditioning_Install-282A7533-2-2-768x512-1-375x281.jpeg" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2023/12/20220803-Eco-Friendly-Air-Conditioning_Install-282A7533-2-2-768x512-1-375x281.jpeg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2023/12/20220803-Eco-Friendly-Air-Conditioning_Install-282A7533-2-2-768x512-1-375x281.jpeg 375w 281h">
+          </figure><a class="b-news__side-cta is-target-link" id="p-6632bae27f22e-link" aria-labelledby="p-6632bae27f22e-title" aria-describedby="p-6632bae27f22e-link" data-js="target-link" href="https://wyss.harvard.edu/technology/eco-friendly-air-conditioning/"> Read More </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-list-with-image t-theme--light">
+      <div class="b-list-with-image__container l-container">
+       <header class="c-block__content-block c-block__header b-list-with-image__header c-content-block c-content-block--layout-left">
+        <h2 class="c-block__title b-list-with-image__title h3 c-content-block__title">Want to explore more climate solutions?</h2>
+        <div class="c-content-block__content-wrap">
+         <div class="c-block__description b-list-with-image__description t-sink s-sink c-content-block__content">
+          <p>Join climate experts, leaders, and stakeholders as they explore approaches to the most complex and challenging dimensions of the climate crisis.</p>
+         </div>
+         <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://salatainstitute.harvard.edu/hcaw/" aria-label="Learn more about Harvard Climate Action Week"> <span class="a-btn__text"> Learn more about Harvard Climate Action Week </span> </a></p>
+        </div>
+       </header>
+       <div class="b-list-with-image__loop">
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-media-text c-block--layout-right c-block--width-grid content-vertical">
+      <div class="b-media-text__container l-container">
+       <div class="b-media-text__media">
+        <div class="b-media-text__img-wrap">
+         <figure class="c-image">
+          <img decoding="async" class="c-image__image lazyload" alt="A beach area with buildings close to the water." data-expand="200" data-parent-fit="width" data-src="https://www.harvard.edu/wp-content/uploads/2024/03/Fort-Kongenstein-768x576.jpg" srcset="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png" data-sizes="(min-width: 1260px) 1260px, 100vw" data-srcset="https://www.harvard.edu/wp-content/uploads/2024/03/Fort-Kongenstein-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/Fort-Kongenstein-768x576.jpg 768w 576h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/Fort-Kongenstein-1536x1074.jpg 1536w 1074h" src="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png">
+         </figure>
+        </div>
+       </div>
+       <div class="b-media-text__content">
+        <div class="c-block__content-block c-block__header b-media-text__content-container c-content-block c-content-block--layout-left">
+         <h2 class="c-block__title b-media-text__title h3 c-content-block__title">Helping the world adapt</h2>
+         <div class="c-content-block__content-wrap">
+          <div class="c-block__description b-media-text__text t-sink s-sink c-content-block__content">
+           <p>The Harvard community can be found across the globe working on climate solutions like <a href="https://gsas.harvard.edu/news/beef-climate-change">lowering emissions from Brazil’s cattle industry</a>, creating a more <a href="https://mittalsouthasiainstitute.harvard.edu/climate/">a sustainable future in South Asia</a>, adapting to <a href="https://www.gsd.harvard.edu/2024/02/from-drought-to-flood-solutions-for-extreme-climate-events-in-monterrey-mexico/">extreme climate events in Mexico</a>, addressing <a href="https://www.gsd.harvard.edu/2024/02/a-new-future-for-a-colonial-fort-in-ghana/">coastal erosion’s threat to structures in Ghana</a> and exploring the intersection of <a href="https://mittalsouthasiainstitute.harvard.edu/2024/02/medical-anthropologist-sabina-faiz-rashid-on-climate-and-health/">climate change and health in Bangladesh</a>.</p>
+          </div>
+          <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://climatecreatorstowatch.com/" aria-label="Explore content creators around the globe advocating for climate solutions"> <span class="a-btn__text"> Explore content creators around the globe advocating for climate solutions </span> </a></p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-news">
+      <div class="b-news__container l-container">
+       <header class="c-block__content-block c-block__header b-news__header c-content-block c-content-block--layout-left">
+        <h2 class="c-block__title b-news__title h3 c-content-block__title">Empowering tomorrow</h2>
+        <div class="c-content-block__content-wrap">
+         <div class="c-block__description b-news__description t-sink s-sink c-content-block__content">
+          <p>The Harvard community is helping prepare the leaders of tomorrow for the challenges ahead.</p>
+         </div>
+         <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://www.youtube.com/playlist?list=PLBkl3iwzl9l5lS9Ap62z8oEYLGiytpuj6" aria-label="Get inspired by careers in climate action"> <span class="a-btn__text"> Get inspired by careers in climate action </span> </a></p>
+        </div>
+       </header>
+       <div class="b-news__wrap">
+        <div class="b-news__left">
+         <div class="b-news__first">
+          <figure class="b-news__first-img main-image c-image">
+           <img decoding="async" class="c-image__image" alt="Children holding a globe" src="https://www.harvard.edu/wp-content/uploads/2024/03/tge_istock-1435661952-736x491.png" sizes="(min-width: 1260px) 1260px, 100vw" srcset="https://www.harvard.edu/wp-content/uploads/2024/03/tge_istock-1435661952-736x491.png 736w 491h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/tge_istock-1435661952-736x491.png 736w 491h">
+          </figure>
+          <h3 id="p-6632bae283f20-title" class="h3 b-news__first-title"><span>Climate change in education</span></h3>
+          <p class="p b-news__first-excerpt">Climate change affects learners everywhere—from wildfire smoke negatively impacting healthy development, to heat harming students’ ability to learn, to flooding forcing schools to close. Educational systems must increasingly grapple with how to best support learners, schools, and communities in a changing climate.</p><a class="b-news__first-cta is-target-link" id="p-6632bae283f20-link" aria-labelledby="p-6632bae283f20-title" aria-describedby="p-6632bae283f20-link" data-js="target-link" href="https://www.gse.harvard.edu/climate-change-education"> Read More </a>
+         </div>
+        </div>
+        <div class="b-news__right">
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <ul class="b-news__side-category">
+            <li><span class="b-news__category__item"> Teach</span></li>
+           </ul>
+           <h3 id="p-6632bae284752-title" class="b-news__side-title"><span>What role can educators play in improving the lives of children living amid the impacts of a warming planet?</span></h3>
+          </div><a class="b-news__side-cta is-target-link" id="p-6632bae284752-link" aria-labelledby="p-6632bae284752-title" aria-describedby="p-6632bae284752-link" data-js="target-link" href="https://www.gse.harvard.edu/ideas/askwith-education-forum/24/02/childhood-health-amid-changing-climate-focus-askwith-education"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <ul class="b-news__side-category">
+            <li><span class="b-news__category__item"> Adapt</span></li>
+           </ul>
+           <h3 id="p-6632bae2847fb-title" class="b-news__side-title"><span>Harvard faculty are developing curricula for the intersection of environmentalism, equity, and civil rights.</span></h3>
+          </div><a class="b-news__side-cta is-target-link" id="p-6632bae2847fb-link" aria-labelledby="p-6632bae2847fb-title" aria-describedby="p-6632bae2847fb-link" data-js="target-link" href="https://news.harvard.edu/gazette/story/newsplus/fas-faculty-dream-up-plan-for-environmental-justice-curriculum/"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <ul class="b-news__side-category">
+            <li><span class="b-news__category__item"> Advocate</span></li>
+           </ul>
+           <h3 id="p-6632bae2849dc-title" class="b-news__side-title"><span>Some physicians are providing key evidence to support a youth-led legal movement for climate justice.</span></h3>
+          </div><a class="b-news__side-cta is-target-link" id="p-6632bae2849dc-link" aria-labelledby="p-6632bae2849dc-title" aria-describedby="p-6632bae2849dc-link" data-js="target-link" href="https://magazine.hms.harvard.edu/articles/youth-demand-climate-action-court-doctors-bear-witness"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <ul class="b-news__side-category">
+            <li><span class="b-news__category__item"> Unite</span></li>
+           </ul>
+           <h3 id="p-6632bae284a54-title" class="b-news__side-title"><span>A global array of high school students joined Harvard's Youth Summit on Climate, Equity, and Health.</span></h3>
+          </div><a class="b-news__side-cta is-target-link" id="p-6632bae284a54-link" aria-labelledby="p-6632bae284a54-title" aria-describedby="p-6632bae284a54-link" data-js="target-link" href="https://www.hsph.harvard.edu/c-change/news/harvard-chan-c-change-youth-summits/"> Read More </a>
+         </div>
+         <div class="b-news__side-wrap">
+          <div class="b-news__side-content">
+           <ul class="b-news__side-category">
+            <li><span class="b-news__category__item"> Lead</span></li>
+           </ul>
+           <h3 id="p-6632bae284ad4-title" class="b-news__side-title"><span>A Harvard gathering shows the increasing interest in careers in climate and sustainability.</span></h3>
+          </div><a class="b-news__side-cta is-target-link" id="p-6632bae284ad4-link" aria-labelledby="p-6632bae284ad4-title" aria-describedby="p-6632bae284ad4-link" data-js="target-link" href="https://news.harvard.edu/gazette/story/newsplus/hundreds-gather-at-inaugural-harvard-wide-climate-career-expo/"> Read More </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-media-text c-block--layout-right c-block--width-grid content-vertical">
+      <div class="b-media-text__container l-container">
+       <div class="b-media-text__media">
+        <div class="b-media-text__img-wrap">
+         <figure class="c-image">
+          <img decoding="async" class="c-image__image lazyload" alt="Dried herbs" data-expand="200" data-parent-fit="width" data-src="https://www.harvard.edu/wp-content/uploads/2024/03/041923_Herbarium_126-768x576.jpg" srcset="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png" data-sizes="(min-width: 1260px) 1260px, 100vw" data-srcset="https://www.harvard.edu/wp-content/uploads/2024/03/041923_Herbarium_126-375x281.jpg 375w 281h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/041923_Herbarium_126-768x576.jpg 768w 576h, 
+https://www.harvard.edu/wp-content/uploads/2024/03/041923_Herbarium_126-1536x1152.jpg 1536w 1152h" src="https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/four-three.png">
+         </figure>
+        </div>
+       </div>
+       <div class="b-media-text__content">
+        <div class="c-block__content-block c-block__header b-media-text__content-container c-content-block c-content-block--layout-left">
+         <h2 class="c-block__title b-media-text__title h3 c-content-block__title">Looking to the plants</h2>
+         <div class="c-content-block__content-wrap">
+          <div class="c-block__description b-media-text__text t-sink s-sink c-content-block__content">
+           <p>Harvard researchers are exploring the history and future of the plant kingdom, including ways to <a href="https://news.harvard.edu/gazette/story/2023/11/from-a-plant-free-place-clues-about-how-to-help-plants-survive-as-planet-warms/">help plants survive</a> on a warming planet, how warming may affect <a href="https://news.harvard.edu/gazette/story/2023/05/how-climate-change-may-threaten-soils-ability-to-capture-carbon/">the carbon that plants capture</a>, how Thoreau’s writing can help us understand the <a href="https://hmnh.harvard.edu/search-thoreau-flowers">profound loss of natural diversity</a> that climate change is causing, and how <a href="https://news.harvard.edu/gazette/story/2024/02/herbarias-use-and-importance-grows-with-climate-change/">digitizing plant collections</a> can foster new discoveries.</p>
+          </div>
+          <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://arboretum.harvard.edu/stories/how-plants-adapt-to-climate-change/" aria-label="Learn more about how plants adapt to climate change"> <span class="a-btn__text"> Learn more about how plants adapt to climate change </span> </a></p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-card-grid spotlight query_type_manual">
+      <div class="b-card-grid__container l-container">
+       <header class="c-block__content-block c-block__header b-card-grid__header c-content-block c-content-block--layout-left">
+        <h2 class="c-block__title b-card-grid__title h3 c-content-block__title">On our campus</h2>
+        <div class="c-content-block__content-wrap">
+         <div class="c-block__description b-card-grid__description t-sink s-sink c-content-block__content">
+          <p>Harvard is continuously finding ways to increase sustainability and decrease greenhouse gases on our campus and around the world.</p>
+         </div>
+         <p class="c-content-block__cta"><a class="c-block__cta-link a-btn a-btn-secondary a-btn--arrow-right  c-content-block__cta-link" href="https://sustainable.harvard.edu/" aria-label="Explore all the sustainable work happening on Harvard's campus"> <span class="a-btn__text"> Explore all the sustainable work happening on Harvard’s campus </span> </a></p>
+        </div>
+       </header>
+       <div class="b-card-grid__loop g-2-up">
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="A worker standing in front of solar panels on top of a Harvard Building" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/04/AHi_j0047_11-900x600.jpg 900w 600h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae2877c1-title"><span>Creating an environmentally friendly campus</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>New US emission transparency requirements help inform Harvard’s sustainable investments.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Read more about Harvard’s Climate Report </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae2877c1-link" aria-labelledby="p-6632bae2877c1-title" aria-describedby="p-6632bae2877c1-link" data-js="target-link" href="https://news.harvard.edu/gazette/story/2024/03/progress-and-challenges-on-the-road-to-net-zero/"> Read more about Harvard’s Climate Report </a>
+         </div>
+        </div>
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="Two walls in the Climate Change exhibit at the Harvard Natural History museum" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/04/climate.intro_.jpg 820w 461h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae2877f4-title"><span>Walking through the world of climate change</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>The Harvard Museum of Natural History’s “Climate Change: Our Global Experiment” exhibit helps visitors separate truth from spin and provide a basis for making informed decisions affecting the future of our planet.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Learn more about the climate exhibit </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae2877f4-link" aria-labelledby="p-6632bae2877f4-title" aria-describedby="p-6632bae2877f4-link" data-js="target-link" href="https://hmnh.harvard.edu/climate-change-our-global-experiment"> Learn more about the climate exhibit </a>
+         </div>
+        </div>
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="Students working at Harvard Kennedy School" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/03/031120_features_RL_1398-900x1350.jpg 900w 1350h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae287808-title"><span>Asking what we can do for the world</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>Harvard Kennedy School details the strides they’ve made to transition toward clean energy and create a campus that’s cleaner, greener, and more sustainable.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Explore the sustainability report </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae287808-link" aria-labelledby="p-6632bae287808-title" aria-describedby="p-6632bae287808-link" data-js="target-link" href="https://www.hks.harvard.edu/faculty-research/policy-topics/environment-energy/sustainability-numbers"> Explore the sustainability report </a>
+         </div>
+        </div>
+        <div class="c-card-link-wrapper">
+         <div class="c-card has-target-link">
+          <div class="c-card__media">
+           <figure class="c-image--spotlight c-card__image c-image">
+            <div class="c-image__image lazyload" role="img" aria-label="A person walking by the Harvard Extension School building" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2024/04/092509_Features_KS_016-900x1350.jpeg 900w 1350h" style="background-image:url('https://www.harvard.edu/wp-content/themes/core/assets/img/theme/shims/card-spotlight.png');"></div>
+           </figure>
+          </div>
+          <div class="c-card__content">
+           <h3 class="c-card__title" id="p-6632bae287819-title"><span>Working on a global problem with a global community</span></h3>
+           <div class="t-sink s-sink c-card__description">
+            <p>Harvard Extension School’s Michael Mortimer, the new director of the Sustainability and Global Development Practice Programs, is incorporating interdisciplinary collaboration and global perspectives into their sustainability programs.</p>
+           </div>
+          </div>
+          <div class="c-card__cta" aria-hidden="true">
+           <div class="c-block__cta-link a-btn a-btn-outline is-style-light a-btn--arrow-right ">
+            <span class="a-btn__text"> Learn more about sustainability at Harvard Extension School </span>
+           </div>
+          </div><a class="c-card__wrapper-link" id="p-6632bae287819-link" aria-labelledby="p-6632bae287819-title" aria-describedby="p-6632bae287819-link" data-js="target-link" href="https://news.harvard.edu/gazette/story/2024/03/sustainability-programs-focus-will-expand-at-harvard-extension/"> Learn more about sustainability at Harvard Extension School </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section class=" c-block b-link-list has-image">
+      <div class="b-link-list__figure c-image--bg c-image">
+       <div class="b-link-list__img c-image__image lazyload" role="img" aria-label="dark crimson" data-expand="200" data-sizes="(min-width: 1260px) 1260px, 100vw" data-bgset="https://www.harvard.edu/wp-content/uploads/2021/01/dark-crimson.png 596w 295h" style="background-image:url('');"></div>
+      </div>
+      <div class="l-container b-link-list__container">
+       <div class="b-link-list__left-col">
+        <header class="c-block__content-block c-block__header b-link-list__header c-content-block c-content-block--layout-left">
+         <p class="c-block__leadin b-media-text__leadin c-content-block__leadin">You may also like</p>
+         <h2 class="c-block__title b-link-list__title h3 c-content-block__title">Related In Focus topics</h2>
+         <div class="c-content-block__content-wrap">
+         </div>
+        </header>
+       </div>
+       <div class="b-link-list__right-col">
+        <ul class="b-link-list__list">
+         <li class="b-link-list__item"><a class="b-link-list__link" href="https://www.harvard.edu/in-focus/earth-science/"> <span class="a-btn__text"> Earth Science </span> </a></li>
+         <li class="b-link-list__item"><a class="b-link-list__link" href="https://www.harvard.edu/in-focus/climate-action/"> <span class="a-btn__text"> Climate Actions </span> </a></li>
+         <li class="b-link-list__item"><a class="b-link-list__link" href="https://www.harvard.edu/in-focus/climate-crisis/"> <span class="a-btn__text"> Rising to the Climate Challenge </span> </a></li>
+        </ul>
+       </div>
+      </div>
+     </section>
+    </div>
+   </main>
+   <footer class="site-footer">
+    <div class="l-container site-footer__container">
+     <div class="site-footer__row site-footer__row--navigation">
+      <div class="site-footer__menu-col">
+       <h2 class="site-footer__menu-heading">Security &amp; Brand</h2>
+       <nav class="site-footer__nav" aria-label="Security &amp; Brand Navigation">
+        <ol class="site-footer__nav-list">
+         <li class="footer-one__item"><a href="https://www.harvard.edu/copyright-issue/" class="footer-one__action" data-attribute="report-copyright-infringement-2">Report Copyright Infringement</a></li>
+         <li class="footer-one__item"><a href="https://www.harvard.edu/security-issue/" class="footer-one__action" data-attribute="report-security-issue-2">Report Security Issue</a></li>
+         <li class="footer-one__item"><a href="https://trademark.harvard.edu/pages/trademark-notice" class="footer-one__action" data-attribute="trademark-notice">Trademark Notice</a></li>
+        </ol>
+       </nav>
+      </div>
+      <div class="site-footer__menu-col">
+       <h2 class="site-footer__menu-heading">Website</h2>
+       <nav class="site-footer__nav" aria-label="Website Navigation">
+        <ol class="site-footer__nav-list">
+         <li class="footer-two__item"><a href="https://accessibility.harvard.edu/" class="footer-two__action" data-attribute="accessibility">Accessibility</a></li>
+         <li class="footer-two__item"><a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy" class="footer-two__action" data-attribute="digital-accessibility">Digital Accessibility</a></li>
+         <li class="footer-two__item"><a rel="privacy-policy" href="https://www.harvard.edu/privacy-statement/" class="footer-two__action" data-attribute="9826">Privacy statement</a></li>
+        </ol>
+       </nav>
+      </div>
+      <div class="site-footer__menu-col">
+       <h2 class="site-footer__menu-heading">Get In Touch</h2>
+       <nav class="site-footer__nav" aria-label="Get In Touch Navigation">
+        <ol class="site-footer__nav-list">
+         <li class="footer-three__item"><a href="/contact-harvard" class="footer-three__action" data-attribute="contact-harvard">Contact Harvard</a></li>
+         <li class="footer-three__item"><a href="/maps-directions" class="footer-three__action" data-attribute="maps-directions">Maps &amp; Directions</a></li>
+         <li class="footer-three__item"><a href="http://hr.harvard.edu/jobs" class="footer-three__action" data-attribute="jobs">Jobs</a></li>
+        </ol>
+       </nav>
+      </div>
+     </div>
+     <div class="site-footer__row site-footer__row--secondary">
+      <div class="site-footer__copyright">
+       <p>© 2024&nbsp;The President and Fellows of Harvard College</p>
+      </div>
+      <div class="site-footer__logo ">
+       <a href="https://www.harvard.edu/"> <img src="/wp-content/themes/core/assets/img/theme/branding-assets/footer-logo.svg" alt="Harvard University"> </a>
+      </div>
+      <div class="site-footer__social ">
+       <div class="social-follow">
+        <ul class="social-follow__list">
+         <li class="social-follow__item social-follow__item--instagram"><a href="https://www.instagram.com/harvard/" class="social-follow__anchor" rel="me noopener" title="Instagram"> <span>Instagram</span> <img src="https://www.harvard.edu/wp-content/uploads/2023/11/Instagram-1.png" alt="Instagram" aria-hidden="true"> </a></li>
+         <li class="social-follow__item social-follow__item--tiktok"><a href="https://www.tiktok.com/@harvard" class="social-follow__anchor" rel="me noopener" title="TikTok"> <span>TikTok</span> <img src="https://www.harvard.edu/wp-content/uploads/2023/11/tiktok-1.png" alt="TikTok" aria-hidden="true"> </a></li>
+         <li class="social-follow__item social-follow__item--linkedin"><a href="https://www.linkedin.com/school/harvard-university" class="social-follow__anchor" rel="me noopener" title="LinkedIn"> <span>LinkedIn</span> <img src="https://www.harvard.edu/wp-content/uploads/2023/11/Linkedin-1.png" alt="LinkedIn" aria-hidden="true"> </a></li>
+         <li class="social-follow__item social-follow__item--facebook"><a href="https://www.facebook.com/Harvard/" class="social-follow__anchor" rel="me noopener" title="Facebook"> <span>Facebook</span> <img src="https://www.harvard.edu/wp-content/uploads/2023/11/FB3.png" alt="Facebook" aria-hidden="true"> </a></li>
+         <li class="social-follow__item social-follow__item--youtube"><a href="https://www.youtube.com/harvard" class="social-follow__anchor" rel="me noopener" title="YouTube"> <span>YouTube</span> <img src="https://www.harvard.edu/wp-content/uploads/2023/11/youtube-1.png" alt="YouTube" aria-hidden="true"> </a></li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div><!-- .l-wrapper -->
+  <script>window.Promise ||
+			document.write('<script src="https://www.harvard.edu/wp-content/themes/core/assets/js/vendor/es6-promise.auto.js"><\/script>');
+		</script>
+  <script src="https://www.harvard.edu/wp-content/themes/core/assets/js/vendor/jquery.min.js?ver=3.4.1" id="jquery-core-js"></script>
+  <script src="https://www.harvard.edu/wp-content/themes/core/assets/js/dist/theme/vendor.min.js?ver=c2be3fe4ce30ad379854ef238d97400e" id="tribe-scripts-vendor-js"></script>
+  <script id="tribe-scripts-scripts-js-extra">
+var modern_tribe_i18n = {"help_text":{"msg_limit":"There is a limit to the messages you can post.","secondary_nav_toggle":"Explore this section"},"tooltips":{"add_to_save":"Add Photo to Saved Items","in_this_photo":"Products in this photo"}};
+var modern_tribe_config = {"images_url":"https:\/\/www.harvard.edu\/wp-content\/themes\/core\/assets\/img\/theme","template_url":"https:\/\/www.harvard.edu\/wp-content\/themes\/core\/","script_debug":"","hmr_dev":"","block_theme_service_worker":"","ppp":"12","home_url":"https:\/\/www.harvard.edu"};
+</script>
+  <script src="https://www.harvard.edu/wp-content/themes/core/assets/js/dist/theme/scripts.min.js?ver=00c0c90b86df53ffec7a628249ebb472" id="tribe-scripts-scripts-js"></script>
+  <script src="https://www.harvard.edu/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.18.1" id="gtm4wp-form-move-tracker-js"></script>
+  <script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"site_key":"6Lc_nsgnAAAAAMHbceQB7cPmOz4t4_V5PIRhEbbW","ajaxurl":"https:\/\/www.harvard.edu\/wp-admin\/admin-ajax.php","nonce":"ff7ee7d39b"};
+</script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lc_nsgnAAAAAMHbceQB7cPmOz4t4_V5PIRhEbbW&amp;ver=1.3.0" id="gforms_recaptcha_recaptcha-js"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-415bcf4c4af1a9108ef","applicationID":"400299824","transactionName":"YVcDYRYDVhdVUBFcWlgdIFYQC1cKG0AMW1JaV0xcCj1eC1dGFg==","queueTime":0,"applicationTime":397,"atts":"TRAAF14ZRRk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+ </body>
+</html>

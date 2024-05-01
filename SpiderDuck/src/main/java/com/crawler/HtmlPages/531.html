@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+ <head>
+  <meta charset="utf-8">
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-889d0f3d691da91ea39",applicationID:"812192627"};;/*! For license information please see nr-loader-rum-1.258.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={234:(e,t,r)=>{"use strict";r.d(t,{P_:()=>v,Mt:()=>b,C5:()=>s,OP:()=>k,lF:()=>P,Yu:()=>_,Dg:()=>m,CX:()=>c,GE:()=>w,sU:()=>N});var n=r(8632),i=r(9567);const o={beacon:n.ce.beacon,errorBeacon:n.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.D)(t,o);const r=(0,n.ek)(e);r&&(r.info=a[e])}const u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(7056),l=r(50);const f="[data-nr-mask]",g=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{feature_flags:[],proxy:{assets:void 0,beacon:void 0},privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,inline_stylesheet:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.",t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.Z)("An invalid session_replay.block_selector was provided and will not be used",t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.Z)("An invalid session_replay.mask_input_option was provided and will not be used",t)}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},p={},h="All configuration objects require an agent identifier!";function v(e){if(!e)throw new Error(h);if(!p[e])throw new Error("Configuration for ".concat(e," was never set"));return p[e]}function m(e,t){if(!e)throw new Error(h);p[e]=(0,i.D)(t,g());const r=(0,n.ek)(e);r&&(r.init=p[e])}function b(e,t){if(!e)throw new Error(h);var r=v(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}const y={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A={};function w(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");A[e]=(0,i.D)(t,y);const r=(0,n.ek)(e);r&&(r.loader_config=A[e])}const _=(0,n.mF)().o;var E=r(385),x=r(6818);const D={buildEnv:x.Re,distMethod:x.gF,version:x.q4,originTime:E.sK},R={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+E._A.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,harvestCount:0,timeKeeper:void 0},S={};function k(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!S[e])throw new Error("Runtime for ".concat(e," was never set"));return S[e]}function N(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");S[e]={...(0,i.D)(t,R),...D};const r=(0,n.ek)(e);r&&(r.runtime=S[e])}function P(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},9567:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,n.Z)("Setting a Configurable requires a model to set its initial properties");const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.Z)("An error occurred while setting a property of a Configurable",e)}return r}catch(e){(0,n.Z)("An error occured while setting a Configurable",e)}}},6818:(e,t,r)=>{"use strict";r.d(t,{Re:()=>i,gF:()=>o,q4:()=>n});const n="1.258.0",i="PROD",o="CDN"},385:(e,t,r)=>{"use strict";r.d(t,{Nk:()=>d,Tt:()=>s,_A:()=>o,iS:()=>a,il:()=>n,sK:()=>l,ux:()=>c,v6:()=>i,w1:()=>u});const n="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=n?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),a=Boolean("hidden"===o?.document?.visibilityState),s=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),c=s&&"undefined"==typeof SharedWorker,u=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(n&&window.document.documentMode)),d=!!o.navigator?.sendBeacon,l=Math.floor(Date.now()-performance.now())},1117:(e,t,r)=>{"use strict";r.d(t,{w:()=>o});var n=r(50);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,r]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=r)}))}catch(e){(0,n.Z)("An error occurred while setting SharedContext",e)}}}},8e3:(e,t,r)=>{"use strict";r.d(t,{LP:()=>l,RP:()=>c,o5:()=>u});var n=r(8325),i=r(1284),o=r(4322),a=r(3325);const s={};function c(e,t){const r={staged:!1,priority:a.p[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){d(e),s[e].get(t)&&s[e].delete(t),s[e].size&&f(e)}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature",r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=[...s[e]];t.every((e=>{let[t,r]=e;return r.staged}))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((t=>{let[r]=t;s[e].delete(r),g(e,r)})))}function g(e,t){const r=e?n.ee.get(e):n.ee,a=o.X.handlers;if(r.backlog&&a){var s=r.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)p(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,r){r[0].on(e,r[1])}))}))}r.isolatedBacklog||delete a[t],r.backlog[t]=null,r.emit("drain-"+t,[])}}function p(e,t){var r=e[1];(0,i.D)(t[r],(function(t,r){var n=e[0];if(r[0]===n){var i=r[1],o=e[3],a=e[2];i.apply(o,a)}}))}},8325:(e,t,r)=>{"use strict";r.d(t,{A:()=>c,ee:()=>u});var n=r(8632),i=r(2210),o=r(234);class a{constructor(e){this.contextId=e}}var s=r(3117);const c="nr@context:".concat(s.a),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.OP)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=m()[s[e]];p&&p.push([f,e,r,a]);return a},get:v,listeners:h,context:g,buffer:function(e,t){const r=m();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((e=>{let[n,i]=e;s[i]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!m()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a?e:e?(0,i.X)(e,c,(()=>new a(c))):new a(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function v(t){return d[t]=d[t]||e(f,t)}function m(){return f.backlog}}(void 0,"globalEE"),d=(0,n.fP)();d.ee||(d.ee=u)},5546:(e,t,r)=>{"use strict";r.d(t,{E:()=>n,p:()=>i});var n=r(8325).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},4322:(e,t,r)=>{"use strict";r.d(t,{X:()=>o});var n=r(5546);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.E,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.E);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3239:(e,t,r)=>{"use strict";r.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var n=r(385);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};n._A.addEventListener("test",null,e),n._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(r,n))}function c(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2],n=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(r,n))}},3117:(e,t,r)=>{"use strict";r.d(t,{a:()=>n});const n=(0,r(4402).Rl)()},4402:(e,t,r)=>{"use strict";r.d(t,{Rl:()=>a,ky:()=>s});var n=r(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n._A?.crypto||n._A?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n._A?.crypto||n._A?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},7056:(e,t,r)=>{"use strict";r.d(t,{Bq:()=>n,Hb:()=>a,IK:()=>u,K4:()=>i,oD:()=>o,uT:()=>c,wO:()=>s});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},7894:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{z:()=>n})},50:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}r.d(t,{Z:()=>n})},2825:(e,t,r)=>{"use strict";r.d(t,{N:()=>c,T:()=>s});var n=r(8325),i=r(385);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{i._A.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},2210:(e,t,r)=>{"use strict";r.d(t,{X:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},7872:(e,t,r)=>{"use strict";function n(e){var t=this;let r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:500,n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const i=n?.leading||!1;let o;return function(){for(var n=arguments.length,a=new Array(n),s=0;s<n;s++)a[s]=arguments[s];i&&void 0===o&&(e.apply(t,a),o=setTimeout((()=>{o=clearTimeout(o)}),r)),i||(clearTimeout(o),o=setTimeout((()=>{e.apply(t,a)}),r))}}function i(e){var t=this;let r=!1;return function(){if(!r){r=!0;for(var n=arguments.length,i=new Array(n),o=0;o<n;o++)i[o]=arguments[o];e.apply(t,i)}}}r.d(t,{D:()=>n,Z:()=>i})},1284:(e,t,r)=>{"use strict";r.d(t,{D:()=>n});const n=(e,t)=>Object.entries(e||{}).map((e=>{let[r,n]=e;return t(r,n)}))},4351:(e,t,r)=>{"use strict";r.d(t,{P:()=>o});var n=r(8325);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}}}},3960:(e,t,r)=>{"use strict";r.d(t,{KB:()=>a,b2:()=>o});var n=r(3239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.bP)("load",e,t)}function a(e){if(i())return e();(0,n.iz)("DOMContentLoaded",e)}},8632:(e,t,r)=>{"use strict";r.d(t,{EZ:()=>d,ce:()=>o,ek:()=>u,fP:()=>a,gG:()=>l,h5:()=>c,mF:()=>s});var n=r(385),i=r(7894);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n._A.NREUM||(n._A.NREUM={}),void 0===n._A.newrelic&&(n._A.newrelic=n._A.NREUM),n._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:n._A.setTimeout,SI:n._A.setImmediate,CT:n._A.clearTimeout,XHR:n._A.XMLHttpRequest,REQ:n._A.Request,EV:n._A.Event,PR:n._A.Promise,MO:n._A.MutationObserver,FETCH:n._A.fetch}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.z)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},7956:(e,t,r)=>{"use strict";r.d(t,{N:()=>i});var n=r(3239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],r=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,n.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3081:(e,t,r)=>{"use strict";r.d(t,{gF:()=>o,mY:()=>i,t9:()=>n,vz:()=>s,xS:()=>a});const n=r(3325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},7633:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewEvent},9251:(e,t,r)=>{"use strict";r.d(t,{t:()=>n});const n=r(3325).D.pageViewTiming},7144:(e,t,r)=>{"use strict";r.d(t,{Ef:()=>i});var n=r(7056);r(3325).D.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.IK.ERROR,n.IK.FULL,n.IK.OFF},5938:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(8325);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},2758:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(3325),i=r(234),o=r(5546),a=r(8325),s=r(8e3),c=r(3960),u=r(385),d=r(50),l=r(3081),f=r(8632),g=r(7144);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start","recordReplay","pauseReplay",g.Ef.RECORD,g.Ef.PAUSE],h=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(7894),m=r(7056);function b(){const e=(0,f.gG)();p.forEach((t=>{e[t]=function(){for(var r=arguments.length,n=new Array(r),i=0;i<r;i++)n[i]=arguments[i];return function(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...n))})),o.length>1?o:o[0]}(t,...n)}}))}const y={};var A=r(2825);const w=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},p=arguments.length>2?arguments[2]:void 0,E=arguments.length>3?arguments[3]:void 0,{init:x,info:D,loader_config:R,runtime:S={loaderType:p},exposed:k=!0}=t;const N=(0,f.gG)();D||(x=N.init,D=N.info,R=N.loader_config),(0,i.Dg)(e.agentIdentifier,x||{}),(0,i.GE)(e.agentIdentifier,R||{}),D.jsAttributes??={},u.v6&&(D.jsAttributes.isWorker=!0),(0,i.CX)(e.agentIdentifier,D);const P=(0,i.P_)(e.agentIdentifier),j=[D.beacon,D.errorBeacon];_||(P.proxy.assets&&(w(P.proxy.assets),j.push(P.proxy.assets)),P.proxy.beacon&&j.push(P.proxy.beacon),b(),(0,f.EZ)("activatedFeatures",A.T),e.runSoftNavOverSpa&&=!0===P.soft_navigations.enabled&&P.feature_flags.includes("soft_nav")),S.denyList=[...P.ajax.deny_list||[],...P.ajax.block_internal?j:[]],(0,i.sU)(e.agentIdentifier,S),void 0===e.api&&(e.api=function(e,t){let f=arguments.length>2&&void 0!==arguments[2]&&arguments[2];t||(0,s.RP)(e,"api");const p={};var b=a.ee.get(e),A=b.get("tracer");y[e]=m.IK.OFF,b.on(g.Ef.REPLAY_RUNNING,(t=>{y[e]=t}));var w="api-",_=w+"ixn-";function E(t,r,n,o){const a=(0,i.C5)(e);return null===r?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),R(w,n,!0,o||null===r?"session":void 0)(t,r)}function x(){}h.forEach((e=>{p[e]=R(w,e,!0,"api")})),p.addPageAction=R(w,"addPageAction",!0,n.D.pageAction),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(r||"http://custom.transaction")+t,R(w,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t){let r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return E(e,t,"setCustomAttribute",r);(0,d.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t,"> was provided."))}else(0,d.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setUserId=function(e){if("string"==typeof e||null===e)return E("enduser.id",e,"setUserId",!0);(0,d.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return E("application.version",e,"setApplicationVersion",!1);(0,d.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},p.start=e=>{try{const t=e?"defined":"undefined";(0,o.p)(l.xS,["API/start/".concat(t,"/called")],void 0,n.D.metrics,b);const r=Object.values(n.D);if(void 0===e)e=r;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!r.includes(e))))return(0,d.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));e.includes(n.D.pageViewEvent)||e.push(n.D.pageViewEvent)}e.forEach((e=>{b.emit("".concat(e,"-opt-in"))}))}catch(e){(0,d.Z)("An unexpected issue occurred",e)}},p[g.Ef.RECORD]=function(){(0,o.p)(l.xS,["API/recordReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.RECORD,[],void 0,n.D.sessionReplay,b)},p[g.Ef.PAUSE]=function(){(0,o.p)(l.xS,["API/pauseReplay/called"],void 0,n.D.metrics,b),(0,o.p)(g.Ef.PAUSE,[],void 0,n.D.sessionReplay,b)},p.interaction=function(e){return(new x).get("object"==typeof e?e:{})};const D=x.prototype={createTracer:function(e,t){var r={},i=this,a="function"==typeof t;return(0,o.p)(l.xS,["API/createTracer/called"],void 0,n.D.metrics,b),f||(0,o.p)(_+"tracer",[(0,v.z)(),e,r],i,n.D.spa,b),function(){if(A.emit((a?"":"no-")+"fn-start",[(0,v.z)(),i,a],r),a)try{return t.apply(this,arguments)}catch(e){throw A.emit("fn-err",[arguments,this,e],r),e}finally{A.emit("fn-end",[(0,v.z)()],r)}}}};function R(e,t,r,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,n.D.metrics,b),i&&(0,o.p)(e+t,[(0,v.z)(),...arguments],r?null:this,i,b),r?void 0:this}}function S(){r.e(75).then(r.bind(r,7438)).then((t=>{let{setAPI:r}=t;r(e),(0,s.LP)(e,"api")})).catch((()=>{(0,d.Z)("Downloading runtime APIs failed..."),b.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{D[e]=R(_,e,void 0,f?n.D.softNav:n.D.spa)})),p.setCurrentRouteName=f?R(_,"routeName",void 0,n.D.softNav):R(w,"routeName",!0,n.D.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,n.D.metrics,b),(0,o.p)("err",[t,(0,v.z)(),!1,r,!!y[e]],void 0,n.D.jserrors,b)},u.il?(0,c.b2)((()=>S()),!0):S(),p}(e.agentIdentifier,E,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8993:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},3325:(e,t,r)=>{"use strict";r.d(t,{D:()=>n,p:()=>i});const n={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.ajax]:5,[n.sessionTrace]:6,[n.pageAction]:7,[n.spa]:8,[n.softNav]:9,[n.sessionReplay]:10}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.258.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.258.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={75:"sha512-dbRQ0U/DzQ6bR/LVo1bSCjmtT4Mn+TUoByqFctqWrjwdLoHvi/Uhr3w190Zk5FuNMJFjPV0z6jQVNhQGb0DrLQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.258.0.PROD"]=self["webpackChunk:NRBA-1.258.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8993);var e=i(50),t=i(7144),r=i(4402);class n{agentIdentifier;constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,r.ky)(16);this.agentIdentifier=e}#e(t){for(var r=arguments.length,n=new Array(r>1?r-1:0),i=1;i<r;i++)n[i-1]=arguments[i];if("function"==typeof this.api?.[t])return this.api[t](...n);(0,e.Z)("Call to agent api ".concat(t," failed. The API is not currently initialized."))}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.Ef.RECORD)}pauseReplay(){return this.#e(t.Ef.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}}var o=i(3325),a=i(234);const s=Object.values(o.D);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.Mt)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(2758);var d=i(8e3),l=i(5938),f=i(3960),g=i(385);function p(e){return g.il&&!0===(0,a.Mt)(e,"privacy.cookies_enabled")}function h(e){return!!a.Yu.MO&&p(e)&&!0===(0,a.Mt)(e,"session_trace.enabled")}var v=i(7872);class m extends l.W{constructor(e,t,r){let n=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.RP)(e,r):this.ee.on("".concat(this.featureName,"-opt-in"),(0,v.Z)((()=>{(0,d.RP)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(){let t,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate||!this.auto)return;this.onAggregateImported=new Promise((e=>{t=e}));const n=async()=>{let n;try{if(p(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,7920));n=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t),this.featureName===o.D.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.LP)(this.agentIdentifier,this.featureName),void t(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,8582)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,r),t(!0)}catch(r){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),r),this.abortHandler?.(),(0,d.LP)(this.agentIdentifier,this.featureName,!0),t(!1),this.ee&&this.ee.abort()}};g.il?(0,f.b2)((()=>n()),!0):n()}#t(e,t){return e!==o.D.sessionReplay||(r=this.agentIdentifier,n=t,!(!h(r)||!n?.isNew&&!n?.state.sessionReplayMode));var r,n}}var b=i(7633);class y extends m{static featureName=b.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,b.t,r),this.importAggregator()}}var A=i(1117),w=i(1284);class _ extends A.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,w.D)(e,(function(e,r){t[e]=E(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,(0,w.D)(r,(function(e,t){if("count"!==e){var n=a[e],i=r[e];i&&!i.c?a[e]=E(i.t,n):a[e]=function(e,t){if(!t)return e;t.c||(t=x(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=E(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function E(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=x(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function x(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var D=i(8632),R=i(4351);var S=i(5546),k=i(7956),N=i(3239),P=i(9251),j=i(7894);class T extends m{static featureName=P.t;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,P.t,r),g.il&&((0,k.N)((()=>(0,S.p)("docHidden",[(0,j.z)()],void 0,P.t,this.ee)),!0),(0,N.bP)("pagehide",(()=>(0,S.p)("winPagehide",[(0,j.z)()],void 0,P.t,this.ee))),this.importAggregator())}}var I=i(3081);class O extends m{static featureName=I.t9;constructor(e,t){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,I.t9,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g._A?(this.sharedAggregator=new _({agentIdentifier:this.agentIdentifier}),this.features={},(0,D.h5)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.D.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.Z)("Failed to initialize the agent. Could not determine the runtime environment.")}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.p[e.featureName]-o.p[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.D.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.D.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.D.softNav)return;const n=function(e){switch(e){case o.D.ajax:return[o.D.jserrors];case o.D.sessionTrace:return[o.D.ajax,o.D.pageViewEvent];case o.D.sessionReplay:return[o.D.sessionTrace];case o.D.pageViewTiming:return[o.D.pageViewEvent];default:return[]}}(r.featureName);n.every((e=>e in this.features))||(0,e.Z)("".concat(r.featureName," is enabled but one or more dependent features has not been initialized (").concat((0,R.P)(n),"). This may cause unintended consequences or missing data...")),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,D.fP)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[y,T,O],loaderType:"lite"})})()})();</script>
+  <script src="/sites/default/files/hotjar/hotjar.script.js?scprmy"></script>
+  <meta name="description" content="A warm, welcoming reading room and celebrated architectural landmark that houses one of the largest collections of literary recordings in the U.S.">
+  <link rel="canonical" href="https://library.harvard.edu/libraries/poetryroom">
+  <meta property="og:site_name" content="Harvard Library">
+  <meta property="og:type" content="library">
+  <meta property="og:url" content="https://library.harvard.edu/libraries/poetryroom">
+  <meta property="og:title" content="Woodberry Poetry Room">
+  <meta property="og:description" content="A warm, welcoming reading room and celebrated architectural landmark that houses one of the largest collections of literary recordings in the U.S.">
+  <meta property="og:image" content="https://library.harvard.edu/sites/default/files/2020-05/Woodberry_13_0.jpg">
+  <meta property="og:image:alt" content="A reading room with wooden tables and blue chairs">
+  <meta itemprop="name" content="Woodberry Poetry Room">
+  <meta itemprop="description" content="A warm, welcoming reading room and celebrated architectural landmark that houses one of the largest collections of literary recordings in the U.S.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@harvardlibrary">
+  <meta name="twitter:title" content="Harvard Library - Woodberry Poetry Room">
+  <meta name="twitter:url" content="https://library.harvard.edu/libraries/poetryroom">
+  <meta name="twitter:image" content="https://library.harvard.edu/sites/default/files/2020-05/Woodberry_13_0.jpg">
+  <meta name="twitter:image:alt" content="A reading room with wooden tables and blue chairs">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/themes/custom/harvard/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="/sites/default/files/google_tag/ga4/google_tag.script.js?scprmy" defer></script>
+  <title>Woodberry Poetry Room | Harvard Library</title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_DlVS1YiTq5Gmn9I2lcSsBmxFLQS4Wv5liOOSzNiWrLc.css">
+  <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1oXiADemalWzIEeb4lEtEEgKDSTfnVTMq27KGrpRbCw.css">
+ </head>
+ <body class="path-node page-node-type-library">
+  <a href="#hl__main-id" class="visually-hidden focusable skip-link"> Skip to main content </a>
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSHSDQ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+   <section class="region">
+   </section>
+   <section class="hl__header region js-header">
+    <nav class="hl__header__container" aria-label="main">
+     <div class="hl__header__logo">
+      <section class="hl__linked-image">
+       <a href="/" title="Harvard Library Homepage"> <img class="hl__image " alt="Harvard Library Homepage" height="82" width="110" src="/themes/custom/harvard/assets/images/logo-final.svg"> </a>
+      </section>
+     </div>
+     <div class="hl__header__menu">
+      <section class="hl__main-nav js-main-nav">
+       <button class="hl__hamburger-button js-hamburger-button" type="button" aria-label="open or close the Main Navigation"> <span class="hl__hamburger-button__icon"></span> </button>
+       <div class="hl__main-nav__wrapper">
+        <div class="hl__main-nav__container">
+         <div class="hl__main-nav__menu">
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-1"> Help with... </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-1">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/services-tools" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1326"><span>All Services, Tools &amp; Catalogs</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/use-harvard-library-alum" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1416"><span>Alumni Access</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/borrow-renew-and-return-library-materials" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1306"><span>Borrowing</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/get-remote-support-research-publishing" class="hl__link-tag" title="Get Remote Support for Research &amp; Publishing" data-ga-link="Header Nav" data-drupal-link-system-path="node/9426"><span>Research &amp; Publishing</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="https://library.harvard.edu/services-tools/scan-deliver" class="hl__link-tag" data-ga-link="Header Nav"><span>Scan &amp; Deliver</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-2"> Collections </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-2">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/collections-exhibits/explore-collections" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/341"><span>Explore All Collections</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/digital-collections" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/6236"><span>Search Digital Collections</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/how-to/use-harvard-librarys-special-collections-and-archives" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1311"><span>How to Use Special Collections &amp; Archives</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/collections/exhibits" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1441"><span>What's on Exhibit</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-3"> Events &amp; News </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-3">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="https://libcal.library.harvard.edu/calendar/main" title="Upcoming Events" class="hl__link-tag" data-ga-link="Header Nav"><span>Events</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/about/news" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/116"><span>News</span></a></li>
+            </ul>
+           </div>
+          </div>
+          <div class="hl__main-nav__menu-item js-main-nav-menu">
+           <button aria-expanded="false" class="hl__main-nav__top-link js-main-nav-top-link" id="hl__top-link-4"> Visit &amp; About </button>
+           <div class="hl__main-nav__sub-menu js-main-nav-sub-menu">
+            <button aria-label="close sub menu" class="hl__button hl__button--small js-main-nav-back-button" type="button">back</button>
+            <ul class="hl__main-nav__items" role="menu" aria-labelledby="hl__top-link-4">
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/libraries" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/171"><span>Locations &amp; Hours</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visitor-access" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/3186"><span>Visitor Access</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/spaces" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="spaces"><span>Find a Space</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/confronting-anti-black-racism" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/10946"><span>Confronting Anti-Black Racism</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visit-about/grants-fellowships" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1586"><span>Grants &amp; Fellowships</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/staff" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/1466"><span>Staff Profiles</span></a></li>
+             <li role="menuitem" class="hl__main-nav__item js-main-nav-sub-menu-item"><a href="/visit-about/about-harvard-library" class="hl__link-tag" data-ga-link="Header Nav" data-drupal-link-system-path="node/10241"><span>About Harvard Library</span></a></li>
+            </ul>
+           </div>
+          </div>
+         </div>
+         <div class="hl__main-nav__utility-nav">
+          <section class="hl__utility-nav js-utility-nav">
+           <div class="js-utility-nav-item hl__utility-nav__link js-utility-nav-item--hollis">
+            <a href="https://hollis.harvard.edu/primo-explore/account?vid=HVD2&amp;section=overview&amp;lang=en_US" data-icon="user" data-show-title="yes" data-item-type="link" data-item-label="hollis" class="hl__utility-nav__item" title="Sign in to HOLLIS"> <span class="hl__utility-nav__icon hl__utility-nav__item--hollis" aria-hidden="true">
+              <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="user-icon" style="pointer-events:none">
+               <title id="user-icon">
+                Sign in to HOLLIS
+               </title> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-1156.000000, -35.000000)">
+                 <g transform="translate(1065.000000, 1.000000)">
+                  <g transform="translate(91.000000, 34.000000)" fill="#1E1E1E" fill-rule="nonzero">
+                   <path d="M17.5774327,20 C18.8046827,20 19.8251827,18.9925 19.5558077,17.795125 C18.5516827,13.333125 14.5650577,11.875 9.79980771,11.875 C5.03454521,11.875 1.04763271,13.333125 0.0435327056,17.795125 C-0.225904794,18.9925 0.794582706,20 2.02188271,20 L17.5774327,20 Z" />
+                   <path d="M14.7996827,5 C14.7996827,7.761375 12.5610577,10 9.79968271,10 C7.03823271,10 4.79965771,7.761375 4.79965771,5 C4.79965771,2.238575 7.03823271,0 9.79968271,0 C12.5610577,0 14.7996827,2.238575 14.7996827,5 Z" />
+                  </g>
+                 </g>
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--hollis ">MyHOLLIS</span> </a>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--ask">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--ask" id="hl__utility-nav__button-2" title="Ask a Librarian, contact us with your question" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--ask" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" role="img" aria-labelledby="ask-icon" style="pointer-events:none">
+               <title id="ask-icon">
+                Ask a Librarian, contact us with your question
+               </title> <g>
+                <g transform="translate(-34 -74)">
+                 <path d="M41 81h-2v2h2zm4 0h-2v2h2zm4 0h-2v2h2zm3-7a2 2 0 0 1 2 2v18l-4-4H36a2 2 0 0 1-2-2V76c0-1.1.9-2 2-2z" />
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--ask ">Ask</span> </button>
+            <div class="hl__utility-nav__dropdown  js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small   js-utility-nav-back-button " aria-label="close dropdown menu"> back </button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__dropdown-tray">
+               <div class="hl__dropdown-tray__container">
+                <div class="hl__dropdown-tray__columns hl__dropdown-tray__columns--searchbox">
+                 <h2 class="hl__comp-heading">Ask <span class="hl__dropdown-tray__heading--lora">a Librarian</span></h2>
+                 <section class="hl__single-input-form  ">
+                  <form class="hl__single-input-form__form" action="https://ask.library.harvard.edu/search" method="GET" autocomplete="off">
+                   <label class="hl__label hl__label--inline" for="text-input">Ask a librarian</label>
+                   <div class="hl__single-input-form__input-group">
+                    <input class="hl__input hl__input--inline js-is-required" name="q" id="text-input" type="text" placeholder="Try &quot;printer help&quot; or &quot;Zotero&quot;" data-type="text" required autocomplete="off"> <button type="submit" class="hl__button hl__button--small hl__button--inline" aria-label=""> Go </button>
+                   </div>
+                  </form>
+                 </section>
+                </div>
+                <div class="hl__dropdown-tray__columns hl__dropdown-tray__columns--links">
+                 <div class="hl__linked-list hl__linked-list--no-bullets ">
+                  <h2 class="hl__comp-heading  ">More help options</h2>
+                  <ul class="hl__linked-list__items">
+                   <li class="hl__linked-list__item"><a href="/services-tools/library-liaisons" class="hl__link-tag">Find my subject liaison</a></li>
+                   <li class="hl__linked-list__item"><a href="https://harvard.az1.qualtrics.com/jfe/form/SV_09DXHPBmaMSnqdL" class="hl__link-tag">Request a research appointment</a></li>
+                  </ul>
+                 </div><!-- "Library.Harvard Chat Widget" embedded from ask.library.harvard.edu --> <!-- update styles in sprinshare interface -->
+                 <div id="hl__chat-button">
+                  <div id="libchat_90b85bdd1489a074045c2519ad2fc1a5" class="hl__chat-button">
+                   <p class="hl__chat-button__placeholder">Let's chat!</p>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </section>
+             </div>
+            </div>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--hours">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--hours" id="hl__utility-nav__button-3" title="Library locations and hours" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--hours" aria-hidden="true">
+              <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="clock-icon" style="pointer-events:none">
+               <title id="clock-icon">
+                Library locations and hours
+               </title> <g>
+                <g transform="translate(-188 -510)">
+                 <g>
+                  <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                 </g>
+                 <g>
+                  <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                 </g>
+                </g>
+               </g>
+              </svg></span> <span class="hl__utility-nav__text hl__utility-nav__item--hours ">Hours</span> </button>
+            <div class="hl__utility-nav__dropdown  js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small   js-utility-nav-back-button " aria-label="close dropdown menu"> back </button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__featured-libraries">
+               <div class="hl__featured-libraries__container">
+                <div class="hl__featured-libraries__today">
+                 <h2><span class="hl__highlighted-text">Wednesday, May 1, 2024</span></h2>
+                </div>
+                <ul class="hl__featured-libraries__items">
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/widener" class="hl__link-tag"><span>Widener Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">9am - 10pm</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/lamont" class="hl__link-tag"><span>Lamont Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">24 Hours Reading Period/Exams</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item">
+                  <h3 class="hl__featured-libraries__name" role="article"><a href="/libraries/cabot" class="hl__link-tag"><span>Cabot Science Library</span> </a></h3>
+                  <div class="hl__featured-libraries__hours">
+                   <span class="hl__featured-libraries__icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__status">Today</span> <span class="hl__featured-libraries__time">24 Hours</span>
+                  </div></li>
+                 <li class="hl__featured-libraries__item hl__featured-libraries__item--more">
+                  <h3 class="hl__featured-libraries__all"><span>see all locations</span></h3>
+                  <div class="hl__featured-libraries__see-more">
+                   <span class="hl__featured-libraries__more-icon">
+                    <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
+                     <g>
+                      <g transform="translate(-188 -510)">
+                       <g>
+                        <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                       </g>
+                       <g>
+                        <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                       </g>
+                      </g>
+                     </g>
+                    </svg></span> <span class="hl__featured-libraries__more-link"> <a href="/libraries?active_filter=1" class="hl__link-tag hl__link-tag--with-arrow" #title="See more library hours"><span>Hours for all 25+ locations</span></a> </span>
+                  </div></li>
+                </ul>
+               </div>
+              </section>
+             </div>
+            </div>
+           </div>
+           <div class="js-utility-nav-item hl__utility-nav__button js-utility-nav-item--search">
+            <button class="hl__utility-nav__item js-utility-nav-button hl__utility-nav__item--search" id="hl__utility-nav__button-4" title="Search" aria-expanded="false"> <span class="hl__utility-nav__icon hl__utility-nav__item--search" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17" role="img" aria-labelledby="search-icon" style="pointer-events:none">
+               <title id="search-icon">
+                Search
+               </title> <g>
+                <g transform="translate(-158 -656)">
+                 <path d="M170.15 666.7l4.85 4.85-1.45 1.45-4.86-4.85v-.77l-.26-.27a6.32 6.32 0 1 1 .68-.68l.27.26zm-5.83 0a4.37 4.37 0 1 0 .01-8.74 4.37 4.37 0 0 0-.01 8.73z" />
+                </g>
+               </g>
+              </svg></span> </button>
+            <div class="hl__utility-nav__dropdown js-utility-nav-dropdown">
+             <button type="button" class="hl__button hl__button--small js-utility-nav-back-button" aria-label="close dropdown menu" tabindex="-1"><span class="hl__button__text">back</span></button>
+             <div class="hl__utility-nav__dropdown-container">
+              <section class="hl__single-input-form hl__single-input-form--clear js-search-dropdown">
+               <form class="hl__single-input-form__form" action="/search" method="GET" autocomplete="off">
+                <label class="hl__label hl__label--hidden" for="utility-nav-search-input">Search website or HOLLIS catalog</label>
+                <div class="hl__single-input-form__input-group">
+                 <input class="hl__input hl__input--inline js-is-required" name="keywords" id="utility-nav-search-input" type="text" placeholder="" data-type="text" required autocomplete="off"> <button type="submit" class="hl__button hl__button--small hl__button--inline" aria-label=""><span class="hl__button__text">Search</span></button>
+                </div>
+                <div class="hl__single-input-form__dropdown">
+                 <div class="hl__single-input-form__dropdown-item">
+                  <a href="#" alt="search in website" id="search-website-link" tabindex="0">
+                   <div class="hl__single-input-form__search-term"></div> in <span>website (library.harvard)</span> </a>
+                 </div>
+                 <div class="hl__single-input-form__dropdown-item">
+                  <a href="#" alt="search in library catalog" id="search-hollis-link" tabindex="0">
+                   <div class="hl__single-input-form__search-term"></div> in <span>library catalog &amp; articles (HOLLIS)</span> </a>
+                 </div>
+                </div>
+               </form>
+              </section>
+              <div class="hl__utility-nav__helper-text">
+               <section class="hl__rich-text">
+                <p>Search website or HOLLIS catalog</p>
+               </section>
+              </div>
+             </div>
+            </div>
+           </div>
+          </section>
+         </div>
+        </div>
+       </div>
+      </section>
+     </div>
+    </nav>
+   </section>
+   <div class="hl__header__sticky-gap"></div>
+   <main id="hl__main-id" class="hl__full-template hl__library-details" tabindex="-1">
+    <section class="hl__full-template__pre-content hl__library-details__pre-content region">
+     <div id="block-breadcrumbs" data-block-plugin-id="system_breadcrumb_block">
+      <nav role="navigation" aria-labelledby="system-breadcrumb" class="hl__breadcrumb hl__breadcrumb--light">
+       <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+       <ul class="hl__breadcrumb__items">
+        <li class="hl__breadcrumb__item"><a href="/" class="hl__link-tag" data-ga-link="Breadcrumb" title="Home">Home</a></li>
+        <li class="hl__breadcrumb__item"><a href="/libraries" class="hl__link-tag" data-ga-link="Breadcrumb" title="Locations &amp; Hours">Locations &amp; Hours</a></li>
+       </ul>
+      </nav>
+     </div>
+     <section role="article" class="hl__page-header hl__page-header--light">
+      <div class="hl__page-header__container">
+       <div class="hl__page-header__page-title">
+        <h1 class="hl__page-title"><span>Woodberry Poetry Room</span></h1>
+       </div>
+       <div class="hl__page-header__sub-text">
+        <div class="hl__sub-text">
+         One of the largest collections of literary AV recordings in the United States
+        </div>
+       </div>
+      </div>
+     </section>
+     <div class="hl__library-details__bg-overlay hl__library-details__bg-overlay--dark"></div>
+     <style>
+  .hl__library-details__pre-content {
+    background-image: url('https://library.harvard.edu/sites/default/files/styles/library_header_narrow/public/2020-05/Woodberry_13_0.jpg?h=22125ad4&itok=DuQqR3Lx');
+  }
+
+  @media (min-width: 800px) {
+    .hl__library-details__pre-content {
+      background-image: url('https://library.harvard.edu/sites/default/files/styles/library_header_wide/public/2020-05/Woodberry_13_0.jpg?h=22125ad4&itok=zFx5s6xN');
+    }
+  }
+</style>
+     <div class="hl__library-details__jump-links">
+      <div class="hl__jump-links js-jump-links hl__jump-links--primary">
+       <div class="hl__jump-links__navigation">
+        <nav class="hl__jump-links__items" aria-label="in-page">
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#Collections" class="hl__link-tag"><span>Collections</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#programs" class="hl__link-tag"><span>Events</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#classesandtours" class="hl__link-tag"><span>Classes &amp; Tours</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#fellowships" class="hl__link-tag"><span>Fellowships</span></a>
+         </div>
+         <div class="hl__jump-links__link js-jump-links-link">
+          <a href="#about" class="hl__link-tag"><span>About</span></a>
+         </div>
+        </nav>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="hl__full-template__main-content region">
+     <div data-drupal-messages-fallback class="hidden"></div>
+     <div id="block-harvard-content" data-block-plugin-id="system_main_block">
+      <article role="article">
+       <div class="hl__library-details__info">
+        <a name="library-info" id="library-info"></a>
+        <section class="hl__library-info">
+         <div class="hl__library-info__container ">
+          <div class="hl__library-info__hours">
+           <section class="hl__library-hours">
+            <div class="hl__library-hours__icon">
+             <svg height="31" viewBox="0 0 30 31" width="30" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+              <g>
+               <g transform="translate(-188 -510)">
+                <g>
+                 <path fill="#fad154" d="M202.99 512.5a12.5 12.5 0 1 1 0 25.01 12.5 12.5 0 0 1 0-25.01zM203 535a10 10 0 1 0 0-20 10 10 0 0 0 0 20z" />
+                </g>
+                <g>
+                 <path fill="#fad154" d="M203.63 518.75h-1.88v7.5l6.56 3.94.94-1.54-5.63-3.34z" />
+                </g>
+               </g>
+              </g>
+             </svg>
+            </div>
+            <div class="hl__library-hours__today">
+             Today: 10am - 10pm
+            </div>
+            <div class="hl__library-hours__see-all">
+             <a href="/libraries?active_filter=1&amp;library=woodberry" class="hl__link-tag hl__link-tag--with-arrow" title="See all hours for Woodberry Poetry Room" data-ga-link="Text Link: In-Line Arrow"><span>Poetry Room Hours</span></a>
+            </div>
+           </section>
+          </div>
+          <div class="hl__library-info__summary">
+           <h2 class="hl__comp-heading  ">Highlights</h2>
+           <div class="hl__library-info__highlights">
+            <section class="hl__rich-text  ">
+             <p>A warm, welcoming reading room and celebrated architectural landmark that houses one of the largest collections of literary recordings in the U.S.</p>
+             <ul>
+              <li>Designed by Alvar Aalto</li>
+              <li>8,000 collections of poetry</li>
+              <li>6,000 literary recordings</li>
+              <li>150 open-shelf magazines</li>
+             </ul>
+            </section>
+           </div>
+           <div class="hl__library-info__access">
+            <section class="hl__rich-text  ">
+             Open to the public. Please inform the Lamont security staff that you are "visiting the Poetry Room." A form of photo ID is required.
+            </section>
+           </div>
+          </div>
+          <div class="hl__library-info__cta hl__library-info__cta--social">
+           <section class="hl__pattern-cta hl__pattern-cta--small">
+            <div class="hl__pattern-cta__container">
+             <div class="hl__pattern-cta__text">
+              <div class="hl__pattern-cta__title">
+               Follow Woodberry Poetry Room
+              </div>
+              <div class="hl__pattern-cta__description">
+               You can find us on Twitter and YouTube
+              </div>
+             </div>
+             <div class="hl__pattern-cta__links">
+              <div class="hl__pattern-cta-icon">
+               <a class="hl__icon-link" href="https://twitter.com/WPRHarvard" title="follow us on Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="17" viewBox="0 0 20 17">
+                 <defs>
+                  <path id="7gyva" d="M1386.63 1059.5c.87-.5 1.5-1.25 1.74-2.25a8.2 8.2 0 0 1-2.62 1 4.36 4.36 0 0 0-3-1.25c-2.13 0-4 1.88-4 4.13 0 .37 0 .62.13.87a11.5 11.5 0 0 1-8.5-4.25c-.38.63-.5 1.25-.5 2.13a4.1 4.1 0 0 0 1.87 3.37c-.63 0-1.25-.25-1.88-.5 0 2 1.38 3.63 3.26 4-.38.13-.76.13-1.13.13-.25 0-.5 0-.75-.13.5 1.63 2 2.88 3.88 2.88a7.95 7.95 0 0 1-5.13 1.74h-1a12.2 12.2 0 0 0 6.25 1.88c7.5 0 11.63-6.25 11.63-11.63v-.5a7.27 7.27 0 0 0 2.12-2.24c-.75.37-1.5.5-2.38.62z" />
+                 </defs><g>
+                  <g transform="translate(-1369 -1057)">
+                   <use fill="#1da1f2" xlink:href="#7gyva" />
+                  </g>
+                 </g>
+                </svg></a>
+              </div>
+              <div class="hl__pattern-cta-icon">
+               <a class="hl__icon-link" href="https://www.youtube.com/WoodberryPoetryRoom" title="follow us on YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="15" viewBox="0 0 15 11">
+                 <defs>
+                  <path id="bqfba2" d="M1326 1611v-5l5 2.5zm-3.26-7.89c-2.43.17-2.72 1.6-2.74 5.39.02 3.78.3 5.22 2.74 5.39 2.25.15 7.27.15 9.52 0 2.43-.17 2.72-1.6 2.74-5.39-.02-3.78-.3-5.22-2.74-5.39-2.25-.15-7.27-.15-9.52 0z" />
+                 </defs><g>
+                  <g transform="translate(-1320 -1603)">
+                   <use fill="#FF0000" xlink:href="#bqfba2" />
+                  </g>
+                 </g>
+                </svg></a>
+              </div>
+             </div>
+            </div>
+           </section>
+          </div>
+          <div class="hl__library-info__sidebar js-accordion">
+           <div class="hl__library-info__contact">
+            <section class="hl__contact-info">
+             <h2 class="hl__comp-heading  ">Contact</h2>
+             <div class="hl__contact-info__list">
+              <div class="hl__contact-info__section">
+               <div class="hl__contact-info__address">
+                Lamont Library, Room 330 
+                <br><span class="address-line1">11 Quincy Street</span>
+                <br>
+                 Cambridge, <span class="administrative-area">MA</span> <span class="postal-code">02138</span>
+               </div>
+               <div class="hl__contact-info__directions">
+                <span class="hl__contact-info__icon" aria-hidden="true">
+                 <svg height="17" viewbox="0 0 12 17" width="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                   <path d="M994 1676c3.32 0 6 2.66 6 5.95 0 4.46-6 11.05-6 11.05s-6-6.59-6-11.05a5.97 5.97 0 0 1 6-5.95zm0 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" id="jpn3a">
+                   </path>
+                  </defs> <g>
+                   <g transform="translate(-988 -1676)">
+                    <use fill="silver" xlink:href="#jpn3a">
+                    </use>
+                   </g>
+                  </g>
+                 </svg></span> <a class="hl__link-tag" href="https://www.google.com/maps/place/Lamont+Library/@42.3738371,-71.1138721,15.01z/data=!4m5!3m4!1s0x0:0xf6dea0b8f10d3d8c!8m2!3d42.372767!4d-71.115481" title="Get directions to Woodberry Poetry Room"> <span>Directions</span> </a>
+               </div>
+              </div>
+             </div>
+            </section>
+            <section class="hl__contact-info">
+             <div class="hl__contact-info__list">
+              <div class="hl__contact-info__section">
+               <ul class="hl__contact-info__items hl__contact-info__items--email">
+                <li class="hl__contact-info__item"><span class="hl__contact-info__icon" aria-hidden="true">
+                  <svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs></defs> <g id="Press-Release" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="press-release---final" transform="translate(-845.000000, -677.000000)">
+                     <g id="for-the-media" transform="translate(801.000000, 512.000000)">
+                      <path d="M57.5,165 L45.5,165 C44.675,165 44.0075,165.675 44.0075,166.5 L44,175.5 C44,176.325 44.675,177 45.5,177 L57.5,177 C58.325,177 59,176.325 59,175.5 L59,166.5 C59,165.675 58.325,165 57.5,165 L57.5,165 Z M58,168.428571 L52,172 L46,168.428571 L46,167 L52,170.571429 L58,167 L58,168.428571 L58,168.428571 Z" id="Icon" />
+                     </g>
+                    </g>
+                   </g>
+                  </svg></span> <span class="hl__contact-info__email"><a href="mailto:poetryrm@fas.harvard.edu" class="hl__link-tag"> <span class="hl__visually-hidden">email:</span> <span>poetryrm@fas.harvard.edu</span> </a></span></li>
+               </ul>
+               <ul class="hl__contact-info__items hl__contact-info__items--phone">
+                <li class="hl__contact-info__item"><span class="hl__contact-info__icon" aria-hidden="true">
+                  <svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs></defs> <g id="Press-Release" stroke="none" stroke-width="1" fill-rule="evenodd">
+                    <g id="press-release---final" transform="translate(-846.000000, -702.000000)">
+                     <g id="for-the-media" transform="translate(801.000000, 512.000000)">
+                      <path d="M48.0166667,196.491667 C49.2166667,198.85 51.15,200.775 53.5083333,201.983333 L55.3416667,200.15 C55.5666667,199.925 55.9,199.85 56.1916667,199.95 C57.125,200.258333 58.1333333,200.425 59.1666667,200.425 C59.625,200.425 60,200.8 60,201.258333 L60,204.166667 C60,204.625 59.625,205 59.1666667,205 C51.3416667,205 45,198.658333 45,190.833333 C45,190.375 45.375,190 45.8333333,190 L48.75,190 C49.2083333,190 49.5833333,190.375 49.5833333,190.833333 C49.5833333,191.875 49.75,192.875 50.0583333,193.808333 C50.15,194.1 50.0833333,194.425 49.85,194.658333 L48.0166667,196.491667 L48.0166667,196.491667 Z" id="Icon" />
+                     </g>
+                    </g>
+                   </g>
+                  </svg></span> <a href="tel:617-495-2454" class="hl__contact-info__phone"> <span class="hl__contact-info__label hl__visually-hidden">Phone number</span> 617-495-2454 </a></li>
+               </ul>
+              </div>
+             </div>
+            </section>
+           </div>
+           <div class="js-accordion-content">
+            <div class="hl__library-info__links">
+             <section class="hl__contact-info">
+              <div class="hl__contact-info__list">
+               <div class="hl__contact-info__section">
+                <div class="hl__contact-info__website">
+                 <span class="hl__contact-info__icon" aria-hidden="true">
+                  <svg height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs>
+                    <path d="M999.33 1716.33v-5.83h1.67v5.83c0 .92-.75 1.67-1.67 1.67h-11.66c-.93 0-1.67-.75-1.67-1.67v-11.66c0-.92.74-1.67 1.67-1.67h5.83v1.67h-5.83v11.66zm-4.15-13.33h5.82v5.82h-1.66v-2.99l-8.17 8.17-1.17-1.17 8.17-8.17h-2.99z" id="fwuua">
+                    </path>
+                   </defs> <g>
+                    <g transform="translate(-986 -1703)">
+                     <use fill="silver" xlink:href="#fwuua">
+                     </use>
+                    </g>
+                   </g>
+                  </svg></span> <a href="http://woodberrypoetryroom.com/" class="hl__link-tag" title="Visit website for Woodberry Poetry Room Blog"><span>Woodberry Poetry Room Blog</span></a>
+                </div>
+               </div>
+              </div>
+             </section>
+             <div class="hl__library-info__links-buttons">
+              <a href="https://library.harvard.edu/staff?library=681" class="hl__library-info__contact-buttons hl__button hl__button--small" title="Meet the Staff">Meet the Staff</a>
+             </div>
+            </div>
+            <div class="hl__library-info__connect">
+             <section class="hl__icon-list">
+              <div class="hl__icon-list__label">
+               Connect with Poetry Room
+              </div>
+              <ul class="hl__icon-list__items">
+               <li class="hl__icon-list__item"><a class="hl__icon-list__link" href="https://www.facebook.com/WPRHarvard/" title="Facebook"> <span role="presentation">
+                  <svg height="15" viewbox="0 0 9 15" width="9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs>
+                    <path d="M1324.72 1538l-.02-6.56h-2.7v-2.82h2.7v-1.87c0-2.53 1.5-3.75 3.67-3.75 1.04 0 1.93.08 2.2.12v2.64h-1.51c-1.18 0-1.4.59-1.4 1.44v1.43h3.34l-.9 2.8h-2.45v6.57h-2.93z" id="jn7la">
+                    </path>
+                   </defs> <g>
+                    <g transform="translate(-1322 -1523)">
+                     <use fill="silver" xlink:href="#jn7la">
+                     </use>
+                    </g>
+                   </g>
+                  </svg></span> </a></li>
+               <li class="hl__icon-list__item"><a class="hl__icon-list__link" href="https://twitter.com/WPRHarvard" title="Twitter"> <span role="presentation">
+                  <svg height="12" viewbox="0 0 15 12" width="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs>
+                    <path d="M1333.22 1552.85a2.62 2.62 0 0 0 1.31-1.67 6.2 6.2 0 0 1-1.97.74 3.3 3.3 0 0 0-2.25-.92c-1.6 0-3 1.38-3 3.05 0 .27 0 .46.1.64a8.67 8.67 0 0 1-6.38-3.14 2.8 2.8 0 0 0-.37 1.57c0 1.02.56 1.94 1.4 2.5-.47 0-.93-.19-1.4-.37a3 3 0 0 0 2.43 2.95c-.28.1-.56.1-.84.1-.19 0-.38 0-.56-.1a3.03 3.03 0 0 0 2.9 2.12 6.02 6.02 0 0 1-3.84 1.3h-.75c1.4.83 3 1.38 4.69 1.38a8.6 8.6 0 0 0 8.72-8.58v-.37a5.4 5.4 0 0 0 1.59-1.67c-.56.28-1.13.37-1.78.47z" id="1es3a">
+                    </path>
+                   </defs> <g>
+                    <g transform="translate(-1320 -1551)">
+                     <use fill="silver" xlink:href="#1es3a">
+                     </use>
+                    </g>
+                   </g>
+                  </svg></span> </a></li>
+               <li class="hl__icon-list__item"><a class="hl__icon-list__link" href="https://www.instagram.com/woodberrypoetryroom/" title="Instagram"> <span role="presentation">
+                  <svg height="15" viewbox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs>
+                    <path d="M1331.5 1577.6a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zm-4 7.4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0-6.35a3.85 3.85 0 1 1 0 7.7 3.85 3.85 0 0 1 0-7.7zm0-3.65c2.04 0 2.3 0 3.1.05 2.72.12 4.23 1.64 4.35 4.36.04.8.05 1.05.05 3.09s0 2.3-.05 3.1c-.12 2.72-1.64 4.23-4.36 4.36-.8.03-1.05.04-3.09.04s-2.3 0-3.1-.04c-2.72-.13-4.23-1.64-4.36-4.37-.03-.8-.04-1.05-.04-3.09s0-2.3.05-3.1c.12-2.72 1.63-4.23 4.36-4.36.8-.03 1.05-.04 3.09-.04zm0 1.35c-2 0-2.24 0-3.03.05-2.04.09-2.98 1.05-3.08 3.07-.03.8-.04 1.03-.04 3.03 0 2 0 2.24.05 3.03.09 2.01 1.03 2.98 3.07 3.08.79.03 1.03.04 3.03.04 2 0 2.24 0 3.03-.04 2.04-.1 2.98-1.06 3.08-3.08.03-.79.04-1.03.04-3.03 0-2 0-2.24-.05-3.03-.09-2.02-1.04-2.98-3.07-3.07-.79-.04-1.03-.05-3.03-.05z" id="vqi3a">
+                    </path>
+                   </defs> <g>
+                    <g transform="translate(-1320 -1575)">
+                     <use fill="silver" xlink:href="#vqi3a">
+                     </use>
+                    </g>
+                   </g>
+                  </svg></span> </a></li>
+               <li class="hl__icon-list__item"><a class="hl__icon-list__link" href="https://www.youtube.com/WoodberryPoetryRoom" title="YouTube"> <span role="presentation">
+                  <svg height="11" viewbox="0 0 15 11" width="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <defs>
+                    <path d="M1326 1611v-5l5 2.5zm-3.26-7.89c-2.43.17-2.72 1.6-2.74 5.39.02 3.78.3 5.22 2.74 5.39 2.25.15 7.27.15 9.52 0 2.43-.17 2.72-1.6 2.74-5.39-.02-3.78-.3-5.22-2.74-5.39-2.25-.15-7.27-.15-9.52 0z" id="bqfba">
+                    </path>
+                   </defs> <g>
+                    <g transform="translate(-1320 -1603)">
+                     <use fill="silver" xlink:href="#bqfba">
+                     </use>
+                    </g>
+                   </g>
+                  </svg></span> </a></li>
+              </ul>
+             </section>
+            </div>
+           </div>
+           <div class="hl__library-info__more-info">
+            <a class="hl__link-tag hl__link-tag--with-arrow js-accordion-link" href="#" title="Show or hide more contact information"> <span class="hl__link-tag__toggle-text">Less contact information</span> <span>More contact information</span> </a>
+           </div>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="Collections" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Collections</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-17962" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText17962">
+          <section class="hl__rich-text">
+           <p>The Woodberry Poetry Room is home to a breathtaking range of poetry-related collections: including a landmark collection of <a href="https://library.harvard.edu/collections/woodberry-poetry-room-comprehensive-recording-collection">literary recordings</a> (1933 to the present) and a browsable selection of 20th and 21st century <a href="https://library.harvard.edu/collections/woodberry-poetry-room-circulating-serials-collection">poetry monographs and magazines</a>&nbsp;(which can be accessed at its <strong>Lamont Library</strong> location). It is also the repository of a wide array of <a href="https://library.harvard.edu/collections/woodberry-poetry-room-blue-star-collection">rare books, broadsides, and typescripts</a>&nbsp;(which can be accessed via&nbsp;<strong>Houghton Library</strong>).&nbsp;</p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="featured_collections-406" tabindex="-1">
+        <section class="hl__overlay-promo-grid hl__overlay-promo-grid--accordion js-accordion">
+         <div class="hl__overlay-promo-grid__container">
+          <div class="hl__overlay-promo-grid__description">
+           <section class="hl__rich-text">
+            <p><br>
+              &nbsp;</p>
+           </section>
+          </div>
+          <section class="hl__masonry-promo">
+           <div class="hl__overlay-promo-grid__grid">
+            <a href="/collections/woodberry-poetry-room-comprehensive-recording-collection" title="Read more about Woodberry Poetry Room Comprehensive Recording Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/fullsizeoutput_18bbc_0.jpeg?h=c78a580b&amp;itok=5R5BdZ7T')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Comprehensive Recording Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Comprehensive Recording Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               One of the largest collections of literary recordings in the U.S., featuring over 6,000 recordings of poets and writers from the 1930s to the present day.
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-blue-star-collection" title="Read more about Woodberry Poetry Room Blue Star Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/AngelaDavis_BroadsidePress_Uncataloged_0.jpg?h=04a7e307&amp;itok=ovmehEQI')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Blue Star Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Blue Star Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               The Woodberry Poetry Room's special collection of monographs, chapbooks, serials, typescripts, broadsides, photographs, and related correspondence.
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-circulating-serials-collection" title="Read more about Woodberry Poetry Room Circulating &amp; Serials Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/poetry_room_0.jpg?h=7a042119&amp;itok=zMCFJj67')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Circulating &amp; Serials Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Circulating &amp; Serials Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A selection of over 5,000 poetry monographs and magazines, housed in the presence of a landmark Alvar Aalto-designed space.
+              </div>
+             </div></a>
+           </div>
+           <div class="hl__overlay-promo-grid__grid hl__overlay-promo-grid__grid--accordion-content js-accordion-content" style="display: none;" id="paragraph-accordion-406">
+            <a href="/collections/woodberry-poetry-room-comprehensive-recording-collection" title="Read more about Woodberry Poetry Room Comprehensive Recording Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/fullsizeoutput_18bbc_0.jpeg?h=c78a580b&amp;itok=5R5BdZ7T')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Comprehensive Recording Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Comprehensive Recording Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               One of the largest collections of literary recordings in the U.S., featuring over 6,000 recordings of poets and writers from the 1930s to the present day.
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-blue-star-collection" title="Read more about Woodberry Poetry Room Blue Star Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/AngelaDavis_BroadsidePress_Uncataloged_0.jpg?h=04a7e307&amp;itok=ovmehEQI')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Blue Star Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Blue Star Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               The Woodberry Poetry Room's special collection of monographs, chapbooks, serials, typescripts, broadsides, photographs, and related correspondence.
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-circulating-serials-collection" title="Read more about Woodberry Poetry Room Circulating &amp; Serials Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/poetry_room_0.jpg?h=7a042119&amp;itok=zMCFJj67')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Circulating &amp; Serials Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Circulating &amp; Serials Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A selection of over 5,000 poetry monographs and magazines, housed in the presence of a landmark Alvar Aalto-designed space.
+              </div>
+             </div></a> <a href="https://library.harvard.edu/poetry/listeningbooth/index.html" title="Read more about The Listening Booth" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/LISTENING%20BOOTH%20Main%20Image_0.jpg?h=da213a88&amp;itok=C-dQm8Nb')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Website
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>The Listening Booth</span> </span> <span class="hl__link-tag__external-icon hl__link-tag__external-icon--white">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                 <g>
+                  <g transform="translate(-906 -1005)">
+                   <path d="M923.78 1022.78V1015H926v7.78c0 1.22-1 2.22-2.22 2.22h-15.56c-1.23 0-2.22-1-2.22-2.22v-15.56c0-1.22.99-2.22 2.22-2.22H916v2.22h-7.78v15.56zm-5.71-17.78H926v7.93h-2.27v-4.07L912.6 1020l-1.6-1.6 11.14-11.13h-4.07z" />
+                  </g>
+                 </g>
+                </svg></span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Website
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>The Listening Booth</span> </span> <span class="hl__link-tag__external-icon hl__link-tag__external-icon--white">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                 <g>
+                  <g transform="translate(-906 -1005)">
+                   <path d="M923.78 1022.78V1015H926v7.78c0 1.22-1 2.22-2.22 2.22h-15.56c-1.23 0-2.22-1-2.22-2.22v-15.56c0-1.22.99-2.22 2.22-2.22H916v2.22h-7.78v15.56zm-5.71-17.78H926v7.93h-2.27v-4.07L912.6 1020l-1.6-1.6 11.14-11.13h-4.07z" />
+                  </g>
+                 </g>
+                </svg></span></h3>
+              <div class="hl__overlay-promo__description">
+               Over 600 recordings from the Woodberry Poetry Room's audio-visual collection of literary recordings from the 1930s to the present.
+              </div>
+             </div></a> <a href="/collections/frederick-c-packard-jr-sound-recordings" title="Read more about Frederick C. Packard, Jr. Sound Recordings" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/Record%20case.jpg?h=0cc67d3a&amp;itok=Pfxer_xf')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Frederick C. Packard, Jr. Sound Recordings</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Frederick C. Packard, Jr. Sound Recordings</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               The Packard Collection includes approximately 2,500 discs created, produced, or collected by Prof. Frederick C. Packard, Jr., during the years 1933-1963 as a part of his vision to create the nation's first "library of voices."
+               <br>
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-visual-collection" title="Read more about Woodberry Poetry Room Visual Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/Screen%20Shot%202019-07-23%20at%209.57.01%20AM.png?h=080ed96a&amp;itok=QcXBqPe-')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Visual Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Visual Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A range of architectural images of the Woodberry Poetry Room, focused on the designs of Alvar Aalto and some of its original curators and contributors.
+              </div>
+             </div></a> <a href="/collections/fanny-howe-notebooks-1967-2021" title="Read more about Fanny Howe Notebooks, 1967-2021" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/fullsizeoutput_1a09f_0.jpeg?h=2379be59&amp;itok=BsSg2qeN')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Fanny Howe Notebooks, 1967-2021</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Fanny Howe Notebooks, 1967-2021</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A collection of over 110 notebooks and diaries of award-winning poet, novelist, and memoirist Fanny Howe
+              </div>
+             </div></a> <a href="/collections/woodberry-poetry-room-collection-vinyl-records" title="Read more about Woodberry Poetry Room Collection of Vinyl Records" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/LP-Montage-Updated.jpeg?h=cfff666a&amp;itok=wsAa92Hr')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Collection of Vinyl Records</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Woodberry Poetry Room Collection of Vinyl Records</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               A dazzling array of literary recordings on vinyl, many of which can be played on the Aalto-designed consoles in the Woodberry Poetry Room
+              </div>
+             </div></a> <a href="/collections/galway-kinnell-recordings" title="Read more about Galway Kinnell Recordings " class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/Screen%20Shot%202019-07-22%20at%2012.18.54%20PM.png?h=bd9e4587&amp;itok=u71ZaN33')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Galway Kinnell Recordings </span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Galway Kinnell Recordings </span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Experience the Galway Kinnell collection, featuring over 365 recordings of the Pulitzer-Prizewinning poet and his friends made between 1960 and 2015.
+              </div>
+             </div></a> <a href="/collections/stephen-b-fassett-collection" title="Read more about Stephen B. Fassett Collection" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/fullsizeoutput_20b.jpeg?h=ea8edfa9&amp;itok=bWlKzq6g')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Stephen B. Fassett Collection</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Stephen B. Fassett Collection</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               Explore the correspondence of pioneering musicologist and audio engineer Steve Fassett, who made some of the earliest recordings of Sylvia Plath, Anne Sexton, and Joan Baez.
+               <br>
+              </div>
+             </div></a> <a href="/collections/anne-sexton-and-her-kind-sound-recordings-1968-1971" title="Read more about Anne Sexton and Her Kind Sound Recordings, 1968-1971" class="hl__overlay-promo hl__overlay-promo--description" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/collection_listing/public/a1c8c3ec-d707-4f42-9594-fefe1d3301e7_1_201_a_0.jpeg?h=50beaa1f&amp;itok=Ov4q4yQM')">
+             <div class="hl__overlay-promo__details-spacer" aria-hidden="true">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Anne Sexton and Her Kind Sound Recordings, 1968-1971</span> </span></h3>
+             </div>
+             <div class="hl__overlay-promo__details">
+              <div class="hl__overlay-promo__eyebrow">
+               Collection
+              </div>
+              <h3 class="hl__overlay-promo__title"><span><span>Anne Sexton and Her Kind Sound Recordings, 1968-1971</span> </span></h3>
+              <div class="hl__overlay-promo__description">
+               The sound archive of the groundbreaking band Anne Sexton and Her Kind, including demo tapes, studio recordings, and live performances
+              </div>
+             </div></a>
+           </div>
+           <div class="hl__overlay-promo-grid__see-all">
+            <a class="hl__link-tag hl__link-tag--with-arrow js-accordion-link" href="#" title="Show or hide more items" aria-expanded="false" aria-controls="paragraph-accordion-406"> <span class="hl__link-tag__toggle-text">Show Less</span><span>Show More</span> </a>
+           </div>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-17953" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="programs" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Public Programs</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-866" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText866">
+          <section class="hl__rich-text">
+           <p>The Woodberry Poetry Room is a vibrant hub of literary activity: all of our events are free and open to the public. Many programs&nbsp;are also&nbsp;<a href="https://www.youtube.com/playlist?list=PLDtBhamUEttF7dDSVrX_OWsEAtt46sejd">live-streamed</a>. If you would like to be added to our <a href="mailto: poetryrm@fas.harvard.edu">mailing list</a>, feel free to email us.&nbsp;If you have to miss an event, we invite you to visit our <a href="https://www.youtube.com/WoodberryPoetryRoom">YouTube Channel</a>&nbsp;featuring over 150 videos of past programs. All recordings produced through our public programs are added to the Poetry Room's landmark audio-visual archive (1933-present), which is searchable via <a href="https://hollis.harvard.edu/primo-explore/search?query=any,contains,woodberry%20poetry%20room%20collection%20of%20audio%20and%20video%20recordings,AND&amp;tab=books&amp;search_scope=default_scope&amp;vid=HVD2&amp;lang=en_US&amp;mode=advanced&amp;offset=0">HOLLIS</a>.<br><br><em>This season, we are pleased to announce that <strong>Tongo Eisen-Martin</strong> will be&nbsp;</em><a href="https://woodberrypoetryroom.com/?p=7976">guest curator</a><em> for two amazing events. Stay tuned for additional Spring 2024 programs, which will be added to this site shortly.&nbsp;</em></p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="button_callout-7421" tabindex="-1">
+        <section class="hl__stacked-promo-grid">
+         <div class="hl__stacked-promo-grid__container">
+          <h3 class="hl__comp-heading hl__comp-heading--left">Spring 2024 Events</h3>
+          <div class="hl__stacked-promo-grid__grid">
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screenshot_2024-02-05_at_3.31.40_pm_0.jpeg?h=e9284465&amp;itok=2FPL4Y2H" width="690" height="388" alt="LP with Boston Originals authors names">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Thursday, February 29: BOSTON ORIGINALS: Midwinter Reading &amp; Party</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Woodberry Poetry Room, Lamont Library, 6:00pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/11959857" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for more info&quot;"><span class="hl__button__text">Click for more info</span></a>
+             </div>
+            </div>
+           </section>
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screen_shot_2024-01-23_at_2.19.00_pm_0.jpeg?h=b44fabe9&amp;itok=4ofT0tzl" width="690" height="388" alt="Photo of Rukeyser and Moure">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Thursday, March 7: THE MYRIAD ACTIVISMS OF MURIEL RUKEYSER: Erín Moure</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Woodberry Poetry Room, Lamont Library, 5:30pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/11960869" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for more info&quot;"><span class="hl__button__text">Click for more info</span></a>
+             </div>
+            </div>
+           </section>
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screenshot_2024-01-24_at_8.44.23_am_0.png?h=adf6d0fe&amp;itok=nZbzxdCA" width="690" height="388" alt="Long Soldier and Sealey">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Tuesday, March 19: VOCARIUM READING SERIES: Layli Long Soldier &amp; Nicole Sealey</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Edison Newman Room, Houghton Library, 6:00pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/11965338" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for more info&quot;"><span class="hl__button__text">Click for more info</span></a>
+             </div>
+            </div>
+           </section>
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screenshot_2024-01-24_at_9.33.26_am_0.jpeg?h=39b075c7&amp;itok=9VFu6JxR" width="690" height="388" alt="Alexander and Eisen-Martin">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Wednesday, March 27: ORAL HISTORY INITIATIVE: Will Alexander in Conversation with Tongo Eisen-Martin</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Edison Newman Room, Houghton Library, 6:00pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/11983413" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for event info&quot;"><span class="hl__button__text">Click for event info</span></a>
+             </div>
+            </div>
+           </section>
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screen_shot_2024-01-26_at_1.15.08_pm_0.png?h=85d5eb5e&amp;itok=fFl5yiVl" width="690" height="388" alt="Nikki Giovanni headshot">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Tuesday, April 2: AN EVENING WITH NIKKI GIOVANNI: Film &amp; Reading</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Harvard Art Museums, Broadway St entrance. Film: 5pm &amp; Reading: 7pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/12070121" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for more info&quot;"><span class="hl__button__text">Click for more info</span></a>
+             </div>
+            </div>
+           </section>
+           <section class="hl__stacked-promo">
+            <div class="hl__stacked-promo__image">
+             <article class="media media--type-image media--view-mode-">
+              <img loading="lazy" src="/sites/default/files/styles/button_callout/public/screenshot_2024-02-15_at_9.11.54_am_0.png?h=a79859a4&amp;itok=1eQd3Bqr" width="690" height="388" alt="Grolier">
+             </article>
+            </div>
+            <div class="hl__stacked-promo__details">
+             <h3 class="hl__stacked-promo__title">Monday, April 15: ORAL HISTORY INITIATIVE: On the Grolier Poetry Book Shop</h3>
+             <div class="hl__stacked-promo__description">
+              <section class="hl__rich-text ">
+               <p>Forum Room, Lamont Library, 6:00pm</p>
+              </section>
+             </div>
+             <div class="hl__stacked-promo__link">
+              <a href="https://libcal.library.harvard.edu/event/12046193" class="hl__button hl__button--small hl__button--minor" title="Visit link for &quot;Click for more info&quot;"><span class="hl__button__text">Click for more info</span></a>
+             </div>
+            </div>
+           </section>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="content_block-17064" tabindex="-1">
+        <section class="hl__illustrated-content">
+         <div class="hl__illustrated-content__bg hl__illustrated-content__bg--narrow" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/paragraph_background_narrow/public/screen_shot_2022-08-15_at_4.47.01_pm_0.png?h=94583387&amp;itok=BuEsqrS7')"></div>
+         <div class="hl__illustrated-content__bg hl__illustrated-content__bg--wide" style="background-image: url('https://library.harvard.edu/sites/default/files/styles/paragraph_background_wide/public/screen_shot_2022-08-15_at_4.47.01_pm_0.png?h=94583387&amp;itok=aShkdMTK')"></div>
+         <div class="hl__illustrated-content__overlay"></div>
+         <div class="hl__illustrated-content__container">
+          <div class="hl__illustrated-content__title">
+           <h2 class="hl__comp-heading hl__comp-heading--center">Ashbery Typewriter Sessions</h2>
+          </div>
+          <div class="hl__illustrated-content__description">
+           <section class="hl__rich-text ">
+            <p>Celebrate the generous &amp; generative spirit of John Ashbery (1927-2017) by creating poems on his typewriter. Our Spring 2024 sessions will take place once a month: FEBRUARY 14, MARCH 20, and APRIL 10 (1:00-5:00pm). Reservations are required (a link will be posted in early February). Faculty members and local educators are welcome to contact us regarding class-related use throughout the semester.</p>
+           </section>
+          </div>
+          <div class="hl__illustrated-content__cta">
+           <a href="https://calendly.com/woodberrypoetryroom/lunch-poems-ashbery-typewriter-sessions-spring2024" class="hl__button hl__button--secondary" title="Visit link for &quot;Click here to register&quot;"><span class="hl__button__text">Click here to register</span></a>
+          </div>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-871" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="classesandtours" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Classes &amp; Tours</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-436" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText436">
+          <section class="hl__rich-text">
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Screen%20Shot%202018-09-14%20at%209.48.09%20AM.png?itok=Oupm0VGj" width="450" height="293" alt="Audio Seminar with Christian Hawkey and Rachel Levitsky" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Audio Seminar at the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>The Woodberry Poetry Room offers a range of innovative educational opportunities,&nbsp;including staff-led <strong>audio seminars</strong>, <a href="https://libcal.library.harvard.edu/event/10540960?_gl=1*t68zx4*_ga*MTI5NjI5MjEyMi4xNjM5NDIzNjIx*_ga_3CXC97RWEK*MTY3OTc0NDUxMC4yMjMuMS4xNjc5NzQ2MDUwLjYwLjAuMA..">public listening sessions</a>, and <strong>group tours.</strong></p>
+           <p>In addition to our standard seminar, which gives a broad overview of our A/V collection highlights and history, we are happy to customize seminars for individual classroom needs.&nbsp;</p>
+           <figure class="hl__figure--right hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Screen%20Shot%202018-09-14%20at%209.45.55%20AM.png?itok=xnUIeaJY" width="450" height="359" alt="Jen Bervin teaches a class for the Poetry Room" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Jen Bervin teaches for the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>Faculty members, graduate students, and local educators wishing to schedule classes or seminars in the room are encouraged to use the Special Collections <a href="https://classrequest.library.harvard.edu/">Class Request tool</a>. The Woodberry Poetry Room curatorial staff will follow-up to discuss your specific needs and interests.</p>
+           <p>If you would like <a href="mailto:davis2@fas.harvard.edu">to schedule a group tour</a> or to discuss a more formal use of the venue, please&nbsp;contact us in advance to make arrangements.</p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-1706" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="fellowships" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">Creative Fellowships</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-2621" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText2621">
+          <section class="hl__rich-text">
+           <figure class="hl__figure--right hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Fellowships_LandingPage_WPR-Creative-Fellow-Eileen-Myles.jpg?itok=hNC_8kja" width="450" height="253" alt="Eileen Myles works in the Poetry Room sitting with headphones on" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              WPR Fellow Eileen Myles at the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>Each year the Woodberry Poetry Room offers&nbsp;poets, writers, visual and multimedia artists, composers, and scholars of contemporary poetry the opportunity to apply for the <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="7e8c1bea-4c25-4d64-b874-b64ffd969218" href="/grants-fellowships/woodberry-poetry-room-fellowship" title="Woodberry Poetry Room Creative Fellowship"><strong>WPR Creative Fellowship</strong></a>.</p>
+           <p>Applicants are encouraged to propose creative projects that would benefit from the resources available in the room and to generate new work that further actualizes the Poetry Room's collections—particularly the audio-video archive.&nbsp;</p>
+           <p>The next deadline is&nbsp;<strong>February 1, 2024</strong>. Recipients will be notified by <strong>June 15, 2024.</strong><br>
+             &nbsp;</p>
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/IMG_2503_0.jpg?itok=JIlDRx-t" width="450" height="292" alt="Tracie Morris standing and reading into a microphone at the Poetry Room" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Tracie Morris performs at the Poetry Room (2017)
+             </div>
+            </figcaption>
+           </figure>
+           <p>The recipient of the 2023-2024 WPR Creative Fellowship was <strong>Rosa&nbsp;Alcalá&nbsp;</strong>for her project&nbsp;<strong>“Beyond Opposing Pages: Poets and Their Translators in Performance.”&nbsp;</strong><br><br>
+             Each year, the committee is also given the option to name a Creative Grant recipient: the 2023-2024 recipient was<strong> Gbenga Adesina&nbsp;</strong>for his project "Re-Memory."</p>
+           <p>Past fellowship recipients have included Jonah Mixon-Webster, Diana Khoi Nguyen &amp; Jane Wong, Tracie Morris, Erin Moure, Eileen Myles, Sawako Nakayasu, and Fanny Howe.&nbsp;<em>WPR Creative Fellowships and Grants are generously funded by the Anagnostopoulos fund.</em></p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-876" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="about" tabindex="-1">
+        <div class="hl__comp-header" tab-index="-1">
+         <h2 class="hl__comp-heading ">About the Poetry Room</h2>
+        </div>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked hl__full-template__page-content--sub-row" id="rich_text-421" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText421">
+          <section class="hl__rich-text">
+           <p class="hl__rte-large">Welcome to the Woodberry Poetry Room, a special collections reading room and lively literary center at Harvard University.&nbsp;</p>
+           <figure class="hl__figure--right hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Welcome2000section_DorotheaLaskyvisitsthePoetryRoom_0.jpg?itok=h2TB67Vk" width="450" height="253" alt="Welcome to the Poetry Room featuring a photo of poet Dorothea Lasky" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Dorothea Lasky at the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>Located in Lamont Library — in a room designed by <a href="https://www.alvaraalto.fi/en/">Alvar Aalto</a> — and overseen by Houghton Library, the Poetry Room features over 5,000 poetry monographs and magazines and a landmark collection of literary recordings (1933-present).</p>
+           <p>With over 6,000 recordings on a range of media that span the 20th and 21st centuries — including discs, magnetic tape (reel to reel and cassette), CDs, DATs, and born digital — the collection is one of the largest and earliest literary sound archives in the United States.</p>
+           <p>&nbsp;</p>
+           <h2>BRIEF HISTORY OF "THE LIBRARY OF VOICES"</h2>
+           <h3><br>
+             Woodberry at Widener: 1931—1949</h3>
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Welcome_Poetry%20Room_WidenerLibrary_undated1940s.jpg?itok=jnqhGHoh" width="450" height="253" alt="Poetry Room at Widener Library with a group of people standing and looking at the camera" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Poetry Room at Widener Library (1931)
+             </div>
+            </figcaption>
+           </figure>
+           <p>Founded in honor of poet, scholar, and Harvard graduate&nbsp;<a href="https://en.wikipedia.org/wiki/George_Edward_Woodberry">George Edward Woodberry (1855-1930)</a>, the Poetry Room first opened its doors on the third floor of Widener Library in 1931. Prof. Harry Levin later reflected that its opening was a kind of declaration that "Harvard was officially recognizing modern poetry."</p>
+           <p>The early Poetry Room featured seminal materials from the&nbsp;<a href="http://nrs.harvard.edu/urn-3:FHCL.Hough:hou01012">Amy Lowell collection</a>, now a part of Houghton Library, as well as Modernist monographs and magazines. The&nbsp;<a href="https://hollis.harvard.edu/primo-explore/search?query=any,contains,%22morris%20gray%22&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;amp=&amp;tab=everything&amp;search_scope=everything&amp;sortby=rank&amp;vid=HVD2&amp;facet=rtype,include,sound_recordings&amp;lang=en_US&amp;offset=0">Morris Gray lecture series</a>&nbsp;— which hosted such luminaries as Martha Dickinson Bianchi, Robert Frost, Wallace Stevens, and William Carlos Williams — added an audible dimension to the room. In 1938, a Victrola was installed, and phonograph records swiftly became the fulcrum of the room and its collections.</p>
+           <p>&nbsp;</p>
+           <h3>The Harvard Vocarium: 1933—1955</h3>
+           <figure class="hl__figure--right hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Eliot%20disc%20edited_0.jpg?itok=gfoJ-Quj" width="450" height="440" alt="Harvard Vocarium vinyl view with label" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Harvard Vocarium disc
+             </div>
+            </figcaption>
+           </figure>
+           <p>The mere presence of phonograph records does not explain how the Poetry Room became a landmark A/V collection. For that, we need to turn to the pioneering work of Harvard Professor of Public Speaking <a href="http://nrs.harvard.edu/urn-3:FHCL.Hough:hou02820">Frederick C. Packard, Jr.</a>.<br><br>
+             As early as 1929, Packard began to clamor for the creation of the world's first-ever library of voices (a "vocarium," as he and Prof. E. K. Rand dubbed it), which would be “a place where voices can be kept and studied” and stand in equal stature to a library of books. He found a home for his vision in the nascent Poetry Room: “My Vocarium was in<em> there.</em>”<br>
+             &nbsp;</p> A repository of all of the voices he could get a hold of, a kind of audio time-capsule.... Josephine Packard
+           <br>
+            &nbsp; 
+           <p>In 1933, Packard launched the Harvard Vocarium, one of the first poetry and spoken-literature recording labels in the world. The preliminary batch featured several Latin and Greek recordings and <a href="https://www.harvard.edu/in-focus/poetry/#eliot">T. S. Eliot's first poetry recording</a>.&nbsp;Eliot's recording of "Gerontion" and "The Hollow Men"&nbsp;was made by Packard during the poet's year-long Charles Eliot Norton lecturership.</p>
+           <p>Until its discontinuation in 1955, the Harvard Vocarium made and, in many cases commercially released, the first (or earliest extant) recordings by such authors as <strong>Elizabeth Bishop, Robert Lowell, Marianne Moore, Vladimir Nabokov, Anais Nin, Ezra Pound</strong>, and<strong> Tennessee Williams.</strong>&nbsp;While a 1938&nbsp;<em>Boston Sunday Post</em>&nbsp;article boasted that “Harvard University, one of the most forward universities in the world, is breaking all precedent and <strong>founding a library for the voice</strong>,” the vast library (encompassing poetry readings, theatrical performances, musical concerts, classical oratory, and political speeches) that Packard envisioned never wholly materialized. But his literary recordings <em>did </em>continue to be deposited, preserved, and accessed at the Woodberry Poetry Room, where an active effort to catalog and preserve them continues to this day.</p>
+           <p>&nbsp;</p>
+           <h3>The Poetry Room in Lamont Library: 1949—present</h3>
+           <p>By the late 1940s, the venue had become so popular that plans were made to move it to the new Lamont Library.</p>
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Welcome_Cartoon.jpg?itok=E_MufbqY" width="450" height="253" alt="Cartoon of students listening to records in the Lamont Poetry Room" class="hl__image">
+           </figure>
+           <p>When the Poetry Room opened in Lamont in&nbsp;1949, it was in a new suite of&nbsp;<a href="http://id.lib.harvard.edu/aleph/015129373/catalog">Alvar Aalto-designed rooms</a>&nbsp;created specifically as "a place for poetry" and poetry listening. Four Thorens turntables, equipped with outlets for eight sets of earphones, helped to accommodate the growing visitorship. Over 4,000 listening requests were made during its first four months alone.</p>
+           <p>(The downside of this move was that it excluded women from the Poetry Room: Radcliffe students had previously had access to its Widener venue. With the exception of summer sessions, during which time such poets as Adrienne Rich and Sylvia Plath were able to visit, Lamont Library did not admit women until 1967.)</p>
+           <p>During <strong>John Lincoln Sweeney</strong>’s mid-century curatorship, the Poetry Room flourished and became a nexus for poets who were (or would later be) associated with the New York School of Poets, the Boston Renaissance, and the so-called "Confessional" poetry movement.&nbsp;The Poetry Room also forged a significant collaboration "The Poet Speaks" with the British Council, which jointly funded recordings by Kamau Brathwaite, Philip Larkin, Hugh MacDiarmid, Stevie Smith, Ted Hughes, among others.</p>
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Folksingers-Master-reel-768x598_0.jpg?itok=_ypvfTCV" width="450" height="350" alt="Fassett Studio reel of Joan Baez" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Fassett Studio reel of Joan Baez
+             </div>
+            </figcaption>
+           </figure>
+           <p>Working in collaboration with Packard and with the expertise of sound engineer&nbsp;<a href="http://id.lib.harvard.edu/ead/hou02818/catalog">Stephen B. Fassett</a>, Sweeney was responsible for documenting the circuit tours of E. E. Cummings and Dylan Thomas, for making <a href="https://library.harvard.edu/sites/default/files/static/poetry/listeningbooth/poets/stevens.html">Wallace Stevens'</a> last recordings, and for chronicling the performances of such emerging mid-century writers as John Ashbery, John Berryman, Robert Creeley, Allen Ginsberg, Stephen Jonas, Robert Lowell,&nbsp;<a href="http://id.lib.harvard.edu/aleph/001788919/catalog">Sylvia Plath</a>, Adrienne Rich, Anne Sexton, and John Wieners.</p>
+           <p>Sweeney also facilitated and recorded literary conferences and folk-music performances in Lamont Forum Room: among the highlights from this collection are one of the earliest live recordings of&nbsp;<a href="http://id.lib.harvard.edu/aleph/001695406/catalog">Ralph Ellison</a>, made during the Conference on the Contemporary Novel, in August 1953.</p>
+           <p>Fassett continued to assist interim curators after Sweeney's tenure: in addition to his early work recording everyone from Baez to Plath, Fassett&nbsp;was instrumental in making Poetry Room recordings by <a href="https://library.harvard.edu/sites/default/files/static/poetry/listeningbooth/poets/lorde.html">Audre Lorde</a> and Yvegeny Yevtushenko.</p>
+           <figure class="hl__figure--right hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/Welcome_Heaney.jpg?itok=A4vpui5y" width="450" height="253" alt="Seamus Heaney beside his portrait in the Poetry Room" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Seamus Heaney at the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>In 1974, <strong>Stratis Haviaras </strong>was named curator of the Poetry and Farnsworth Rooms, a position he held until 2000. During this lively period, Haviaras recorded a wide array of poets representing a broad range of late 20th century poetics: among them, Charles Bernstein, Rita Dove, Robert Duncan, Jorie Graham, Galway Kinnell, Sharon Olds, Gary Snyder, and Derek Walcott. Haviaras was also responsible for creating a substantive archive of Greek-language recordings, featuring such authors as George Seferis and Odysseus Elytis.<br><br>
+             In addition, he recorded over 40 readings, seminars, and lectures by <a href="https://library.harvard.edu/sites/default/files/static/poetry/listeningbooth/poets/heaney.html">Seamus Heaney</a>, during Heaney's pivotal period of affiliation with the university. Like Sweeney before him, Haviaras also began to transfer the Poetry Room's recordings to the next iteration of sound recording: the compact cassette.</p>
+           <p>In 1986, Haviaras founded the literary journal&nbsp;<em>Errato</em>, which later became the&nbsp;<em><a href="http://www.harvardreview.org/">Harvard Review</a></em>--contributors to which have included Jhumpa Lahiri, J. M. Coetzee, Yusef Komunyakaa, David Foster Wallace, and the over 200 poets who participated in the recent&nbsp;<em>Renga for Obama</em>.</p>
+           <p>&nbsp;</p>
+           <h3>The Poetry Room Joins Houghton Library: circa 2000</h3>
+           <figure class="hl__figure--left hl__figure">
+            <img loading="lazy" src="/sites/default/files/styles/content_embed/public/ClaudiaRankine.jpg?itok=TEOWSHnj" width="450" height="279" alt="Claudia Rankine reads from CITIZEN at a podium" class="hl__image">
+            <figcaption class="hl__figure__figcaption">
+             <div class="hl__figure__text-caption">
+              Claudia Rankine reads for the Poetry Room
+             </div>
+            </figcaption>
+           </figure>
+           <p>With Haviaras’ retirement in 2000, the Poetry Room was transferred to management under Houghton Library: its landmark recording collection having been deemed a special collection.</p>
+           <p>In 2002, during the dynamic curatorship of <strong>Don Share,</strong> the Harvard Vocarium was chosen by the Library of Congress as a part of the first annual selection of&nbsp;the <a href="https://www.loc.gov/programs/static/national-recording-preservation-board/documents/Harvard%20Vocarium%20essay.pdf">National Recording Registry</a>.<br><br>
+             Share was also crucial in recognizing the precarity of early recording formats and helped pilot the first Library Digitization Initiative at Harvard, establishing new standards for audio preservation. In 2006, Share joined the staff of&nbsp;<em>Poetry</em>&nbsp;Magazine.</p> [The Poetry Room] contains not only the voices of the greatest poets, but constitutes a living history of modern poetry.... Seamus Heaney
+           <br>
+            &nbsp; 
+           <p>The Poetry Room has a long history of hiring poets and writers, and the current staff is no exception to that legacy. <strong>Christina Davis</strong> and <strong>Mary Walker Graham</strong> are both actively publishing poets. Past curatorial assistants and Harvard students who have worked at the Poetry Room include: Chloe Garcia Roberts, Maureen McLane, Fred Moten, and Lindsay Turner.</p>
+           <p>Poetry Room curators from 1931 to the present have been: W. N. Bates, George M. Kahrl, Arthur T. Hamlin, Arnold M. Kenseth, Philip Horton, John Lincoln Sweeney, Robert Fitzgerald, Jeanne Broburg, Stratis Haviaras, Don Share, and Christina Davis.<br><br>
+             The Woodberry Poetry Room's A/V collection is, according to Nobel laureate Seamus Heaney, "indispensable: it contains not only the voices—from different times of their lives—of the greatest poets, but constitutes a living history of modern poetry." This vital tradition continues today with a rich assortment of <a href="https://www.youtube.com/channel/UCx7LgX1FZbs7zguHTxGmPKw">readings and performances,</a> as well as significant efforts to preserve and digitize the&nbsp;<a href="/collections/listening-booth">Poetry Room’s pivotal recordings</a>&nbsp;for generations to come.</p>
+           <p>&nbsp;</p>
+          </section>
+         </div>
+        </section>
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="divider-17665" tabindex="-1">
+        <hr class="hl__section-divider hl__section-divider--thin" aria-hidden="true">
+       </div>
+       <div class="hl__full-template__page-content hl__full-template__page-content--stacked" id="rich_text-17693" tabindex="-1">
+        <section class="hl__show-more-text">
+         <div id="showMoreText17693">
+          <section class="hl__rich-text">
+           <h2>Accessibility of the Poetry Room</h2>
+           <ul>
+            <li>The main entrance to Lamont Library near&nbsp;Quincy Street is accessible by automatic door and ramp.</li>
+            <li>The Poetry Room is on the 3rd floor and can be accessed by elevator.</li>
+            <li>Attendees to Poetry Room events may request accommodations with advance notice.&nbsp;</li>
+            <li>An all-gender restroom on the 4th floor&nbsp;is open Monday-Friday, 9AM-5PM during the academic term.&nbsp;</li>
+           </ul>
+           <p>Contact Houghton Library Administrative Coordinator Le Huong Huynh, <a href="mailto:lehuong_huynh@harvard.edu">lehuong_huynh@harvard.edu</a> or (617) 495-2443, with accessibility questions about the Woodberry Poetry Room.</p>
+          </section>
+         </div>
+        </section>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="hl__full-template__post-content region">
+     <div id="block-newslettersignupblock" data-block-plugin-id="newsletter_signup_block">
+      <section class="hl__single-input-form">
+       <form class="newsletter-signup hl__single-input-form__form" data-drupal-selector="newsletter-signup" action="/libraries/poetryroom" method="post" id="newsletter-signup" accept-charset="UTF-8">
+        <label class="hl__label hl__label--inline" data-drupal-selector="edit-title" for="edit-email-address" id="edit-title">Stay in the know</label>
+        <div class="hl__single-input-form__input-group">
+         <input placeholder="Email Address" class="hl__input hl__input--inline js-is-required form-email required" data-twig-suggestion="newsletter_signup_email" data-drupal-selector="edit-email-address" type="email" id="edit-email-address" name="email_address" value="" maxlength="254" required aria-required="true"> <button class="hl__button hl__button--small hl__button--inline button js-form-submit form-submit" data-twig-suggestion="newsletter_signup_submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Sign up" data-ga-link="Form: Email Full-Width"> Sign up </button>
+        </div><input autocomplete="off" data-drupal-selector="form-yrlofm1jio5g3j7tkds3mhhceubmtm-aeehdbkkcxk" type="hidden" name="form_build_id" value="form-_YRlofM1Jio5G3J7tkDs3mhHcEUbmTm-AEehdbKKcXk"> <input data-drupal-selector="edit-newsletter-signup" type="hidden" name="form_id" value="newsletter_signup">
+       </form>
+      </section>
+     </div>
+    </section>
+   </main>
+   <footer role="contentinfo">
+    <section>
+     <section class="region hl__footer">
+      <div class="hl__footer__container">
+       <div class="hl__footer__logo">
+        <section class="hl__linked-image">
+         <a href="/" title="Harvard Library"> <img class="hl__image" alt="Harvard Library Logo" height="24" width="270" src="/themes/custom/harvard/assets/images/logo-large.svg"> </a>
+        </section>
+       </div>
+       <div class="hl__footer__links">
+        <div class="hl__footer__column">
+         <nav class="hl__footer-nav" aria-label="footer 1 of 2">
+          <ul class="hl__footer-nav__items">
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/support-library" class="hl__link-tag" data-drupal-link-system-path="node/5341"><span>Giving to the Library</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://provost.harvard.edu/" class="hl__link-tag"><span>Office of the Provost</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://hollis.harvard.edu/" class="hl__link-tag"><span>HOLLIS</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/digital-collections" class="hl__link-tag" data-drupal-link-system-path="node/6236"><span>Harvard Digital Collections</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://hollisarchives.lib.harvard.edu/" class="hl__link-tag"><span>HOLLIS for Archival Discovery</span></a></li>
+          </ul>
+         </nav>
+        </div>
+        <div class="hl__footer__column">
+         <nav class="hl__footer-nav" aria-label="footer 2 of 2">
+          <ul class="hl__footer-nav__items">
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="http://nrs.harvard.edu/urn-3:hul.ois:databases" class="hl__link-tag"><span>Databases</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="/library-newsletters-social-media" class="hl__link-tag" data-drupal-link-system-path="node/10856"><span>Newsletters/Social</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://staff.library.harvard.edu" class="hl__link-tag"><span>Staff Portal</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://library.harvard.edu/accessibility" class="hl__link-tag"><span>Library Accessibility</span></a></li>
+           <li data-ga-link="Footer Links" class="hl__footer-nav__item"><a href="https://nrs.harvard.edu/urn-3:hul.ois:reportaproblem" class="hl__link-tag"><span>Report a Problem</span></a></li>
+          </ul>
+         </nav>
+        </div>
+       </div>
+       <div class="hl__footer__content">
+        <div class="hl__footer__top-links">
+         <div class="hl__footer__quick-links">
+          <div class="hl__linked-list hl__linked-list--no-bullets ">
+           <ul class="hl__linked-list__items">
+            <li class="hl__linked-list__item"><a class="hl__link-tag" href="https://accessibility.harvard.edu/" title="Read our accessibility"><span>Accessibility</span></a></li>
+            <li class="hl__linked-list__item"><a class="hl__link-tag" href="/privacy-terms-use-copyright-information/" title="Read our Privacy Policy"><span>Privacy</span></a></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div class="hl__footer__license">
+         <div class="hl__footer__cc-icon">
+          <img class="hl__image " alt="Creative Commons license" height="31" width="88" src="/themes/custom/harvard/assets/images/cc-88x31.png">
+         </div>
+         <div class="hl__footer__cc-text">
+          Creative Commons Attribution 4.0 International License
+         </div>
+        </div>
+        <div class="hl__footer__message">
+         <section class="hl__rich-text hl__rich-text--small ">
+          <p>Except where otherwise noted, this work is subject to a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, which allows anyone to share and adapt our material as long as proper attribution is given. For details and exceptions, see the <a href="https://osc.hul.harvard.edu/programs/copyright/ccby">Harvard Library Copyright Policy</a> ©2024 Presidents and Fellows of Harvard College.</p>
+         </section>
+        </div>
+       </div>
+      </div>
+     </section>
+    </section>
+   </footer>
+  </div>
+  <script src="/sites/default/files/js/js_UidHnrtdlpI_bMpjuWcyjWBS2sgPohZ-uwzhL401g5s.js"></script>
+  <script src="https://v2.libanswers.com/load_chat.php?hash=90b85bdd1489a074045c2519ad2fc1a5"></script>
+  <script src="https://v2.libanswers.com/load_chat.php?hash=055503cc8dd52ad22b42fb2afdf10da9"></script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-889d0f3d691da91ea39","applicationID":"812192627","transactionName":"b1RUbEVTWxEDBhILXFYed1tDW1oMTSEUF0NZXWpWWFZQPiEKCBZBV11aXUVuew0GADALVk9yWVZDQFoODgAUTw1OWFNP","queueTime":0,"applicationTime":1001,"atts":"QxNXGg1JSB8=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+ </body>
+</html>
