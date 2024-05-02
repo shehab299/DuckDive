@@ -5,10 +5,10 @@ import styles from "./SearchSuggestion.module.css";
 function SearchSuggestion({ suggestion, onSelectSuggestion }) {
   return (
     <div
-      onClick={() => onSelectSuggestion(suggestion)}
+      onClick={() => onSelectSuggestion(suggestion.query)}
       className={styles.container}
     >
-      {suggestion}
+      {suggestion.query}
     </div>
   );
 }
