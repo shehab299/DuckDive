@@ -2,6 +2,7 @@
 */Robots/
 */docs/
 */HtmlPages/
+*/target
 *.log
 .env
 .idea
