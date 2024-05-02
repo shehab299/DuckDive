@@ -2,7 +2,7 @@
 */target/
 */Robots/
 */docs/
-*/HtmlPages/
+HtmlPages/
 */target
 *.log
 .env
