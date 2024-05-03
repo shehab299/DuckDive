@@ -12,6 +12,10 @@ target
 */html/
 .vscode
 
+.vscode/
+
+.html
+
 html/
 
 */target/
