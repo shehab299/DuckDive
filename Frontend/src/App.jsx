@@ -1,13 +1,13 @@
 import SearchPage from "../Pages/SearchPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Results from "../Pages/Results";
+import ResultsPage from "../Pages/ResultsPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SearchPage />} />
-        <Route path="/results" element={<Results />} />
+        <Route path="/results" element={<ResultsPage />} />
       </Routes>
     </BrowserRouter>
   );

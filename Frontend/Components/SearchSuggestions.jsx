@@ -4,7 +4,7 @@ import SearchSuggestion from "./SearchSuggestion";
 
 import styles from "./SearchSuggestions.module.css";
 
-function SearchSuggestions({ suggestions, onSelectSuggestion }) {
+function SearchSuggestions({ style, suggestions, onSelectSuggestion }) {
   return (
     <div className={styles.container}>
       {suggestions.map((suggestion, index) => (
@@ -12,6 +12,7 @@ function SearchSuggestions({ suggestions, onSelectSuggestion }) {
           onSelectSuggestion={onSelectSuggestion}
           suggestion={suggestion}
           key={index}
+          style={style}
         />
       ))}
     </div>

@@ -1,0 +1,38 @@
+.pagination {
+  position: relative;
+  margin: 30px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  border-radius: 5px;
+
+  color: grey;
+}
+
+.arrow {
+  font-size: 13px;
+  padding: 10px;
+  margin: 0px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.number {
+  margin: 0 6px;
+  border-radius: 4px;
+
+  cursor: pointer;
+  padding: 10px 13px;
+
+  transition: 0.3s;
+}
+
+.number:hover,
+.arrow:hover,
+.active {
+  background-color: #ffb74d;
+  color: white;
+}
