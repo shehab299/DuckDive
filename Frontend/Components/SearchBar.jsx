@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import styles from "./Search.module.css";
+import styles from "./SearchBar.module.css";
 
 import SearchSuggestions from "./SearchSuggestions";
 
 // import { IoIosSearch } from "react-icons/io";
 
-function Search() {
+function SearchBar({ customStyle }) {
   const [suggestions, setSuggestions] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -19,7 +19,7 @@ function Search() {
         navigate("/results");
       }
     }
-    
+
     document.addEventListener("keydown", callback);
 
     return function cleanup() {
@@ -30,18 +30,19 @@ function Search() {
   useEffect(() => {
     const controller = new AbortController();
     async function fetchSuggestions() {
-      const res = await fetch(
-        "https://bpkv76oojc.api.quickmocker.com/complete",
-        { signal: controller.signal }
-      );
+      const res = await fetch("http://localhost:3030/complete", {
+        signal: controller.signal,
+      });
       const data = await res.json();
       setSuggestions(data.suggestions);
-      return function cleanup() {
-        controller.abort();
-      };
     }
-    fetchSuggestions();
+
     console.log(suggestions);
+    fetchSuggestions();
+
+    return function cleanup() {
+      controller.abort();
+    };
   }, [searchTerm]);
 
   function handleChange(value) {
@@ -51,6 +52,7 @@ function Search() {
   function handleSelectSuggestion(value) {
     setSearchTerm(value);
     setShowSuggestions(false);
+    navigate("/results");
   }
 
   return (
@@ -64,16 +66,18 @@ function Search() {
         value={searchTerm}
         onChange={(e) => handleChange(e.target.value)}
         onClick={() => setShowSuggestions(true)}
+        style={customStyle}
       />
       {/* <IoIosSearch /> */}
       {showSuggestions && suggestions.length !== 0 && (
         <SearchSuggestions
           onSelectSuggestion={handleSelectSuggestion}
           suggestions={suggestions}
+          style={customStyle}
         />
       )}
     </>
   );
 }
 
-export default Search;
+export default SearchBar;
