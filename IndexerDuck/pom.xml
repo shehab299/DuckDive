@@ -10,6 +10,18 @@
 
   <name>indexer_duck</name>
 
+
+<repositories>
+		<repository>
+			<id>jcenter</id>
+			<url>https://jcenter.bintray.com</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -17,12 +29,19 @@
   </properties>
 
   <dependencies>
+		<dependency>
+			<groupId>org.tartarus.snowball</groupId>
+			<artifactId>libstemmer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongodb-driver-sync</artifactId>
       <version>5.0.1</version>
     </dependency>
+
+
 
     <dependency>
       <groupId>org.jsoup</groupId>

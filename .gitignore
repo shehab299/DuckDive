@@ -7,9 +7,10 @@ HtmlPages/
 *.log
 .env
 .idea
-
+target
 =======
 */html/
+.vscode
 
 html/
 

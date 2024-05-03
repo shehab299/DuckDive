@@ -4,31 +4,35 @@ import org.jsoup.Connection.Response;
 
 import com.crawler.Models.Page;
 import com.crawler.Models.PageService;
+import com.mongodb.internal.connection.ReadConcernHelper;
 
 public class Crawler implements Runnable {
-    private static final int CRAWLING_LIMIT = 5000;
-    private static final String seedPath = "SpiderDuck/Resources/seed.txt";
-    private static final String docPath = "SpiderDuck/src/main/java/com/crawler/HtmlPages/";
-    private static PageService service;
+    private static final int CRAWLING_LIMIT = 5;
+    private PageService service;
     private Frontier frontier;
     private Counter numCrawled;
 
     public Crawler(Frontier frontier, PageService service, Counter numCrawled) {
         this.frontier = frontier;
-        Crawler.service = service;
+        this.service = service;
         this.numCrawled = numCrawled;
 
     }
 
-    private static boolean shouldBeCrawled(Response response, Url url) {
+    private boolean shouldBeCrawled(Response response, Url url) {
+        
         if (service.urlExists(url)) {
             System.out.println(url.getUrl() + " Repeated\n");
+            return false;
         }
+
         return response != null
                 && response.statusCode() == 200
                 && HttpRequest.isHtml(response)
-                && (!url.robotsExists() || RobotsHandler.canBeCrawled(url))
                 && !service.urlExists(url);
+                // && !url.robotsExists()
+                // && RobotsHandler.canBeCrawled(url);
+
     }
 
     private static void addUrlsToFrontier(HtmlDocument doc, Frontier frontier) {
@@ -39,23 +43,31 @@ public class Crawler implements Runnable {
     }
 
     public void run() {
-        synchronized (frontier) {
-            frontier.readSeed(seedPath);
-        }
 
         while (true) {
+
+            synchronized (numCrawled) {
+                if (numCrawled.get() >= CRAWLING_LIMIT) {
+                    break;
+                }
+            }
+
             Url url;
             synchronized (frontier) {
+
+                if(frontier.isEmpty())
+                    break;
+
                 url = frontier.getNexturl();
             }
 
-            Response response = HttpRequest.sendRequest(url.getUrl());
+            Response response = HttpRequest.sendRequest(url.getNormalized());
 
             if (!shouldBeCrawled(response, url)) {
                 continue;
             }
 
-            HtmlDocument doc = new HtmlDocument(url.getUrl());
+            HtmlDocument doc = new HtmlDocument(url.getNormalized());
 
             String hashCode = doc.hash();
 
@@ -65,8 +77,7 @@ public class Crawler implements Runnable {
 
             String path;
             synchronized (numCrawled) {
-                path = docPath + numCrawled.get() + ".html";
-                numCrawled.increment();
+                path = MultiThreadedCrawler.docPath + numCrawled.get() + ".html";
             }
 
             doc.download(path);
@@ -75,14 +86,10 @@ public class Crawler implements Runnable {
                 addUrlsToFrontier(doc, frontier);
             }
 
-            Page x = new Page(url.getNormalized(), hashCode, path, false);
+            Page x = new Page(url.getNormalized(), url.getUrl(), hashCode, path, false);
             service.insertPage(x);
+            
 
-            synchronized (numCrawled) {
-                if (numCrawled.get() == CRAWLING_LIMIT) {
-                    break;
-                }
-            }
         }
     }
 }

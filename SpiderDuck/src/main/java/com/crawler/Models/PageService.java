@@ -15,9 +15,11 @@ public class PageService {
 
         Document newPage = new Document()
                 .append("url", p.getUrl())
+                .append("originalUrl",p.getOriginalUrl())
                 .append("hash",p.getHash())
                 .append("path",p.getPath())
                 .append("is_indexed",p.getIndexed());
+
 
         pageTable.insertOne(newPage);
     }
@@ -37,7 +39,7 @@ public class PageService {
 
     public boolean urlExists(Url url)
     {
-        Document query = new Document("url",url.getNormalized());
+        Document query = new Document("url", url.getNormalized());
         Document result = pageTable.find(query).first();
 
         return result != null;

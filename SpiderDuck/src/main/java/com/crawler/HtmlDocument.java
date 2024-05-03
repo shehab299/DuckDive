@@ -7,7 +7,7 @@ import org.jsoup.nodes.Element;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +35,12 @@ public class HtmlDocument {
 
         for (Element link : this.document.select("a[href]")) {
             String absUrl = link.absUrl("href");
-            Url url = new Url(absUrl);
+            Url url;
+            try {
+                url = new Url(absUrl);
+            } catch (URISyntaxException e) {
+                continue;
+            }
             urls.add(url);
         }
 

@@ -5,6 +5,7 @@ import java.util.Queue;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class Frontier {
     private Queue<Url> urlQueue;
@@ -19,7 +20,12 @@ public class Frontier {
         try (BufferedReader reader = new BufferedReader(new FileReader(seedPath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                Url url = new Url(line);
+                Url url;
+                try {
+                    url = new Url(line);
+                } catch (URISyntaxException e) {
+                    continue;
+                }
                 addurl(url);
             }
         } catch (IOException e) {

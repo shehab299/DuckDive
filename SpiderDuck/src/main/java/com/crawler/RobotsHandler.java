@@ -157,26 +157,5 @@ public class RobotsHandler {
         return !writeRobotsFile(url);
     }
 
-    // test function
-    public static void Test() {
-        try {
-            FileReader fileReader = new FileReader("SpiderDuck\\src\\main\\java\\com\\crawler\\seed.txt");
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                Url url = new Url(line);
-                System.out.println(canBeCrawled(url));
-            }
-
-            bufferedReader.close();
-            fileReader.close();
-        } catch (IOException e) {
-            e.printStackTrace(); 
-        }
-    }
-
-    public static void main(String[] argv) {
-        Test();
-    }
-
+    
 }
