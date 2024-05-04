@@ -1,0 +1,15 @@
+{
+  "name": "mocker",
+  "version": "1.0.0",
+  "description": "Mocker server for a search engine",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "shehab khaled",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

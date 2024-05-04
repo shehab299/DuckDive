@@ -10,49 +10,58 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+import java.nio.file.Paths;
 import java.util.HashMap;
-// import java.util.Objects;
-// import java.util.Set;
+
 
 public class Indexer
 {
+    private static TokenService tokenService;
+    private static DocumentService docService;
+    private static String stopsPath;
+    public static String docPath;
+    public static String scorePath;
 
-    private static void index(String path, int docid, TokenService service){
 
-        Tokenizer tokenizerInst = new Tokenizer(path,docid);
-        tokenizerInst.tokenize();
-
-        HashMap<String,Token> dictionary = tokenizerInst.getTokenizedData();
-
-        Thread thread = new Thread(new Runnable() {
-            public void run() {
-                service.insertToken(dictionary,docid);
-            }
-        });
-
-        thread.start();
+    private static void initailizePath(){
+        String currentDirectory = System.getProperty("user.dir");
+        stopsPath = Paths.get(currentDirectory, "resources", "stops.txt").toString();
+        docPath = Paths.get(currentDirectory, "plain_docs", " ").toString();
+        scorePath = Paths.get(currentDirectory, "resources" , "html.txt").toString();
+        docPath = docPath.trim();
     }
+
+    private static void initailizeDB()
+    {
+        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017","SearchEngine");
+        docService = new DocumentService(connection);
+        tokenService =  new TokenService(connection);
+    }
+
+    private static void index(String path, ObjectId docid, String doc_path){
+        Tokenizer tokenizerInst = new Tokenizer(path);
+        HashMap<String,Token> dictionary = tokenizerInst.tokenizeDocument(doc_path);
+        tokenService.insert(dictionary,docid.toString(),tokenizerInst.getWordCount());
+    }
+
+
     public static void main(String[] args) {
 
-        Language.readStopWords("/home/shehab/Desktop/DuckDive/IndexerDuck/resources/stops.txt");
-        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017","SearchEngine");
+        initailizePath();
+        initailizeDB();
 
-        DocumentService docService = new DocumentService(connection);
-        TokenService tokenService =  new TokenService(connection);
+        Language.initalizeDictionary(stopsPath);
+        Language.initalizeHTML(scorePath);
+
 
         FindIterable<Document> patch = docService.getUnindexedDocuments();
 
-        long start = System.currentTimeMillis();
-
-        int counter = 0;
         for (Document document : patch) {
             ObjectId docid = document.getObjectId("_id");
             String path = document.getString("path");
-            index(path,counter,tokenService);
-            docService.setIndexed(docid);
+            String doc_path = docPath + docid + ".txt";
+            index(path,docid,doc_path);
+            docService.setIndexed(docid,doc_path);
         }
-
-        System.out.println(System.currentTimeMillis() - start);
-
     }
 }

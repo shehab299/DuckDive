@@ -21,23 +21,23 @@ public class DocumentService {
         Document projection = new Document("_id",true).append("path",true);
         Document query = new Document("is_indexed",false);
 
-        return documentTable.find(query).limit(499).projection(projection);
+        return documentTable.find(query).projection(projection);
     }
 
     public Document getDummy(){
-        Document projection = new Document("_id",true).append("path",true);
         ObjectId x = new ObjectId("6624325457fa294b09dea102");
         Document query = new Document("_id",x);
 
         return documentTable.find(query).first();
     }
 
-    public void setIndexed(ObjectId id){
+    public void setIndexed(ObjectId id, String docPath){
 
         Document query = new Document("_id",id);
-        Document update = new Document("$set", new Document("is_indexed",true));
+        Document updates = new Document("is_indexed",true).append("doc_path",docPath);
+        Document updateQuery = new Document("$set", updates);
 
-        documentTable.updateOne(query,update);
+        documentTable.updateOne(query,updateQuery);
     }
 
 }

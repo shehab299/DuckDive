@@ -1,6 +1,6 @@
 import React from "react";
 
-import Search from "../Components/Search";
+import Search from "../Components/SearchBar";
 
 import styles from "./SearchPage.module.css";
 

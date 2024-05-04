@@ -20,6 +20,7 @@ public class PageService {
 
         Document newPage = new Document()
                 .append("url", p.getUrl())
+                .append("originalUrl", p.getOriginalUrl())
                 .append("hash", p.getHash())
                 .append("path", p.getPath())
                 .append("outlinks", p.getOutlinks())

@@ -7,7 +7,7 @@ public class Doc {
 
     public String term;
     public int TF;
-
+    
     public List<Integer> positions;
 
     public Doc(String term) {

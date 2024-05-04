@@ -2,21 +2,36 @@ package com.crawler;
 
 import java.util.Scanner;
 
-import org.bson.Document;
-
 import com.crawler.Models.PageService;
 import com.crawler.utils.DBManager;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
 import com.mongodb.client.result.DeleteResult;
-import com.mongodb.internal.bulk.DeleteRequest;
+import java.nio.file.Paths;
 
 public class MultiThreadedCrawler {
-    static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
-    static PageService service = new PageService(connection);
-    static Frontier frontier = new Frontier();
+
+    private static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "DummySearchEngine");
+    private static PageService service = new PageService(connection);
+    private static Frontier frontier;
+    public static String seedPath;
+    public static String docPath;
+
+
+    private static void initializeFrontier() {
+        frontier = new Frontier();
+        frontier.readSeed(seedPath);
+    }
+
+    private static void initializePaths() {
+        String currentDirectory = System.getProperty("user.dir");
+
+        seedPath = String.valueOf(Paths.get(currentDirectory, "Resources", "seed.txt"));
+        docPath = String.valueOf(Paths.get(currentDirectory, "Resources", "HtmlPages", " "));
+        docPath = docPath.trim();
+
+    }
 
     private static int getNumThreads() {
         Scanner scanner = new Scanner(System.in);
@@ -32,6 +47,10 @@ public class MultiThreadedCrawler {
     }
 
     public static void main(String[] args) {
+
+        initializePaths();
+        initializeFrontier();
+
         int numThreads = getNumThreads();
         MongoCollection<Document> pageTable = connection.getCollection("page");
         DeleteResult result = pageTable.deleteMany(new Document());

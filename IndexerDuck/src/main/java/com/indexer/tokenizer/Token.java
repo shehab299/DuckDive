@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Token {
     public String term;
     public String html_pos;
-    public int TF;
+    public Float TF;
     public ArrayList<Integer> position; // Changed to ArrayList of integers
 
     @Override
@@ -20,6 +20,6 @@ public class Token {
         this.term = term;
         this.html_pos = html_pos;
         this.position = new ArrayList<>();
-        this.TF = 0;
+        this.TF = 0.0f;
     }
 }

@@ -13,10 +13,9 @@ import java.util.Set;
 public class TokenService {
     private final MongoCollection<Document> tokenTable;
 
-    private void getToken(Token t, int docId) {
+    private void insertToken(Token t, String docId) {
 
         Document query = new Document("term", t.term);
-
         Document find = tokenTable.find(query).first();
 
         if(find == null)
@@ -27,12 +26,11 @@ public class TokenService {
 
         Document newDoc = new Document("docid", docId)
                 .append("TF", t.TF)
-                .append("pos", t.position);
-
+                .append("pos", t.position)
+                .append("html_pos", t.html_pos);
 
         Document update = new Document("$addToSet", new Document("documents", newDoc));
 
-        // If the document with the specified term exists, update it; otherwise, insert it
         tokenTable.updateOne(query, update, new UpdateOptions().upsert(true));
     }
 
@@ -40,13 +38,15 @@ public class TokenService {
         this.tokenTable = dbConnection.getCollection("InvertedIndex");
     }
 
-    public void insertToken(HashMap<String, Token> dict, int docId){
+    public void insert(HashMap<String, Token> dict, String docId, int wordCount){
 
         Set<String> keySet = dict.keySet();
 
+
         for (String key : keySet) {
             Token t = dict.get(key);
-            getToken(t,docId);
+            t.TF = (float) t.position.size() / (float) wordCount;
+            insertToken(t,docId);
         }
 
     }

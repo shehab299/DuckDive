@@ -6,6 +6,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
+import org.tartarus.snowball.SnowballStemmer;
+import org.tartarus.snowball.ext.englishStemmer;
 
 import java.io.*;
 import java.util.HashMap;
@@ -13,126 +15,134 @@ import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
 
-
-
-
-// Technical Depts
-
-// 1- tokenization process need to be imporoved (splitting)
-// 2- we need to measure speed
-// 3- If you could reimplement the parsing process
-
-
 public class Tokenizer {
 
-    String output_path;
-    File output;
-    String path;
-    HashMap<String,Token> tokenDic;
-    Integer counter;
-    BufferedWriter w;
-    FileWriter w_dummy;
+    private Document doc;
+    private int cursor;
+    private int wordCount;
+    private BufferedWriter writer;
+    private HashMap<String,Token> tokenDic;
 
-    public Tokenizer(String path,int docId)
-    {
+    public Tokenizer(String path) {
+        this.cursor = 0;
 
-        String output_path = "/home/shehab/Desktop/DuckDive/IndexerDuck/docs/";
-        this.path = path;
-        this.output_path = output_path + docId + ".txt";
-        this.tokenDic = new HashMap<String,Token>();
-        this.counter = 0;
-
+        try {
+            File file = new File(path);
+            doc = Jsoup.parse(file);
+        } catch (IOException e) {
+            throw new RuntimeException("Can't Parse File", e);
+        }
     }
 
-    private void tokenize_helper(String text, String nodeName)
-    {
+    private String stemToken(String token) {
+        SnowballStemmer stemmer = new englishStemmer();
+        stemmer.setCurrent(token);
+        stemmer.stem();
+        return stemmer.getCurrent();
+    }
+
+    private String removeSpecialChars(String token) {
+        return token.toLowerCase().replaceAll("[^a-zA-Z ]", "");
+    }
+
+    private void writeToFile(String token) {
+        try {
+            writer.write(token + " ");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        this.cursor += token.length();
+    }
+
+    private String compare(String pos1 , String pos2){
+
+        int score1 = Language.scoreHtml(pos1);
+        int score2 = Language.scoreHtml(pos2);
+
+        if(score1 >= score2)
+            return pos1;
+        else
+            return pos2;
+    }
+
+    private void tokenize(String text, String nodeName) {
+        
         Pattern pattern = Pattern.compile("\\s+");
         String[] splitTokens = pattern.split(text);
 
         for (String token : splitTokens) {
+            
+            token = removeSpecialChars(token);
 
-            token = token.toLowerCase().replaceAll("[^a-zA-Z ]", "");
-
-            if(token.isEmpty())
+            if (Language.isStop(token))
                 continue;
 
-            if(Language.isStop(token) || token.length() == 1)
-                continue;
+            token = stemToken(token);
+            writeToFile(token);
 
-            try {
-                w_dummy.write(token + " ");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            this.counter++;
-
-            if(!tokenDic.containsKey(token))
-            {
-                Token newT = new Token(token,nodeName);
-                tokenDic.put(token,newT);
-                newT.position.add(counter);
-            }
-            else{
+            if (!tokenDic.containsKey(token)) {
+                Token newT = new Token(token, nodeName);
+                tokenDic.put(token, newT);
+                newT.position.add(cursor);
+            } else {
                 Token t = tokenDic.get(token);
                 t.TF++;
-                t.html_pos = nodeName;
-                t.position.add(this.counter);
+                t.html_pos = compare(t.html_pos ,nodeName);
+                t.position.add(cursor);
             }
+
+            wordCount++;
         }
     }
 
-    private void traverse(Node root)
-    {
-        if(root instanceof TextNode)
-        {
-            tokenize_helper(((TextNode) root).text(), Objects.requireNonNull(root.parent()).nodeName());
+    public int getWordCount(){
+        return wordCount;
+    }
+
+    private void tokenizeDOM(Node root) {
+        if (root instanceof TextNode) {
+            tokenize(((TextNode) root).text(), Objects.requireNonNull(root.parent()).nodeName());
             return;
         }
 
         List<Node> nodes = root.childNodes();
-
         for (Node node : nodes) {
-            traverse(node);
+            tokenizeDOM(node);
         }
-
     }
 
-    public void tokenize()
-    {
-        Document doc;
+    public HashMap<String,Token> tokenizeDocument(String docPath) {
+        
+        tokenDic = new HashMap<String,Token>();
 
-        try {
-            File file = new File(this.path);
-            doc = Jsoup.parse(file);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return;
-        }
-
-        try {
-            this.w_dummy = new FileWriter(new File(output_path)); // Initialize BufferedWriter with FileWriter
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        openFile(docPath);
+        
         String title = doc.title();
-        tokenize_helper(title,"title");
+        tokenize(title, "title");
 
         Element body = doc.body();
-        traverse(body);
-        ;
+        tokenizeDOM(body);
+
+        closeFile();
+
+        return tokenDic;
+    }
+
+    private void closeFile() {
         try {
-            this.w_dummy.close();
+            this.writer.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
-    public HashMap<String, Token> getTokenizedData() {
-        return tokenDic;
+    private void openFile(String path) {
+        try {
+            this.writer = new BufferedWriter(new FileWriter(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }
-
-

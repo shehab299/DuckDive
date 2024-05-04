@@ -1,0 +1,22 @@
+.container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.searchBar {
+  position: sticky;
+
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  margin: auto;
+  top: 0;
+}
