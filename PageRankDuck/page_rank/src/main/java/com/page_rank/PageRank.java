@@ -1,8 +1,6 @@
 package com.page_rank;
 
-import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.ConnectException;
 import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
@@ -14,40 +12,29 @@ import com.page_rank.Utils.*;
 import com.page_rank.Models.*;
 
 import com.mongodb.client.MongoDatabase;
-
 import org.bson.Document;
-import org.jsoup.Jsoup;
-import org.jsoup.select.Elements;
-
-import org.jsoup.nodes.Element;
 
 public class PageRank {
     private static List<Document> retrievedPages;
+    private static final double diveFactor = 0.85;
+    private static final double EPSILON = 1e-10;
 
     public static List<List<String>> getOutlinks() {
         List<List<String>> outlinks = new ArrayList<>();
         try {
-            // for (Document page : retrievedPages) {
-            for (int i = 0; i < retrievedPages.size(); i++) {
+            // You can adjust the number of pages to be fetched according to your needs
+            for (int i = 0; i < 15; i++) {
                 Document page = retrievedPages.get(i);
-                System.out.println("Fetching outlinks for page " + (outlinks.size() + 1));
-                List<String> currentOutlinks = new ArrayList<>();
-                String currentPageURL = page.getString("url");
-                org.jsoup.nodes.Document doc = Jsoup.connect(currentPageURL).get();
-                Elements links = doc.select("a[href]");
-                for (Element link : links) {
-                    String outlink = link.attr("abs:href");
-                    Url url = new Url(outlink);
-                    String normalizedOutlink = url.getNormalized();
-                    currentOutlinks.add(normalizedOutlink);
+                System.out.println("Fetching outlinks for page " + (i + 1));
+                List<String> currentOutlinks = page.getList("outlinks", String.class);
+                if (currentOutlinks == null) {
+                    System.out.println("Outlinks for page " + (i + 1) + " are null");
                 }
                 outlinks.add(currentOutlinks);
             }
-        } catch (ConnectException e) {
-            System.err.println("Connection timed out: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error in fetching outlinks: " + e.getMessage());
             return null;
-        } catch (IOException e) {
-            System.err.println("Error fetching document: " + e.getMessage());
         }
         return outlinks;
     }
@@ -59,11 +46,11 @@ public class PageRank {
             System.out.println("Builder: Error in fetching outlinks");
             return null;
         }
-        if (retrievedPages == null) {
+        if (retrievedPages == null || retrievedPages.isEmpty()) {
             System.out.println("Builder: Error in fetching documents");
             return null;
         }
-        int numPages = retrievedPages.size();
+        int numPages = 15;
         System.out.println("Number of pages: " + numPages);
         int mappingIndex = 0;
         for (int i = 0; i < numPages; i++) {
@@ -77,13 +64,20 @@ public class PageRank {
             }
         }
         for (Document page : retrievedPages) {
-            Integer sourceIndex = urlToIndex.get(page.getString("url"));
+            String url = page.getString("url");
+            if (url == null || url.isEmpty()) {
+                continue;
+            }
+            Integer sourceIndex = urlToIndex.get(url);
             if (sourceIndex == null) {
                 continue;
             }
             List<String> myOutlinks = outlinks.get(sourceIndex);
             if (myOutlinks != null) {
                 for (String outlink : myOutlinks) {
+                    if (outlink == null || outlink.isEmpty() || outlink.equals(url)) {
+                        continue;
+                    }
                     if (urlToIndex.containsKey(outlink)) {
                         int destinationIndex = urlToIndex.get(outlink);
                         adjacencyMatrix[sourceIndex][destinationIndex] = true;
@@ -100,8 +94,7 @@ public class PageRank {
 
     private static void weightedRankAlgorithm(boolean[][] adjacencyMatrix) {
         HashMap<Integer, Double> pageRankValue = new HashMap<>();
-        int numIterations = retrievedPages.size(), numPages = retrievedPages.size();
-        float diveFactor = 0.85f;
+        int numIterations = 1, numPages = 15;
         double sum = 0;
         for (int i = 0; i < numPages; ++i) {
             pageRankValue.put(i, 1.0);
@@ -143,14 +136,14 @@ public class PageRank {
     public static double inputsWeight(boolean[][] adjacencyMatrix, int m, int pageIndex,
             HashMap<Integer, Double> pageRankValue) {
         double k = 0, l = 0;
-        for (int i = 0; i < retrievedPages.size(); i++) {
-            if (adjacencyMatrix[i][pageIndex]) {
+        for (int i = 0; i < 15; i++) {
+            if (adjacencyMatrix[i][m]) {
                 k++;
             }
         }
-        for (int i = 0; i < retrievedPages.size(); i++) {
+        for (int i = 0; i < 15; i++) {
             if (adjacencyMatrix[pageIndex][i]) {
-                for (int j = 0; j < retrievedPages.size(); j++) {
+                for (int j = 0; j < 15; j++) {
                     if (adjacencyMatrix[j][i]) {
                         l++;
                     }
@@ -163,14 +156,14 @@ public class PageRank {
     public static double outputsWeight(boolean[][] adjacencyMatrix, int m, int pageIndex,
             HashMap<Integer, Double> pageRankValue) {
         double k = 0, l = 0;
-        for (int i = 0; i < retrievedPages.size(); i++) {
+        for (int i = 0; i < 15; i++) {
             if (adjacencyMatrix[0][i]) {
                 k++;
             }
         }
-        for (int i = 0; i < retrievedPages.size(); i++) {
+        for (int i = 0; i < 15; i++) {
             if (adjacencyMatrix[pageIndex][i]) {
-                for (int j = 0; j < retrievedPages.size(); j++) {
+                for (int j = 0; j < 15; j++) {
                     if (adjacencyMatrix[i][j]) {
                         l++;
                     }
@@ -180,16 +173,32 @@ public class PageRank {
         return k / l;
     }
 
+    /*
+     * Do not remove it as it will be the blue print for detecting the steady state
+     * of the calculations
+     */
+    private static boolean isConverged(double[] oldPageRank, double[] newPageRank) {
+        for (int i = 0; i < oldPageRank.length; i++) {
+            if (Math.abs(oldPageRank[i] - newPageRank[i]) > EPSILON) {
+                return false; // Not converged
+            }
+        }
+        return true; // Converged
+    }
+
+    /*
+     * N.B: To change the number of pages to be fetched, adjust the limit in
+     * searching for (15) in the file and replace it whether by
+     * (retrievedPages.size()) or your desired number
+     */
     public static void main(String[] args) throws URISyntaxException {
         MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
-        DocumentService docService = new DocumentService(connection);
         PageRankService pagerankService = new PageRankService(connection);
 
         PageRank.getAllDocuments(pagerankService);
         System.out.println("First size:" + retrievedPages.size());
-        // for (Document doc : retrievedPages) {
-        // System.out.println(doc.getString("url"));
-        // }
+
+        // Removing duplicate pages from the list
         Set<String> uniqueUrls = new HashSet<>();
         List<Document> uniqueDocuments = new ArrayList<>();
 
@@ -201,31 +210,26 @@ public class PageRank {
         }
         retrievedPages = uniqueDocuments;
         System.out.println("Second size:" + retrievedPages.size());
-        // for (Document doc : retrievedPages) {
-        // System.out.println(doc.getString("url"));
-        // }
-        // Document doc = retrievedPages.get(0);
-        // System.out.println(doc.getString("url"));
+
         List<List<String>> outlinks = getOutlinks();
 
-        // Print the outlinks to check on them
-        // int k = 1;
-        // if (outlinks != null)
-        // for (List<String> outlink : outlinks) {
-        // System.out.println("Outlinks for page " + k++);
-        // for (String link : outlink) {
-        // System.out.println(link);
-        // }
-        // }
+        if (outlinks == null) {
+            System.out.println("Page-Rank: Error in fetching outlinks in main method");
+            return;
+        }
 
         boolean[][] adjacencyMatrix = buildAdjacencyMatrix(outlinks);
         if (adjacencyMatrix == null) {
-            // the matrix is null
             System.out.println("Error in building adjacency matrix");
             return;
         }
-        for (int i = 0; i < retrievedPages.size(); ++i) {
-            for (int j = 0; j < retrievedPages.size(); ++j) {
+
+        /*
+         * Print adjacency matrix -> You can adjust the size of the printed sub matrix
+         * according to your needs
+         */
+        for (int i = 0; i < 15; ++i) {
+            for (int j = 0; j < 15; ++j) {
                 System.out.print(adjacencyMatrix[i][j] + " ");
             }
             System.out.println();
@@ -234,5 +238,6 @@ public class PageRank {
         System.out.println();
         System.out.println();
         weightedRankAlgorithm(adjacencyMatrix);
+
     }
 }

@@ -1,5 +1,7 @@
 package com.crawler;
 
+import java.util.List;
+
 import org.jsoup.Connection.Response;
 
 import com.crawler.Models.Page;
@@ -75,7 +77,8 @@ public class Crawler implements Runnable {
                 addUrlsToFrontier(doc, frontier);
             }
 
-            Page x = new Page(url.getNormalized(), hashCode, path, false);
+            List<String> outlinks = service.getOutlinks(doc.extractUrls());
+            Page x = new Page(url.getNormalized(), hashCode, path, outlinks, false, false);
             service.insertPage(x);
 
             synchronized (numCrawled) {
