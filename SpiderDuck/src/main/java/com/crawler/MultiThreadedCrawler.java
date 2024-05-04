@@ -10,6 +10,8 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.result.DeleteResult;
+import com.mongodb.internal.bulk.DeleteRequest;
 
 public class MultiThreadedCrawler {
     static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
@@ -31,6 +33,9 @@ public class MultiThreadedCrawler {
 
     public static void main(String[] args) {
         int numThreads = getNumThreads();
+        MongoCollection<Document> pageTable = connection.getCollection("page");
+        DeleteResult result = pageTable.deleteMany(new Document());
+        System.out.println("Deleted " + result.getDeletedCount() + " documents");
         Counter numCrawled = new Counter();
         for (int i = 0; i < numThreads; i++) {
             new Thread(new Crawler(frontier, service, numCrawled)).start();
