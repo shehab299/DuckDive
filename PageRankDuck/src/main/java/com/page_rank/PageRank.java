@@ -11,6 +11,8 @@ import com.page_rank.Models.*;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.internal.binding.ReadBinding;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.RealMatrix;
 import org.bson.Document;
 import com.page_rank.Utils.*;
 
@@ -243,7 +245,19 @@ public class PageRank {
             }
         }
 
-        System.out.println(Arrays.deepToString(matrix));
+        RealMatrix realMatrix = new Array2DRowRealMatrix(matrix.length, matrix[0].length);
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                realMatrix.setEntry(i, j, matrix[i][j]);
+            }
+        }
+
+        RealMatrix result = realMatrix.multiply(realMatrix.transpose());
+
+
+        System.out.println("Matrix: " + result.toString());
+
 
 
 

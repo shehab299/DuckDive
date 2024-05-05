@@ -50,6 +50,13 @@
       <artifactId>slf4j-api</artifactId>
       <version>1.7.32</version> <!-- or the latest version -->
     </dependency>
+    
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.6.1</version>
+  </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>

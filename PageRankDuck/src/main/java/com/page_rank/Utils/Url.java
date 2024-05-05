@@ -1,4 +1,4 @@
-package com.crawler;
+package com.page_rank.Utils;
 
 import java.io.IOException;
 import java.net.URI;
