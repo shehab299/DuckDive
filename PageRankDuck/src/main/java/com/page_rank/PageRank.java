@@ -1,42 +1,32 @@
 package com.page_rank;
 
 import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+import com.mongodb.client.*;
+
+import com.mongodb.client.DistinctIterable;
 import com.page_rank.Utils.*;
 import com.page_rank.Models.*;
-
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.internal.binding.ReadBinding;
+
 import org.bson.Document;
+import com.page_rank.Utils.*;
 
 public class PageRank {
+
     private static List<Document> retrievedPages;
     private static final double diveFactor = 0.85;
     private static final double EPSILON = 1e-10;
 
-    public static List<List<String>> getOutlinks() {
-        List<List<String>> outlinks = new ArrayList<>();
-        try {
-            // You can adjust the number of pages to be fetched according to your needs
-            for (int i = 0; i < 15; i++) {
-                Document page = retrievedPages.get(i);
-                System.out.println("Fetching outlinks for page " + (i + 1));
-                List<String> currentOutlinks = page.getList("outlinks", String.class);
-                if (currentOutlinks == null) {
-                    System.out.println("Outlinks for page " + (i + 1) + " are null");
-                }
-                outlinks.add(currentOutlinks);
-            }
-        } catch (Exception e) {
-            System.out.println("Error in fetching outlinks: " + e.getMessage());
-            return null;
-        }
-        return outlinks;
+    private static PageService pageService = null;
+
+
+    private static void initalizeDatabase(){
+
+        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "DummySearchEngine");
+        pageService = new PageService(connection);
     }
 
     private static boolean[][] buildAdjacencyMatrix(List<List<String>> outlinks) {
@@ -88,10 +78,6 @@ public class PageRank {
         return adjacencyMatrix;
     }
 
-    private static void getAllDocuments(PageRankService service) {
-        retrievedPages = service.fetchAllDocuments();
-    }
-
     private static void weightedRankAlgorithm(boolean[][] adjacencyMatrix) {
         HashMap<Integer, Double> pageRankValue = new HashMap<>();
         int numIterations = 1, numPages = 15;
@@ -126,8 +112,8 @@ public class PageRank {
                         value++;
                     }
                 }
-                value += pageRankValue.get(i) / k * inputsWeight(adjacencyMatrix, i, pageIndex, pageRankValue)
-                        * outputsWeight(adjacencyMatrix, i, pageIndex, pageRankValue);
+                value += (int) (pageRankValue.get(i) / k * inputsWeight(adjacencyMatrix, i, pageIndex, pageRankValue)
+                                        * outputsWeight(adjacencyMatrix, i, pageIndex, pageRankValue));
             }
         }
         return value;
@@ -191,53 +177,106 @@ public class PageRank {
      * searching for (15) in the file and replace it whether by
      * (retrievedPages.size()) or your desired number
      */
+
+
+
+    public static List<List<String>> getOutlinks() {
+        
+        List<List<String>> outlinks = new ArrayList<>();
+
+        try {
+            for (int i = 0; i < 15; i++) {            // You can adjust the number of pages to be fetched according to your needs
+                Document page = retrievedPages.get(i);
+                System.out.println("Fetching outlinks for page " + (i + 1));
+                List<String> currentOutlinks = page.getList("outlinks", String.class);
+                if (currentOutlinks == null) {
+                    System.out.println("Outlinks for page " + (i + 1) + " are null");
+                }
+                outlinks.add(currentOutlinks);
+            }
+        } catch (Exception e) {
+            System.out.println("Error in fetching outlinks: " + e.getMessage());
+            return null;
+        }
+        
+        return outlinks;
+    }
+
+
     public static void main(String[] args) throws URISyntaxException {
-        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
-        PageRankService pagerankService = new PageRankService(connection);
 
-        PageRank.getAllDocuments(pagerankService);
-        System.out.println("First size:" + retrievedPages.size());
+        initalizeDatabase();
+        retrievedPages = pageService.fetchAllDocuments();
 
-        // Removing duplicate pages from the list
-        Set<String> uniqueUrls = new HashSet<>();
-        List<Document> uniqueDocuments = new ArrayList<>();
-
-        for (Document document : retrievedPages) {
-            String url = document.getString("url");
-            if (uniqueUrls.add(url)) {
-                uniqueDocuments.add(document);
-            }
-        }
-        retrievedPages = uniqueDocuments;
-        System.out.println("Second size:" + retrievedPages.size());
-
-        List<List<String>> outlinks = getOutlinks();
-
-        if (outlinks == null) {
-            System.out.println("Page-Rank: Error in fetching outlinks in main method");
+        if (retrievedPages == null) {
+            System.out.println("Nothing to rank");
+            System.out.println("Exiting Program...");
             return;
         }
 
-        boolean[][] adjacencyMatrix = buildAdjacencyMatrix(outlinks);
-        if (adjacencyMatrix == null) {
-            System.out.println("Error in building adjacency matrix");
-            return;
+       System.out.println("Size:" + retrievedPages.size());
+
+       HashMap<String, Integer> urlDict = new HashMap<>();
+
+
+        for (int i = 0; i < retrievedPages.size(); i++) {
+            urlDict.put((String) retrievedPages.get(i).get("url"),i);
         }
 
-        /*
-         * Print adjacency matrix -> You can adjust the size of the printed sub matrix
-         * according to your needs
-         */
-        for (int i = 0; i < 15; ++i) {
-            for (int j = 0; j < 15; ++j) {
-                System.out.print(adjacencyMatrix[i][j] + " ");
+        Integer[][] matrix = new Integer[retrievedPages.size()][retrievedPages.size()];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                matrix[i][j] = 0;
             }
-            System.out.println();
         }
-        System.out.println("Adjacency matrix built successfully");
-        System.out.println();
-        System.out.println();
-        weightedRankAlgorithm(adjacencyMatrix);
+
+        for (int i = 0; i < retrievedPages.size(); i++) {
+
+            Document currentPage = retrievedPages.get(i);
+            List<String> urls = (List<String>) currentPage.get("outlinks");
+
+            for (String url : urls) {
+                if(urlDict.containsKey(url)) {
+                    matrix[i][urlDict.get(url)]++;
+                }
+            }
+        }
+
+        System.out.println(Arrays.deepToString(matrix));
+
+
+
+
+
+
+  
+//
+//        if (outlinks == null) {
+//            System.out.println("Page-Rank: Error in fetching outlinks in main method");
+//            return;
+//        }
+//
+//        boolean[][] adjacencyMatrix = buildAdjacencyMatrix(outlinks);
+//        if (adjacencyMatrix == null) {
+//            System.out.println("Error in building adjacency matrix");
+//            return;
+//        }
+//
+//        /*
+//         * Print adjacency matrix -> You can adjust the size of the printed sub matrix
+//         * according to your needs
+//         */
+//        for (int i = 0; i < 15; ++i) {
+//            for (int j = 0; j < 15; ++j) {
+//                System.out.print(adjacencyMatrix[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println("Adjacency matrix built successfully");
+//        System.out.println();
+//        System.out.println();
+//        weightedRankAlgorithm(adjacencyMatrix);
 
     }
 }

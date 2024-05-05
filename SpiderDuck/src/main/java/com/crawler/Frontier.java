@@ -1,5 +1,6 @@
 package com.crawler;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.io.BufferedReader;
@@ -10,6 +11,7 @@ import java.net.URISyntaxException;
 public class Frontier {
     private Queue<Url> urlQueue;
     private int count;
+    private HashMap<String, Queue<Url>> urlMap;
 
     public Frontier() {
         urlQueue = new LinkedList<Url>();
