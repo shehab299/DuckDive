@@ -1,6 +1,5 @@
 .pagination {
-  position: relative;
-  margin: 30px auto;
+  margin: 4rem auto;
 
   display: flex;
   align-items: center;
