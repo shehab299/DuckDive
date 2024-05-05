@@ -47,7 +47,9 @@ function ResultsPage() {
     <div className={styles.container}>
       {/* <div className={styles.searchBar}>
         <img src={duckDive} width={'110px'} />
+        <div>
         <SearchBar customStyle={{ width: "80%", margin: '0px'}} />
+        </div>
       </div> */}
       <div>
         {results.slice(firstIndex, lastIndex).map((result, index) => (

@@ -5,3 +5,12 @@
 
   gap: 7px;
 }
+
+.link {
+  color: #ffac2f;
+}
+
+.snippet{
+  color: #4d5156;
+  font-size: smaller;
+}
