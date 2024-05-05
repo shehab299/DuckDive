@@ -4,10 +4,7 @@ import java.util.Scanner;
 
 import com.crawler.Models.PageService;
 import com.crawler.utils.DBManager;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-import com.mongodb.client.result.DeleteResult;
 import java.nio.file.Paths;
 
 public class MultiThreadedCrawler {
@@ -52,9 +49,11 @@ public class MultiThreadedCrawler {
         initializeFrontier();
 
         int numThreads = getNumThreads();
-        MongoCollection<Document> pageTable = connection.getCollection("page");
-        DeleteResult result = pageTable.deleteMany(new Document());
-        System.out.println("Deleted " + result.getDeletedCount() + " documents");
+
+        // MongoCollection<Document> pageTable = connection.getCollection("page");
+        // DeleteResult result = pageTable.deleteMany(new Document());
+        // System.out.println("Deleted " + result.getDeletedCount() + " documents");
+
         Counter numCrawled = new Counter();
         for (int i = 0; i < numThreads; i++) {
             new Thread(new Crawler(frontier, service, numCrawled)).start();

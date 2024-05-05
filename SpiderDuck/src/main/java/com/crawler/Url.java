@@ -11,7 +11,7 @@ import org.jsoup.Connection.Response;
 public class Url {
     private final String url;
     private final String baseURL;
-    private final String normalizedURL;
+    private String normalizedURL;
     private final String robotsURL;
 
     private boolean urlExists(String url) {
@@ -35,7 +35,13 @@ public class Url {
 
         host = host.replaceFirst("www.","");
         this.url = url;
-        this.normalizedURL = "http://" + host + objectURI.getPath();
+        String semi_normalized = "http://" + host + objectURI.getPath();
+                
+        if(semi_normalized.charAt(semi_normalized.length() - 1) == '/')
+            this.normalizedURL = semi_normalized.substring(0,semi_normalized.length()-1);
+        else
+            this.normalizedURL = semi_normalized;
+
         this.baseURL = "http://" + host;
         this.robotsURL = this.baseURL + "/robots.txt";
     }

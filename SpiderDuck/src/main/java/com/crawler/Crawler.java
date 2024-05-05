@@ -6,10 +6,9 @@ import org.jsoup.Connection.Response;
 
 import com.crawler.Models.Page;
 import com.crawler.Models.PageService;
-import com.mongodb.internal.connection.ReadConcernHelper;
 
 public class Crawler implements Runnable {
-    private static final int CRAWLING_LIMIT = 5;
+    private static final int CRAWLING_LIMIT = 5000;
     private PageService service;
     private Frontier frontier;
     private Counter numCrawled;
@@ -30,8 +29,7 @@ public class Crawler implements Runnable {
 
         return response != null
                 && response.statusCode() == 200
-                && HttpRequest.isHtml(response)
-                && !service.urlExists(url);
+                && HttpRequest.isHtml(response);
         // && !url.robotsExists()
         // && RobotsHandler.canBeCrawled(url);
 
@@ -78,7 +76,9 @@ public class Crawler implements Runnable {
             }
 
             String path;
+
             synchronized (numCrawled) {
+                numCrawled.increment();
                 path = MultiThreadedCrawler.docPath + numCrawled.get() + ".html";
             }
 
