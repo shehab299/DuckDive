@@ -33,7 +33,7 @@ public class Indexer
 
     private static void initailizeDB()
     {
-        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017","SearchEngine");
+        MongoDatabase connection = DBManager.connect("mongodb://localhost:27017","test");
         docService = new DocumentService(connection);
         tokenService =  new TokenService(connection);
     }

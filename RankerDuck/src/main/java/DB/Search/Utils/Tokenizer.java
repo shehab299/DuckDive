@@ -4,6 +4,7 @@ import org.tartarus.snowball.SnowballStemmer;
 import org.tartarus.snowball.ext.englishStemmer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -18,6 +19,9 @@ public class Tokenizer {
 
     public static List<String> tokenize(String text)
     {
+
+        HashMap <String, Boolean> tokenDic = new HashMap<String, Boolean>();
+
         Pattern pattern = Pattern.compile("\\s+");
         String[] splitTokens = pattern.split(text);
         List<String> tokens = new ArrayList<String>();
@@ -29,7 +33,10 @@ public class Tokenizer {
             if(Language.isStop(token) || token.isEmpty())
                 continue;
 
-            tokens.add(token);
+            if(!tokenDic.containsKey(token)){
+                tokens.add(token);
+                tokenDic.put(token, true);
+            }
         }
 
         return tokens;
