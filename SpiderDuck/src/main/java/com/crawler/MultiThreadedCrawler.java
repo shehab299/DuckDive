@@ -9,8 +9,7 @@ import com.crawler.utils.DBManager;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.result.DeleteResult;
-
-import java.nio.file.Paths;
+import java.lang.Thread;
 
 public class MultiThreadedCrawler {
 
