@@ -1,0 +1,89 @@
+Test Cases(Word searching): 
+1. a word that exists (1 word)                 ✅   ✅
+2. a word that does not exist                  ✅   ✅
+3. a bunch of words (all exists)               ✅   ✅
+4. a word is a substring of another            ✅   ✅
+5. a bunch of words, some of them do not exist ✅   ✅
+6. a bunch of words, neither exists            ✅   ✅
+7. empty query                                 ✅   ✅  //white screen ._.
+8. garbage                                     ✅   ✅
+9. grabage + existing word                     ✅   ✅
+10. garbage + non-existing word                ✅   ✅
+-------------------------------------------------
+Test Cases(Phrase searching):       
+1. one Word                                    ✅   ✅
+2. two words (existing phrase)                 ✅   ✅
+3. +2 words  (existing phrase)                 ✅   ✅
+4. an existing Phrase                          ✅   ✅                       
+5. non-existing Phrase                         ✅   ✅
+6. empty query                                 ✅   ✅   //white screen ._.
+7. garbage                                     ✅   ✅
+8. garbage + existing Phrase                   ❓        //garbage is converted to empty string i guess? so it's giving me 
+9. garbage + non-existing Phrase               ✅   ✅  //Whitelabel Error Page
+10 existing phrase with extra spaces           ❓       //extra spaces are ignored
+11 existing words + non existing words         ❓
+-------------------------------------------------
+Test Cases(Operator searching): 
+1. 
+
+-------------------------------------------------
+Test Cases (User r5em):
+1. "extra quotation\" "
+2. " "" " //nested qoutation
+3. "/*/2" //randaom special chars                         
+4. //"missing quotation                                  ?
+5. "extra    spaces"                                    //ignored
+6. numbers                                              //white screen
+7. 
+-------------------------------------------------
+current Assumptions:
+
+-------------------------------------------------
+Current Tasks
+1. fix the substring problem
+2. better ranking algorithm for phrase searching
+3. snippets using ID
+4. Bonus
+-------------------------------------------------
+Optimization
+1. word searching ✅
+2. phraseSearch   
+-------------------------------------------------
+
+
+Saved Code:
+//     private List<String> filterDocs() {
+//     List<String> docsContainingAllTokens = new ArrayList<>();
+//     List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
+//     for (Doc doc : firstTokenDocs) {
+//         docsContainingAllTokens.add(doc.getDocid());
+//     }
+    
+//     for (int i = 1; i < searchTokens.size(); i++) {
+//         List<String> docIds = new ArrayList<>();
+//         List<Doc> thisTokenDocs = searchTokens.get(i).getDocuments();
+//         for (Doc doc : thisTokenDocs) {
+//             docIds.add(doc.getDocid());
+//         }
+//         docsContainingAllTokens.retainAll(docIds);
+//     }
+//     return docsContainingAllTokens;
+//     }
+// }
+
+
+
+    // private List<String> filterDocs() {
+    //     List<String> docsContainingPhraseTokens=new ArrayList<>();
+    //     List<Doc> firstTokenDoc =searchTokens.get(0).getDocuments();
+    //     for (Doc doc :firstTokenDoc)
+    //         docsContainingPhraseTokens.add(doc.getDocid());
+    //     for (Token token : searchTokens) {
+    //         List<String> docIds=new ArrayList<>();
+    //         List<Doc> thisTokenDocs=token.getDocuments();
+    //         for (Doc doc : thisTokenDocs)
+    //             docIds.add(doc.getDocid());
+    //         docsContainingPhraseTokens.retainAll(docIds);
+    //     }
+    //     return docsContainingPhraseTokens;
+    // }
