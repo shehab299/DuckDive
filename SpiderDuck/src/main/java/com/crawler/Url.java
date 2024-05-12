@@ -1,6 +1,7 @@
 package com.crawler;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -8,13 +9,13 @@ import java.net.URISyntaxException;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection.Response;
 
-public class Url {
+public class Url implements Serializable {
     private final String url;
     private final String baseURL;
     private String normalizedURL;
     private final String robotsURL;
     private String host;
-
+    
     private boolean urlExists(String url) {
         try {
             Response response = Jsoup.connect(url).execute();

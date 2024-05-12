@@ -2,25 +2,30 @@ package com.crawler;
 
 import java.util.Scanner;
 
-import org.bson.Document;
-
 import com.crawler.Models.PageService;
 import com.crawler.utils.DBManager;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.result.DeleteResult;
 
 import java.nio.file.Paths;
 
 public class MultiThreadedCrawler {
 
-    private static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "DummySearchEngine");
+    private static MongoDatabase connection = DBManager.connect("mongodb://localhost:27017", "SearchEngine");
     private static PageService service = new PageService(connection);
     private static Frontier frontier;
     public static String seedPath;
     public static String docPath;
+    public static String serialPath;
+    public static long crawlerState;
+    private static Scanner scanner = new Scanner(System.in);
 
     private static void initializeFrontier() {
+        crawlerState = service.countUrls();
+        if (crawlerState != 0) {
+            frontier = Frontier.deserialize(serialPath);
+            return;
+        }
+
         frontier = new Frontier();
         frontier.readSeed(seedPath);
     }
@@ -28,27 +33,24 @@ public class MultiThreadedCrawler {
     private static void initializePaths() {
         String currentDirectory = System.getProperty("user.dir");
 
-        // seedPath = String.valueOf(Paths.get(currentDirectory, "Resources",
-        // "seed.txt"));
-        seedPath = "D:\\CMP_Projects\\CMP_Year2\\APT\\DuckDive\\SpiderDuck\\Resources\\seed.txt";
-        // docPath = String.valueOf(Paths.get(currentDirectory, "Resources",
-        // "HtmlPages", " "));
-        docPath = "D:\\CMP_Projects\\CMP_Year2\\APT\\DuckDive\\SpiderDuck\\Resources\\HtmlPages\\";
-        // docPath = docPath.trim();
-
+        seedPath = String.valueOf(Paths.get(currentDirectory, "Resources", "seed.txt"));
+        docPath = String.valueOf(Paths.get(currentDirectory, "Resources",
+        "HtmlPages", " "));
+        serialPath = String.valueOf(Paths.get(currentDirectory, "Resources", "frontier.txt"));
+        docPath = docPath.trim();
     }
 
     private static int getNumThreads() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter the number of threads: ");
-
-        String input = scanner.nextLine();
-        int numThreads = Integer.parseInt(input);
-
-        scanner.close();
-
+        int numThreads = scanner.nextInt();
         return numThreads;
+    }
+
+    private static int getSaveFrequency() {
+        System.out.print("Every how many crawls do you wanna save the state? ");
+        int saveFrequency = scanner.nextInt();
+        scanner.nextLine();
+        return saveFrequency;
     }
 
     public static void main(String[] args) {
@@ -57,30 +59,27 @@ public class MultiThreadedCrawler {
         initializeFrontier();
 
         int numThreads = getNumThreads();
+        int saveFrequency = getSaveFrequency();
 
-        MongoCollection<Document> pageTable = connection.getCollection("page");
-        DeleteResult result = pageTable.deleteMany(new Document());
-        System.out.println("Deleted " + result.getDeletedCount() + " documents");
-
-        Counter numCrawled = new Counter();
+        Counter numCrawled = new Counter(crawlerState);
         for (int i = 0; i < numThreads; i++) {
-            new Thread(new Crawler(frontier, service, numCrawled)).start();
+            new Thread(new Crawler(frontier, service, numCrawled, saveFrequency)).start();
         }
     }
 }
 
 class Counter {
-    private int counter;
+    private long counter;
 
-    public Counter() {
-        counter = 0;
+    public Counter(long crawlerState) {
+        counter = crawlerState;
     }
 
     public void increment() {
         counter++;
     }
 
-    public int get() {
+    public long get() {
         return counter;
     }
 }
