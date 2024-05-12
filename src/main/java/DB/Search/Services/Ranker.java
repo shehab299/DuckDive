@@ -75,7 +75,6 @@ public class Ranker {
         Optional<Token> token = tokenCollection.findOneByTerm(token_);
         
         if(token.isPresent()){
-            System.out.println(token.get().getTerm());
             return Math.log(pageCollection.count() / token.get().getDocuments().size());
         }
 
@@ -83,7 +82,6 @@ public class Ranker {
     }
 
     private double scoreHtml(String pos){
-
         double relevance; //not normalized yet
         switch (pos) {
             case "h1":
@@ -173,10 +171,10 @@ public class Ranker {
             String docPath="";
             String pagePath="";
             if(page.isPresent())
-                {
-                    docPath=page.get().getDoc_path();
-                    pagePath=page.get().getPath();
-                }
+            {
+                docPath=page.get().getDoc_path();
+                pagePath=page.get().getPath();
+            }
             else return;
 
             Result res = new Result();
@@ -224,17 +222,17 @@ public class Ranker {
     }
 
     private Double scorePages_phraseSearch(String path) {
-        System.out.println(searchPhrase);
         String docPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDiveV01\\IndexerDuck\\".concat(path);
         try {
             File input = new File(docPath);
             Document doc = Jsoup.parse(input, "UTF-8", "");
             Element firstElementContainingWord = doc.select("*:containsOwn(" + searchPhrase + ")").first();
                 if (firstElementContainingWord != null) {
-                    return 1.0;
+                    System.out.println(firstElementContainingWord.tagName());
+                    return scoreHtml(firstElementContainingWord.tagName());
                 }
             }catch (IOException e) {
-                System.err.println("cannot opent the file");
+                System.err.println("cannot open the file");
                 e.printStackTrace();
             }
             System.out.println("no score");
@@ -243,7 +241,6 @@ public class Ranker {
 
     private String getTitle(String pagePath){
         try {
-            System.out.println(pagePath);
             File input = new File(pagePath);
             Document doc = Jsoup.parse(input, "UTF-8", "");
             String title=doc.title();
@@ -259,22 +256,6 @@ public class Ranker {
         }
         return "";
     }
-
-    // private List<String> filterDocs() {
-    //     List<String> docsContainingPhraseTokens=new ArrayList<>();
-    //     List<Doc> firstTokenDoc =searchTokens.get(0).getDocuments();
-    //     for (Doc doc :firstTokenDoc)
-    //         docsContainingPhraseTokens.add(doc.getDocid());
-
-    //     for (Token token : searchTokens) {
-    //         List<String> docIds=new ArrayList<>();
-    //         List<Doc> thisTokenDocs=token.getDocuments();
-    //         for (Doc doc : thisTokenDocs)
-    //             docIds.add(doc.getDocid());
-    //         docsContainingPhraseTokens.retainAll(docIds);
-    //     }
-    //     return docsContainingPhraseTokens;
-    // }
 
     private List<String> filterDocs() {
         Set<String> docsContainingAllTokens = new HashSet<>();
@@ -294,22 +275,5 @@ public class Ranker {
         return new ArrayList<>(docsContainingAllTokens);
     }
 
-//     private List<String> filterDocs() {
-//     List<String> docsContainingAllTokens = new ArrayList<>();
-//     List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
-//     for (Doc doc : firstTokenDocs) {
-//         docsContainingAllTokens.add(doc.getDocid());
-//     }
-    
-//     for (int i = 1; i < searchTokens.size(); i++) {
-//         List<String> docIds = new ArrayList<>();
-//         List<Doc> thisTokenDocs = searchTokens.get(i).getDocuments();
-//         for (Doc doc : thisTokenDocs) {
-//             docIds.add(doc.getDocid());
-//         }
-//         docsContainingAllTokens.retainAll(docIds);
-//     }
-//     return docsContainingAllTokens;
-//     }
-// }
 }
+
