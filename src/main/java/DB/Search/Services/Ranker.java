@@ -15,8 +15,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,7 +45,6 @@ public class Ranker {
 
     Ranker()
     {
-        TYPE=1;
         searchTokens = new ArrayList<>();
         pageScore = new HashMap<String,Double>();
         results = new ArrayList<>();
@@ -109,7 +110,9 @@ public class Ranker {
         searchTokens = new ArrayList<>();
         pageScore = new HashMap<String,Double>();
         results = new ArrayList<>();
+        TYPE=1;
         formTokens(tokens);
+        formPhrase();
         if(tokens.size()==1)
             TYPE=0;
         if(TYPE==0)
@@ -154,7 +157,8 @@ public class Ranker {
             {
                 path=page.get().getDoc_path();
                 Double score=scorePages_phraseSearch(path);
-                pageScore.put(page.get().getId(), score);
+                if(score>0)
+                    pageScore.put(page.get().getId(), score);
             }   
         }
         formResult();
@@ -191,7 +195,7 @@ public class Ranker {
                 }
             else 
             {
-                res.setSnippet(getSnippet(pagePath, searchPhrase));
+                res.setSnippet(getSnippet(docPath, searchPhrase));
             }
             results.add(res);
         });
@@ -230,6 +234,7 @@ public class Ranker {
                     return 1.0;
                 }
             }catch (IOException e) {
+                System.err.println("cannot opent the file");
                 e.printStackTrace();
             }
             System.out.println("no score");
@@ -272,20 +277,39 @@ public class Ranker {
     // }
 
     private List<String> filterDocs() {
-    List<String> docsContainingAllTokens = new ArrayList<>();
-    List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
-    for (Doc doc : firstTokenDocs) {
-        docsContainingAllTokens.add(doc.getDocid());
-    }
-    
-    for (int i = 1; i < searchTokens.size(); i++) {
-        List<String> docIds = new ArrayList<>();
-        List<Doc> thisTokenDocs = searchTokens.get(i).getDocuments();
-        for (Doc doc : thisTokenDocs) {
-            docIds.add(doc.getDocid());
+        Set<String> docsContainingAllTokens = new HashSet<>();
+        List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
+        for (Doc doc : firstTokenDocs) {
+            docsContainingAllTokens.add(doc.getDocid());
         }
-        docsContainingAllTokens.retainAll(docIds);
+        
+        for (Token token : searchTokens) {
+            List<Doc> thisTokenDocs=token.getDocuments();
+            List<String> thisTokenDocs_ids=new ArrayList<>();
+            for (Doc doc : thisTokenDocs) {
+                thisTokenDocs_ids.add(doc.getDocid());
+            }
+            docsContainingAllTokens.retainAll(thisTokenDocs_ids);
+        }
+        return new ArrayList<>(docsContainingAllTokens);
     }
-    return docsContainingAllTokens;
-    }
+
+//     private List<String> filterDocs() {
+//     List<String> docsContainingAllTokens = new ArrayList<>();
+//     List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
+//     for (Doc doc : firstTokenDocs) {
+//         docsContainingAllTokens.add(doc.getDocid());
+//     }
+    
+//     for (int i = 1; i < searchTokens.size(); i++) {
+//         List<String> docIds = new ArrayList<>();
+//         List<Doc> thisTokenDocs = searchTokens.get(i).getDocuments();
+//         for (Doc doc : thisTokenDocs) {
+//             docIds.add(doc.getDocid());
+//         }
+//         docsContainingAllTokens.retainAll(docIds);
+//     }
+//     return docsContainingAllTokens;
+//     }
+// }
 }

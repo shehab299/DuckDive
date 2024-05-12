@@ -1,0 +1,36 @@
+
+//     private List<String> filterDocs() {
+//     List<String> docsContainingAllTokens = new ArrayList<>();
+//     List<Doc> firstTokenDocs = searchTokens.get(0).getDocuments();
+//     for (Doc doc : firstTokenDocs) {
+//         docsContainingAllTokens.add(doc.getDocid());
+//     }
+    
+//     for (int i = 1; i < searchTokens.size(); i++) {
+//         List<String> docIds = new ArrayList<>();
+//         List<Doc> thisTokenDocs = searchTokens.get(i).getDocuments();
+//         for (Doc doc : thisTokenDocs) {
+//             docIds.add(doc.getDocid());
+//         }
+//         docsContainingAllTokens.retainAll(docIds);
+//     }
+//     return docsContainingAllTokens;
+//     }
+// }
+
+
+
+    // private List<String> filterDocs() {
+    //     List<String> docsContainingPhraseTokens=new ArrayList<>();
+    //     List<Doc> firstTokenDoc =searchTokens.get(0).getDocuments();
+    //     for (Doc doc :firstTokenDoc)
+    //         docsContainingPhraseTokens.add(doc.getDocid());
+    //     for (Token token : searchTokens) {
+    //         List<String> docIds=new ArrayList<>();
+    //         List<Doc> thisTokenDocs=token.getDocuments();
+    //         for (Doc doc : thisTokenDocs)
+    //             docIds.add(doc.getDocid());
+    //         docsContainingPhraseTokens.retainAll(docIds);
+    //     }
+    //     return docsContainingPhraseTokens;
+    // }
