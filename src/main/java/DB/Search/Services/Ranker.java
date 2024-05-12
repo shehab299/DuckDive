@@ -37,39 +37,51 @@ public class Ranker {
     HashMap<String, Double> pageScore;
     List<Result> results;
     String searchPhrase;
+    List<Integer> phrasePosition;
     @Autowired
     private PageCollection pageCollection;
 
     @Autowired
     TokenCollection tokenCollection;
 
-    Ranker()
-    {
+    Ranker(){}
+    //opt
+    public List<Result> rank(List<String> tokens, int type,String[] op){
+        if(tokens.isEmpty()) return null;
+
         searchTokens = new ArrayList<>();
         pageScore = new HashMap<String,Double>();
         results = new ArrayList<>();
-    }
-     
-    void formPhrase() //
-    {
-        searchPhrase="";
-        int i=0;
-        int numOfTokens=searchTokens.size();
-        for (Token token : searchTokens) {
-            searchPhrase=searchPhrase.concat(token.getTerm());
-            if(i++!=numOfTokens) searchPhrase=searchPhrase.concat(" ");
-        }
-    }
+        phrasePosition= new ArrayList<>();
+        TYPE=type;
 
+        formTokens(tokens);
+        
+        if(TYPE==0)
+        {
+            System.out.println("--------WORD SEARCH--------");
+            rankByWord();
+        }
+        else if(TYPE==1)
+        {
+            System.out.println("--------Phrase SEARCH--------");
+            rankByPhrase();
+        }
+        else return null;
+        return results;
+    }
+    //opt
     private void formTokens(List<String> tokens)
     {
+        searchPhrase=String.join(" ", tokens);
+        
         tokens.forEach(token -> {
             Optional<Token> token_ = tokenCollection.findOneByTerm(token);
             if(token_.isPresent())
                 searchTokens.add(token_.get());
-        });   
+        });
     }
-
+    //opt
     private Double calculateIDF(String token_){
         
         Optional<Token> token = tokenCollection.findOneByTerm(token_);
@@ -80,7 +92,7 @@ public class Ranker {
 
         return 0.0;
     }
-
+    //opt
     private double scoreHtml(String pos){
         double relevance; //not normalized yet
         switch (pos) {
@@ -103,25 +115,8 @@ public class Ranker {
 
         return relevance;
     }
-
-    public List<Result> rank(List<String> tokens){
-        searchTokens = new ArrayList<>();
-        pageScore = new HashMap<String,Double>();
-        results = new ArrayList<>();
-        TYPE=1;
-        formTokens(tokens);
-        formPhrase();
-        if(tokens.size()==1)
-            TYPE=0;
-        if(TYPE==0)
-            rankByWord();
-        else if(TYPE==1)
-            rankByPhrase();
-        else return null;
-        return results;
-    }
-
-    void scorePages(Token token, Double idf){
+    //opt
+    private void scorePages(Token token, Double idf){
         token.getDocuments().forEach(document -> {
             Double TF = document.getTF();
             Double score = TF * idf + scoreHtml(document.getHtml_pos());
@@ -134,7 +129,7 @@ public class Ranker {
             }
         });
     }
-
+    //opt
     private void rankByWord()
     {
         searchTokens.forEach(token -> {
@@ -144,17 +139,18 @@ public class Ranker {
         });   
         formResult();
     }
-
+    //opt
     private void rankByPhrase()
     {
+        if(searchTokens.isEmpty()) return;
         String path;
         List<String> docsContainingAllTokens=filterDocs();
         for (String string : docsContainingAllTokens) {
-            Optional<Page> page=pageCollection.findById(string);
+            Optional<Page> page = pageCollection.findById(string);
             if(page.isPresent())
             {
                 path=page.get().getDoc_path();
-                Double score=scorePages_phraseSearch(path);
+                Double score=phraseSearch(path);
                 if(score>0)
                     pageScore.put(page.get().getId(), score);
             }   
@@ -162,7 +158,7 @@ public class Ranker {
         formResult();
         return;
     }
-
+    //opt
     private void formResult()
     {
             pageScore.forEach((docid,score) -> {
@@ -199,7 +195,7 @@ public class Ranker {
         });
         results.sort((r1,r2) -> Double.compare(r2.getScore(), r1.getScore()));
     }
-
+    //to be edited
     private String getSnippet(String path, String phrase) {
         String docPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDiveV01\\IndexerDuck\\".concat(path);
         try {
@@ -221,39 +217,32 @@ public class Ranker {
         return "";
     }
 
-    private Double scorePages_phraseSearch(String path) {
+    private Double phraseSearch(String path) {
         String docPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDiveV01\\IndexerDuck\\".concat(path);
         try {
             File input = new File(docPath);
             Document doc = Jsoup.parse(input, "UTF-8", "");
             Element firstElementContainingWord = doc.select("*:containsOwn(" + searchPhrase + ")").first();
                 if (firstElementContainingWord != null) {
-                    System.out.println(firstElementContainingWord.tagName());
                     return scoreHtml(firstElementContainingWord.tagName());
                 }
             }catch (IOException e) {
                 System.err.println("cannot open the file");
                 e.printStackTrace();
             }
-            System.out.println("no score");
             return 0.0;
     }
-
+    //to be deleted
     private String getTitle(String pagePath){
-        try {
-            File input = new File(pagePath);
-            Document doc = Jsoup.parse(input, "UTF-8", "");
-            String title=doc.title();
-            if (title.isEmpty()) {
-                System.out.println("No title found in the HTML document.");
-            } else {
-                System.out.println("Title: " + title);
-            }
-            return title;
-        } catch (IOException e) {
-            System.err.println("cannot retreive the title");
-            e.printStackTrace();
-        }
+        // try {
+        //     File input = new File(pagePath);
+        //     Document doc = Jsoup.parse(input, "UTF-8", "");
+        //     String title=doc.title();
+        //     return title;
+        // } catch (IOException e) {
+        //     System.err.println("cannot retreive the title");
+        //     e.printStackTrace();
+        // }
         return "";
     }
 
@@ -263,7 +252,7 @@ public class Ranker {
         for (Doc doc : firstTokenDocs) {
             docsContainingAllTokens.add(doc.getDocid());
         }
-        
+        if(docsContainingAllTokens.isEmpty()) return null;
         for (Token token : searchTokens) {
             List<Doc> thisTokenDocs=token.getDocuments();
             List<String> thisTokenDocs_ids=new ArrayList<>();
@@ -272,6 +261,7 @@ public class Ranker {
             }
             docsContainingAllTokens.retainAll(thisTokenDocs_ids);
         }
+        if(docsContainingAllTokens.isEmpty()) return null;
         return new ArrayList<>(docsContainingAllTokens);
     }
 
