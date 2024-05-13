@@ -7,7 +7,7 @@ import SearchSuggestions from "./SearchSuggestions";
 
 // import { IoIosSearch } from "react-icons/io";
 
-function SearchBar() {
+function SearchBar({ customStyle }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
