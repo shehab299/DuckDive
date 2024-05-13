@@ -7,9 +7,8 @@ import SearchSuggestions from "./SearchSuggestions";
 
 // import { IoIosSearch } from "react-icons/io";
 
-function SearchBar({ customStyle }) {
+function SearchBar({ customStyle, searchTerm, setSearchTerm }) {
   const [suggestions, setSuggestions] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
 
@@ -30,7 +29,7 @@ function SearchBar({ customStyle }) {
   useEffect(() => {
     const controller = new AbortController();
     async function fetchSuggestions() {
-      const res = await fetch("http://localhost:3030/complete", {
+      const res = await fetch(`http://localhost:3030/complete?query=${searchTerm}`, {
         signal: controller.signal,
       });
       const data = await res.json();

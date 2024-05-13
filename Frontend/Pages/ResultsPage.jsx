@@ -6,7 +6,7 @@ import styles from "./ResultsPage.module.css";
 import PagePagination from "../Components/PagePagination";
 import duckDive from "../assets/duckDive.png";
 
-function ResultsPage() {
+function ResultsPage({searchTerm}) {
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -22,7 +22,7 @@ function ResultsPage() {
 
     async function fetchResults() {
       try {
-        const res = await fetch("http://localhost:3030/search", {
+        const res = await fetch(`http://localhost:3030/search?query=${searchTerm}`, {
           signal: controller.signal,
         });
         if (!res.ok) {
