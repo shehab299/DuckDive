@@ -5,8 +5,13 @@ import Result from "../Components/Result";
 import styles from "./ResultsPage.module.css";
 import PagePagination from "../Components/PagePagination";
 import duckDive from "../assets/duckDive.png";
+import { useLocation } from "react-router-dom";
 
-function ResultsPage({searchTerm}) {
+function ResultsPage() {
+   const location = useLocation();
+   const searchParams = new URLSearchParams(location.search);
+  const searchTerm = searchParams.get("query");
+  
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 

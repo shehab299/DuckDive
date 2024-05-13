@@ -4,12 +4,11 @@ import ResultsPage from "../Pages/ResultsPage";
 import { useState } from "react";
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SearchPage searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>} />
-        <Route path="/results" element={<ResultsPage searchTerm={searchTerm}/>} />
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/search" element={<ResultsPage/>} />
       </Routes>
     </BrowserRouter>
   );
