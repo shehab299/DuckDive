@@ -43,7 +43,5 @@ public class suggestController {
 
 
         return suggestions;
-
-
     }    
 }
