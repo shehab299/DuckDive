@@ -8,6 +8,7 @@ import SearchSuggestions from "./SearchSuggestions";
 // import { IoIosSearch } from "react-icons/io";
 
 function SearchBar({ customStyle, searchTerm, setSearchTerm }) {
+  const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function SearchBar({ customStyle, searchTerm, setSearchTerm }) {
   useEffect(() => {
     function callback(e) {
       if (e.code === "Enter" && searchTerm !== "") {
-        navigate("/results");
+        navigate(`/search?query=${searchTerm}`);
       }
     }
 
@@ -29,11 +30,22 @@ function SearchBar({ customStyle, searchTerm, setSearchTerm }) {
   useEffect(() => {
     const controller = new AbortController();
     async function fetchSuggestions() {
-      const res = await fetch(`http://localhost:3030/complete?query=${searchTerm}`, {
-        signal: controller.signal,
-      });
-      const data = await res.json();
-      setSuggestions(data.suggestions);
+      try {
+        const res = await fetch(
+          `http://localhost:3030/complete?query=${searchTerm}`,
+          {
+            signal: controller.signal,
+          }
+        );
+        if (!res.ok) {
+          throw new Error("Failed to fetch results");
+        }
+        const data = await res.json();
+        setSuggestions(data.suggestions);
+      } catch (error) {
+        if (error.name !== "AbortError")
+          console.error("Error fetching results:", error);
+      }
     }
 
     console.log(suggestions);
@@ -51,7 +63,7 @@ function SearchBar({ customStyle, searchTerm, setSearchTerm }) {
   function handleSelectSuggestion(value) {
     setSearchTerm(value);
     setShowSuggestions(false);
-    navigate("/results");
+    navigate(`/search?query=${value}`);
   }
 
   return (
