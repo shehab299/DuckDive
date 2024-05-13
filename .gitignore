@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 */target/
 */Robots/
 */docs/
@@ -8,10 +8,9 @@ HtmlPages/
 .env
 .idea
 target
-=======
 */html/
 .vscode
-
+plain_docs/
 .vscode/
 
 .html
@@ -35,11 +34,7 @@ html/
 */html
 
 .env
-
 .idea
-
-
->>>>>>> 13cf921 (🐛 Fix crawler not checking queue)
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -49,8 +44,5 @@ lerna-debug.log*
 node_modules/
 dist
 dist-ssr
-<<<<<<< HEAD
 *.local
-=======
-*.local
->>>>>>> 13cf921 (🐛 Fix crawler not checking queue)
+
