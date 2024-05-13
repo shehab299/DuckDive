@@ -2,6 +2,7 @@ package DB.Search.Controller;
 
 import DB.Search.Documents.Result;
 import DB.Search.Services.Ranker;
+import DB.Search.Services.SuggestService;
 import DB.Search.Utils.Tokenizer;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,23 +15,28 @@ import java.util.List;
 public class SearchController {
     
     @Autowired
-    private Ranker ranker;
+    private SuggestService suggestService;
+
+    @Autowired
+    private Ranker ranker;  
 
     @GetMapping
-    public List<Result> doSearch(@RequestParam String query) {
+    public List<Result> search(@RequestParam String query) {
         
         if(query.isEmpty() || query.isBlank()) 
             return null;
 
+        
+
         String[] words = Tokenizer.splitText(query);
 
         if(query.contains("\"")){
-
             query = query.replaceAll("\"", "");
             words = Tokenizer.splitText(query);
             return ranker.searchByPhrase(words);
         }
                 
+        suggestService.updateSuggestions(query);
         words = Tokenizer.splitText(query);
         return ranker.searchByWord(words);
     }

@@ -1,0 +1,30 @@
+
+
+ :: Spring Boot ::                (v2.6.4)
+
+2024-05-13 20:33:58.270  INFO 968234 --- [           main] DB.Search.SearchApplication              : Starting SearchApplication using Java 17.0.10 on shehab-Vostro-5481 with PID 968234 (/home/shehab/Desktop/DuckDive/Ranker/target/classes started by shehab in /home/shehab/Desktop/DuckDive/Ranker)
+2024-05-13 20:33:58.274  INFO 968234 --- [           main] DB.Search.SearchApplication              : No active profile set, falling back to 1 default profile: "default"
+2024-05-13 20:33:59.047  INFO 968234 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-05-13 20:33:59.126  INFO 968234 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 0 Reactive MongoDB repository interfaces.
+2024-05-13 20:33:59.133  INFO 968234 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-05-13 20:33:59.152  INFO 968234 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 MongoDB repository interfaces.
+2024-05-13 20:33:59.490  INFO 968234 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-13 20:33:59.509  INFO 968234 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13 20:33:59.509  INFO 968234 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2024-05-13 20:33:59.595  INFO 968234 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13 20:33:59.596  INFO 968234 --- [           main] w.s.c.ServletWgebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2024-05-13 20:33:59.846  INFO 968234 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-05-13 20:33:59.907  INFO 968234 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:360}] to localhost:27017
+2024-05-13 20:33:59.908  INFO 968234 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:359}] to localhost:27017
+2024-05-13 20:33:59.908  INFO 968234 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18944097}
+2024-05-13 20:34:00.398  INFO 968234 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2024-05-13 20:34:00.416  INFO 968234 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:361}] to localhost:27017
+2024-05-13 20:34:00.417  INFO 968234 --- [localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:362}] to localhost:27017
+2024-05-13 20:34:00.417  INFO 968234 --- [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5324474}
+2024-05-13 20:34:00.546  INFO 968234 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-05-13 20:34:00.591  INFO 968234 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-13 20:34:00.605  INFO 968234 --- [           main] DB.Search.SearchApplication              : Started SearchApplication in 2.614 seconds (JVM running for 2.948)
+2024-05-13 20:34:06.203  INFO 968234 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-13 20:34:06.204  INFO 968234 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-13 20:34:06.205  INFO 968234 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-05-13 20:34:06.272  INFO 968234 --- [nio-8080-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:363}] to localhost:27017
