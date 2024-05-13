@@ -9,6 +9,7 @@ public class Token {
 
     @Override
     public String toString() {
+     
         return "{" +
                 "term=" + term +
                 ", html_pos=" + html_pos +

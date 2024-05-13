@@ -8,26 +8,19 @@ import DB.Search.Documents.Result;
 import DB.Search.Documents.Token;
 import DB.Search.Utils.Tokenizer;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.aggregation.ArithmeticOperators.Rand;
 import org.springframework.stereotype.Service;
 
-import com.jcraft.jsch.IO;
+
 
 @Service
 public class Ranker {
@@ -38,16 +31,13 @@ public class Ranker {
     public static final double OTHER = 0.1;
     public static final int SNIPPET_LENGTH = 150;
 
-    private HashMap<String, Doc> pageScore = new HashMap<String, Doc>();
-    private List<Result> results = new ArrayList<>();
-    private String searchPhrase;
-    private long pageCount;
-
     @Autowired
     private PageCollection pageCollection;
 
     @Autowired
     private TokenCollection tokenCollection;
+
+    int pageCount;
 
     private List<Token> formTokens(String[] tokens)
     {        
@@ -116,7 +106,7 @@ public class Ranker {
     }
 
     public List<Result> searchByWord(String[] words) {
-        int pageCount = (int) pageCollection.count();
+        pageCount = (int) pageCollection.count();
         List<Token> searchTokens = formTokens(words);
         HashMap<String, Doc> pageScore = new HashMap<String, Doc>();
         searchTokens.forEach(token -> scoreDocs(pageScore, token));
@@ -213,13 +203,13 @@ public class Ranker {
         return results;
     }
 
-
-    String getPhraseSnippet(RandomAccessFile file,int pos){
+    private String getPhraseSnippet(RandomAccessFile file,int pos){
 
         StringBuilder snippet = new StringBuilder();  
+        int snipperPosition = pos;
 
         try {        
-            file.seek(pos);
+            file.seek(snipperPosition);
         } catch (Exception e) {
             System.out.println("Cannot seek to position: " + pos);
         }
@@ -248,7 +238,8 @@ public class Ranker {
 
             for (int i = 0; i < 1; i++) {
                 int position = positions.get(i);
-                randomAccessFile.seek(position);
+                int new_pos = position;
+                randomAccessFile.seek(new_pos);
                 byte[] bytes = new byte[SNIPPET_LENGTH];
                 randomAccessFile.read(bytes);
                 String text = new String(bytes);
@@ -262,8 +253,6 @@ public class Ranker {
 
         return snippet.toString();
     }
-
-
 
 }
 
