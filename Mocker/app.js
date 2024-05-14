@@ -39,13 +39,13 @@ app.get("/search", (req, res) => {
       {
         title: "How to Build a Mock Server",
         description:
-          "This comprehensive guide covers the steps to create a mock server for testing purposes. It includes detailed instructions and best practices.",
+          "This 'comprehensive' guide covers the steps to create a 'mock' server for testing purposes. It includes detailed instructions and best practices.",
         url: "https://www.example.com/build-mock-server",
       },
       {
         title: "Mock Server vs. Real Server: Pros and Cons",
         description:
-          "Explore the advantages and disadvantages of using a mock server versus a real server in your development workflow. Learn when to use each approach.",
+          "Explore the advantages and disadvantages of using a 'mock' server versus a real server in your development workflow. Learn when to use each approach.",
         url: "https://www.example.com/mock-vs-real",
       },
       {
