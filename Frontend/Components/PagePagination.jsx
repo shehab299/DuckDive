@@ -8,7 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 function PagePagination({ numPages, setCurrentPage, currentPage }) {
   const [maxPageNumber, setMaxPageNumber] = useState(5);
   const [minPageNumber, setMinPageNumber] = useState(0);
-  const [pageNumberLimit, setPageNumberLimit] = useState(5);
+  const pageNumberLimit = 5;
 
   let pages = [];
   for (let index = 1; index <= numPages; index++) {

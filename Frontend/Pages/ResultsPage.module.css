@@ -1,6 +1,6 @@
 .container {
   width: 80%;
-  /* height: 100vh; */
+  position: relative;
 
   margin: 0 auto;
 
@@ -11,19 +11,27 @@
   text-align: justify;
 }
 
-.searchBar {
+.search {  
+  width: 100%;
+  padding: 20px;
+  padding-left: 10%;
+  
+  background-color: #fffae6;
   position: sticky;
-
-  margin: 30px 0px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-  margin: auto;
   top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.searchBar {
+  width: 60%;
 }

@@ -8,9 +8,12 @@
 
 .link {
   color: #ffac2f;
+  width: fit-content;
 }
 
 .snippet{
   color: #4d5156;
   font-size: smaller;
+
+  max-width: 80%;
 }

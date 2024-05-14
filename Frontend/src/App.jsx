@@ -1,7 +1,6 @@
 import SearchPage from "../Pages/SearchPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResultsPage from "../Pages/ResultsPage";
-import { useState } from "react";
 
 function App() {
   return (
