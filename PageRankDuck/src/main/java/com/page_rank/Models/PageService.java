@@ -4,13 +4,9 @@ import com.mongodb.MongoException;
 import com.mongodb.client.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.bson.Document;
-import org.bson.conversions.Bson;
-
-import javax.print.Doc;
 
 public class PageService {
     private final MongoCollection<Document> documentTable;

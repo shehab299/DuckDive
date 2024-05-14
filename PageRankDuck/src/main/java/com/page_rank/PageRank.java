@@ -1,23 +1,18 @@
 package com.page_rank;
 
-import java.lang.reflect.Array;
 import java.net.URISyntaxException;
 import java.util.*;
 
-import com.mongodb.client.*;
 
-import com.mongodb.client.DistinctIterable;
 import com.page_rank.Utils.*;
 import com.page_rank.Models.*;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.internal.binding.ReadBinding;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.ArrayRealVector;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.RealVector;
 import org.bson.Document;
-import com.page_rank.Utils.*;
 
 public class PageRank {
 

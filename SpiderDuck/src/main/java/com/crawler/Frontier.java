@@ -4,15 +4,22 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 import java.net.URISyntaxException;
 
-public class Frontier {
-    private HashMap <String, Queue<Url>> urlDict;
+public class Frontier implements Serializable {
+    private HashMap<String, Queue<Url>> urlDict;
     private List<Url> hostList;
-    private int count;
+    public int count;
     private int index;
 
     public Frontier() {
@@ -42,7 +49,7 @@ public class Frontier {
     public void addurl(Url url) {
 
         String host = url.getHost();
-        
+
         if (!urlDict.containsKey(host)) {
             urlDict.put(host, new LinkedList<Url>());
             hostList.add(url);
@@ -53,13 +60,11 @@ public class Frontier {
     }
 
     public Url getNexturl() {
-
         index = (index + 1) % hostList.size();
 
         int limit = hostList.size();
 
         for (int i = index; i < limit;) {
-
             String host = hostList.get(i).getHost();
 
             if (!urlDict.get(host).isEmpty()) {
@@ -69,17 +74,33 @@ public class Frontier {
 
             i = (i + 1) % hostList.size();
 
-            if(i == 0){
+            if (i == 0) {
                 limit = index;
             }
         }
 
         return null;
     }
-  
+
     public boolean isEmpty() {
         return count == 0;
     }
 
-}
+    public void serialize(String filePath) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
+            out.writeObject(this);
+        } catch (IOException e) {
+            System.err.println("Failed to serialize Frontier");
+        }
+    }
 
+    public static Frontier deserialize(String filePath) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
+            return (Frontier) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Failed to deserialize Frontier");
+            e.printStackTrace();
+            return null;
+        }
+    }
+}

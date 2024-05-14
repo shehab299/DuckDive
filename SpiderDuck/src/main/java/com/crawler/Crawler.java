@@ -9,21 +9,23 @@ import com.crawler.Models.PageService;
 
 public class Crawler implements Runnable {
     private static final int CRAWLING_LIMIT = 5000;
+    private static int SAVING_FREQUENCY;
     private PageService service;
     private Frontier frontier;
     private Counter numCrawled;
 
-    public Crawler(Frontier frontier, PageService service, Counter numCrawled) {
+    public Crawler(Frontier frontier, PageService service, Counter numCrawled, int saveFrequency) {
         this.frontier = frontier;
         this.service = service;
         this.numCrawled = numCrawled;
+        SAVING_FREQUENCY = saveFrequency;
 
     }
 
     private boolean shouldBeCrawled(Response response, Url url) {
 
         if (service.urlExists(url)) {
-            System.out.println(url.getUrl() + " Repeated\n");
+            System.out.println(url.getNormalized() + " Repeated\n");
             return false;
         }
 
@@ -45,16 +47,18 @@ public class Crawler implements Runnable {
     public void run() {
 
         while (true) {
-
             synchronized (numCrawled) {
                 if (numCrawled.get() >= CRAWLING_LIMIT) {
                     break;
+                }
+
+                if (numCrawled.get() != 0 && numCrawled.get() % SAVING_FREQUENCY == 0) {
+                    frontier.serialize(MultiThreadedCrawler.serialPath);
                 }
             }
 
             Url url;
             synchronized (frontier) {
-
                 if (frontier.isEmpty())
                     break;
 
@@ -89,7 +93,8 @@ public class Crawler implements Runnable {
             }
 
             List<String> outlinks = service.getOutlinks(doc.extractUrls());
-            Page x = new Page(url.getNormalized(), url.getUrl(), hashCode, path, outlinks, false, false);
+            Page x = new Page(url.getNormalized(), url.getUrl(), hashCode, path,
+                    outlinks, false, false);
             service.insertPage(x);
 
         }
