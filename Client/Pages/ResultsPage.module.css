@@ -1,0 +1,37 @@
+.container {
+  width: 80%;
+  position: relative;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  text-align: justify;
+}
+
+.search {  
+  width: 100%;
+  padding: 20px;
+  padding-left: 10%;
+  
+  background-color: #fffae6;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.searchBar {
+  width: 60%;
+}

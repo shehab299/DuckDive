@@ -39,12 +39,19 @@ public class Ranker {
 
     int pageCount;
 
+    HashMap<String,Boolean> stemmedTokens;
+
     private List<Token> formTokens(String[] tokens)
     {        
         List<Token> searchTokens = new ArrayList<Token>();
 
         for (String token : tokens) {
             String stemmed = Tokenizer.processWord(token);
+
+            if(stemmed != "" && !stemmedTokens.containsKey(stemmed)){
+                stemmedTokens.put(stemmed, true);
+            }
+
             Optional<Token> tokenOptional = tokenCollection.findOneByTerm(stemmed);
             if(tokenOptional.isPresent())
                 searchTokens.add(tokenOptional.get());
@@ -80,6 +87,7 @@ public class Ranker {
 
     List<Result> formWordResults(HashMap<String , Doc> pageScore){
 
+
         List<Result> results = new ArrayList<>();
 
         pageScore.forEach((docid, doc) -> {
@@ -106,6 +114,7 @@ public class Ranker {
     }
 
     public List<Result> searchByWord(String[] words) {
+        stemmedTokens = new HashMap<>();
         pageCount = (int) pageCollection.count();
         List<Token> searchTokens = formTokens(words);
         HashMap<String, Doc> pageScore = new HashMap<String, Doc>();
@@ -125,7 +134,7 @@ public class Ranker {
         return wordRead.toString().toLowerCase();
     }
 
-    public List<Result> searchByPhrase(String[] words) {
+    public List<Result> searchByPhrase(String[] words, int size) {
 
         List<Result> results = new ArrayList<Result>();
 
@@ -189,7 +198,7 @@ public class Ranker {
                 if(phraseFound) {
                     String url = page.getUrl();
                     String title = page.getTitle();
-                    String snippet = getPhraseSnippet(randomAccessFile, pos);
+                    String snippet = getPhraseSnippet(randomAccessFile, pos, size);
                     Double score = 0.0;
 
                     results.add(new Result(url, snippet, title, score));
@@ -203,7 +212,7 @@ public class Ranker {
         return results;
     }
 
-    private String getPhraseSnippet(RandomAccessFile file,int pos){
+    private String getPhraseSnippet(RandomAccessFile file,int pos, int size){
 
         StringBuilder snippet = new StringBuilder();  
         int snipperPosition = pos;
@@ -222,11 +231,52 @@ public class Ranker {
             System.out.println("Cannot read file");
             return "";
         }
+        
         String text = new String(bytes);
-        snippet.append(text);
+
+        String highligtedText = "\'" + text.substring(0, size) + "\'" + text.substring(size); 
+
+        
+        snippet.append(highligtedText);
         snippet.append("...");
 
         return snippet.toString();
+    }
+
+
+
+    String newGetSnippet(String docPath, Doc document){
+
+        StringBuilder snippet = new StringBuilder();
+        List<Integer> positions = document.getPositions();
+        
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile(new File(docPath), "r")) {
+
+            int position = positions.get(0);
+            randomAccessFile.seek(position);
+
+            String word = null;
+            int length = 50;
+            while((word = getWord(randomAccessFile)) != "" && (length != 0)){
+
+                if(stemmedTokens.containsKey(word)){
+                    word = "_" + word + "_ ";
+                }else{
+                    word += " ";
+                }
+
+                snippet.append(word);
+            }
+
+            snippet.append("...");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return snippet.toString();
+
+
     }
 
     String getSnippet(String docPath , Doc document){
@@ -243,7 +293,23 @@ public class Ranker {
                 byte[] bytes = new byte[SNIPPET_LENGTH];
                 randomAccessFile.read(bytes);
                 String text = new String(bytes);
-                snippet.append(text);
+
+
+                StringBuilder highligtedText = new StringBuilder();
+                String[] words = Tokenizer.splitText(text);
+
+                for (String foundWord : words) {
+ 
+                    String x = Tokenizer.processWord(foundWord);
+                    
+                    if(stemmedTokens.containsKey(x) && (Boolean) stemmedTokens.get(x) == true){
+                        highligtedText.append("\'" + foundWord + "\' ");
+                    }else{
+                        highligtedText.append(foundWord + " ");
+                    }
+                }
+
+                snippet.append(highligtedText.toString());
                 snippet.append("...");
             }
 

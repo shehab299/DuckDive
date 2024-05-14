@@ -31,9 +31,10 @@ public class SearchController {
         String[] words = Tokenizer.splitText(query);
 
         if(query.contains("\"")){
+            int size = query.length() - 2;
             query = query.replaceAll("\"", "");
             words = Tokenizer.splitText(query);
-            return ranker.searchByPhrase(words);
+            return ranker.searchByPhrase(words,size);
         }
                 
         suggestService.updateSuggestions(query);
