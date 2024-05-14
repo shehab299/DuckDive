@@ -20,7 +20,11 @@ function ResultsPage() {
   const lastIndex = currentPage * postsPerPage;
   const firstIndex = lastIndex - postsPerPage;
 
-  const numPages = Math.ceil(results.length / postsPerPage);
+  let numPages = 0;
+
+  useEffect(() => {
+    numPages = Math.ceil(results.length / postsPerPage);
+  } , [results])
 
   useEffect(() => {
     const controller = new AbortController();
@@ -28,7 +32,7 @@ function ResultsPage() {
     async function fetchResults() {
       try {
         const res = await fetch(
-          `http://localhost:3030/search?query=${searchTerm}`,
+          `http://localhost:8080/search?query=${searchTerm}`,
           {
             signal: controller.signal,
           }
@@ -37,7 +41,7 @@ function ResultsPage() {
           throw new Error("Failed to fetch results");
         }
         const data = await res.json();
-        setResults(data.results);
+        setResults(data);
       } catch (error) {
         if (error.name !== "AbortError")
           console.error("Error fetching results:", error);

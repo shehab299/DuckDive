@@ -6,10 +6,10 @@ import { GiBackwardTime } from "react-icons/gi";
 function SearchSuggestion({ suggestion, onSelectSuggestion }) {
   return (
     <div
-      onClick={() => onSelectSuggestion(suggestion.query)}
+      onClick={() => onSelectSuggestion(suggestion)}
       className={styles.container}
     >
-      <GiBackwardTime style={{ color: "grey" }} /> {suggestion.query}
+      <GiBackwardTime style={{ color: "grey" }} /> {suggestion}
     </div>
   );
 }

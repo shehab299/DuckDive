@@ -56,7 +56,7 @@ function SearchBar({ customStyle }) {
     async function fetchSuggestions() {
       try {
         const res = await fetch(
-          `http://localhost:3030/complete?query=${searchTerm}`,
+          `http://localhost:8080/suggest?query=${searchTerm}`,
           {
             signal: controller.signal,
           }
@@ -65,7 +65,7 @@ function SearchBar({ customStyle }) {
           throw new Error("Failed to fetch results");
         }
         const data = await res.json();
-        setSuggestions(data.suggestions);
+        setSuggestions(data);
       } catch (error) {
         if (error.name !== "AbortError")
           console.error("Error fetching results:", error);
