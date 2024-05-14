@@ -18,27 +18,28 @@ import java.util.regex.Pattern;
 public class Tokenizer {
 
     private Document doc;
-    private int cursor;
     private int wordCount;
-    private BufferedWriter writer;
-    private HashMap<String,Token> tokenDic;
+    private HashMap<String, Token> tokenDic;
+    private RandomAccessFile file;
+    private int cursor;
 
     public Tokenizer(String path) {
-        this.cursor = 0;
+        this.cursor = 1;
 
         try {
-            File file = new File(path);
-            doc = Jsoup.parse(file);
+            File inputFile = new File(path);
+            doc = Jsoup.parse(inputFile, "UTF-8");
         } catch (IOException e) {
             throw new RuntimeException("Can't Parse File", e);
         }
     }
 
-    private String stemToken(String token) {
-        SnowballStemmer stemmer = new englishStemmer();
-        stemmer.setCurrent(token);
-        stemmer.stem();
-        return stemmer.getCurrent();
+    private int getFilePosition() {
+        try {
+            return (int) file.getFilePointer();
+        } catch (IOException e) {
+            throw new RuntimeException("Error getting file position", e);
+        }
     }
 
     private String removeSpecialChars(String token) {
@@ -47,56 +48,52 @@ public class Tokenizer {
 
     private void writeToFile(String token) {
         try {
-            writer.write(token + " ");
+            file.writeBytes(token + " ");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        this.cursor += token.length();
+        this.cursor += token.length() + 1;
     }
 
-    private String compare(String pos1 , String pos2){
-
+    private String compare(String pos1, String pos2) {
         int score1 = Language.scoreHtml(pos1);
         int score2 = Language.scoreHtml(pos2);
 
-        if(score1 >= score2)
-            return pos1;
-        else
-            return pos2;
+        return score1 >= score2 ? pos1 : pos2;
     }
 
     private void tokenize(String text, String nodeName) {
-        
         Pattern pattern = Pattern.compile("\\s+");
         String[] splitTokens = pattern.split(text);
 
         for (String token : splitTokens) {
-            
+            int position = getFilePosition();
+            writeToFile(token);
+
             token = removeSpecialChars(token);
 
             if (Language.isStop(token))
                 continue;
 
             token = stemToken(token);
-            writeToFile(token);
 
             if (!tokenDic.containsKey(token)) {
                 Token newT = new Token(token, nodeName);
                 tokenDic.put(token, newT);
-                newT.position.add(cursor);
+                newT.position.add(position);
             } else {
                 Token t = tokenDic.get(token);
                 t.TF++;
-                t.html_pos = compare(t.html_pos ,nodeName);
-                t.position.add(cursor);
+                t.html_pos = compare(t.html_pos, nodeName);
+                t.position.add(position);
             }
 
             wordCount++;
         }
     }
 
-    public int getWordCount(){
+    public int getWordCount() {
         return wordCount;
     }
 
@@ -112,12 +109,11 @@ public class Tokenizer {
         }
     }
 
-    public HashMap<String,Token> tokenizeDocument(String docPath) {
-        
-        tokenDic = new HashMap<String,Token>();
+    public HashMap<String, Token> tokenizeDocument(String docPath) {
+        tokenDic = new HashMap<>();
 
         openFile(docPath);
-        
+
         String title = doc.title();
         tokenize(title, "title");
 
@@ -131,7 +127,7 @@ public class Tokenizer {
 
     private void closeFile() {
         try {
-            this.writer.close();
+            this.file.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -139,10 +135,16 @@ public class Tokenizer {
 
     private void openFile(String path) {
         try {
-            this.writer = new BufferedWriter(new FileWriter(path));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            file = new RandomAccessFile(path, "rw");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("Can't open file", e);
         }
     }
 
+    private String stemToken(String token) {
+        SnowballStemmer stemmer = new englishStemmer();
+        stemmer.setCurrent(token);
+        stemmer.stem();
+        return stemmer.getCurrent();
+    }
 }

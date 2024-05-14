@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./Result.module.css";
 import { NavLink } from "react-router-dom";
@@ -7,8 +7,10 @@ function Result({ result }) {
   return (
     <div className={styles.container}>
       <p>{result.title}</p>
-      <NavLink to={result.url}>{result.url}</NavLink>
-      <p>{result.description}</p>
+      <NavLink className={styles.link} to={result.url}>
+        {result.url}
+      </NavLink>
+      <p className={styles.snippet}>{result.description}</p>
     </div>
   );
 }

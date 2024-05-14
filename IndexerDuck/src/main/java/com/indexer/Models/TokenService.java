@@ -35,7 +35,7 @@ public class TokenService {
     }
 
     public TokenService(MongoDatabase dbConnection) {
-        this.tokenTable = dbConnection.getCollection("InvertedIndex");
+        this.tokenTable = dbConnection.getCollection("tokens2");
     }
 
     public void insert(HashMap<String, Token> dict, String docId, int wordCount){

@@ -6,7 +6,11 @@ import com.crawler.Models.PageService;
 import com.crawler.utils.DBManager;
 import com.mongodb.client.MongoDatabase;
 
-import java.nio.file.Paths;
+
+import java.nio.file.Paths
+import com.mongodb.client.result.DeleteResult;
+import java.lang.Thread;
+
 
 public class MultiThreadedCrawler {
 
