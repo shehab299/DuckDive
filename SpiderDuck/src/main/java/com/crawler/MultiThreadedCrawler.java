@@ -29,10 +29,10 @@ public class MultiThreadedCrawler {
 
         // seedPath = String.valueOf(Paths.get(currentDirectory, "Resources",
         // "seed.txt"));
-        seedPath = "D:\\CMP_Projects\\CMP_Year2\\APT\\DuckDive\\SpiderDuck\\Resources\\seed.txt";
+        seedPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDive\\SpiderDuck\\Resources\\seed.txt";
         // docPath = String.valueOf(Paths.get(currentDirectory, "Resources",
         // "HtmlPages", " "));
-        docPath = "D:\\CMP_Projects\\CMP_Year2\\APT\\DuckDive\\SpiderDuck\\Resources\\HtmlPages\\";
+        docPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDive\\SpiderDuck\\Resources\\HtmlPages";
         // docPath = docPath.trim();
 
     }

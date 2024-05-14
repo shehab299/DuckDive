@@ -24,11 +24,9 @@ public class Indexer
 
 
     private static void initailizePath(){
-        String currentDirectory = System.getProperty("user.dir");
-        stopsPath = Paths.get(currentDirectory, "resources", "stops.txt").toString();
-        docPath = Paths.get(currentDirectory, "plain_docs", " ").toString();
-        scorePath = Paths.get(currentDirectory, "resources" , "html.txt").toString();
-        docPath = docPath.trim();
+        stopsPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDive-finalVersion\\IndexerDuck\\resources\\stops.txt";
+        docPath = "E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDive-finalVersion\\IndexerDuck\\plain_docs\\";
+        scorePath ="E:\\Education\\CMP_SecYear\\SecondSemester\\DuckDive-finalVersion\\IndexerDuck\\resources\\html.txt";
     }
 
     private static void initailizeDB()

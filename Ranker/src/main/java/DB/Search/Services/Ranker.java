@@ -14,8 +14,11 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +45,7 @@ public class Ranker {
     private List<Token> formTokens(String[] tokens)
     {        
         List<Token> searchTokens = new ArrayList<Token>();
-
+        
         for (String token : tokens) {
             String stemmed = Tokenizer.processWord(token);
             Optional<Token> tokenOptional = tokenCollection.findOneByTerm(stemmed);
@@ -254,5 +257,32 @@ public class Ranker {
         return snippet.toString();
     }
 
+    public List<Result> operatorHandler(List<String[]> phrasesWords,List<String> operators)
+    {
+        List<Result>[] result = new ArrayList[phrasesWords.size()];
+        int i=0;
+        for (i = 0; i < result.length; i++)
+            result[i] = searchByPhrase(phrasesWords.get(i));
+            
+        i=1;
+        for (String operator : operators) {
+            switch (operator.toLowerCase()) {
+                case "and":
+                    result[0].retainAll(result[i++].stream()
+                            .filter(r -> result[0].stream().anyMatch(rr -> rr.getUrl().equals(r.getUrl())))
+                            .collect(Collectors.toList()));
+                break;
+                case "or":
+                    Set<Result> resultSet = new HashSet<>(result[i++]);
+                    resultSet.removeAll(result[0]);
+                    result[0].addAll(resultSet);
+                    break;
+                case "not":
+                    result[0].removeAll(result[i++]);
+                break;
+            }
+        }
+        return result[0];
+    }
 }
 
