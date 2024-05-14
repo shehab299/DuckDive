@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./Result.module.css";
 import { NavLink } from "react-router-dom";
